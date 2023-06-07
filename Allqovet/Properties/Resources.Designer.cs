@@ -253,6 +253,26 @@ namespace Allqovet.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ICON_MARCAS_Y_CATEOGRIAS {
+            get {
+                object obj = ResourceManager.GetObject("ICON MARCAS Y CATEOGRIAS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ICON_MARCAS_Y_CATEOGRIAS1 {
+            get {
+                object obj = ResourceManager.GetObject("ICON MARCAS Y CATEOGRIAS1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_maximizar {
             get {
                 object obj = ResourceManager.GetObject("icon maximizar", resourceCulture);
@@ -286,6 +306,46 @@ namespace Allqovet.Properties {
         internal static System.Drawing.Bitmap Logoallqovet {
             get {
                 object obj = ResourceManager.GetObject("Logoallqovet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MARCA {
+            get {
+                object obj = ResourceManager.GetObject("MARCA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MARCA1 {
+            get {
+                object obj = ResourceManager.GetObject("MARCA1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MARCA2 {
+            get {
+                object obj = ResourceManager.GetObject("MARCA2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap marca3 {
+            get {
+                object obj = ResourceManager.GetObject("marca3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

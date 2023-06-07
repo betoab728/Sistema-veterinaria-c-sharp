@@ -16,3 +16,9 @@ C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Entidades
 C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Entidades\obj\Debug\Entidades.dll
 C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Entidades\obj\Debug\Entidades.pdb
+D:\VETERINARIA\integrador_avance03\Entidades\bin\Debug\Entidades.dll
+D:\VETERINARIA\integrador_avance03\Entidades\bin\Debug\Entidades.pdb
+D:\VETERINARIA\integrador_avance03\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+D:\VETERINARIA\integrador_avance03\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+D:\VETERINARIA\integrador_avance03\Entidades\obj\Debug\Entidades.dll
+D:\VETERINARIA\integrador_avance03\Entidades\obj\Debug\Entidades.pdb

@@ -5,10 +5,10 @@
     <Setting Name="cnx" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Server=SERVER;Database=allqovet; Uid=USER;Pwd=PASSWORD;&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Server=grupoctc.ddns.net;Database=allqovet; Uid=admin;Pwd=Utp+Integrador#37646*;&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Server=SERVER;Database=allqovet; Uid=USER;Pwd=PASSWORD;</Value>
+      <Value Profile="(Default)">Server=grupoctc.ddns.net;Database=allqovet; Uid=admin;Pwd=Utp+Integrador#37646*;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

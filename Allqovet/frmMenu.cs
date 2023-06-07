@@ -137,14 +137,17 @@ namespace Allqovet
             if (panelPedidos.Visible == true)
                 panelPedidos.Visible = false;
 
-            if (panelsubmenuSistemas.Visible == true)
-                panelsubmenuSistemas.Visible = false;
+            if (panelSistema.Visible == true)
+                panelSistema.Visible = false;
 
             if (panelsubmenuClientes.Visible == true)
                 panelsubmenuClientes.Visible = false;
 
             if (panelSubmenuConsultorio.Visible == true)
                 panelSubmenuConsultorio.Visible = false;
+
+             if (panelMYC.Visible == true)
+                panelMYC.Visible = false;
         }
 
        private void MostrarSubmenu(Panel submenu)
@@ -248,7 +251,7 @@ namespace Allqovet
 
         private void button8_Click(object sender, EventArgs e)
         {
-            MostrarSubmenu(panelsubmenuSistemas);
+            MostrarSubmenu(panelSistema);
         }
 
         private void button29_Click(object sender, EventArgs e)
@@ -327,6 +330,31 @@ namespace Allqovet
         }
 
         private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            MostrarSubmenu(panelMYC);
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button21_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
         {
 
         }

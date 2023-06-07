@@ -298,5 +298,23 @@
   <ItemGroup>
     <None Include="Resources\save_essential_app_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON MARCAS Y CATEOGRIAS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON MARCAS Y CATEOGRIAS1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MARCA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MARCA1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MARCA2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marca3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

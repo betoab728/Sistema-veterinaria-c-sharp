@@ -26,7 +26,7 @@ namespace AllqovetDAO.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Server=SERVER;Database=allqovet; Uid=USER;Pwd=PASSWORD;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=grupoctc.ddns.net;Database=allqovet; Uid=admin;Pwd=Utp+Integrador#37646*;")]
         public string cnx {
             get {
                 return ((string)(this["cnx"]));
