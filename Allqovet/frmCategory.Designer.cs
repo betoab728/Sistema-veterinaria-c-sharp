@@ -1,6 +1,6 @@
 ﻿namespace Allqovet
 {
-    partial class frmMarca
+    partial class frmCategory
     {
         /// <summary>
         /// Required designer variable.
@@ -43,10 +43,10 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.txtdni);
-            this.groupBox1.Location = new System.Drawing.Point(28, 32);
+            this.groupBox1.Location = new System.Drawing.Point(28, 35);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(501, 207);
-            this.groupBox1.TabIndex = 34;
+            this.groupBox1.Size = new System.Drawing.Size(490, 136);
+            this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             // 
             // button5
@@ -72,9 +72,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(38, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 17);
+            this.label1.Size = new System.Drawing.Size(123, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre Marca:";
+            this.label1.Text = "Nombre Categoria:";
             // 
             // button3
             // 
@@ -105,23 +105,23 @@
             // 
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(12, 6);
+            this.label8.Location = new System.Drawing.Point(12, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(550, 23);
-            this.label8.TabIndex = 33;
-            this.label8.Text = "REGISTRAR NUEVA MARCA";
+            this.label8.Size = new System.Drawing.Size(524, 23);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "REGISTRAR NUEVA CATEGORIA";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // frmMarca
+            // frmCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
-            this.ClientSize = new System.Drawing.Size(574, 286);
+            this.ClientSize = new System.Drawing.Size(548, 181);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
-            this.Name = "frmMarca";
-            this.Text = "frmMarca";
+            this.Name = "frmCategory";
+            this.Text = "frmCategory";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

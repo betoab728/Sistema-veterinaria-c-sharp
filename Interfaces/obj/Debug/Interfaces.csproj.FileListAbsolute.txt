@@ -38,3 +38,13 @@ C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Interface
 C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Interfaces\obj\Debug\Interfaces.csproj.CopyComplete
 C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Interfaces\obj\Debug\Interfaces.dll
 C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Interfaces\obj\Debug\Interfaces.pdb
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Interfaces\bin\Debug\Interfaces.dll.config
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Interfaces\bin\Debug\Interfaces.dll
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Interfaces\bin\Debug\Entidades.dll
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Interfaces\bin\Debug\Entidades.pdb
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Interfaces\obj\Debug\Interfaces.csprojAssemblyReference.cache
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Interfaces\obj\Debug\Interfaces.csproj.CopyComplete
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Interfaces\obj\Debug\Interfaces.dll
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Interfaces\obj\Debug\Interfaces.pdb
