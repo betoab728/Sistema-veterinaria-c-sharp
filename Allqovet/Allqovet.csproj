@@ -88,11 +88,29 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNuevaCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaCategory.Designer.cs">
+      <DependentUpon>frmNuevaCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevaMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaMarca.Designer.cs">
+      <DependentUpon>frmNuevaMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNuevoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmNuevoCliente.Designer.cs">
       <DependentUpon>frmNuevoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoProducto.Designer.cs">
+      <DependentUpon>frmNuevoProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProductos.cs">
       <SubType>Form</SubType>
@@ -141,8 +159,17 @@
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaCategory.resx">
+      <DependentUpon>frmNuevaCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaMarca.resx">
+      <DependentUpon>frmNuevaMarca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNuevoCliente.resx">
       <DependentUpon>frmNuevoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoProducto.resx">
+      <DependentUpon>frmNuevoProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>

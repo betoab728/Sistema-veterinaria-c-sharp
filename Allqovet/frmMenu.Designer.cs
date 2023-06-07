@@ -50,24 +50,24 @@
             this.button31 = new System.Windows.Forms.Button();
             this.button37 = new System.Windows.Forms.Button();
             this.panelmenu = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.btnConsultorio = new System.Windows.Forms.Button();
             this.panelAlmacen = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
+            this.btnAlmacen = new System.Windows.Forms.Button();
             this.panelPedidos = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
+            this.btnPedidos = new System.Windows.Forms.Button();
             this.panelFacturacion = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
             this.button33 = new System.Windows.Forms.Button();
-            this.panelProductos = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.btnConsultorio = new System.Windows.Forms.Button();
-            this.btnAlmacen = new System.Windows.Forms.Button();
-            this.btnPedidos = new System.Windows.Forms.Button();
             this.btnFacturacion = new System.Windows.Forms.Button();
+            this.panelProductos = new System.Windows.Forms.Panel();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
@@ -410,6 +410,40 @@
             this.panelmenu.TabIndex = 0;
             this.panelmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button8
+            // 
+            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Image = global::Allqovet.Properties.Resources.configuraciones;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(0, 1297);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(241, 41);
+            this.button8.TabIndex = 8;
+            this.button8.Text = "Sistema";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // btnConsultorio
+            // 
+            this.btnConsultorio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConsultorio.FlatAppearance.BorderSize = 0;
+            this.btnConsultorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultorio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultorio.ForeColor = System.Drawing.Color.White;
+            this.btnConsultorio.Image = global::Allqovet.Properties.Resources.consultorio;
+            this.btnConsultorio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultorio.Location = new System.Drawing.Point(0, 1126);
+            this.btnConsultorio.Name = "btnConsultorio";
+            this.btnConsultorio.Size = new System.Drawing.Size(241, 41);
+            this.btnConsultorio.TabIndex = 3;
+            this.btnConsultorio.Text = "Consultorio";
+            this.btnConsultorio.UseVisualStyleBackColor = true;
+            this.btnConsultorio.Click += new System.EventHandler(this.button15_Click);
+            // 
             // panelAlmacen
             // 
             this.panelAlmacen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(81)))), ((int)(((byte)(131)))));
@@ -467,6 +501,23 @@
             this.button17.Text = "Ingresos";
             this.button17.UseVisualStyleBackColor = false;
             this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // btnAlmacen
+            // 
+            this.btnAlmacen.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAlmacen.FlatAppearance.BorderSize = 0;
+            this.btnAlmacen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlmacen.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlmacen.ForeColor = System.Drawing.Color.White;
+            this.btnAlmacen.Image = global::Allqovet.Properties.Resources.almacen;
+            this.btnAlmacen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlmacen.Location = new System.Drawing.Point(0, 955);
+            this.btnAlmacen.Name = "btnAlmacen";
+            this.btnAlmacen.Size = new System.Drawing.Size(241, 41);
+            this.btnAlmacen.TabIndex = 13;
+            this.btnAlmacen.Text = "Almacen";
+            this.btnAlmacen.UseVisualStyleBackColor = true;
+            this.btnAlmacen.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // panelPedidos
             // 
@@ -527,6 +578,23 @@
             this.button25.UseVisualStyleBackColor = false;
             this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
+            // btnPedidos
+            // 
+            this.btnPedidos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPedidos.FlatAppearance.BorderSize = 0;
+            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPedidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPedidos.ForeColor = System.Drawing.Color.White;
+            this.btnPedidos.Image = global::Allqovet.Properties.Resources.pedido;
+            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPedidos.Location = new System.Drawing.Point(0, 784);
+            this.btnPedidos.Name = "btnPedidos";
+            this.btnPedidos.Size = new System.Drawing.Size(241, 41);
+            this.btnPedidos.TabIndex = 13;
+            this.btnPedidos.Text = "Pedidos";
+            this.btnPedidos.UseVisualStyleBackColor = true;
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
+            // 
             // panelFacturacion
             // 
             this.panelFacturacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(81)))), ((int)(((byte)(131)))));
@@ -585,87 +653,6 @@
             this.button33.UseVisualStyleBackColor = false;
             this.button33.Click += new System.EventHandler(this.button33_Click);
             // 
-            // panelProductos
-            // 
-            this.panelProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(81)))), ((int)(((byte)(131)))));
-            this.panelProductos.Controls.Add(this.button26);
-            this.panelProductos.Controls.Add(this.button28);
-            this.panelProductos.Controls.Add(this.button27);
-            this.panelProductos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelProductos.Location = new System.Drawing.Point(0, 483);
-            this.panelProductos.Name = "panelProductos";
-            this.panelProductos.Size = new System.Drawing.Size(241, 130);
-            this.panelProductos.TabIndex = 13;
-            this.panelProductos.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
-            // 
-            // button8
-            // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Image = global::Allqovet.Properties.Resources.configuraciones;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(0, 1297);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(241, 41);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "Sistema";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // btnConsultorio
-            // 
-            this.btnConsultorio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConsultorio.FlatAppearance.BorderSize = 0;
-            this.btnConsultorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultorio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultorio.ForeColor = System.Drawing.Color.White;
-            this.btnConsultorio.Image = global::Allqovet.Properties.Resources.consultorio;
-            this.btnConsultorio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultorio.Location = new System.Drawing.Point(0, 1126);
-            this.btnConsultorio.Name = "btnConsultorio";
-            this.btnConsultorio.Size = new System.Drawing.Size(241, 41);
-            this.btnConsultorio.TabIndex = 3;
-            this.btnConsultorio.Text = "Consultorio";
-            this.btnConsultorio.UseVisualStyleBackColor = true;
-            this.btnConsultorio.Click += new System.EventHandler(this.button15_Click);
-            // 
-            // btnAlmacen
-            // 
-            this.btnAlmacen.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAlmacen.FlatAppearance.BorderSize = 0;
-            this.btnAlmacen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlmacen.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlmacen.ForeColor = System.Drawing.Color.White;
-            this.btnAlmacen.Image = global::Allqovet.Properties.Resources.almacen;
-            this.btnAlmacen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlmacen.Location = new System.Drawing.Point(0, 955);
-            this.btnAlmacen.Name = "btnAlmacen";
-            this.btnAlmacen.Size = new System.Drawing.Size(241, 41);
-            this.btnAlmacen.TabIndex = 13;
-            this.btnAlmacen.Text = "Almacen";
-            this.btnAlmacen.UseVisualStyleBackColor = true;
-            this.btnAlmacen.Click += new System.EventHandler(this.button6_Click_1);
-            // 
-            // btnPedidos
-            // 
-            this.btnPedidos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPedidos.FlatAppearance.BorderSize = 0;
-            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedidos.ForeColor = System.Drawing.Color.White;
-            this.btnPedidos.Image = global::Allqovet.Properties.Resources.pedido;
-            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedidos.Location = new System.Drawing.Point(0, 784);
-            this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(241, 41);
-            this.btnPedidos.TabIndex = 13;
-            this.btnPedidos.Text = "Pedidos";
-            this.btnPedidos.UseVisualStyleBackColor = true;
-            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
-            // 
             // btnFacturacion
             // 
             this.btnFacturacion.Dock = System.Windows.Forms.DockStyle.Top;
@@ -682,6 +669,19 @@
             this.btnFacturacion.Text = "Facturacion";
             this.btnFacturacion.UseVisualStyleBackColor = true;
             this.btnFacturacion.Click += new System.EventHandler(this.btnFacturacion_Click);
+            // 
+            // panelProductos
+            // 
+            this.panelProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(81)))), ((int)(((byte)(131)))));
+            this.panelProductos.Controls.Add(this.button26);
+            this.panelProductos.Controls.Add(this.button28);
+            this.panelProductos.Controls.Add(this.button27);
+            this.panelProductos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelProductos.Location = new System.Drawing.Point(0, 483);
+            this.panelProductos.Name = "panelProductos";
+            this.panelProductos.Size = new System.Drawing.Size(241, 130);
+            this.panelProductos.TabIndex = 13;
+            this.panelProductos.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // btnProductos
             // 

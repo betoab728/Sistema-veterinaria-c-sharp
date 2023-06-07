@@ -42,8 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="ICategoria.cs" />
     <Compile Include="ICliente.cs" />
+    <Compile Include="IMarca.cs" />
     <Compile Include="INivelacceso.cs" />
+    <Compile Include="IProducto.cs" />
     <Compile Include="IUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

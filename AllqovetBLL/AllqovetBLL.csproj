@@ -41,9 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoriaBLL.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="ClienteBLL.cs" />
+    <Compile Include="MarcaBLL.cs" />
     <Compile Include="NivelaccesoBLL.cs" />
+    <Compile Include="ProductoBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioBLL.cs" />
   </ItemGroup>

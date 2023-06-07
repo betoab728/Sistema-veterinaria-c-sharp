@@ -162,6 +162,7 @@
             this.cbonivel.Name = "cbonivel";
             this.cbonivel.Size = new System.Drawing.Size(349, 25);
             this.cbonivel.TabIndex = 5;
+            this.cbonivel.SelectedIndexChanged += new System.EventHandler(this.cbonivel_SelectedIndexChanged);
             // 
             // pictureBox4
             // 

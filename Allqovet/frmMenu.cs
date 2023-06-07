@@ -263,6 +263,8 @@ namespace Allqovet
 
         private void button27_Click(object sender, EventArgs e)
         {
+            frmNuevoProducto nuevo = new frmNuevoProducto();
+            nuevo.Show();
 
         }
 
