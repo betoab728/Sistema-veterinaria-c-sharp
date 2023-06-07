@@ -124,7 +124,7 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(179, 103);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(99, 20);
             this.dateTimePicker1.TabIndex = 38;
             // 
             // label3
@@ -235,8 +235,11 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label8);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAgregarmascota";
             this.Text = "frmAgregarmascota";
+            this.Load += new System.EventHandler(this.frmAgregarmascota_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
