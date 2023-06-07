@@ -10,3 +10,9 @@ C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Entidades\obj\Deb
 C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Entidades\obj\Debug\Entidades.dll
 C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Entidades\bin\Debug\Entidades.dll
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Entidades\obj\Debug\Entidades.dll
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Entidades\obj\Debug\Entidades.pdb

@@ -28,3 +28,13 @@ C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Interfaces\obj\De
 C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Interfaces\obj\Debug\Interfaces.csproj.CopyComplete
 C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Interfaces\obj\Debug\Interfaces.dll
 C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Interfaces\obj\Debug\Interfaces.pdb
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Interfaces\bin\Debug\Interfaces.dll.config
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Interfaces\bin\Debug\Interfaces.dll
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Interfaces\bin\Debug\Entidades.dll
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Interfaces\bin\Debug\Entidades.pdb
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Interfaces\obj\Debug\Interfaces.csprojAssemblyReference.cache
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Interfaces\obj\Debug\Interfaces.csproj.CopyComplete
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Interfaces\obj\Debug\Interfaces.dll
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Interfaces\obj\Debug\Interfaces.pdb
