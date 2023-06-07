@@ -4,3 +4,9 @@ C:\Users\ELIAS\Documents\curso integrador\allqovet\Entidades\obj\Debug\Entidades
 C:\Users\ELIAS\Documents\curso integrador\allqovet\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\ELIAS\Documents\curso integrador\allqovet\Entidades\obj\Debug\Entidades.dll
 C:\Users\ELIAS\Documents\curso integrador\allqovet\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Entidades\bin\Debug\Entidades.dll
+C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Entidades\obj\Debug\Entidades.dll
+C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Entidades\obj\Debug\Entidades.pdb

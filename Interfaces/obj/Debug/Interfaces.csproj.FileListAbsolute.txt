@@ -18,3 +18,13 @@ D:\VET PROJECT\vet_allqovet\Interfaces\bin\Debug\Interfaces.dll.config
 D:\VET PROJECT\vet_allqovet\Interfaces\bin\Debug\Entidades.dll
 D:\VET PROJECT\vet_allqovet\Interfaces\bin\Debug\Entidades.pdb
 D:\VET PROJECT\vet_allqovet\Interfaces\obj\Debug\Interfaces.csproj.CopyComplete
+C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Interfaces\bin\Debug\Interfaces.dll.config
+C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Interfaces\bin\Debug\Interfaces.dll
+C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Interfaces\bin\Debug\Entidades.dll
+C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Interfaces\bin\Debug\Entidades.pdb
+C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Interfaces\obj\Debug\Interfaces.csprojAssemblyReference.cache
+C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Interfaces\obj\Debug\Interfaces.csproj.CopyComplete
+C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Interfaces\obj\Debug\Interfaces.dll
+C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Interfaces\obj\Debug\Interfaces.pdb
