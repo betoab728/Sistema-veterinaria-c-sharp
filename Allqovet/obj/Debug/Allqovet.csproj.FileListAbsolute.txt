@@ -189,3 +189,4 @@ C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Allqovet\obj\Debu
 C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Allqovet\obj\Debug\Allqovet.csproj.CopyComplete
 C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Allqovet\obj\Debug\Allqovet.exe
 C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Allqovet\obj\Debug\Allqovet.pdb
+C:\Users\Marcos\Documents\curso integrador\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmPrueba.resources

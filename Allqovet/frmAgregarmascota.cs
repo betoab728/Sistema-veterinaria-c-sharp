@@ -21,5 +21,10 @@ namespace Allqovet
         {
 
         }
+
+        private void frmAgregarmascota_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
