@@ -68,5 +68,10 @@ namespace Allqovet
         {
             Buscar();
         }
+
+        private void frmMarca_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

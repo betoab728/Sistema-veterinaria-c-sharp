@@ -258,7 +258,8 @@ namespace Allqovet
 
         private void button37_Click(object sender, EventArgs e)
         {
-
+            frmNuevoCliente clientes = new frmNuevoCliente();
+            clientes.Show();
         }
 
         private void button27_Click(object sender, EventArgs e)
@@ -331,6 +332,35 @@ namespace Allqovet
         private void button2_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button16_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            frmProductos prod = new frmProductos();
+            prod.Show();
+        }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            frmMarca marca = new frmMarca();
+            marca.Show();
+        }
+
+        private void button31_Click(object sender, EventArgs e)
+        {
+            frmClientes cli = new frmClientes();
+            cli.Show();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            frmCategory cat = new frmCategory();
+            cat.Show();
         }
     }
 }

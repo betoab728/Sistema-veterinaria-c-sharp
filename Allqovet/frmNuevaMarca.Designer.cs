@@ -125,6 +125,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
             this.Name = "frmNuevaMarca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNuevaMarca";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

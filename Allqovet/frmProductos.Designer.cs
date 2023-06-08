@@ -194,6 +194,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgProductos);
             this.Name = "frmProductos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProductos";
             this.Load += new System.EventHandler(this.frmProductos_Load);
             this.groupBox1.ResumeLayout(false);

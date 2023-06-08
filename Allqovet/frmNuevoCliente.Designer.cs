@@ -44,13 +44,10 @@
             this.txtdni = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -199,8 +196,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.label1);
@@ -220,26 +215,9 @@
             this.groupBox1.Controls.Add(this.txtDireccion);
             this.groupBox1.Location = new System.Drawing.Point(23, 58);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(663, 429);
+            this.groupBox1.Size = new System.Drawing.Size(663, 294);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(41, 245);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(584, 136);
-            this.dataGridView1.TabIndex = 31;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(509, 210);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 29);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "Agregar mascota";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -265,7 +243,7 @@
             this.button5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = global::Allqovet.Properties.Resources.eliminar;
-            this.button5.Location = new System.Drawing.Point(322, 387);
+            this.button5.Location = new System.Drawing.Point(358, 225);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(103, 36);
             this.button5.TabIndex = 29;
@@ -282,7 +260,7 @@
             this.button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::Allqovet.Properties.Resources.save;
-            this.button3.Location = new System.Drawing.Point(210, 387);
+            this.button3.Location = new System.Drawing.Point(246, 225);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(106, 36);
             this.button3.TabIndex = 28;
@@ -297,7 +275,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
-            this.ClientSize = new System.Drawing.Size(711, 499);
+            this.ClientSize = new System.Drawing.Size(711, 359);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
             this.Name = "frmNuevoCliente";
@@ -305,7 +283,6 @@
             this.Text = "frmNuevoCliente";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -331,7 +308,5 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

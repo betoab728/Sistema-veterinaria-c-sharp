@@ -16,7 +16,7 @@ namespace Allqovet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmNuevoProducto());
+            Application.Run(new frmLogin());
         }
     }
 }

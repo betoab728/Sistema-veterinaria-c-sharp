@@ -195,7 +195,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgMarca);
             this.Name = "frmMarca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMarca";
+            this.Load += new System.EventHandler(this.frmMarca_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgMarca)).EndInit();

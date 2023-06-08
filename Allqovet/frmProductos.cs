@@ -38,7 +38,7 @@ namespace Allqovet
 
         private void buscar_Click(object sender, EventArgs e)
         {
-
+           Buscar();
         }
 
         private void Buscar()

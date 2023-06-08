@@ -30,21 +30,21 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
+            this.txtFechaVenc = new System.Windows.Forms.DateTimePicker();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtPrecioVenta = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtPrecioCosto = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.cmbCategoria = new System.Windows.Forms.ComboBox();
-            this.txtFechaVenc = new System.Windows.Forms.DateTimePicker();
-            this.txtPrecioCosto = new System.Windows.Forms.TextBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +79,30 @@
             this.groupBox1.Size = new System.Drawing.Size(485, 261);
             this.groupBox1.TabIndex = 106;
             this.groupBox1.TabStop = false;
+            // 
+            // cmbMarca
+            // 
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Location = new System.Drawing.Point(119, 62);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(109, 21);
+            this.cmbMarca.TabIndex = 121;
+            // 
+            // txtFechaVenc
+            // 
+            this.txtFechaVenc.Location = new System.Drawing.Point(166, 129);
+            this.txtFechaVenc.Name = "txtFechaVenc";
+            this.txtFechaVenc.Size = new System.Drawing.Size(200, 20);
+            this.txtFechaVenc.TabIndex = 120;
+            // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(348, 65);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(109, 21);
+            this.cmbCategoria.TabIndex = 119;
+            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
             // 
             // button3
             // 
@@ -157,6 +181,17 @@
             this.label5.TabIndex = 111;
             this.label5.Text = "Precio Costo: ";
             // 
+            // txtPrecioCosto
+            // 
+            this.txtPrecioCosto.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPrecioCosto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPrecioCosto.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtPrecioCosto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.txtPrecioCosto.Location = new System.Drawing.Point(119, 97);
+            this.txtPrecioCosto.Name = "txtPrecioCosto";
+            this.txtPrecioCosto.Size = new System.Drawing.Size(120, 20);
+            this.txtPrecioCosto.TabIndex = 110;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -178,6 +213,17 @@
             this.label3.Size = new System.Drawing.Size(53, 17);
             this.label3.TabIndex = 108;
             this.label3.Text = "Marca: ";
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.txtDescripcion.Location = new System.Drawing.Point(119, 29);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(338, 20);
+            this.txtDescripcion.TabIndex = 107;
             // 
             // label2
             // 
@@ -202,52 +248,6 @@
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // cmbCategoria
-            // 
-            this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(348, 65);
-            this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(109, 21);
-            this.cmbCategoria.TabIndex = 119;
-            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
-            // 
-            // txtFechaVenc
-            // 
-            this.txtFechaVenc.Location = new System.Drawing.Point(166, 129);
-            this.txtFechaVenc.Name = "txtFechaVenc";
-            this.txtFechaVenc.Size = new System.Drawing.Size(200, 20);
-            this.txtFechaVenc.TabIndex = 120;
-            // 
-            // txtPrecioCosto
-            // 
-            this.txtPrecioCosto.BackColor = System.Drawing.SystemColors.Control;
-            this.txtPrecioCosto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPrecioCosto.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txtPrecioCosto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.txtPrecioCosto.Location = new System.Drawing.Point(119, 97);
-            this.txtPrecioCosto.Name = "txtPrecioCosto";
-            this.txtPrecioCosto.Size = new System.Drawing.Size(120, 20);
-            this.txtPrecioCosto.TabIndex = 110;
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.BackColor = System.Drawing.SystemColors.Control;
-            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txtDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.txtDescripcion.Location = new System.Drawing.Point(119, 29);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(338, 20);
-            this.txtDescripcion.TabIndex = 107;
-            // 
-            // cmbMarca
-            // 
-            this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Location = new System.Drawing.Point(119, 62);
-            this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(109, 21);
-            this.cmbMarca.TabIndex = 121;
-            // 
             // frmNuevoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,6 +258,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "frmNuevoProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNuevoProducto";
             this.Load += new System.EventHandler(this.frmNuevoProducto_Load);
             this.groupBox1.ResumeLayout(false);
