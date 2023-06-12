@@ -7,6 +7,8 @@ using Interfaces;
 using Entidades;
 using System.Data;
 using MySql.Data.MySqlClient;
+using System.Net;
+using Newtonsoft.Json;
 
 namespace AllqovetDAO
 {
@@ -74,6 +76,26 @@ namespace AllqovetDAO
         public DataTable Listar()
         {
             throw new NotImplementedException();
+        }
+
+        public Cliente ConsultaDNI(string dni)
+        {
+
+            string token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFsYmVydG9hbGVncmViYXJhem9yZGFAZ21haWwuY29tIn0." +
+                "hXidRgKKMbxHKoctqJB4Baa_p7ISmxlkbPOL0OIZKeA";
+
+            var url = "https://dniruc.apisperu.com/api/v1/dni/" + dni + "?token=" +token;
+            WebClient wc = new WebClient();
+            var datos = wc.DownloadString(url);
+
+            ConsultaDNI consulta = JsonConvert.DeserializeObject<ConsultaDNI>(datos);
+            Cliente cliente = new Cliente();
+            cliente.Nombres = consulta.nombres;
+            cliente.ApellidoPaterno = consulta.apellidoPaterno;
+            cliente.ApellidoMaterno = consulta.apellidoMaterno;
+
+            return cliente;
+
         }
 
         #region IDisposable Support

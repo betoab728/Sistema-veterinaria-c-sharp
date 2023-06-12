@@ -15,7 +15,7 @@ namespace AllqovetBLL
         UsuarioDAO db = new UsuarioDAO();
         public int Agregar(Usuario usuario)
         {
-            throw new NotImplementedException();
+           return db.Agregar(usuario);
         }
 
         public int Editar()

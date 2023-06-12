@@ -16,3 +16,9 @@ C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Entidades
 C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Entidades\obj\Debug\Entidades.dll
 C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Entidades\obj\Debug\Entidades.pdb
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Entidades\bin\Debug\Entidades.dll
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Entidades\bin\Debug\Entidades.pdb
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Entidades\obj\Debug\Entidades.dll
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Entidades\obj\Debug\Entidades.pdb

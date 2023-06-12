@@ -90,9 +90,12 @@
             // 
             // txtFechaVenc
             // 
+            this.txtFechaVenc.Checked = false;
+            this.txtFechaVenc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtFechaVenc.Location = new System.Drawing.Point(166, 129);
             this.txtFechaVenc.Name = "txtFechaVenc";
-            this.txtFechaVenc.Size = new System.Drawing.Size(200, 20);
+            this.txtFechaVenc.ShowCheckBox = true;
+            this.txtFechaVenc.Size = new System.Drawing.Size(136, 20);
             this.txtFechaVenc.TabIndex = 120;
             // 
             // cmbCategoria

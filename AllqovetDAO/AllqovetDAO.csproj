@@ -117,6 +117,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CargoDAO.cs" />
     <Compile Include="CategoriaDAO.cs" />
     <Compile Include="ClienteDAO.cs" />
     <Compile Include="Conexion.cs" />
@@ -129,6 +130,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="TrabajadorDAO.cs" />
     <Compile Include="UsuarioDAO.cs" />
   </ItemGroup>
   <ItemGroup>

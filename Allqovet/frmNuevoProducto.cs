@@ -108,7 +108,37 @@ namespace Allqovet
 
         }
 
-        private void ListarMarca()        {            using (MarcaBLL db = new MarcaBLL())            {                try                {                    DataTable dt = null;                    dt = db.Listar();                    cmbMarca.DataSource = dt;                    cmbMarca.ValueMember = "idmarca";                    cmbMarca.DisplayMember = "nombre";                    cmbMarca.SelectedIndex = -1;                    AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();                    foreach (DataRow item in dt.Rows)                    {                        coleccion.Add(Convert.ToString(item["nombre"]));                    }                    cmbMarca.AutoCompleteCustomSource = coleccion;                    cmbMarca.AutoCompleteMode = AutoCompleteMode.SuggestAppend;                    cmbMarca.AutoCompleteSource = AutoCompleteSource.CustomSource;                }                catch (Exception ex)                {                    MessageBox.Show(ex.Message);                }            }        }
+        private void ListarMarca()
+        {
+            using (MarcaBLL db = new MarcaBLL())
+            {
+                try
+                {
+                    DataTable dt = null;
+                    dt = db.Listar();
+                    cmbMarca.DataSource = dt;
+
+                    cmbMarca.ValueMember = "idmarca";
+                    cmbMarca.DisplayMember = "nombre";
+                    cmbMarca.SelectedIndex = -1;
+
+                    AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+                    foreach (DataRow item in dt.Rows)
+                    {
+                        coleccion.Add(Convert.ToString(item["nombre"]));
+                    }
+                    cmbMarca.AutoCompleteCustomSource = coleccion;
+                    cmbMarca.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    cmbMarca.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
 
         private void frmNuevoProducto_Load(object sender, EventArgs e)
         {

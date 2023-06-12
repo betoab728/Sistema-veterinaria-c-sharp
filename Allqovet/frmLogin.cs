@@ -16,6 +16,7 @@ namespace Allqovet
     {
         public frmLogin()
         {
+          
             InitializeComponent();
         }
 
@@ -27,7 +28,8 @@ namespace Allqovet
 
                 cbonivel.ValueMember = "Idnivel";
                 cbonivel.DisplayMember = "descripcion";
-                cbonivel.DataSource = nivel.Listar();   
+                cbonivel.DataSource = nivel.Listar();
+
 
             }
 
@@ -35,6 +37,7 @@ namespace Allqovet
             {
 
                 MessageBox.Show(ex.Message);
+                Application.Exit();
             }
 
          
@@ -66,6 +69,8 @@ namespace Allqovet
         private void frmLogin_Load(object sender, EventArgs e)
         {
             ListarAccesos();
+
+          
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -149,7 +154,7 @@ namespace Allqovet
                 {
 
                     ex.ToString();
-                }
+                                   }
             }
 
 
@@ -160,6 +165,12 @@ namespace Allqovet
         private void cbonivel_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmLogin_Activated(object sender, EventArgs e)
+        {
+
+            cbonivel.Focus();
         }
     }
 }

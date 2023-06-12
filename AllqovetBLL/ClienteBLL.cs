@@ -39,6 +39,11 @@ namespace AllqovetBLL
             throw new NotImplementedException();
         }
 
+        public Cliente ConsultaDNI(string dni)
+        {
+            return db.ConsultaDNI(dni);
+        }
+
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes
 

@@ -74,7 +74,7 @@
             this.cbocriterio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbocriterio.FormattingEnabled = true;
             this.cbocriterio.Items.AddRange(new object[] {
-            "NOMBRES",
+            "APELLIDOS",
             "DNI"});
             this.cbocriterio.Location = new System.Drawing.Point(100, 19);
             this.cbocriterio.Name = "cbocriterio";

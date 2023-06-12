@@ -65,5 +65,45 @@ namespace Allqovet
             return r;
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ConsultaReniec();
+        }
+
+        private void ConsultaReniec()
+        {
+            using (ClienteBLL db=new ClienteBLL())
+            {
+                try
+                {
+                    if (txtdni.Text.Length !=8)
+                    {
+                        MessageBox.Show("El dni debe tener 8 digitos");
+                        return;
+                    }
+
+                    string dni = txtdni.Text;
+
+                    Cliente cliente = new Cliente();
+                    cliente = db.ConsultaDNI(dni);
+
+                    if (cliente !=null)
+                    {
+                        txtNombre.Text = cliente.Nombres;
+                        txtApePaterno.Text = cliente.ApellidoPaterno;
+                        txtApeMaterno.Text = cliente.ApellidoMaterno;
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.ToString());
+
+                }
+            }
+
+           
+        }
     }
 }

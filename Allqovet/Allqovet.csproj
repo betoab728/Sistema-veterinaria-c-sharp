@@ -112,6 +112,12 @@
     <Compile Include="frmNuevoProducto.Designer.cs">
       <DependentUpon>frmNuevoProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoUsuario.Designer.cs">
+      <DependentUpon>frmNuevoUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,12 @@
     </Compile>
     <Compile Include="frmTrabajador.Designer.cs">
       <DependentUpon>frmTrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -171,6 +183,9 @@
     <EmbeddedResource Include="frmNuevoProducto.resx">
       <DependentUpon>frmNuevoProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoUsuario.resx">
+      <DependentUpon>frmNuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrabajador.resx">
       <DependentUpon>frmTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -324,6 +342,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\save_essential_app_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8542014_dog_puppy_pet_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352092_security_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\309037_remove_user_users_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\309037_remove_user_users_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\309037_remove_user_users_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4945350_document_extension_files_folders_min_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4945350_document_extension_files_folders_min_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4945350_document_extension_files_folders_min_icon %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

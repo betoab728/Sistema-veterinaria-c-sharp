@@ -83,9 +83,49 @@ namespace Allqovet.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _309037_remove_user_users_icon {
+            get {
+                object obj = ResourceManager.GetObject("309037_remove_user_users_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _309037_remove_user_users_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("309037_remove_user_users_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _309037_remove_user_users_icon__2_ {
+            get {
+                object obj = ResourceManager.GetObject("309037_remove_user_users_icon (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _352092_security_icon {
             get {
                 object obj = ResourceManager.GetObject("352092_security_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _352092_security_icon__2_ {
+            get {
+                object obj = ResourceManager.GetObject("352092_security_icon (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,6 +153,36 @@ namespace Allqovet.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4945350_document_extension_files_folders_min_icon {
+            get {
+                object obj = ResourceManager.GetObject("4945350_document_extension_files_folders_min_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4945350_document_extension_files_folders_min_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("4945350_document_extension_files_folders_min_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4945350_document_extension_files_folders_min_icon__2_ {
+            get {
+                object obj = ResourceManager.GetObject("4945350_document_extension_files_folders_min_icon (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _5084645_add_create_new_plus_icon {
             get {
                 object obj = ResourceManager.GetObject("5084645_add_create_new_plus_icon", resourceCulture);
@@ -126,6 +196,16 @@ namespace Allqovet.Properties {
         internal static System.Drawing.Bitmap _622405_lock_security_password_protect_safety_icon {
             get {
                 object obj = ResourceManager.GetObject("622405_lock_security_password_protect_safety_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8542014_dog_puppy_pet_icon {
+            get {
+                object obj = ResourceManager.GetObject("8542014_dog_puppy_pet_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

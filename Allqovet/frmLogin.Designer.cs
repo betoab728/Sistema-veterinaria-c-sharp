@@ -161,7 +161,7 @@
             this.cbonivel.Location = new System.Drawing.Point(68, 11);
             this.cbonivel.Name = "cbonivel";
             this.cbonivel.Size = new System.Drawing.Size(349, 25);
-            this.cbonivel.TabIndex = 5;
+            this.cbonivel.TabIndex = 0;
             this.cbonivel.SelectedIndexChanged += new System.EventHandler(this.cbonivel_SelectedIndexChanged);
             // 
             // pictureBox4
@@ -228,7 +228,7 @@
             this.txtnombre.Location = new System.Drawing.Point(68, 15);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(349, 20);
-            this.txtnombre.TabIndex = 4;
+            this.txtnombre.TabIndex = 1;
             this.txtnombre.Click += new System.EventHandler(this.textBox1_Click);
             this.txtnombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -251,7 +251,7 @@
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(349, 20);
-            this.txtpass.TabIndex = 5;
+            this.txtpass.TabIndex = 2;
             this.txtpass.Click += new System.EventHandler(this.textBox2_Click);
             this.txtpass.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -277,6 +277,7 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
+            this.Activated += new System.EventHandler(this.frmLogin_Activated);
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

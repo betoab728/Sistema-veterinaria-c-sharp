@@ -44,10 +44,12 @@
     <Compile Include="analisis.cs" />
     <Compile Include="boleta.cs" />
     <Compile Include="cajachica.cs" />
+    <Compile Include="Cargo.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="CausaMovimiento.cs" />
     <Compile Include="Cita.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="ConsultaDNI.cs" />
     <Compile Include="DetalleAnalisis.cs" />
     <Compile Include="DetalleBoleta.cs" />
     <Compile Include="DetalleFactura.cs" />

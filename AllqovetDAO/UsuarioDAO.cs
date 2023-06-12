@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
@@ -17,7 +18,23 @@ namespace AllqovetDAO
 
         public int Agregar(Usuario usuario)
         {
-            throw new NotImplementedException();
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_RegistrarUsuario", cn))
+                {
+                    string clave_encriptada = Encriptar(usuario.Contraseña);
+
+                    cn.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pNombre", usuario.Nombre);
+                    cmd.Parameters.AddWithValue("pClave", clave_encriptada);
+                    cmd.Parameters.AddWithValue("pIdtrabajador", usuario.Idtrabajador);
+                    cmd.Parameters.AddWithValue("pIdnivel", usuario.Idnivelacceso);
+
+                    return cmd.ExecuteNonQuery();
+
+                }
+            }
         }
 
         public int Editar()
@@ -36,10 +53,12 @@ namespace AllqovetDAO
             {
                 using (MySqlCommand cmd = new MySqlCommand("sp_Login", cn))
                 {
+                   
+                    string clave_encriptada = Encriptar(usuario.Contraseña);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("pidnivel",usuario.Idnivelacceso);
                     cmd.Parameters.AddWithValue("pnombre",usuario.Nombre);
-                    cmd.Parameters.AddWithValue("pclave",usuario.Contraseña);
+                    cmd.Parameters.AddWithValue("pclave", clave_encriptada);
 
 
                     cn.Open();
@@ -53,6 +72,21 @@ namespace AllqovetDAO
                 }
             }
         }
+
+        private string Encriptar(string clave)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] claveBytes = Encoding.UTF8.GetBytes(clave);
+                byte[] claveHashBytes = sha256.ComputeHash(claveBytes);
+                string claveEncriptada = Convert.ToBase64String(claveHashBytes);
+                return claveEncriptada;
+            }
+        }
+
+       
+
+
 
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes

@@ -10,9 +10,9 @@ namespace Interfaces
 {
     public interface ICategoria
     {
-        int Agregar(Categoria categoria);
-        int Editar(Categoria categoria);
-        DataTable Buscar(Categoria categoria);
+        int Agregar(Categoria cargo);
+        int Editar(Categoria cargoo);
+        DataTable Buscar(Categoria cargo);
         DataTable Listar();
     }
 }
