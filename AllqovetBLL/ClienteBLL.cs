@@ -14,9 +14,9 @@ namespace AllqovetBLL
     {
         ClienteDAO db = new ClienteDAO();
        
-        public int Agregar(Cliente cliente)
+        public int Agregar(Cliente cliente, List<Mascota> mascotas)
         {
-           return db.Agregar(cliente);
+           return db.Agregar(cliente, mascotas);
         }
 
         public DataTable BuscarApellidos(Cliente cliente)

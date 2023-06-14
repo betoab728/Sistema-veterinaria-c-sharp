@@ -265,7 +265,9 @@ namespace Allqovet
         private void button37_Click(object sender, EventArgs e)
         {
             frmNuevoCliente clientes = new frmNuevoCliente();
-            clientes.Show();
+
+            AbrirFormHijo(clientes);   
+          
         }
 
         private void button27_Click(object sender, EventArgs e)

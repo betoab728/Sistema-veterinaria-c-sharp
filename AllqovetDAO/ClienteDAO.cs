@@ -17,26 +17,65 @@ namespace AllqovetDAO
 
         string cnx = Conexion.ObtenerConexion();
 
-        public int Agregar(Cliente cliente)
+        public int Agregar(Cliente cliente, List<Mascota> mascotas)
         {
-            using (MySqlConnection cn = new MySqlConnection(cnx))
+            MySqlConnection cn = new MySqlConnection(cnx);
+            cn.Open();
+            MySqlTransaction transaccion = cn.BeginTransaction();
+            int r = 0;
+            int idcliente = 0;
+
+
+
+            using (MySqlCommand cmd = new MySqlCommand("sp_RegistrarCliente", cn, transaccion))
             {
-                using (MySqlCommand cmd=new MySqlCommand("sp_RegistrarCliente",cn))
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("pdni", cliente.DNI);
+                cmd.Parameters.AddWithValue("pApepaterno", cliente.ApellidoPaterno);
+                cmd.Parameters.AddWithValue("pApematerno", cliente.ApellidoMaterno);
+                cmd.Parameters.AddWithValue("pNombres", cliente.Nombres);
+                cmd.Parameters.AddWithValue("pDireccion", cliente.Direccion);
+                cmd.Parameters.AddWithValue("ptelefono", cliente.Telefono);
+                cmd.Parameters.AddWithValue("pcorreo", cliente.Telefono);
+
+                cmd.Parameters.Add("pIdcliente", MySqlDbType.Int32).Direction = ParameterDirection.Output;
+                r = cmd.ExecuteNonQuery();
+
+                if (r > 0)
                 {
-                    cn.Open();
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("pdni",cliente.DNI );
-                    cmd.Parameters.AddWithValue("pApepaterno", cliente.ApellidoPaterno);
-                    cmd.Parameters.AddWithValue("pApematerno", cliente.ApellidoMaterno);
-                    cmd.Parameters.AddWithValue("pNombres", cliente.Nombres);
-                    cmd.Parameters.AddWithValue("pDireccion", cliente.Direccion);
-                    cmd.Parameters.AddWithValue("ptelefono",cliente.Telefono );
-                    cmd.Parameters.AddWithValue("pcorreo",cliente.Telefono );
+                    idcliente = Convert.ToInt32(cmd.Parameters["pIdcliente"].Value);
+                    MascotaDAO db = new MascotaDAO();
 
-                    int r = cmd.ExecuteNonQuery();
+                    foreach (Mascota mascota in mascotas)
+                    {
+                        mascota.idcliente = idcliente;
 
-                    return r;
+                        r = db.Agregar(mascota,ref cn,ref transaccion);
+                        if (r != 1)
+                        {
+
+                            break;
+                        }
+
+                    }
+
+
                 }
+
+
+                if (r == 1)
+                {
+                    transaccion.Commit();
+                    cn.Close();
+                }
+                else
+                {
+
+                    transaccion.Rollback();
+                }
+
+                return r;
             }
         }
 

@@ -26,32 +26,62 @@ namespace Allqovet
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (Registrar() > 0)
+            DialogResult dialogResult = MessageBox.Show(" Esta seguro de registrar al cliente?", "Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
             {
-                MessageBox.Show("cliente registrado");
+                if (Registrar() > 0)
+                {
+                    MessageBox.Show("cliente registrado correctamente");
+                    this.Close();
+                }
             }
+               
 
         }
 
        private int Registrar()
         {
-            Cliente cliente = new Cliente();
-            cliente.DNI = txtdni.Text;
-            cliente.Nombres = txtNombre.Text;
-            cliente.ApellidoPaterno = txtApePaterno.Text;
-            cliente.ApellidoMaterno = txtApeMaterno.Text;
-            cliente.Direccion = txtDireccion.Text;
-            cliente.Telefono = txtTelefono.Text;
-            cliente.Correo = txtCorreo.Text;
+         
 
-            int r = 0;
+           int r = 0;
 
             using (ClienteBLL db= new ClienteBLL())
             {
               
                 try
                 {
-                   r = db.Agregar(cliente);
+
+                    Cliente cliente = new Cliente();
+                    List<Mascota> ListaMascotas = new List<Mascota>();
+
+                    cliente.DNI = txtdni.Text;
+                    cliente.Nombres = txtNombre.Text;
+                    cliente.ApellidoPaterno = txtApePaterno.Text;
+                    cliente.ApellidoMaterno = txtApeMaterno.Text;
+                    cliente.Direccion = txtDireccion.Text;
+                    cliente.Telefono = txtTelefono.Text;
+                    cliente.Correo = txtCorreo.Text;
+
+
+                    //lleno la lista de mascotas
+
+                    foreach (DataGridViewRow row in dtgmascotas.Rows)
+                    {
+                        Mascota mascota = new Mascota();
+                        mascota.Nombre = row.Cells["NOMBRE"].Value.ToString();
+                        mascota.FechaNacimiento = Convert.ToDateTime(row.Cells["FNACIMIENTO"].Value.ToString());
+                        mascota.Raza = row.Cells["RAZA"].Value.ToString();
+                        mascota.Especie = row.Cells["ESPECIE"].Value.ToString();
+                        mascota.Sexo = row.Cells["SEXO"].Value.ToString().Equals("MASCULINO") ? "m" : "f";
+                        mascota.Capa = row.Cells["CAPA"].Value.ToString();
+                        mascota.Observacion = row.Cells["OBSERVACION"].Value.ToString();
+
+                        ListaMascotas.Add(mascota);
+
+                    }
+
+                    r = db.Agregar(cliente, ListaMascotas);
+
 
                 }
                 catch (Exception ex )
@@ -104,6 +134,12 @@ namespace Allqovet
             }
 
            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmNuevaMascota mascota = new frmNuevaMascota();
+            mascota.ShowDialog();
         }
     }
 }
