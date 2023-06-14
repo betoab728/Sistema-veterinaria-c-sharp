@@ -29,45 +29,51 @@
         private void InitializeComponent()
         {
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dtpfechaAtencion = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtobservacion = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.dtgficha = new System.Windows.Forms.DataGridView();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtdescripcion = new System.Windows.Forms.TextBox();
+            this.txttemperatura = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbsexo = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtmascota = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtraza = new System.Windows.Forms.TextBox();
+            this.dtpfecha = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtespecie = new System.Windows.Forms.TextBox();
+            this.txtcapa = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txttelefono = new System.Windows.Forms.TextBox();
+            this.txtcliente = new System.Windows.Forms.TextBox();
+            this.txtdireccion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblidcliente = new System.Windows.Forms.Label();
+            this.lblidmascota = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.FECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TEMPERATURA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PROX_CITA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgficha)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -77,9 +83,9 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.dateTimePicker3);
+            this.groupBox4.Controls.Add(this.dtpfechaAtencion);
             this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.textBox8);
+            this.groupBox4.Controls.Add(this.txtobservacion);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.button2);
             this.groupBox4.Controls.Add(this.dtgficha);
@@ -87,22 +93,22 @@
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.label16);
             this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Controls.Add(this.textBox10);
-            this.groupBox4.Controls.Add(this.textBox11);
+            this.groupBox4.Controls.Add(this.txtdescripcion);
+            this.groupBox4.Controls.Add(this.txttemperatura);
             this.groupBox4.Location = new System.Drawing.Point(11, 206);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(827, 280);
             this.groupBox4.TabIndex = 53;
             this.groupBox4.TabStop = false;
             // 
-            // dateTimePicker3
+            // dtpfechaAtencion
             // 
-            this.dateTimePicker3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(111, 29);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(95, 22);
-            this.dateTimePicker3.TabIndex = 41;
+            this.dtpfechaAtencion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpfechaAtencion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpfechaAtencion.Location = new System.Drawing.Point(111, 29);
+            this.dtpfechaAtencion.Name = "dtpfechaAtencion";
+            this.dtpfechaAtencion.Size = new System.Drawing.Size(95, 22);
+            this.dtpfechaAtencion.TabIndex = 41;
             // 
             // label8
             // 
@@ -115,13 +121,13 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "Observacion";
             // 
-            // textBox8
+            // txtobservacion
             // 
-            this.textBox8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(112, 83);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(474, 22);
-            this.textBox8.TabIndex = 21;
+            this.txtobservacion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtobservacion.Location = new System.Drawing.Point(112, 83);
+            this.txtobservacion.Name = "txtobservacion";
+            this.txtobservacion.Size = new System.Drawing.Size(474, 22);
+            this.txtobservacion.TabIndex = 21;
             // 
             // label14
             // 
@@ -134,26 +140,20 @@
             this.label14.TabIndex = 33;
             this.label14.Text = "Fecha";
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(650, 69);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 36);
-            this.button2.TabIndex = 38;
-            this.button2.Text = "Agregar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // dtgficha
             // 
+            this.dtgficha.AllowUserToAddRows = false;
+            this.dtgficha.AllowUserToDeleteRows = false;
             this.dtgficha.BackgroundColor = System.Drawing.Color.White;
             this.dtgficha.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgficha.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FECHA,
+            this.DESCRIPCION,
+            this.TEMPERATURA,
+            this.PROX_CITA});
             this.dtgficha.Location = new System.Drawing.Point(23, 121);
             this.dtgficha.Name = "dtgficha";
+            this.dtgficha.ReadOnly = true;
             this.dtgficha.Size = new System.Drawing.Size(787, 140);
             this.dtgficha.TabIndex = 32;
             // 
@@ -199,35 +199,35 @@
             this.label15.TabIndex = 34;
             this.label15.Text = "Descripcion";
             // 
-            // textBox10
+            // txtdescripcion
             // 
-            this.textBox10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(112, 55);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(474, 22);
-            this.textBox10.TabIndex = 37;
+            this.txtdescripcion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdescripcion.Location = new System.Drawing.Point(112, 55);
+            this.txtdescripcion.Name = "txtdescripcion";
+            this.txtdescripcion.Size = new System.Drawing.Size(474, 22);
+            this.txtdescripcion.TabIndex = 37;
             // 
-            // textBox11
+            // txttemperatura
             // 
-            this.textBox11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(303, 29);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(95, 22);
-            this.textBox11.TabIndex = 39;
+            this.txttemperatura.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttemperatura.Location = new System.Drawing.Point(303, 29);
+            this.txttemperatura.Name = "txttemperatura";
+            this.txttemperatura.Size = new System.Drawing.Size(95, 22);
+            this.txttemperatura.TabIndex = 39;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Controls.Add(this.cmbsexo);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.txtmascota);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.textBox9);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
+            this.groupBox3.Controls.Add(this.txtraza);
+            this.groupBox3.Controls.Add(this.dtpfecha);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.textBox7);
+            this.groupBox3.Controls.Add(this.txtespecie);
+            this.groupBox3.Controls.Add(this.txtcapa);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(426, 81);
@@ -237,16 +237,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Paciente";
             // 
-            // comboBox1
+            // cmbsexo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbsexo.FormattingEnabled = true;
+            this.cmbsexo.Items.AddRange(new object[] {
             "MASCULINO",
             "FEMENINO"});
-            this.comboBox1.Location = new System.Drawing.Point(254, 50);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(141, 21);
-            this.comboBox1.TabIndex = 23;
+            this.cmbsexo.Location = new System.Drawing.Point(254, 50);
+            this.cmbsexo.Name = "cmbsexo";
+            this.cmbsexo.Size = new System.Drawing.Size(141, 21);
+            this.cmbsexo.TabIndex = 23;
             // 
             // label19
             // 
@@ -270,20 +270,20 @@
             this.label12.TabIndex = 11;
             this.label12.Text = "Nombre";
             // 
-            // textBox4
+            // txtmascota
             // 
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(71, 22);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(126, 22);
-            this.textBox4.TabIndex = 16;
+            this.txtmascota.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmascota.Location = new System.Drawing.Point(71, 22);
+            this.txtmascota.Name = "txtmascota";
+            this.txtmascota.Size = new System.Drawing.Size(126, 22);
+            this.txtmascota.TabIndex = 16;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(206, 85);
+            this.label6.Location = new System.Drawing.Point(206, 81);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 17);
             this.label6.TabIndex = 5;
@@ -300,22 +300,22 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Raza";
             // 
-            // textBox9
+            // txtraza
             // 
-            this.textBox9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(254, 22);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(141, 22);
-            this.textBox9.TabIndex = 22;
+            this.txtraza.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtraza.Location = new System.Drawing.Point(254, 22);
+            this.txtraza.Name = "txtraza";
+            this.txtraza.Size = new System.Drawing.Size(141, 22);
+            this.txtraza.TabIndex = 22;
             // 
-            // dateTimePicker1
+            // dtpfecha
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(300, 80);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(95, 22);
-            this.dateTimePicker1.TabIndex = 17;
+            this.dtpfecha.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpfecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpfecha.Location = new System.Drawing.Point(300, 77);
+            this.dtpfecha.Name = "dtpfecha";
+            this.dtpfecha.Size = new System.Drawing.Size(95, 22);
+            this.dtpfecha.TabIndex = 17;
             // 
             // label9
             // 
@@ -328,21 +328,21 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "Especie";
             // 
-            // textBox5
+            // txtespecie
             // 
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(71, 50);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(126, 22);
-            this.textBox5.TabIndex = 18;
+            this.txtespecie.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtespecie.Location = new System.Drawing.Point(71, 50);
+            this.txtespecie.Name = "txtespecie";
+            this.txtespecie.Size = new System.Drawing.Size(126, 22);
+            this.txtespecie.TabIndex = 18;
             // 
-            // textBox7
+            // txtcapa
             // 
-            this.textBox7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(71, 78);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(126, 22);
-            this.textBox7.TabIndex = 20;
+            this.txtcapa.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcapa.Location = new System.Drawing.Point(71, 78);
+            this.txtcapa.Name = "txtcapa";
+            this.txtcapa.Size = new System.Drawing.Size(126, 22);
+            this.txtcapa.TabIndex = 20;
             // 
             // label10
             // 
@@ -391,9 +391,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txttelefono);
+            this.groupBox1.Controls.Add(this.txtcliente);
+            this.groupBox1.Controls.Add(this.txtdireccion);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -405,42 +405,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cliente";
             // 
-            // button1
+            // txttelefono
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::Allqovet.Properties.Resources.buscar;
-            this.button1.Location = new System.Drawing.Point(366, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 27);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "..";
-            this.button1.UseVisualStyleBackColor = false;
+            this.txttelefono.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttelefono.Location = new System.Drawing.Point(80, 80);
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(280, 22);
+            this.txttelefono.TabIndex = 21;
             // 
-            // textBox3
+            // txtcliente
             // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(80, 80);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(280, 22);
-            this.textBox3.TabIndex = 21;
+            this.txtcliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcliente.Location = new System.Drawing.Point(80, 24);
+            this.txtcliente.Name = "txtcliente";
+            this.txtcliente.Size = new System.Drawing.Size(280, 22);
+            this.txtcliente.TabIndex = 20;
             // 
-            // textBox2
+            // txtdireccion
             // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(80, 24);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(280, 22);
-            this.textBox2.TabIndex = 20;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(80, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(280, 22);
-            this.textBox1.TabIndex = 19;
+            this.txtdireccion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdireccion.Location = new System.Drawing.Point(80, 52);
+            this.txtdireccion.Name = "txtdireccion";
+            this.txtdireccion.Size = new System.Drawing.Size(280, 22);
+            this.txtdireccion.TabIndex = 19;
             // 
             // label5
             // 
@@ -475,6 +462,65 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Direccion";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(310, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(195, 23);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "FICHA DE ATENCION";
+            // 
+            // lblidcliente
+            // 
+            this.lblidcliente.AutoSize = true;
+            this.lblidcliente.Location = new System.Drawing.Point(20, 65);
+            this.lblidcliente.Name = "lblidcliente";
+            this.lblidcliente.Size = new System.Drawing.Size(13, 13);
+            this.lblidcliente.TabIndex = 54;
+            this.lblidcliente.Text = "0";
+            // 
+            // lblidmascota
+            // 
+            this.lblidmascota.AutoSize = true;
+            this.lblidmascota.Location = new System.Drawing.Point(511, 62);
+            this.lblidmascota.Name = "lblidmascota";
+            this.lblidmascota.Size = new System.Drawing.Size(13, 13);
+            this.lblidmascota.TabIndex = 55;
+            this.lblidmascota.Text = "0";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::Allqovet.Properties.Resources._352008_add_photos_to_icon;
+            this.button2.Location = new System.Drawing.Point(650, 69);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(117, 36);
+            this.button2.TabIndex = 38;
+            this.button2.Text = "Agregar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::Allqovet.Properties.Resources.buscar;
+            this.button1.Location = new System.Drawing.Point(366, 20);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(32, 27);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "..";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
@@ -490,6 +536,7 @@
             this.button5.Text = "Cancelar";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
@@ -508,16 +555,30 @@
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // FECHA
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(310, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 23);
-            this.label1.TabIndex = 47;
-            this.label1.Text = "FICHA DE ATENCION";
+            this.FECHA.HeaderText = "FECHA";
+            this.FECHA.Name = "FECHA";
+            this.FECHA.ReadOnly = true;
+            // 
+            // DESCRIPCION
+            // 
+            this.DESCRIPCION.HeaderText = "DESCRIPCION";
+            this.DESCRIPCION.Name = "DESCRIPCION";
+            this.DESCRIPCION.ReadOnly = true;
+            this.DESCRIPCION.Width = 400;
+            // 
+            // TEMPERATURA
+            // 
+            this.TEMPERATURA.HeaderText = "TEMPERATURA";
+            this.TEMPERATURA.Name = "TEMPERATURA";
+            this.TEMPERATURA.ReadOnly = true;
+            // 
+            // PROX_CITA
+            // 
+            this.PROX_CITA.HeaderText = "PROX_CITA";
+            this.PROX_CITA.Name = "PROX_CITA";
+            this.PROX_CITA.ReadOnly = true;
             // 
             // frmFicha
             // 
@@ -525,6 +586,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(848, 534);
+            this.Controls.Add(this.lblidmascota);
+            this.Controls.Add(this.lblidcliente);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -551,9 +614,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dtpfechaAtencion;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtobservacion;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dtgficha;
@@ -561,34 +624,40 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtdescripcion;
+        private System.Windows.Forms.TextBox txttemperatura;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label lblidcliente;
+        public System.Windows.Forms.Label lblidmascota;
+        public System.Windows.Forms.ComboBox cmbsexo;
+        public System.Windows.Forms.TextBox txtmascota;
+        public System.Windows.Forms.TextBox txtraza;
+        public System.Windows.Forms.DateTimePicker dtpfecha;
+        public System.Windows.Forms.TextBox txtespecie;
+        public System.Windows.Forms.TextBox txtcapa;
+        public System.Windows.Forms.TextBox txttelefono;
+        public System.Windows.Forms.TextBox txtcliente;
+        public System.Windows.Forms.TextBox txtdireccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPCION;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TEMPERATURA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PROX_CITA;
     }
 }

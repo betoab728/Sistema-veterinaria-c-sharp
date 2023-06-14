@@ -16,5 +16,16 @@ namespace Allqovet
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmBusCliFicha ficha = new frmBusCliFicha();
+            ficha.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

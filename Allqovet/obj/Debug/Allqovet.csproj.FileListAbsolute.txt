@@ -421,3 +421,4 @@ C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmNuevaMascota.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmBusCliFicha.resources

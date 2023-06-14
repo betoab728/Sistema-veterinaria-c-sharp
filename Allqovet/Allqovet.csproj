@@ -74,6 +74,12 @@
     <Compile Include="frmAgregarmascota.Designer.cs">
       <DependentUpon>frmAgregarmascota.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBusCliFicha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusCliFicha.Designer.cs">
+      <DependentUpon>frmBusCliFicha.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAgregarmascota.resx">
       <DependentUpon>frmAgregarmascota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusCliFicha.resx">
+      <DependentUpon>frmBusCliFicha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCategory.resx">
       <DependentUpon>frmCategory.cs</DependentUpon>
@@ -408,6 +417,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\4945350_document_extension_files_folders_min_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352008_add_photos_to_icon1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

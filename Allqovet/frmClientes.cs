@@ -78,5 +78,10 @@ namespace Allqovet
             frmNuevoCliente nuevo = new frmNuevoCliente();
             nuevo.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

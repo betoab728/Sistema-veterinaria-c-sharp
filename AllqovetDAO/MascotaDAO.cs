@@ -10,8 +10,9 @@ using System.Data;
 
 namespace AllqovetDAO
 {
-    class MascotaDAO : IMascota,IDisposable
+  public  class MascotaDAO : IMascota,IDisposable
     {
+        string cnx = Conexion.ObtenerConexion();
         public int Agregar(Mascota mascota, ref MySqlConnection con, ref MySqlTransaction transaction)
         {
             using (MySqlCommand cmd = new MySqlCommand("sp_RegistrarMascota", con, transaction))
@@ -28,6 +29,30 @@ namespace AllqovetDAO
 
 
                 return cmd.ExecuteNonQuery();
+            }
+        }
+
+        public DataTable BuscarMascotaFicha(int idccliente)
+        {
+          
+
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_BuscarMascotaFicha", cn))
+
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pIdcliente", idccliente);
+
+                    cn.Open();
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        return dt;
+                    }
+                }
             }
         }
 

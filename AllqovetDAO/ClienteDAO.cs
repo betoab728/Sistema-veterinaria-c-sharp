@@ -101,10 +101,28 @@ namespace AllqovetDAO
                 }
             }
         }
+     
 
         public DataTable BuscarDni(Cliente cliente)
         {
-            throw new NotImplementedException();
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_BuscarClienteDNI", cn))
+
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pbuscar", cliente.DNI);
+
+                    cn.Open();
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        return dt;
+                    }
+                }
+            }
         }
 
         public int Editar(Cliente nivelacceso)

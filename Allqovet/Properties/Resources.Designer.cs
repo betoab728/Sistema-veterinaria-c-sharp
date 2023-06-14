@@ -113,6 +113,16 @@ namespace Allqovet.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _352008_add_photos_to_icon {
+            get {
+                object obj = ResourceManager.GetObject("352008_add_photos_to_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _352092_security_icon {
             get {
                 object obj = ResourceManager.GetObject("352092_security_icon", resourceCulture);

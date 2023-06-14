@@ -26,7 +26,7 @@ namespace AllqovetBLL
 
         public DataTable BuscarDni(Cliente cliente)
         {
-            throw new NotImplementedException();
+            return db.BuscarDni(cliente);
         }
 
         public int Editar(Cliente nivelacceso)
