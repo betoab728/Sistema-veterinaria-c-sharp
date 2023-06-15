@@ -125,7 +125,8 @@
             this.Controls.Add(this.label8);
             this.Name = "frmNuevaCategory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmNuevaCategory";
+            this.Text = "l";
+            this.Load += new System.EventHandler(this.frmNuevaCategory_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

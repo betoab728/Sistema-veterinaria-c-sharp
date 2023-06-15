@@ -369,31 +369,9 @@ namespace Allqovet
             cat.Show();
         }
 
-        private void button15_Click_1(object sender, EventArgs e)
+        private void panelEscritorio_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void button32_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button9_Click_1(object sender, EventArgs e)
-        {
-            MostrarSubmenu(panelMantenimiento);
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            frmTrabajador trabajadores = new frmTrabajador();
-            AbrirFormHijo(trabajadores);
-        }
-
-        private void button18_Click(object sender, EventArgs e)
-        {
-            frmUsuarios usuarios = new frmUsuarios();
-            AbrirFormHijo(usuarios);
         }
     }
 }

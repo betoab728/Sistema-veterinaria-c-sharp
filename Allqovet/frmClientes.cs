@@ -78,5 +78,10 @@ namespace Allqovet
             frmNuevoCliente nuevo = new frmNuevoCliente();
             nuevo.ShowDialog();
         }
+
+        private void dgClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

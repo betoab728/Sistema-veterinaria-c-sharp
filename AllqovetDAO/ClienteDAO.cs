@@ -131,6 +131,11 @@ namespace AllqovetDAO
             // TODO: quite la marca de comentario de la siguiente línea si el finalizador se ha reemplazado antes.
            GC.SuppressFinalize(this);
         }
+
+        public int ContarNumClientes(Cliente cliente)
+        {
+            throw new NotImplementedException();
+        }
         #endregion
     }
 }

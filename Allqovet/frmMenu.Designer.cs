@@ -79,6 +79,7 @@
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelsubmenuSistemas.SuspendLayout();
             this.panelSubmenuConsultorio.SuspendLayout();
             this.panelSubmenuVentas.SuspendLayout();
             this.panelsubmenuClientes.SuspendLayout();
@@ -169,6 +170,7 @@
             this.panelEscritorio.Name = "panelEscritorio";
             this.panelEscritorio.Size = new System.Drawing.Size(1112, 615);
             this.panelEscritorio.TabIndex = 7;
+            this.panelEscritorio.Paint += new System.Windows.Forms.PaintEventHandler(this.panelEscritorio_Paint);
             // 
             // button28
             // 

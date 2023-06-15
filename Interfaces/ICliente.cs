@@ -15,6 +15,6 @@ namespace Interfaces
         DataTable BuscarApellidos(Cliente cliente);
         DataTable BuscarDni(Cliente cliente);
         DataTable Listar();
-        Cliente ConsultaDNI(string dni);
+        int ContarNumClientes(Cliente cliente);
     }
 }

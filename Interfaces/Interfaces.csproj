@@ -45,6 +45,7 @@
     <Compile Include="Icargo.cs" />
     <Compile Include="ICategoria.cs" />
     <Compile Include="ICliente.cs" />
+    <Compile Include="IDashboard.cs" />
     <Compile Include="IMarca.cs" />
     <Compile Include="INivelacceso.cs" />
     <Compile Include="IProducto.cs" />

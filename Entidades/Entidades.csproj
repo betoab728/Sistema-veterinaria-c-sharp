@@ -63,6 +63,7 @@
     <Compile Include="MedioPago.cs" />
     <Compile Include="Movimiento.cs" />
     <Compile Include="NivelAcceso.cs" />
+    <Compile Include="DashBoard.cs" />
     <Compile Include="Operacion.cs" />
     <Compile Include="Pedido.cs" />
     <Compile Include="Producto.cs" />
