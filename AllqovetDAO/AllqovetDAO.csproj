@@ -124,6 +124,7 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="DashboardDAO.cs" />
     <Compile Include="MarcaDAO.cs" />
+    <Compile Include="MascotaDAO.cs" />
     <Compile Include="NivelaccesoDAO.cs" />
     <Compile Include="ProductoDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

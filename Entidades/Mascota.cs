@@ -10,10 +10,12 @@ namespace Entidades
     {
         public int idMascota { get; set; }
         public string Nombre { get; set; }
-        public string FechaNacimiento { get; set; }
+        public DateTime FechaNacimiento { get; set; }
         public string Raza { get; set; }
-        public string Especize { get; set; }
+        public string Especie { get; set; }
         public string Sexo { get; set; }
         public string Capa { get; set; }
+        public string Observacion { get; set; }
+        public int idcliente { get; set; }
     }
 }

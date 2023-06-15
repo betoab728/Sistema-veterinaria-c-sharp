@@ -79,7 +79,7 @@ namespace Allqovet
             nuevo.ShowDialog();
         }
 
-        private void dgClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }
