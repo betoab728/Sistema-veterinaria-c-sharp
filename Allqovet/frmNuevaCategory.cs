@@ -65,5 +65,10 @@ namespace Allqovet
             return r;
 
         }
+
+        private void frmNuevaCategory_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AllqovetBLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,11 +13,15 @@ namespace Allqovet
         /// Punto de entrada principal para la aplicación.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new frmDashboard());
+
+            DashboardBLL dashboardBLL = new DashboardBLL();
+            int numClientes = dashboardBLL.ContarNumClientes();
+            Console.WriteLine("Número de clientes: " + numClientes);
         }
     }
 }

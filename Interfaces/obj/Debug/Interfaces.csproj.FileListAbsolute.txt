@@ -48,3 +48,13 @@ C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Interfaces\obj\Debu
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Interfaces\obj\Debug\Interfaces.csproj.CopyComplete
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Interfaces\obj\Debug\Interfaces.dll
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Interfaces\obj\Debug\Interfaces.pdb
+D:\VETERINARIA\integrador_avance03\Interfaces\bin\Debug\Interfaces.dll.config
+D:\VETERINARIA\integrador_avance03\Interfaces\bin\Debug\Interfaces.dll
+D:\VETERINARIA\integrador_avance03\Interfaces\bin\Debug\Interfaces.pdb
+D:\VETERINARIA\integrador_avance03\Interfaces\bin\Debug\Entidades.dll
+D:\VETERINARIA\integrador_avance03\Interfaces\bin\Debug\Entidades.pdb
+D:\VETERINARIA\integrador_avance03\Interfaces\obj\Debug\Interfaces.csprojAssemblyReference.cache
+D:\VETERINARIA\integrador_avance03\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+D:\VETERINARIA\integrador_avance03\Interfaces\obj\Debug\Interfaces.csproj.CopyComplete
+D:\VETERINARIA\integrador_avance03\Interfaces\obj\Debug\Interfaces.dll
+D:\VETERINARIA\integrador_avance03\Interfaces\obj\Debug\Interfaces.pdb

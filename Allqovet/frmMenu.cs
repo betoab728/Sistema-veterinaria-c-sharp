@@ -362,5 +362,10 @@ namespace Allqovet
             frmCategory cat = new frmCategory();
             cat.Show();
         }
+
+        private void panelEscritorio_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using Interfaces;
-using AllqovetBLL;
 
 namespace Allqovet
 {
