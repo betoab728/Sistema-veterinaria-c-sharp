@@ -34,7 +34,11 @@
             this.txtobservacion = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.dtgficha = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.FECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TEMPERATURA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PROX_CITA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtpproxcita = new System.Windows.Forms.DateTimePicker();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -66,14 +70,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblidcliente = new System.Windows.Forms.Label();
             this.lblidmascota = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.FECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TEMPERATURA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PROX_CITA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgficha)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -83,13 +84,14 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.button4);
             this.groupBox4.Controls.Add(this.dtpfechaAtencion);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.txtobservacion);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.button2);
             this.groupBox4.Controls.Add(this.dtgficha);
-            this.groupBox4.Controls.Add(this.dateTimePicker2);
+            this.groupBox4.Controls.Add(this.dtpproxcita);
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.label16);
             this.groupBox4.Controls.Add(this.label15);
@@ -126,7 +128,7 @@
             this.txtobservacion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtobservacion.Location = new System.Drawing.Point(112, 83);
             this.txtobservacion.Name = "txtobservacion";
-            this.txtobservacion.Size = new System.Drawing.Size(474, 22);
+            this.txtobservacion.Size = new System.Drawing.Size(500, 22);
             this.txtobservacion.TabIndex = 21;
             // 
             // label14
@@ -157,14 +159,41 @@
             this.dtgficha.Size = new System.Drawing.Size(787, 140);
             this.dtgficha.TabIndex = 32;
             // 
-            // dateTimePicker2
+            // FECHA
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(491, 29);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(95, 22);
-            this.dateTimePicker2.TabIndex = 40;
+            this.FECHA.HeaderText = "FECHA";
+            this.FECHA.Name = "FECHA";
+            this.FECHA.ReadOnly = true;
+            // 
+            // DESCRIPCION
+            // 
+            this.DESCRIPCION.HeaderText = "DESCRIPCION";
+            this.DESCRIPCION.Name = "DESCRIPCION";
+            this.DESCRIPCION.ReadOnly = true;
+            this.DESCRIPCION.Width = 400;
+            // 
+            // TEMPERATURA
+            // 
+            this.TEMPERATURA.HeaderText = "TEMPERATURA";
+            this.TEMPERATURA.Name = "TEMPERATURA";
+            this.TEMPERATURA.ReadOnly = true;
+            // 
+            // PROX_CITA
+            // 
+            this.PROX_CITA.HeaderText = "PROX_CITA";
+            this.PROX_CITA.Name = "PROX_CITA";
+            this.PROX_CITA.ReadOnly = true;
+            // 
+            // dtpproxcita
+            // 
+            this.dtpproxcita.Checked = false;
+            this.dtpproxcita.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpproxcita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpproxcita.Location = new System.Drawing.Point(491, 29);
+            this.dtpproxcita.Name = "dtpproxcita";
+            this.dtpproxcita.ShowCheckBox = true;
+            this.dtpproxcita.Size = new System.Drawing.Size(121, 22);
+            this.dtpproxcita.TabIndex = 40;
             // 
             // label17
             // 
@@ -204,7 +233,7 @@
             this.txtdescripcion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdescripcion.Location = new System.Drawing.Point(112, 55);
             this.txtdescripcion.Name = "txtdescripcion";
-            this.txtdescripcion.Size = new System.Drawing.Size(474, 22);
+            this.txtdescripcion.Size = new System.Drawing.Size(500, 22);
             this.txtdescripcion.TabIndex = 37;
             // 
             // txttemperatura
@@ -485,11 +514,28 @@
             // lblidmascota
             // 
             this.lblidmascota.AutoSize = true;
-            this.lblidmascota.Location = new System.Drawing.Point(511, 62);
+            this.lblidmascota.Location = new System.Drawing.Point(509, 65);
             this.lblidmascota.Name = "lblidmascota";
             this.lblidmascota.Size = new System.Drawing.Size(13, 13);
             this.lblidmascota.TabIndex = 55;
             this.lblidmascota.Text = "0";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::Allqovet.Properties.Resources._4476913_close_delete_exit_interface_reject_icon__1_;
+            this.button4.Location = new System.Drawing.Point(720, 67);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(90, 36);
+            this.button4.TabIndex = 42;
+            this.button4.Text = "Quitar";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -498,14 +544,15 @@
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::Allqovet.Properties.Resources._352008_add_photos_to_icon;
-            this.button2.Location = new System.Drawing.Point(650, 69);
+            this.button2.Location = new System.Drawing.Point(620, 67);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 36);
+            this.button2.Size = new System.Drawing.Size(94, 36);
             this.button2.TabIndex = 38;
             this.button2.Text = "Agregar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -555,31 +602,6 @@
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // FECHA
-            // 
-            this.FECHA.HeaderText = "FECHA";
-            this.FECHA.Name = "FECHA";
-            this.FECHA.ReadOnly = true;
-            // 
-            // DESCRIPCION
-            // 
-            this.DESCRIPCION.HeaderText = "DESCRIPCION";
-            this.DESCRIPCION.Name = "DESCRIPCION";
-            this.DESCRIPCION.ReadOnly = true;
-            this.DESCRIPCION.Width = 400;
-            // 
-            // TEMPERATURA
-            // 
-            this.TEMPERATURA.HeaderText = "TEMPERATURA";
-            this.TEMPERATURA.Name = "TEMPERATURA";
-            this.TEMPERATURA.ReadOnly = true;
-            // 
-            // PROX_CITA
-            // 
-            this.PROX_CITA.HeaderText = "PROX_CITA";
-            this.PROX_CITA.Name = "PROX_CITA";
-            this.PROX_CITA.ReadOnly = true;
-            // 
             // frmFicha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -620,7 +642,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dtgficha;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpproxcita;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
@@ -659,5 +681,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPCION;
         private System.Windows.Forms.DataGridViewTextBoxColumn TEMPERATURA;
         private System.Windows.Forms.DataGridViewTextBoxColumn PROX_CITA;
+        private System.Windows.Forms.Button button4;
     }
 }

@@ -163,6 +163,26 @@ namespace Allqovet.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4168574_remove_cancel_close_delete_minus_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("4168574_remove_cancel_close_delete_minus_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4476913_close_delete_exit_interface_reject_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("4476913_close_delete_exit_interface_reject_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4945350_document_extension_files_folders_min_icon {
             get {
                 object obj = ResourceManager.GetObject("4945350_document_extension_files_folders_min_icon", resourceCulture);

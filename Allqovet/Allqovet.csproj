@@ -421,5 +421,11 @@
   <ItemGroup>
     <None Include="Resources\352008_add_photos_to_icon1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4168574_remove_cancel_close_delete_minus_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4476913_close_delete_exit_interface_reject_icon %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

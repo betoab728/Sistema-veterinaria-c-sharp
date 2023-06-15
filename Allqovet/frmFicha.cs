@@ -27,5 +27,22 @@ namespace Allqovet
         {
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dtpproxcita.Checked==false)
+            {
+                MessageBox.Show("Indique la fecha de la proxima cita");
+                return;
+            }
+
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+          // dtgficha.Rows.Add(dtpfechaAtencion.Value.ToString("dd/MM/yyyy"), dtpfecha.Value.ToString("dd/MM/yyyy"), txtraza.Text, txtespecie.Text, cmbsexo.Text, txtcapa.Text, txtobs.Text);
+
+        }
     }
 }
