@@ -176,6 +176,12 @@
     <Compile Include="frmPrueba.Designer.cs">
       <DependentUpon>frmPrueba.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegistrofichas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrofichas.Designer.cs">
+      <DependentUpon>frmRegistrofichas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTrabajador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\DataSetAllqovet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetAllqovet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana.cs" />
     <EmbeddedResource Include="frmAgregarmascota.resx">
       <DependentUpon>frmAgregarmascota.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +256,9 @@
     <EmbeddedResource Include="frmPrueba.resx">
       <DependentUpon>frmPrueba.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrofichas.resx">
+      <DependentUpon>frmRegistrofichas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTrabajador.resx">
       <DependentUpon>frmTrabajador.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +291,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Reportes\DataSetAllqovet.xsc">
+      <DependentUpon>DataSetAllqovet.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetAllqovet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetAllqovet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSetAllqovet.xss">
+      <DependentUpon>DataSetAllqovet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\Picsart_23-05-10_23-43-44-179.png" />
   </ItemGroup>
   <ItemGroup>
@@ -426,6 +452,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\4476913_close_delete_exit_interface_reject_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\392505_eye_preview_see_seen_view_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\392505_eye_preview_see_seen_view_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9034427_eye_open_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\103796_view_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3155810_binoculars_binocular_magnifying glass_view_zoom_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7830824_view_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8684063_folder_file_document_view_eye_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5355690_find_look_magnifying glass_search_view_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6579037_and_computers_hardware_print_printer_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

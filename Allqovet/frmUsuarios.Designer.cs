@@ -97,6 +97,7 @@
             this.btnbaja.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnbaja.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnbaja.UseVisualStyleBackColor = false;
+            this.btnbaja.Click += new System.EventHandler(this.btnbaja_Click);
             // 
             // btnsalir
             // 
@@ -132,6 +133,7 @@
             this.btnmod.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnmod.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnmod.UseVisualStyleBackColor = false;
+            this.btnmod.Click += new System.EventHandler(this.btnmod_Click);
             // 
             // btnnuevo
             // 

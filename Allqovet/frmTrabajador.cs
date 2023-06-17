@@ -267,7 +267,7 @@ namespace Allqovet
 
         private void MostrarRegistro()
         {
-            lblidtrabajador.Text = dtgtrabajadores.CurrentRow.Cells["Idtrabajador"].Value.ToString();
+            lblidtrabajador.Text =  
             txtdni.Text = dtgtrabajadores.CurrentRow.Cells["DNI"].Value.ToString();
             txtnombres.Text = dtgtrabajadores.CurrentRow.Cells["Nombres"].Value.ToString();
             txtapepaterno.Text = dtgtrabajadores.CurrentRow.Cells["ApellidoPaterno"].Value.ToString();

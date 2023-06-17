@@ -63,6 +63,16 @@ namespace Allqovet.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _103796_view_icon {
+            get {
+                object obj = ResourceManager.GetObject("103796_view_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1564534_customer_man_user_account_profile_icon {
             get {
                 object obj = ResourceManager.GetObject("1564534_customer_man_user_account_profile_icon", resourceCulture);
@@ -113,6 +123,16 @@ namespace Allqovet.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3155810_binoculars_binocular_magnifying_glass_view_zoom_icon {
+            get {
+                object obj = ResourceManager.GetObject("3155810_binoculars_binocular_magnifying glass_view_zoom_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _352008_add_photos_to_icon {
             get {
                 object obj = ResourceManager.GetObject("352008_add_photos_to_icon", resourceCulture);
@@ -136,6 +156,26 @@ namespace Allqovet.Properties {
         internal static System.Drawing.Bitmap _352092_security_icon__2_ {
             get {
                 object obj = ResourceManager.GetObject("352092_security_icon (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _392505_eye_preview_see_seen_view_icon {
+            get {
+                object obj = ResourceManager.GetObject("392505_eye_preview_see_seen_view_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _392505_eye_preview_see_seen_view_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("392505_eye_preview_see_seen_view_icon (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,6 +263,16 @@ namespace Allqovet.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5355690_find_look_magnifying_glass_search_view_icon {
+            get {
+                object obj = ResourceManager.GetObject("5355690_find_look_magnifying glass_search_view_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _622405_lock_security_password_protect_safety_icon {
             get {
                 object obj = ResourceManager.GetObject("622405_lock_security_password_protect_safety_icon", resourceCulture);
@@ -233,9 +283,49 @@ namespace Allqovet.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _6579037_and_computers_hardware_print_printer_icon {
+            get {
+                object obj = ResourceManager.GetObject("6579037_and_computers_hardware_print_printer_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7830824_view_icon {
+            get {
+                object obj = ResourceManager.GetObject("7830824_view_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _8542014_dog_puppy_pet_icon {
             get {
                 object obj = ResourceManager.GetObject("8542014_dog_puppy_pet_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8684063_folder_file_document_view_eye_icon {
+            get {
+                object obj = ResourceManager.GetObject("8684063_folder_file_document_view_eye_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9034427_eye_open_icon {
+            get {
+                object obj = ResourceManager.GetObject("9034427_eye_open_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

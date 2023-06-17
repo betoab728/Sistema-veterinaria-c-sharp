@@ -897,7 +897,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panelTitulo;
-        private System.Windows.Forms.Panel panelEscritorio;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel panelSubmenuConsultorio;
         private System.Windows.Forms.Button button2;
@@ -947,5 +946,6 @@
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button19;
+        public System.Windows.Forms.Panel panelEscritorio;
     }
 }

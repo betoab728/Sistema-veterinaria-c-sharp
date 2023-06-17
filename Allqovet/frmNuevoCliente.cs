@@ -26,7 +26,7 @@ namespace Allqovet
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show(" Esta seguro de registrar al cliente?", "Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show("Esta seguro de registrar al cliente?", "Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
                 if (Registrar() > 0)
@@ -140,6 +140,11 @@ namespace Allqovet
         {
             frmNuevaMascota mascota = new frmNuevaMascota();
             mascota.ShowDialog();
+        }
+
+        private void frmNuevoCliente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

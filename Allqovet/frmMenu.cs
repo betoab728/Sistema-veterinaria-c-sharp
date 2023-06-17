@@ -230,8 +230,8 @@ namespace Allqovet
 
         private void button14_Click(object sender, EventArgs e)
         {
-            frmFicha ficha = new frmFicha();
-            AbrirFormHijo(ficha);
+            frmRegistrofichas fichas = new frmRegistrofichas();
+            AbrirFormHijo(fichas);
         }
 
         private void button16_Click(object sender, EventArgs e)

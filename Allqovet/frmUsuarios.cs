@@ -28,17 +28,18 @@ namespace Allqovet
             int AnchoPantalla = Screen.PrimaryScreen.WorkingArea.Width;
 
             frmNuevoUsuario nuevo = new frmNuevoUsuario();
-            //nuevo.Owner = this;
-            //nuevo.StartPosition = FormStartPosition.CenterParent;
-           // nuevo.Owner = this;
-
-          //  int x = this.Location.X + ( (this.Width - nuevo.Width) / 2);
-            //int y = this.Location.Y +( (this.Height - nuevo.Height) / 2);
-                       
-           // nuevo.StartPosition = FormStartPosition.Manual;
-           // nuevo.Location = new Point(x, y);
-
+           
             nuevo.ShowDialog();
+        }
+
+        private void btnmod_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnbaja_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -49,6 +49,7 @@
     <Compile Include="CategoriaBLL.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="ClienteBLL.cs" />
+    <Compile Include="FichaBLL.cs" />
     <Compile Include="MarcaBLL.cs" />
     <Compile Include="MascotaBLL.cs" />
     <Compile Include="NivelaccesoBLL.cs" />

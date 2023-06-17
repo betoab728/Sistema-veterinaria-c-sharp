@@ -44,10 +44,6 @@
             this.txtdni = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.dtgmascotas = new System.Windows.Forms.DataGridView();
             this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FNACIMIENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +52,10 @@
             this.SEXO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CAPA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OBSERVACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgmascotas)).BeginInit();
             this.SuspendLayout();
@@ -231,6 +231,68 @@
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             // 
+            // dtgmascotas
+            // 
+            this.dtgmascotas.AllowUserToAddRows = false;
+            this.dtgmascotas.AllowUserToDeleteRows = false;
+            this.dtgmascotas.BackgroundColor = System.Drawing.Color.White;
+            this.dtgmascotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgmascotas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NOMBRE,
+            this.FNACIMIENTO,
+            this.RAZA,
+            this.ESPECIE,
+            this.SEXO,
+            this.CAPA,
+            this.OBSERVACION});
+            this.dtgmascotas.Location = new System.Drawing.Point(41, 248);
+            this.dtgmascotas.Name = "dtgmascotas";
+            this.dtgmascotas.ReadOnly = true;
+            this.dtgmascotas.Size = new System.Drawing.Size(584, 185);
+            this.dtgmascotas.TabIndex = 33;
+            // 
+            // NOMBRE
+            // 
+            this.NOMBRE.HeaderText = "NOMRE";
+            this.NOMBRE.Name = "NOMBRE";
+            this.NOMBRE.ReadOnly = true;
+            // 
+            // FNACIMIENTO
+            // 
+            this.FNACIMIENTO.HeaderText = "F.NACIMIENTO";
+            this.FNACIMIENTO.Name = "FNACIMIENTO";
+            this.FNACIMIENTO.ReadOnly = true;
+            // 
+            // RAZA
+            // 
+            this.RAZA.HeaderText = "RAZA";
+            this.RAZA.Name = "RAZA";
+            this.RAZA.ReadOnly = true;
+            // 
+            // ESPECIE
+            // 
+            this.ESPECIE.HeaderText = "ESPECIE";
+            this.ESPECIE.Name = "ESPECIE";
+            this.ESPECIE.ReadOnly = true;
+            // 
+            // SEXO
+            // 
+            this.SEXO.HeaderText = "SEXO";
+            this.SEXO.Name = "SEXO";
+            this.SEXO.ReadOnly = true;
+            // 
+            // CAPA
+            // 
+            this.CAPA.HeaderText = "CAPA";
+            this.CAPA.Name = "CAPA";
+            this.CAPA.ReadOnly = true;
+            // 
+            // OBSERVACION
+            // 
+            this.OBSERVACION.HeaderText = "OBSERVACION";
+            this.OBSERVACION.Name = "OBSERVACION";
+            this.OBSERVACION.ReadOnly = true;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
@@ -299,68 +361,6 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // dtgmascotas
-            // 
-            this.dtgmascotas.AllowUserToAddRows = false;
-            this.dtgmascotas.AllowUserToDeleteRows = false;
-            this.dtgmascotas.BackgroundColor = System.Drawing.Color.White;
-            this.dtgmascotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgmascotas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NOMBRE,
-            this.FNACIMIENTO,
-            this.RAZA,
-            this.ESPECIE,
-            this.SEXO,
-            this.CAPA,
-            this.OBSERVACION});
-            this.dtgmascotas.Location = new System.Drawing.Point(41, 248);
-            this.dtgmascotas.Name = "dtgmascotas";
-            this.dtgmascotas.ReadOnly = true;
-            this.dtgmascotas.Size = new System.Drawing.Size(584, 185);
-            this.dtgmascotas.TabIndex = 33;
-            // 
-            // NOMBRE
-            // 
-            this.NOMBRE.HeaderText = "NOMRE";
-            this.NOMBRE.Name = "NOMBRE";
-            this.NOMBRE.ReadOnly = true;
-            // 
-            // FNACIMIENTO
-            // 
-            this.FNACIMIENTO.HeaderText = "F.NACIMIENTO";
-            this.FNACIMIENTO.Name = "FNACIMIENTO";
-            this.FNACIMIENTO.ReadOnly = true;
-            // 
-            // RAZA
-            // 
-            this.RAZA.HeaderText = "RAZA";
-            this.RAZA.Name = "RAZA";
-            this.RAZA.ReadOnly = true;
-            // 
-            // ESPECIE
-            // 
-            this.ESPECIE.HeaderText = "ESPECIE";
-            this.ESPECIE.Name = "ESPECIE";
-            this.ESPECIE.ReadOnly = true;
-            // 
-            // SEXO
-            // 
-            this.SEXO.HeaderText = "SEXO";
-            this.SEXO.Name = "SEXO";
-            this.SEXO.ReadOnly = true;
-            // 
-            // CAPA
-            // 
-            this.CAPA.HeaderText = "CAPA";
-            this.CAPA.Name = "CAPA";
-            this.CAPA.ReadOnly = true;
-            // 
-            // OBSERVACION
-            // 
-            this.OBSERVACION.HeaderText = "OBSERVACION";
-            this.OBSERVACION.Name = "OBSERVACION";
-            this.OBSERVACION.ReadOnly = true;
-            // 
             // frmNuevoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,6 +372,7 @@
             this.Name = "frmNuevoCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNuevoCliente";
+            this.Load += new System.EventHandler(this.frmNuevoCliente_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgmascotas)).EndInit();

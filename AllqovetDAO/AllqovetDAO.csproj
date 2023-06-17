@@ -121,6 +121,8 @@
     <Compile Include="CategoriaDAO.cs" />
     <Compile Include="ClienteDAO.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="DetalleFichaDAO.cs" />
+    <Compile Include="FichaDAO.cs" />
     <Compile Include="MarcaDAO.cs" />
     <Compile Include="MascotaDAO.cs" />
     <Compile Include="NivelaccesoDAO.cs" />
