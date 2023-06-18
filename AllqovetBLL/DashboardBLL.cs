@@ -4,17 +4,16 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AllqovetDAO;
 using Entidades;
 using Interfaces;
-using AllqovetDAO;
-using static AllqovetDAO.DashboardDAO;
+
 
 namespace AllqovetBLL
 {
     public class DashboardBLL : IDashboard, IDisposable
-
     {
-        DashboardDAO db = new DashboardDAO ();
+        DashboardDAO db = new DashboardDAO();
 
         public int ContarNumClientes()
         {
@@ -41,9 +40,9 @@ namespace AllqovetBLL
             return db.Stock();
         }
 
-        public DataTable TopProd(DashBoard dashBoard)
+        public DataTable TopProductos(DateTime fromDate, DateTime toDate)
         {
-            return db.TopProd(dashBoard);
+            return db.TopProductos(fromDate, toDate);
         }
     }
 }

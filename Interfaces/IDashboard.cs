@@ -13,8 +13,7 @@ namespace Interfaces
         int ContarNumClientes();
         int ContarNumProveedores();
         int ContarNumProductos();
-        DataTable TopProd(DashBoard dashBoard);
+        DataTable TopProductos(DateTime fromDate, DateTime toDate);
         DataTable Stock();
-
     }
 }

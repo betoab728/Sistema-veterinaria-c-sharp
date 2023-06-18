@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class DashBoard
+    public class Dashboard
     {
         public int NumeroClientes { get; set; }
         public int NumeroProveedores { get; set; }

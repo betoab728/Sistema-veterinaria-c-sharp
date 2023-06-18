@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AllqovetBLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,8 +26,6 @@ namespace Allqovet
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7,41);
             panelmenu.Controls.Add(leftBorderBtn);*/
-
-           
 
         }
 
@@ -113,6 +112,9 @@ namespace Allqovet
         private void frmMenu_Load(object sender, EventArgs e)
         {
             Ocultarsubmenu();
+            frmDashboard dashboard = new frmDashboard();
+            AbrirFormHijo(dashboard);
+
         }
 
         private void Diseniomenu()
@@ -268,6 +270,7 @@ namespace Allqovet
             frmNuevoCliente clientes = new frmNuevoCliente();
 
             AbrirFormHijo(clientes);   
+
           
         }
 
@@ -373,6 +376,31 @@ namespace Allqovet
         }
 
         private void panelEscritorio_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelMantenimiento_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            MostrarSubmenu(panelMantenimiento);
+        }
+
+        private void lblModo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
