@@ -55,9 +55,12 @@
     <Compile Include="DashboardBLL.cs" />
     <Compile Include="MarcaBLL.cs" />
     <Compile Include="MascotaBLL.cs" />
+    <Compile Include="MedioPagoBLL.cs" />
     <Compile Include="NivelaccesoBLL.cs" />
     <Compile Include="ProductoBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProveedorBLL.cs" />
+    <Compile Include="TipoCitaBLL.cs" />
     <Compile Include="TrabajadorBLL.cs" />
     <Compile Include="UsuarioBLL.cs" />
   </ItemGroup>

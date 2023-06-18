@@ -195,6 +195,24 @@
     <Compile Include="frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNuevoMediopago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoMediopago.Designer.cs">
+      <DependentUpon>frmNuevoMediopago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoProveedor.Designer.cs">
+      <DependentUpon>frmNuevoProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoTipoCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoTipoCita.Designer.cs">
+      <DependentUpon>frmNuevoTipoCita.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAgregarmascota.resx">
@@ -242,6 +260,9 @@
     <EmbeddedResource Include="frmNuevoProducto.resx">
       <DependentUpon>frmNuevoProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoProveedor.resx">
+      <DependentUpon>frmNuevoProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNuevoUsuario.resx">
       <DependentUpon>frmNuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +280,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoMediopago.resx">
+      <DependentUpon>frmNuevoMediopago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoTipoCita.resx">
+      <DependentUpon>frmNuevoTipoCita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -52,8 +52,11 @@
     <Compile Include="IDashboard.cs" />
     <Compile Include="IMarca.cs" />
     <Compile Include="IMascota.cs" />
+    <Compile Include="IMedioPago.cs" />
     <Compile Include="INivelacceso.cs" />
     <Compile Include="IProducto.cs" />
+    <Compile Include="IProveedores.cs" />
+    <Compile Include="ITipoCita.cs" />
     <Compile Include="ITrabajador.cs" />
     <Compile Include="IUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
