@@ -47,7 +47,7 @@
             // 
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 19);
+            this.label3.Location = new System.Drawing.Point(12, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(782, 23);
             this.label3.TabIndex = 28;
@@ -80,6 +80,7 @@
             this.cbocriterio.Name = "cbocriterio";
             this.cbocriterio.Size = new System.Drawing.Size(121, 25);
             this.cbocriterio.TabIndex = 4;
+            this.cbocriterio.SelectedIndexChanged += new System.EventHandler(this.cbocriterio_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -103,6 +104,7 @@
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(434, 22);
             this.txtbuscar.TabIndex = 2;
+            this.txtbuscar.TextChanged += new System.EventHandler(this.txtbuscar_TextChanged);
             // 
             // label1
             // 
@@ -123,7 +125,6 @@
             this.dgClientes.Name = "dgClientes";
             this.dgClientes.Size = new System.Drawing.Size(776, 268);
             this.dgClientes.TabIndex = 22;
-            this.dgClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgClientes_CellContentClick);
             // 
             // button5
             // 

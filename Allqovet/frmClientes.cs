@@ -83,5 +83,15 @@ namespace Allqovet
         {
 
         }
+
+        private void cbocriterio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

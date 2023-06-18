@@ -68,12 +68,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDashboard.Designer.cs">
-      <DependentUpon>frmDashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmAgregarmascota.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +116,12 @@
     <Compile Include="frmMarca.Designer.cs">
       <DependentUpon>frmMarca.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMedioPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMedioPago.Designer.cs">
+      <DependentUpon>frmMedioPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +157,18 @@
     </Compile>
     <Compile Include="frmNuevoProducto.Designer.cs">
       <DependentUpon>frmNuevoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoProveedor.Designer.cs">
+      <DependentUpon>frmNuevoProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoTipoCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoTipoCita.Designer.cs">
+      <DependentUpon>frmNuevoTipoCita.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNuevoUsuario.cs">
       <SubType>Form</SubType>
@@ -208,9 +220,6 @@
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDashboard.resx">
-      <DependentUpon>frmDashboard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmFicha.resx">
       <DependentUpon>frmFicha.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMarca.resx">
       <DependentUpon>frmMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMedioPago.resx">
+      <DependentUpon>frmMedioPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
@@ -240,6 +252,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNuevoProducto.resx">
       <DependentUpon>frmNuevoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoProveedor.resx">
+      <DependentUpon>frmNuevoProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoTipoCita.resx">
+      <DependentUpon>frmNuevoTipoCita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNuevoUsuario.resx">
       <DependentUpon>frmNuevoUsuario.cs</DependentUpon>

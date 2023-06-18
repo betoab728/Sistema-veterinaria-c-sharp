@@ -87,6 +87,7 @@
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(109, 21);
             this.cmbMarca.TabIndex = 121;
+            this.cmbMarca.SelectedIndexChanged += new System.EventHandler(this.cmbMarca_SelectedIndexChanged_1);
             // 
             // txtFechaVenc
             // 

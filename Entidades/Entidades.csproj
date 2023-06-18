@@ -50,6 +50,7 @@
     <Compile Include="Cita.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="ConsultaDNI.cs" />
+    <Compile Include="ConsultaRUC.cs" />
     <Compile Include="DetalleAnalisis.cs" />
     <Compile Include="DetalleBoleta.cs" />
     <Compile Include="DetalleFactura.cs" />
@@ -63,7 +64,6 @@
     <Compile Include="MedioPago.cs" />
     <Compile Include="Movimiento.cs" />
     <Compile Include="NivelAcceso.cs" />
-    <Compile Include="DashBoard.cs" />
     <Compile Include="Operacion.cs" />
     <Compile Include="Pedido.cs" />
     <Compile Include="Producto.cs" />

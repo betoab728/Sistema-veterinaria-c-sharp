@@ -30,32 +30,32 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtApeMaterno = new System.Windows.Forms.TextBox();
             this.txtApePaterno = new System.Windows.Forms.TextBox();
             this.txtdni = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.dtgmascotas = new System.Windows.Forms.DataGridView();
-            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FNACIMIENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RAZA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ESPECIE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SEXO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CAPA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OBSERVACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CAPA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SEXO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ESPECIE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RAZA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FNACIMIENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgmascotas = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtApeMaterno = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgmascotas)).BeginInit();
             this.SuspendLayout();
@@ -81,17 +81,6 @@
             this.label2.Size = new System.Drawing.Size(105, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "ApellidoPaterno";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(38, 89);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Apellido Materno";
             // 
             // label4
             // 
@@ -126,17 +115,6 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Telefono";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(38, 117);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 17);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Nombres";
-            // 
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -160,22 +138,6 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(170, 22);
             this.txtTelefono.TabIndex = 9;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(161, 114);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(464, 22);
-            this.txtNombre.TabIndex = 10;
-            // 
-            // txtApeMaterno
-            // 
-            this.txtApeMaterno.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApeMaterno.Location = new System.Drawing.Point(161, 86);
-            this.txtApeMaterno.Name = "txtApeMaterno";
-            this.txtApeMaterno.Size = new System.Drawing.Size(464, 22);
-            this.txtApeMaterno.TabIndex = 11;
             // 
             // txtApePaterno
             // 
@@ -225,27 +187,11 @@
             this.groupBox1.Controls.Add(this.txtCorreo);
             this.groupBox1.Controls.Add(this.txtTelefono);
             this.groupBox1.Controls.Add(this.txtDireccion);
-            this.groupBox1.Location = new System.Drawing.Point(23, 58);
+            this.groupBox1.Location = new System.Drawing.Point(27, 58);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(663, 490);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::Allqovet.Properties.Resources._8542014_dog_puppy_pet_icon;
-            this.button2.Location = new System.Drawing.Point(41, 209);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 33);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "Agregar mascota";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -299,6 +245,48 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // OBSERVACION
+            // 
+            this.OBSERVACION.HeaderText = "OBSERVACION";
+            this.OBSERVACION.Name = "OBSERVACION";
+            this.OBSERVACION.ReadOnly = true;
+            // 
+            // CAPA
+            // 
+            this.CAPA.HeaderText = "CAPA";
+            this.CAPA.Name = "CAPA";
+            this.CAPA.ReadOnly = true;
+            // 
+            // SEXO
+            // 
+            this.SEXO.HeaderText = "SEXO";
+            this.SEXO.Name = "SEXO";
+            this.SEXO.ReadOnly = true;
+            // 
+            // ESPECIE
+            // 
+            this.ESPECIE.HeaderText = "ESPECIE";
+            this.ESPECIE.Name = "ESPECIE";
+            this.ESPECIE.ReadOnly = true;
+            // 
+            // RAZA
+            // 
+            this.RAZA.HeaderText = "RAZA";
+            this.RAZA.Name = "RAZA";
+            this.RAZA.ReadOnly = true;
+            // 
+            // FNACIMIENTO
+            // 
+            this.FNACIMIENTO.HeaderText = "F.NACIMIENTO";
+            this.FNACIMIENTO.Name = "FNACIMIENTO";
+            this.FNACIMIENTO.ReadOnly = true;
+            // 
+            // NOMBRE
+            // 
+            this.NOMBRE.HeaderText = "NOMRE";
+            this.NOMBRE.Name = "NOMBRE";
+            this.NOMBRE.ReadOnly = true;
+            // 
             // dtgmascotas
             // 
             this.dtgmascotas.AllowUserToAddRows = false;
@@ -319,47 +307,59 @@
             this.dtgmascotas.Size = new System.Drawing.Size(584, 185);
             this.dtgmascotas.TabIndex = 33;
             // 
-            // NOMBRE
+            // button2
             // 
-            this.NOMBRE.HeaderText = "NOMRE";
-            this.NOMBRE.Name = "NOMBRE";
-            this.NOMBRE.ReadOnly = true;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::Allqovet.Properties.Resources._8542014_dog_puppy_pet_icon;
+            this.button2.Location = new System.Drawing.Point(41, 209);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(132, 33);
+            this.button2.TabIndex = 32;
+            this.button2.Text = "Agregar mascota";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // FNACIMIENTO
+            // txtNombre
             // 
-            this.FNACIMIENTO.HeaderText = "F.NACIMIENTO";
-            this.FNACIMIENTO.Name = "FNACIMIENTO";
-            this.FNACIMIENTO.ReadOnly = true;
+            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(161, 114);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(464, 22);
+            this.txtNombre.TabIndex = 10;
             // 
-            // RAZA
+            // label7
             // 
-            this.RAZA.HeaderText = "RAZA";
-            this.RAZA.Name = "RAZA";
-            this.RAZA.ReadOnly = true;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(38, 117);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 17);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Nombres";
             // 
-            // ESPECIE
+            // txtApeMaterno
             // 
-            this.ESPECIE.HeaderText = "ESPECIE";
-            this.ESPECIE.Name = "ESPECIE";
-            this.ESPECIE.ReadOnly = true;
+            this.txtApeMaterno.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApeMaterno.Location = new System.Drawing.Point(161, 86);
+            this.txtApeMaterno.Name = "txtApeMaterno";
+            this.txtApeMaterno.Size = new System.Drawing.Size(464, 22);
+            this.txtApeMaterno.TabIndex = 11;
             // 
-            // SEXO
+            // label3
             // 
-            this.SEXO.HeaderText = "SEXO";
-            this.SEXO.Name = "SEXO";
-            this.SEXO.ReadOnly = true;
-            // 
-            // CAPA
-            // 
-            this.CAPA.HeaderText = "CAPA";
-            this.CAPA.Name = "CAPA";
-            this.CAPA.ReadOnly = true;
-            // 
-            // OBSERVACION
-            // 
-            this.OBSERVACION.HeaderText = "OBSERVACION";
-            this.OBSERVACION.Name = "OBSERVACION";
-            this.OBSERVACION.ReadOnly = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(38, 89);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Apellido Materno";
             // 
             // frmNuevoCliente
             // 
@@ -383,16 +383,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtApeMaterno;
         private System.Windows.Forms.TextBox txtApePaterno;
         private System.Windows.Forms.TextBox txtdni;
         private System.Windows.Forms.Button button5;
@@ -400,7 +396,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         public System.Windows.Forms.DataGridView dtgmascotas;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
         private System.Windows.Forms.DataGridViewTextBoxColumn FNACIMIENTO;
@@ -409,5 +404,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SEXO;
         private System.Windows.Forms.DataGridViewTextBoxColumn CAPA;
         private System.Windows.Forms.DataGridViewTextBoxColumn OBSERVACION;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtApeMaterno;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtNombre;
     }
 }

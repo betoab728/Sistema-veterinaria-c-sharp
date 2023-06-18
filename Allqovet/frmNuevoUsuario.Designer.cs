@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmbnivel = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbtrabajador = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,8 +42,6 @@
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmbnivel = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +62,15 @@
             this.groupBox2.Size = new System.Drawing.Size(515, 189);
             this.groupBox2.TabIndex = 53;
             this.groupBox2.TabStop = false;
+            // 
+            // cmbnivel
+            // 
+            this.cmbnivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbnivel.FormattingEnabled = true;
+            this.cmbnivel.Location = new System.Drawing.Point(208, 134);
+            this.cmbnivel.Name = "cmbnivel";
+            this.cmbnivel.Size = new System.Drawing.Size(235, 21);
+            this.cmbnivel.TabIndex = 55;
             // 
             // label6
             // 
@@ -199,32 +207,12 @@
             this.label3.Text = "REGISTRAR NUEVO USUARIO";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // cmbnivel
-            // 
-            this.cmbnivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbnivel.FormattingEnabled = true;
-            this.cmbnivel.Location = new System.Drawing.Point(208, 134);
-            this.cmbnivel.Name = "cmbnivel";
-            this.cmbnivel.Size = new System.Drawing.Size(235, 21);
-            this.cmbnivel.TabIndex = 55;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(411, 242);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 57;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // frmNuevoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(547, 272);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnguardar);
@@ -257,6 +245,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbnivel;
-        private System.Windows.Forms.Button button1;
     }
 }

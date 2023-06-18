@@ -24,6 +24,7 @@ namespace Allqovet
         {
            
         }
+
         private int Registrar()
         {
             Producto producto = new Producto();
@@ -162,6 +163,11 @@ namespace Allqovet
             {
                 MessageBox.Show("Producto registrado");
             }
+        }
+
+        private void cmbMarca_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

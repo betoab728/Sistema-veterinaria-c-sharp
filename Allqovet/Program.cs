@@ -17,11 +17,8 @@ namespace Allqovet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDashboard());
+            Application.Run(new frmProveedores());
 
-            DashboardBLL dashboardBLL = new DashboardBLL();
-            int numClientes = dashboardBLL.ContarNumClientes();
-            Console.WriteLine("Número de clientes: " + numClientes);
         }
     }
 }

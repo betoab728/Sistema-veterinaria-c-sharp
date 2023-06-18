@@ -79,7 +79,6 @@
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelsubmenuSistemas.SuspendLayout();
             this.panelSubmenuConsultorio.SuspendLayout();
             this.panelSubmenuVentas.SuspendLayout();
             this.panelsubmenuClientes.SuspendLayout();
@@ -466,6 +465,7 @@
             this.button19.TabIndex = 10;
             this.button19.Text = "Proveedores";
             this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button18
             // 

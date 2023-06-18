@@ -376,5 +376,29 @@ namespace Allqovet
         {
 
         }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            MostrarSubmenu(panelMantenimiento);
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            frmTrabajador trabajador = new frmTrabajador();
+            AbrirFormHijo(trabajador);
+
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            frmUsuarios usuarios = new frmUsuarios();
+            AbrirFormHijo(usuarios);
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            frmProveedores proveedores = new frmProveedores();
+            AbrirFormHijo(proveedores);
+        }
     }
 }
