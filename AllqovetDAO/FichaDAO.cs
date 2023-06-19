@@ -77,9 +77,59 @@ namespace AllqovetDAO
             throw new NotImplementedException();
         }
 
-        public int Editar(Ficha ficha)
+        public int Editar(Ficha ficha, List<DetalleFicha> detalleFichas)
         {
-            throw new NotImplementedException();
+            MySqlConnection cn = new MySqlConnection(cnx);
+            cn.Open();
+            MySqlTransaction transaccion = cn.BeginTransaction();
+            int r = 0;
+          
+
+            using (MySqlCommand cmd = new MySqlCommand("sp_EditarFicha", cn, transaccion))
+            {
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("pIdficha", ficha.Idficha);
+                cmd.Parameters.AddWithValue("pIdmascota", ficha.Idmascota);
+                cmd.Parameters.AddWithValue("pIdcliente", ficha.Idcliente);
+
+                r = cmd.ExecuteNonQuery();
+
+                if (r > 0)
+                {
+                   
+                    DetalleFichaDAO db = new DetalleFichaDAO();
+
+                    foreach (DetalleFicha detalleFicha in detalleFichas)
+                    {
+                        detalleFicha.idficha = ficha.Idficha;
+
+                        r = db.Agregar(detalleFicha, ref cn, ref transaccion);
+                        if (r != 1)
+                        {
+
+                            break;
+                        }
+
+                    }
+
+
+                }
+
+
+                if (r == 1)
+                {
+                    transaccion.Commit();
+                    cn.Close();
+                }
+                else
+                {
+
+                    transaccion.Rollback();
+                }
+
+                return r;
+            }
         }
 
         public DataTable Imprimir(int idficha )
@@ -190,6 +240,28 @@ namespace AllqovetDAO
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("fdesde", desde);
                     cmd.Parameters.AddWithValue("fhasta", hasta);
+                    cn.Open();
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        return dt;
+                    }
+                }
+            }
+        }
+        public DataTable BuscarFichaID(int idficha)
+        {
+
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_BuscarFichaID", cn))
+
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pIdficha", idficha);
+
                     cn.Open();
                     using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
                     {

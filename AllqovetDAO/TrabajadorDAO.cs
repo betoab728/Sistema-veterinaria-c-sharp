@@ -118,6 +118,40 @@ namespace AllqovetDAO
                 }
             }
         }
+        public Trabajador BuscarDNI(string dni)
+        {
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_BuscarTrabajadorDNI", cn))
+
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pDNI", dni);
+
+                    cn.Open();
+
+                    using (MySqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        Trabajador trabajador = new Trabajador();
+
+                        while (dr.Read())
+                        {
+                            trabajador.Nombres = dr["Nombres"].ToString();
+                            trabajador.Idtrabajador = Convert.ToInt32(dr["Idtrabajador"]);
+                            trabajador.ApellidoPaterno = dr["ApellidoPaterno"].ToString();
+                            trabajador.ApellidoMaterno = dr["ApellidoMaterno"].ToString();
+
+                        }
+
+                        return trabajador;
+                    }
+
+                }
+            }
+        }
+
+
+
 
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes

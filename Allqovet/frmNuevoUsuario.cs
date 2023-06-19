@@ -15,9 +15,11 @@ namespace Allqovet
 {
     public partial class frmNuevoUsuario : Form
     {
-        public frmNuevoUsuario()
+        private bool edicion = false;
+        public frmNuevoUsuario(bool Editar)
         {
             InitializeComponent();
+            edicion = Editar;
         }
 
         private void btncancelar_Click(object sender, EventArgs e)
@@ -29,8 +31,46 @@ namespace Allqovet
         {
             ListarAccesos();
             ListarTrabajadores();
+
+            if (edicion)
+            {
+                BuscarUsuario();
+            }
         }
 
+        private void BuscarUsuario()
+        {
+            using (UsuarioBLL db = new UsuarioBLL())
+            {
+                try
+                {
+                    int idusuario = Convert.ToInt32(lblidusuario.Text);
+
+                    Usuario usuario = new Usuario();
+                    usuario = db.BuscarUsuario(idusuario);
+
+                    cmbtrabajador.SelectedValue = usuario.Idtrabajador;
+                    txtusuario.Text = usuario.Nombre;
+                    cmbnivel.SelectedValue = usuario.Idnivelacceso;
+
+                    int estado = usuario.estado;
+
+                    if (estado == 1)
+                    {
+                        cmbestado.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        cmbestado.SelectedIndex = 0;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
 
         private void ListarAccesos()
         {
@@ -81,6 +121,58 @@ namespace Allqovet
         private void btnguardar_Click(object sender, EventArgs e)
         {
 
+            if (edicion)
+            {
+                Actualizar();
+            }
+            else
+            {
+                Nuevo();
+            }
+        }
+
+        private void Actualizar()
+        {
+            if (txtclave.Text != txtconfirmar.Text)
+            {
+                MessageBox.Show("las contraseñas no coninciden");
+                return;
+            }
+
+            DialogResult dlg = MessageBox.Show("¿Esta seguro de Actualizar datos del usuario?", "Registro de usuario", MessageBoxButtons.YesNo);
+            if (dlg == DialogResult.Yes)
+            {
+                Usuario usuario = new Usuario();
+
+                usuario.Nombre = txtusuario.Text;
+                usuario.Contraseña = txtclave.Text;
+                usuario.Idtrabajador = Convert.ToInt32(cmbtrabajador.SelectedValue);
+                usuario.Idnivelacceso = Convert.ToInt32(cmbnivel.SelectedValue);
+                usuario.Idusuario = Convert.ToInt32(lblidusuario.Text);
+
+                using (UsuarioBLL db = new UsuarioBLL())
+                {
+                    try
+                    {
+                        int r = db.Editar(usuario);
+
+                        if (r > 0)
+                        {
+                            MessageBox.Show("Usuario Modificado correctamente");
+                            this.Close();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void Nuevo()
+        {
             if (txtclave.Text != txtconfirmar.Text)
             {
                 MessageBox.Show("las contraseñas no coninciden");
@@ -98,13 +190,13 @@ namespace Allqovet
                 usuario.Idnivelacceso = Convert.ToInt32(cmbnivel.SelectedValue);
 
 
-                using (UsuarioBLL db=new UsuarioBLL())
+                using (UsuarioBLL db = new UsuarioBLL())
                 {
                     try
                     {
                         int r = db.Agregar(usuario);
 
-                        if (r >0)
+                        if (r > 0)
                         {
                             MessageBox.Show("Usuario registrado correctamente");
                             this.Close();
@@ -127,9 +219,7 @@ namespace Allqovet
         private void button1_Click_1(object sender, EventArgs e)
         {
 
-            string clave_encriptada = Encriptar(txtclave.Text);
-
-            MessageBox.Show(clave_encriptada , clave_encriptada.Length.ToString());
+           
         }
 
         private string Encriptar(string clave)

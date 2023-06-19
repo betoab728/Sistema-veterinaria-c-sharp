@@ -12,10 +12,10 @@ namespace Interfaces
     {
 
         int Agregar(Usuario usuario);
-        int Editar();
+        int Editar(Usuario usuario);
         DataTable Listar();
         DataTable Login(Usuario usuario);
-
+        Usuario BuscarUsuario(int id);
 
     }
 }

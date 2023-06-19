@@ -11,7 +11,7 @@ namespace Interfaces
   public  interface Ificha
     {
         int Agregar( Ficha ficha, List<DetalleFicha> detalleFichas);
-        int Editar(Ficha ficha);
+        int Editar(Ficha ficha, List<DetalleFicha> detalleFichas);
         DataTable Buscar(Ficha ficha);
         DataTable Listar();
         string CorrelativoFicha();
@@ -19,6 +19,7 @@ namespace Interfaces
         DataTable BuscarFichaApellido(string apellido);
         DataTable BuscarFichaDNI(string dni);
         DataTable BuscarFichaFechas(DateTime desde, DateTime hasta);
+        DataTable BuscarFichaID(int idficha);
 
     }
 }

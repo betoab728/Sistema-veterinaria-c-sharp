@@ -33,6 +33,10 @@ namespace AllqovetBLL
         {
             throw new NotImplementedException();
         }
+        public DataTable BuscarProductoCodigo(string codigo)
+        {
+            return db.BuscarProductoCodigo(codigo);
+        }
 
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes

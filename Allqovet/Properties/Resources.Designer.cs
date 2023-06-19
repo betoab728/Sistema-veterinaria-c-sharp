@@ -63,6 +63,16 @@ namespace Allqovet.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _103181_close_remove_delete_cross_icon {
+            get {
+                object obj = ResourceManager.GetObject("103181_close_remove_delete_cross_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _103796_view_icon {
             get {
                 object obj = ResourceManager.GetObject("103796_view_icon", resourceCulture);
@@ -76,6 +86,26 @@ namespace Allqovet.Properties {
         internal static System.Drawing.Bitmap _1564534_customer_man_user_account_profile_icon {
             get {
                 object obj = ResourceManager.GetObject("1564534_customer_man_user_account_profile_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2102044_cash_credit_financial_icon {
+            get {
+                object obj = ResourceManager.GetObject("2102044_cash_credit_financial_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2102044_cash_credit_financial_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("2102044_cash_credit_financial_icon (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +186,16 @@ namespace Allqovet.Properties {
         internal static System.Drawing.Bitmap _352092_security_icon__2_ {
             get {
                 object obj = ResourceManager.GetObject("352092_security_icon (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3669272_remove_circle_ic_icon {
+            get {
+                object obj = ResourceManager.GetObject("3669272_remove_circle_ic_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +333,39 @@ namespace Allqovet.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _6843087_asset_business_finance_insurance_money_icon {
+            get {
+                object obj = ResourceManager.GetObject("6843087_asset_business_finance_insurance_money_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _7830824_view_icon {
             get {
                 object obj = ResourceManager.GetObject("7830824_view_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8541639_cart_plus_shopping_icon {
+            get {
+                object obj = ResourceManager.GetObject("8541639_cart_plus_shopping_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8541639_cart_plus_shopping_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("8541639_cart_plus_shopping_icon (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

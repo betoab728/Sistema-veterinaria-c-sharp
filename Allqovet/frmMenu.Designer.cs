@@ -243,6 +243,7 @@
             this.button12.TabIndex = 9;
             this.button12.Text = "Iniciar Caja";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 

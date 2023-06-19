@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AllqovetBLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,10 +25,8 @@ namespace Allqovet
 
         private void btnnuevo_Click(object sender, EventArgs e)
         {
-            int AltoPantalla = Screen.PrimaryScreen.WorkingArea.Height;
-            int AnchoPantalla = Screen.PrimaryScreen.WorkingArea.Width;
-
-            frmNuevoUsuario nuevo = new frmNuevoUsuario();
+          
+            frmNuevoUsuario nuevo = new frmNuevoUsuario(false);
            
             nuevo.ShowDialog();
         }
@@ -40,6 +39,42 @@ namespace Allqovet
         private void btnbaja_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnnuevo_Click_1(object sender, EventArgs e)
+        {
+            frmNuevoUsuario nuevo = new frmNuevoUsuario(false);
+            nuevo.ShowDialog();
+        }
+
+        private void btnmod_Click_1(object sender, EventArgs e)
+        {
+            frmNuevoUsuario fr = new frmNuevoUsuario(true);
+            fr.lbltitulo.Text = "MODFICAR DATOS DE USUARIO";
+            fr.lblidusuario.Text = dtgusuarios.CurrentRow.Cells["ID"].Value.ToString(); 
+            fr.ShowDialog();
+        }
+
+        private void frmUsuarios_Load(object sender, EventArgs e)
+        {
+            ListarUsuarios();
+        }
+
+        private void ListarUsuarios()
+        {
+
+            using (UsuarioBLL db = new UsuarioBLL())
+            {
+                try
+                {
+                    dtgusuarios.DataSource = db.Listar();
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }

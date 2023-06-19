@@ -13,6 +13,7 @@ namespace Interfaces
         int Editar(Trabajador trabajador);
         DataTable Listar();
         DataTable ListarNombres();
+        Trabajador BuscarDNI(string dni);
 
     }
 }

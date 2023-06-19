@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AllqovetBLL;
 
 namespace Allqovet
 {
@@ -225,7 +226,8 @@ namespace Allqovet
 
         private void button10_Click(object sender, EventArgs e)
         {
-
+            frmVenta venta = new frmVenta();
+            AbrirFormHijo(venta);
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -397,6 +399,36 @@ namespace Allqovet
         {
             frmUsuarios usuarios = new frmUsuarios();
             AbrirFormHijo(usuarios);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            using (CajachicaBLL db=new CajachicaBLL())
+            {
+                try
+                {
+                    int cajachica = 0;
+                    cajachica = db.BuscarCajaActiva();
+
+                    if (cajachica==0)
+                    {
+                        frmAperturaCaja caja = new frmAperturaCaja();
+                        AbrirFormHijo(caja);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ya existe una caja activa");
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+
+            
         }
     }
 }

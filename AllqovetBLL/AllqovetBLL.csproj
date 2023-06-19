@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CajachicaBLL.cs" />
     <Compile Include="CargoBLL.cs" />
     <Compile Include="CategoriaBLL.cs" />
     <Compile Include="Class1.cs" />

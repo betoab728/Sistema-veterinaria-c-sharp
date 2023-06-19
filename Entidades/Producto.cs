@@ -15,6 +15,7 @@ namespace Entidades
         public double PrecioCosto { get; set; }
         public double PrecioVenta { get; set; }
         public DateTime FechaVencimiento { get; set; }
+        public string codigo { get; set; }
     }
 
 }

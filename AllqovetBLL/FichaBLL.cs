@@ -23,9 +23,9 @@ namespace AllqovetBLL
             throw new NotImplementedException();
         }
 
-        public int Editar(Ficha ficha)
+        public int Editar(Ficha ficha, List<DetalleFicha> detalleFichas)
         {
-            throw new NotImplementedException();
+           return db.Editar(ficha, detalleFichas);
         }
 
         public DataTable Listar()
@@ -54,6 +54,11 @@ namespace AllqovetBLL
         public DataTable BuscarFichaFechas(DateTime desde, DateTime hasta)
         {
             return db.BuscarFichaFechas(desde,hasta);
+        }
+
+        public DataTable BuscarFichaID(int idficha)
+        {
+            return db.BuscarFichaID(idficha);
         }
 
         #region IDisposable Support

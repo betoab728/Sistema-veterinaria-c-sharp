@@ -28,6 +28,7 @@ namespace AllqovetDAO
                     cmd.Parameters.AddWithValue("pPrecioCosto", producto.PrecioCosto);
                     cmd.Parameters.AddWithValue("pPrecioVenta", producto.PrecioVenta);
                     cmd.Parameters.AddWithValue("pFechaVencimiento", producto.FechaVencimiento);
+                    cmd.Parameters.AddWithValue("pCodigo", producto.codigo);
 
                     int r = cmd.ExecuteNonQuery();
 
@@ -45,6 +46,27 @@ namespace AllqovetDAO
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("pBuscar", producto.Descripcion);
+
+                    cn.Open();
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        return dt;
+                    }
+                }
+            }
+        }
+        public DataTable BuscarProductoCodigo(string codigo)
+        {
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_BuscarProductoCodigo", cn))
+
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pCodigo", codigo);
 
                     cn.Open();
                     using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))

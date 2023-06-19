@@ -28,7 +28,7 @@ namespace Allqovet
         {
             Ventana ventana = new Ventana();
 
-            frmFicha ficha = new frmFicha();
+            frmFicha ficha = new frmFicha(false);
 
             ventana.AbrirFormHijo(ficha);
 
@@ -98,6 +98,7 @@ namespace Allqovet
                 {
                     string apellido = txtbuscar.Text;
                     dtgfichas.DataSource = db.BuscarFichaApellido(apellido);
+
                 }
                 catch (Exception ex)
                 {
@@ -105,6 +106,11 @@ namespace Allqovet
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void TamanioColumna()
+        {
+            dtgfichas.Columns["NOMBRE"].Width = 300;
         }
         private void BuscarFichaDNI()
         {
@@ -160,15 +166,22 @@ namespace Allqovet
             {
                 BuscarFichaFechas();
             }
+
+            TamanioColumna();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             if (dtgfichas.Rows.Count >0)
             {
-                int idficha= Convert.ToInt32(dtgfichas.CurrentRow.Cells["DNI"].Value);
+                Ventana ventana = new Ventana();
 
+                int idficha = Convert.ToInt32(dtgfichas.CurrentRow.Cells["IDFICHA"].Value);
 
+                frmFicha ficha = new frmFicha(true);
+                ficha.lblidficha.Text = idficha.ToString();
+                ventana.AbrirFormHijo(ficha);
+              
 
             }
         }
