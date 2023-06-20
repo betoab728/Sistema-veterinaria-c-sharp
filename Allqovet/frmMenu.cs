@@ -430,5 +430,11 @@ namespace Allqovet
 
             
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            frmRegistroVentas ventas = new frmRegistroVentas();
+            AbrirFormHijo(ventas);
+        }
     }
 }

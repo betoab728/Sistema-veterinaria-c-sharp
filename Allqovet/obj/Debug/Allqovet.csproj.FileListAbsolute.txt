@@ -529,3 +529,6 @@ C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\System.Resources.Extensions.xml
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.exe.config
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmBusCliVenta.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmImprimirVenta.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmRegistroVentas.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmDetalleVenta.resources

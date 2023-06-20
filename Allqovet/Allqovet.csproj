@@ -141,6 +141,12 @@
     <Compile Include="frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDetalleVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetalleVenta.Designer.cs">
+      <DependentUpon>frmDetalleVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFicha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,12 @@
     </Compile>
     <Compile Include="frmImprimirFicha.Designer.cs">
       <DependentUpon>frmImprimirFicha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImprimirVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImprimirVenta.Designer.cs">
+      <DependentUpon>frmImprimirVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -231,6 +243,12 @@
     <Compile Include="frmRegistrofichas.Designer.cs">
       <DependentUpon>frmRegistrofichas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegistroVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroVentas.Designer.cs">
+      <DependentUpon>frmRegistroVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTrabajador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -275,11 +293,17 @@
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDetalleVenta.resx">
+      <DependentUpon>frmDetalleVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFicha.resx">
       <DependentUpon>frmFicha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmImprimirFicha.resx">
       <DependentUpon>frmImprimirFicha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImprimirVenta.resx">
+      <DependentUpon>frmImprimirVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -320,6 +344,9 @@
     <EmbeddedResource Include="frmRegistrofichas.resx">
       <DependentUpon>frmRegistrofichas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroVentas.resx">
+      <DependentUpon>frmRegistroVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTrabajador.resx">
       <DependentUpon>frmTrabajador.cs</DependentUpon>
     </EmbeddedResource>
@@ -340,6 +367,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reportes\Ficha.rdlc" />
+    <EmbeddedResource Include="Reportes\Venta.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

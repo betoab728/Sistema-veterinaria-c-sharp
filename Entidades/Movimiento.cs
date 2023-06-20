@@ -14,6 +14,7 @@ namespace Entidades
         public int Idventa { get; set; }
         public int Idpedido { get; set; }
         public int idcausa { get; set; }
+        public int cantidad { get; set; }
     }
 
 }

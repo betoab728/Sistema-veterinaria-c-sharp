@@ -58,6 +58,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TrabajadorBLL.cs" />
     <Compile Include="UsuarioBLL.cs" />
+    <Compile Include="VentaBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AllqovetDAO\AllqovetDAO.csproj">

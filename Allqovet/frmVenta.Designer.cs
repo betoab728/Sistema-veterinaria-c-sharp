@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.dgvproductos = new System.Windows.Forms.DataGridView();
+            this.IDPRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CANTIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IMPORTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COSTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UTILIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblnumero = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -44,6 +52,8 @@
             this.txtcliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblutilidad_item = new System.Windows.Forms.Label();
+            this.lblcosto = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblidproducto = new System.Windows.Forms.Label();
             this.txtstock = new System.Windows.Forms.TextBox();
@@ -70,13 +80,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblcosto = new System.Windows.Forms.Label();
-            this.IDPRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CANTIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IMPORTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblutilidad = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproductos)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -97,12 +102,68 @@
             this.DESCRIPCION,
             this.CANTIDAD,
             this.PRECIO,
-            this.IMPORTE});
+            this.IMPORTE,
+            this.COSTO,
+            this.UTILIDAD});
             this.dgvproductos.Location = new System.Drawing.Point(12, 277);
             this.dgvproductos.Name = "dgvproductos";
             this.dgvproductos.ReadOnly = true;
             this.dgvproductos.Size = new System.Drawing.Size(614, 169);
             this.dgvproductos.TabIndex = 0;
+            // 
+            // IDPRODUCTO
+            // 
+            this.IDPRODUCTO.HeaderText = "IDPRODUCTO";
+            this.IDPRODUCTO.Name = "IDPRODUCTO";
+            this.IDPRODUCTO.ReadOnly = true;
+            this.IDPRODUCTO.Visible = false;
+            // 
+            // CODIGO
+            // 
+            this.CODIGO.HeaderText = "CODIGO";
+            this.CODIGO.Name = "CODIGO";
+            this.CODIGO.ReadOnly = true;
+            // 
+            // DESCRIPCION
+            // 
+            this.DESCRIPCION.HeaderText = "DESCRIPCION";
+            this.DESCRIPCION.Name = "DESCRIPCION";
+            this.DESCRIPCION.ReadOnly = true;
+            this.DESCRIPCION.Width = 200;
+            // 
+            // CANTIDAD
+            // 
+            this.CANTIDAD.HeaderText = "CANTIDAD";
+            this.CANTIDAD.Name = "CANTIDAD";
+            this.CANTIDAD.ReadOnly = true;
+            this.CANTIDAD.Width = 70;
+            // 
+            // PRECIO
+            // 
+            this.PRECIO.HeaderText = "PRECIO";
+            this.PRECIO.Name = "PRECIO";
+            this.PRECIO.ReadOnly = true;
+            this.PRECIO.Width = 70;
+            // 
+            // IMPORTE
+            // 
+            this.IMPORTE.HeaderText = "IMPORTE";
+            this.IMPORTE.Name = "IMPORTE";
+            this.IMPORTE.ReadOnly = true;
+            // 
+            // COSTO
+            // 
+            this.COSTO.HeaderText = "COSTO";
+            this.COSTO.Name = "COSTO";
+            this.COSTO.ReadOnly = true;
+            this.COSTO.Visible = false;
+            // 
+            // UTILIDAD
+            // 
+            this.UTILIDAD.HeaderText = "UTILIDAD";
+            this.UTILIDAD.Name = "UTILIDAD";
+            this.UTILIDAD.ReadOnly = true;
+            this.UTILIDAD.Visible = false;
             // 
             // groupBox2
             // 
@@ -185,6 +246,7 @@
             this.lblidcliente.Size = new System.Drawing.Size(13, 13);
             this.lblidcliente.TabIndex = 113;
             this.lblidcliente.Text = "0";
+            this.lblidcliente.Visible = false;
             // 
             // txtfecha
             // 
@@ -261,6 +323,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lblutilidad_item);
             this.groupBox3.Controls.Add(this.lblcosto);
             this.groupBox3.Controls.Add(this.lblCodigo);
             this.groupBox3.Controls.Add(this.lblidproducto);
@@ -285,14 +348,35 @@
             this.groupBox3.TabIndex = 54;
             this.groupBox3.TabStop = false;
             // 
+            // lblutilidad_item
+            // 
+            this.lblutilidad_item.AutoSize = true;
+            this.lblutilidad_item.Location = new System.Drawing.Point(449, 18);
+            this.lblutilidad_item.Name = "lblutilidad_item";
+            this.lblutilidad_item.Size = new System.Drawing.Size(40, 13);
+            this.lblutilidad_item.TabIndex = 130;
+            this.lblutilidad_item.Text = "utilidad";
+            this.lblutilidad_item.Visible = false;
+            // 
+            // lblcosto
+            // 
+            this.lblcosto.AutoSize = true;
+            this.lblcosto.Location = new System.Drawing.Point(415, 18);
+            this.lblcosto.Name = "lblcosto";
+            this.lblcosto.Size = new System.Drawing.Size(33, 13);
+            this.lblcosto.TabIndex = 129;
+            this.lblcosto.Text = "costo";
+            this.lblcosto.Visible = false;
+            // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(371, 19);
+            this.lblCodigo.Location = new System.Drawing.Point(370, 18);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(39, 13);
             this.lblCodigo.TabIndex = 128;
             this.lblCodigo.Text = "codigo";
+            this.lblCodigo.Visible = false;
             // 
             // lblidproducto
             // 
@@ -302,6 +386,7 @@
             this.lblidproducto.Size = new System.Drawing.Size(57, 13);
             this.lblidproducto.TabIndex = 127;
             this.lblidproducto.Text = "idproducto";
+            this.lblidproducto.Visible = false;
             // 
             // txtstock
             // 
@@ -567,6 +652,7 @@
             this.button6.Text = "GUARDAR";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // pictureBox1
             // 
@@ -578,61 +664,34 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
             // 
-            // lblcosto
+            // label1
             // 
-            this.lblcosto.AutoSize = true;
-            this.lblcosto.Location = new System.Drawing.Point(415, 19);
-            this.lblcosto.Name = "lblcosto";
-            this.lblcosto.Size = new System.Drawing.Size(33, 13);
-            this.lblcosto.TabIndex = 129;
-            this.lblcosto.Text = "costo";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(50, 521);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.TabIndex = 120;
+            this.label1.Text = "UTILIDAD";
+            this.label1.Visible = false;
             // 
-            // IDPRODUCTO
+            // lblutilidad
             // 
-            this.IDPRODUCTO.HeaderText = "IDPRODUCTO";
-            this.IDPRODUCTO.Name = "IDPRODUCTO";
-            this.IDPRODUCTO.ReadOnly = true;
-            this.IDPRODUCTO.Visible = false;
-            // 
-            // CODIGO
-            // 
-            this.CODIGO.HeaderText = "CODIGO";
-            this.CODIGO.Name = "CODIGO";
-            this.CODIGO.ReadOnly = true;
-            // 
-            // DESCRIPCION
-            // 
-            this.DESCRIPCION.HeaderText = "DESCRIPCION";
-            this.DESCRIPCION.Name = "DESCRIPCION";
-            this.DESCRIPCION.ReadOnly = true;
-            this.DESCRIPCION.Width = 200;
-            // 
-            // CANTIDAD
-            // 
-            this.CANTIDAD.HeaderText = "CANTIDAD";
-            this.CANTIDAD.Name = "CANTIDAD";
-            this.CANTIDAD.ReadOnly = true;
-            this.CANTIDAD.Width = 70;
-            // 
-            // PRECIO
-            // 
-            this.PRECIO.HeaderText = "PRECIO";
-            this.PRECIO.Name = "PRECIO";
-            this.PRECIO.ReadOnly = true;
-            this.PRECIO.Width = 70;
-            // 
-            // IMPORTE
-            // 
-            this.IMPORTE.HeaderText = "IMPORTE";
-            this.IMPORTE.Name = "IMPORTE";
-            this.IMPORTE.ReadOnly = true;
+            this.lblutilidad.AutoSize = true;
+            this.lblutilidad.Location = new System.Drawing.Point(111, 521);
+            this.lblutilidad.Name = "lblutilidad";
+            this.lblutilidad.Size = new System.Drawing.Size(13, 13);
+            this.lblutilidad.TabIndex = 121;
+            this.lblutilidad.Text = "0";
+            this.lblutilidad.Visible = false;
             // 
             // frmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
-            this.ClientSize = new System.Drawing.Size(636, 553);
+            this.ClientSize = new System.Drawing.Size(644, 553);
+            this.Controls.Add(this.lblutilidad);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label14);
@@ -656,6 +715,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -704,11 +764,16 @@
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblidproducto;
         private System.Windows.Forms.Label lblcosto;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblutilidad;
+        private System.Windows.Forms.Label lblutilidad_item;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDPRODUCTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPCION;
         private System.Windows.Forms.DataGridViewTextBoxColumn CANTIDAD;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn IMPORTE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COSTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UTILIDAD;
     }
 }

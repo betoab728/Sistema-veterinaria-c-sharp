@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BarcodeLib;
 using AllqovetBLL;
+using Entidades;
+using Microsoft.Reporting.WinForms;
+
 namespace Allqovet
 {
     public partial class frmVenta : Form
@@ -32,6 +35,32 @@ namespace Allqovet
         {
             ListarTrabajadores();
             txtfecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            CorelativoVenta();
+        }
+
+        private void CorelativoVenta()
+        {
+            
+                using (VentaBLL db = new VentaBLL())
+                {
+                    try
+                    {
+
+                        Venta venta = new Venta();
+                        venta = db.Correlativo();
+
+                        lblserie.Text =venta.serie ;
+
+                    int cantidadDigitos = 8;
+                    lblnumero.Text = venta.numero.ToString("D"+ cantidadDigitos.ToString());
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            
         }
 
         private void ListarTrabajadores()
@@ -67,6 +96,17 @@ namespace Allqovet
             txttotalitem.Text = total.ToString();
 
             txttotalitem.Text = string.Format("{0:0.00}", total);
+
+            //calculo para la utilidad--------
+            double costo = 0;
+            double utilidad_item = 0;
+            if (lblcosto.Text.Length > 0) costo = Convert.ToDouble(lblcosto.Text);
+            costo = Convert.ToDouble(lblcosto.Text);
+
+            utilidad_item = total - (cantidad * costo);
+            
+            lblutilidad_item.Text= string.Format("{0:0.00}", utilidad_item);
+            //---------------------------------
         }
 
 
@@ -159,19 +199,23 @@ namespace Allqovet
             stock = Convert.ToInt32(txtstock.Text);
             if (stock >0)
             {
-                dgvproductos.Rows.Add(lblidproducto.Text, lblCodigo.Text, txtproducto.Text, txtcan.Text, txtprecio.Text, txttotalitem.Text);
+               
+
+                dgvproductos.Rows.Add(lblidproducto.Text, lblCodigo.Text, txtproducto.Text, txtcan.Text, txtprecio.Text, txttotalitem.Text,lblcosto.Text,lblutilidad_item.Text);
 
                 txtprecio.Text = "";
                 txtcodigo.Text = "";
                 lblidproducto.Text = "0";
                 lblCodigo.Text = "0";
                 txtstock.Text = "";
-                txtcan.Text = "";
+                txtcan.Text = "1";
                 txtproducto.Text = "";
                 txttotalitem.Text = "";
 
                 CalcularTotal();
                 txtcodigo.Focus();
+
+
             }
             else
             {
@@ -192,13 +236,19 @@ namespace Allqovet
             {
                 double total = 0;
                 int cantidad = 0;
+                double utilidad = 0;
+
                 foreach (DataGridViewRow row in dgvproductos.Rows)
                 {
                     total += Convert.ToDouble(row.Cells["IMPORTE"].Value);
                     cantidad += Convert.ToInt32(row.Cells["CANTIDAD"].Value);
+                    utilidad += Convert.ToDouble(row.Cells["UTILIDAD"].Value);
                 }
-                lbltotal.Text = string.Format("{0:0.00}", total);
-                lblarticulos.Text = cantidad.ToString(); ;
+
+                lbltotal.Text = string.Format("{0:0.00}",total);
+                lblarticulos.Text = cantidad.ToString();
+                lblutilidad.Text = string.Format("{0:0.00}",utilidad);
+
             }
         }
 
@@ -216,6 +266,118 @@ namespace Allqovet
                     CalcularTotal();
 
                 }
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show(" Esta seguro de registrar la venta?", "Venta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                RegistrarVenta();
+            }
+        }
+
+
+        private void  RegistrarVenta()
+        {
+            int idventa = 0;
+            using (VentaBLL db=new VentaBLL())
+            {
+                try
+                {
+                    Venta venta = new Venta();
+                    Movimiento movimiento = new Movimiento();
+
+                    List<DetalleVenta> detalleVentas  = new List<DetalleVenta>();
+                    List<ProductoVitrina> productoVitrinas =new  List<ProductoVitrina>();
+                    List<Salida> salidas = new List<Salida>();
+
+                    venta.serie = lblserie.Text;
+                    venta.numero =Convert.ToInt32(lblnumero.Text);
+                    venta.Idcliente = Convert.ToInt32(lblidcliente.Text);
+                    venta.Idtrabajador = Convert.ToInt32(cmbvendedor.SelectedValue);
+                    venta.Total = Convert.ToDouble(lbltotal.Text);
+                    venta.Utilidad = Convert.ToDouble(lblutilidad.Text);
+
+                    movimiento.Tipo = "s";
+                    movimiento.idcausa = 1; //motivo 1: venta de producto
+                    movimiento.cantidad =Convert.ToInt32( lblarticulos.Text);
+
+                    foreach (DataGridViewRow row in dgvproductos.Rows)
+                    {
+                        DetalleVenta detalleVenta = new DetalleVenta();
+                        ProductoVitrina productoVitrina = new ProductoVitrina();
+                        Salida salida = new Salida();
+
+                        detalleVenta.Idproducto= Convert.ToInt32(row.Cells["IDPRODUCTO"].Value.ToString());
+                        detalleVenta.Descripcion = row.Cells["DESCRIPCION"].Value.ToString();
+                        detalleVenta.Cantidad = Convert.ToInt32(row.Cells["CANTIDAD"].Value.ToString());
+                        detalleVenta.Precio = Convert.ToDouble(row.Cells["PRECIO"].Value.ToString());
+                        detalleVenta.Costo = Convert.ToDouble(row.Cells["COSTO"].Value.ToString());
+
+                        productoVitrina.Idproducto= Convert.ToInt32(row.Cells["IDPRODUCTO"].Value.ToString());
+                     
+                        productoVitrina.Stock= Convert.ToInt32(row.Cells["CANTIDAD"].Value.ToString());
+
+                        salida.Idproducto= Convert.ToInt32(row.Cells["IDPRODUCTO"].Value.ToString());
+                        salida.Cantidad= Convert.ToInt32(row.Cells["CANTIDAD"].Value.ToString());
+
+                        detalleVentas.Add(detalleVenta);
+                        productoVitrinas.Add(productoVitrina);
+                        salidas.Add(salida);
+
+                    }
+
+                    idventa = db.Agregar(venta,detalleVentas,productoVitrinas,movimiento,salidas);
+                    if (idventa >0)
+                    {
+                        MessageBox.Show("Venta registrada: "+idventa);
+                        Imprimir(idventa);
+                        this.Close();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message); 
+                }
+            }
+            
+
+           
+        }
+
+
+        private void Imprimir(int idventa)
+        {
+            using (VentaBLL db = new VentaBLL())
+            {
+                try
+                {
+                    frmImprimirVenta venta = new frmImprimirVenta();
+
+                    ReportDataSource fuente = new ReportDataSource("DataSetImprimirVenta", db.ImprimirVenta(idventa));
+                    venta.reportViewer1.LocalReport.DataSources.Clear();
+                    venta.reportViewer1.LocalReport.DataSources.Add(fuente);
+                    venta.reportViewer1.LocalReport.ReportEmbeddedResource = "Allqovet.Reportes.Venta.rdlc";
+                    venta.reportViewer1.RefreshReport();
+                    venta.reportViewer1.LocalReport.Refresh();
+
+                    Ventana ventana = new Ventana();
+                    ventana.AbrirFormHijo(venta);
+
+                    //  this.Close();
+
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+
             }
         }
     }
