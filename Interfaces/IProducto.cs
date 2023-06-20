@@ -14,5 +14,6 @@ namespace Interfaces
         int Editar(Producto producto);
         DataTable Buscar(Producto producto);
         DataTable Listar();
+        DataTable BuscarProductoCodigo(string codigo);
     }
 }

@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="ICajachica.cs" />
     <Compile Include="Icargo.cs" />
     <Compile Include="ICategoria.cs" />
     <Compile Include="ICliente.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="ITipoCita.cs" />
     <Compile Include="ITrabajador.cs" />
     <Compile Include="IUsuario.cs" />
+    <Compile Include="IVenta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

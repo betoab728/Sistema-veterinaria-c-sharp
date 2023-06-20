@@ -55,6 +55,7 @@
     <Compile Include="DetalleAnalisis.cs" />
     <Compile Include="DetalleBoleta.cs" />
     <Compile Include="DetalleFactura.cs" />
+    <Compile Include="DetalleFicha.cs" />
     <Compile Include="DetallePedido.cs" />
     <Compile Include="DetalleVenta.cs" />
     <Compile Include="Entrada.cs" />

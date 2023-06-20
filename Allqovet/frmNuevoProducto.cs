@@ -33,7 +33,8 @@ namespace Allqovet
             producto.PrecioCosto = Convert.ToDouble(txtPrecioCosto.Text);
             producto.PrecioVenta = Convert.ToDouble(txtPrecioVenta.Text);
             producto.FechaVencimiento =txtFechaVenc.Value;
-          
+            producto.codigo = txtcodigo.Text;
+
 
             int r = 0;
 

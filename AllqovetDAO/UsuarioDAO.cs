@@ -37,14 +37,47 @@ namespace AllqovetDAO
             }
         }
 
-        public int Editar()
+        public int Editar(Usuario usuario)
         {
-            throw new NotImplementedException();
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_EditarUsuario", cn))
+                {
+                    string clave_encriptada = Encriptar(usuario.Contraseña);
+
+                    cn.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pNombre", usuario.Nombre);
+                    cmd.Parameters.AddWithValue("pClave", clave_encriptada);
+                    cmd.Parameters.AddWithValue("pIdtrabajador", usuario.Idtrabajador);
+                    cmd.Parameters.AddWithValue("pIdnivel", usuario.Idnivelacceso);
+                    cmd.Parameters.AddWithValue("pIdusuario", usuario.Idusuario);
+
+                    return cmd.ExecuteNonQuery();
+
+                }
+            }
         }
 
         public DataTable Listar()
         {
-            throw new NotImplementedException();
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_ListarUsuario", cn))
+                {
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cn.Open();
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        return dt;
+                    }
+                }
+            }
         }
 
         public DataTable Login(Usuario usuario)
@@ -68,6 +101,35 @@ namespace AllqovetDAO
                         da.Fill(dt);
 
                         return dt;
+                    }
+                }
+            }
+        }
+
+        public Usuario BuscarUsuario(int id)
+        {
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("BuscarUsuario", cn))
+                {
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pIdusuario", id);
+                    cn.Open();
+                    using (MySqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        Usuario usuario = new Usuario();
+
+                        while (dr.Read())
+                        {
+                            usuario.Nombre = dr["Nombre"].ToString();
+                            usuario.Idtrabajador = Convert.ToInt32(dr["Idtrabajador"]);
+                            usuario.Idnivelacceso = Convert.ToInt32(dr["Idnivelacceso"]);
+                            usuario.estado = Convert.ToInt32(dr["estado"]);
+
+                        }
+
+                        return usuario;
                     }
                 }
             }

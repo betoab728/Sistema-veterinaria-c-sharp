@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AllqovetBLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,21 +25,56 @@ namespace Allqovet
 
         private void btnnuevo_Click(object sender, EventArgs e)
         {
-            int AltoPantalla = Screen.PrimaryScreen.WorkingArea.Height;
-            int AnchoPantalla = Screen.PrimaryScreen.WorkingArea.Width;
-
-            frmNuevoUsuario nuevo = new frmNuevoUsuario();
-            //nuevo.Owner = this;
-            //nuevo.StartPosition = FormStartPosition.CenterParent;
-           // nuevo.Owner = this;
-
-          //  int x = this.Location.X + ( (this.Width - nuevo.Width) / 2);
-            //int y = this.Location.Y +( (this.Height - nuevo.Height) / 2);
-                       
-           // nuevo.StartPosition = FormStartPosition.Manual;
-           // nuevo.Location = new Point(x, y);
-
+          
+            frmNuevoUsuario nuevo = new frmNuevoUsuario(false);
+           
             nuevo.ShowDialog();
+        }
+
+        private void btnmod_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnbaja_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnnuevo_Click_1(object sender, EventArgs e)
+        {
+            frmNuevoUsuario nuevo = new frmNuevoUsuario(false);
+            nuevo.ShowDialog();
+        }
+
+        private void btnmod_Click_1(object sender, EventArgs e)
+        {
+            frmNuevoUsuario fr = new frmNuevoUsuario(true);
+            fr.lbltitulo.Text = "MODFICAR DATOS DE USUARIO";
+            fr.lblidusuario.Text = dtgusuarios.CurrentRow.Cells["ID"].Value.ToString(); 
+            fr.ShowDialog();
+        }
+
+        private void frmUsuarios_Load(object sender, EventArgs e)
+        {
+            ListarUsuarios();
+        }
+
+        private void ListarUsuarios()
+        {
+
+            using (UsuarioBLL db = new UsuarioBLL())
+            {
+                try
+                {
+                    dtgusuarios.DataSource = db.Listar();
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }

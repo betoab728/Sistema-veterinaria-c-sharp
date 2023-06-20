@@ -249,6 +249,7 @@
             this.button12.TabIndex = 9;
             this.button12.Text = "Iniciar Caja";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
@@ -264,6 +265,7 @@
             this.button11.TabIndex = 8;
             this.button11.Text = "Buscar Venta";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -925,7 +927,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panelTitulo;
-        private System.Windows.Forms.Panel panelEscritorio;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel panelSubmenuConsultorio;
         private System.Windows.Forms.Button button2;

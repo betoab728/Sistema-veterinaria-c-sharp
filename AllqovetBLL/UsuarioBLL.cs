@@ -15,22 +15,26 @@ namespace AllqovetBLL
         UsuarioDAO db = new UsuarioDAO();
         public int Agregar(Usuario usuario)
         {
-           return db.Agregar(usuario);
+            return db.Agregar(usuario);
         }
 
-        public int Editar()
+        public int Editar(Usuario usuario)
         {
-            throw new NotImplementedException();
+            return db.Editar(usuario);
         }
 
         public DataTable Listar()
         {
-            throw new NotImplementedException();
+            return db.Listar();
         }
 
         public DataTable Login(Usuario usuario)
         {
             return db.Login(usuario);
+        }
+        public Usuario BuscarUsuario(int id)
+        {
+            return db.BuscarUsuario(id);
         }
 
         #region IDisposable Support

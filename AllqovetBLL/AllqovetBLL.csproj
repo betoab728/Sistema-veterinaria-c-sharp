@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CajachicaBLL.cs" />
     <Compile Include="CargoBLL.cs" />
     <Compile Include="CategoriaBLL.cs" />
     <Compile Include="Class1.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="TipoCitaBLL.cs" />
     <Compile Include="TrabajadorBLL.cs" />
     <Compile Include="UsuarioBLL.cs" />
+    <Compile Include="VentaBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AllqovetDAO\AllqovetDAO.csproj">

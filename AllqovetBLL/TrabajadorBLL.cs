@@ -34,6 +34,11 @@ namespace AllqovetBLL
             return db.ListarNombres();
         }
 
+        public Trabajador BuscarDNI(string dni)
+        {
+            return db.BuscarDNI(dni);
+        }
+
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes
 

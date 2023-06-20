@@ -29,15 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.dtpfechaAtencion = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtobservacion = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.dtgficha = new System.Windows.Forms.DataGridView();
-            this.FECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TEMPERATURA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PROX_CITA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpproxcita = new System.Windows.Forms.DateTimePicker();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -58,9 +54,10 @@
             this.txtcapa = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblnumeroficha = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.txttelefono = new System.Windows.Forms.TextBox();
             this.txtcliente = new System.Windows.Forms.TextBox();
             this.txtdireccion = new System.Windows.Forms.TextBox();
@@ -70,11 +67,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblidcliente = new System.Windows.Forms.Label();
             this.lblidmascota = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.lblidficha = new System.Windows.Forms.Label();
+            this.FECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TEMPERATURA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PROX_CITA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.R = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgficha)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -86,8 +86,6 @@
             // 
             this.groupBox4.Controls.Add(this.button4);
             this.groupBox4.Controls.Add(this.dtpfechaAtencion);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.txtobservacion);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.button2);
             this.groupBox4.Controls.Add(this.dtgficha);
@@ -103,33 +101,33 @@
             this.groupBox4.TabIndex = 53;
             this.groupBox4.TabStop = false;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::Allqovet.Properties.Resources._4476913_close_delete_exit_interface_reject_icon__1_;
+            this.button4.Location = new System.Drawing.Point(718, 41);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(90, 36);
+            this.button4.TabIndex = 42;
+            this.button4.Text = "Quitar";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // dtpfechaAtencion
             // 
+            this.dtpfechaAtencion.Checked = false;
             this.dtpfechaAtencion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpfechaAtencion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpfechaAtencion.Location = new System.Drawing.Point(111, 29);
             this.dtpfechaAtencion.Name = "dtpfechaAtencion";
-            this.dtpfechaAtencion.Size = new System.Drawing.Size(95, 22);
+            this.dtpfechaAtencion.ShowCheckBox = true;
+            this.dtpfechaAtencion.Size = new System.Drawing.Size(107, 22);
             this.dtpfechaAtencion.TabIndex = 41;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(21, 86);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 17);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Observacion";
-            // 
-            // txtobservacion
-            // 
-            this.txtobservacion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtobservacion.Location = new System.Drawing.Point(112, 83);
-            this.txtobservacion.Name = "txtobservacion";
-            this.txtobservacion.Size = new System.Drawing.Size(500, 22);
-            this.txtobservacion.TabIndex = 21;
             // 
             // label14
             // 
@@ -142,6 +140,23 @@
             this.label14.TabIndex = 33;
             this.label14.Text = "Fecha";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::Allqovet.Properties.Resources._352008_add_photos_to_icon;
+            this.button2.Location = new System.Drawing.Point(618, 41);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 36);
+            this.button2.TabIndex = 38;
+            this.button2.Text = "Agregar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // dtgficha
             // 
             this.dtgficha.AllowUserToAddRows = false;
@@ -152,47 +167,23 @@
             this.FECHA,
             this.DESCRIPCION,
             this.TEMPERATURA,
-            this.PROX_CITA});
-            this.dtgficha.Location = new System.Drawing.Point(23, 121);
+            this.PROX_CITA,
+            this.R});
+            this.dtgficha.Location = new System.Drawing.Point(23, 83);
             this.dtgficha.Name = "dtgficha";
             this.dtgficha.ReadOnly = true;
-            this.dtgficha.Size = new System.Drawing.Size(787, 140);
+            this.dtgficha.Size = new System.Drawing.Size(787, 178);
             this.dtgficha.TabIndex = 32;
-            // 
-            // FECHA
-            // 
-            this.FECHA.HeaderText = "FECHA";
-            this.FECHA.Name = "FECHA";
-            this.FECHA.ReadOnly = true;
-            // 
-            // DESCRIPCION
-            // 
-            this.DESCRIPCION.HeaderText = "DESCRIPCION";
-            this.DESCRIPCION.Name = "DESCRIPCION";
-            this.DESCRIPCION.ReadOnly = true;
-            this.DESCRIPCION.Width = 400;
-            // 
-            // TEMPERATURA
-            // 
-            this.TEMPERATURA.HeaderText = "TEMPERATURA";
-            this.TEMPERATURA.Name = "TEMPERATURA";
-            this.TEMPERATURA.ReadOnly = true;
-            // 
-            // PROX_CITA
-            // 
-            this.PROX_CITA.HeaderText = "PROX_CITA";
-            this.PROX_CITA.Name = "PROX_CITA";
-            this.PROX_CITA.ReadOnly = true;
             // 
             // dtpproxcita
             // 
             this.dtpproxcita.Checked = false;
             this.dtpproxcita.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpproxcita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpproxcita.Location = new System.Drawing.Point(491, 29);
+            this.dtpproxcita.Location = new System.Drawing.Point(501, 29);
             this.dtpproxcita.Name = "dtpproxcita";
             this.dtpproxcita.ShowCheckBox = true;
-            this.dtpproxcita.Size = new System.Drawing.Size(121, 22);
+            this.dtpproxcita.Size = new System.Drawing.Size(111, 22);
             this.dtpproxcita.TabIndex = 40;
             // 
             // label17
@@ -200,7 +191,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(403, 32);
+            this.label17.Location = new System.Drawing.Point(412, 34);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(82, 17);
             this.label17.TabIndex = 36;
@@ -211,7 +202,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(213, 32);
+            this.label16.Location = new System.Drawing.Point(224, 32);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(84, 17);
             this.label16.TabIndex = 35;
@@ -239,7 +230,7 @@
             // txttemperatura
             // 
             this.txttemperatura.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttemperatura.Location = new System.Drawing.Point(303, 29);
+            this.txttemperatura.Location = new System.Drawing.Point(314, 29);
             this.txttemperatura.Name = "txttemperatura";
             this.txttemperatura.Size = new System.Drawing.Size(95, 22);
             this.txttemperatura.TabIndex = 39;
@@ -386,7 +377,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.lblnumeroficha);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(682, 12);
@@ -395,16 +386,16 @@
             this.groupBox2.TabIndex = 51;
             this.groupBox2.TabStop = false;
             // 
-            // label11
+            // lblnumeroficha
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(45, 36);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 17);
-            this.label11.TabIndex = 45;
-            this.label11.Text = "00000001";
+            this.lblnumeroficha.AutoSize = true;
+            this.lblnumeroficha.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnumeroficha.ForeColor = System.Drawing.Color.White;
+            this.lblnumeroficha.Location = new System.Drawing.Point(45, 36);
+            this.lblnumeroficha.Name = "lblnumeroficha";
+            this.lblnumeroficha.Size = new System.Drawing.Size(64, 17);
+            this.lblnumeroficha.TabIndex = 45;
+            this.lblnumeroficha.Text = "00000001";
             // 
             // label18
             // 
@@ -433,6 +424,20 @@
             this.groupBox1.TabIndex = 50;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cliente";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::Allqovet.Properties.Resources.buscar;
+            this.button1.Location = new System.Drawing.Point(366, 20);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(32, 27);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "..";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txttelefono
             // 
@@ -496,11 +501,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(310, 32);
+            this.label1.Location = new System.Drawing.Point(321, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(195, 23);
             this.label1.TabIndex = 47;
             this.label1.Text = "FICHA DE ATENCION";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblidcliente
             // 
@@ -519,54 +525,6 @@
             this.lblidmascota.Size = new System.Drawing.Size(13, 13);
             this.lblidmascota.TabIndex = 55;
             this.lblidmascota.Text = "0";
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::Allqovet.Properties.Resources._4476913_close_delete_exit_interface_reject_icon__1_;
-            this.button4.Location = new System.Drawing.Point(720, 67);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(90, 36);
-            this.button4.TabIndex = 42;
-            this.button4.Text = "Quitar";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::Allqovet.Properties.Resources._352008_add_photos_to_icon;
-            this.button2.Location = new System.Drawing.Point(620, 67);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 36);
-            this.button2.TabIndex = 38;
-            this.button2.Text = "Agregar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::Allqovet.Properties.Resources.buscar;
-            this.button1.Location = new System.Drawing.Point(366, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 27);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "..";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
@@ -601,6 +559,48 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // lblidficha
+            // 
+            this.lblidficha.AutoSize = true;
+            this.lblidficha.Location = new System.Drawing.Point(50, 39);
+            this.lblidficha.Name = "lblidficha";
+            this.lblidficha.Size = new System.Drawing.Size(13, 13);
+            this.lblidficha.TabIndex = 56;
+            this.lblidficha.Text = "0";
+            // 
+            // FECHA
+            // 
+            this.FECHA.HeaderText = "FECHA";
+            this.FECHA.Name = "FECHA";
+            this.FECHA.ReadOnly = true;
+            // 
+            // DESCRIPCION
+            // 
+            this.DESCRIPCION.HeaderText = "DESCRIPCION";
+            this.DESCRIPCION.Name = "DESCRIPCION";
+            this.DESCRIPCION.ReadOnly = true;
+            this.DESCRIPCION.Width = 400;
+            // 
+            // TEMPERATURA
+            // 
+            this.TEMPERATURA.HeaderText = "TEMPERATURA";
+            this.TEMPERATURA.Name = "TEMPERATURA";
+            this.TEMPERATURA.ReadOnly = true;
+            // 
+            // PROX_CITA
+            // 
+            this.PROX_CITA.HeaderText = "PROX_CITA";
+            this.PROX_CITA.Name = "PROX_CITA";
+            this.PROX_CITA.ReadOnly = true;
+            // 
+            // R
+            // 
+            this.R.HeaderText = "R";
+            this.R.Name = "R";
+            this.R.ReadOnly = true;
+            this.R.Visible = false;
             // 
             // frmFicha
             // 
@@ -608,6 +608,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(848, 534);
+            this.Controls.Add(this.lblidficha);
             this.Controls.Add(this.lblidmascota);
             this.Controls.Add(this.lblidcliente);
             this.Controls.Add(this.groupBox4);
@@ -618,7 +619,9 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Name = "frmFicha";
-            this.Text = "frmFicha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = " ";
+            this.Load += new System.EventHandler(this.frmFicha_Load);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgficha)).EndInit();
@@ -637,8 +640,6 @@
 
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DateTimePicker dtpfechaAtencion;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtobservacion;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dtgficha;
@@ -656,7 +657,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblnumeroficha;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
@@ -677,10 +678,12 @@
         public System.Windows.Forms.TextBox txttelefono;
         public System.Windows.Forms.TextBox txtcliente;
         public System.Windows.Forms.TextBox txtdireccion;
+        private System.Windows.Forms.Button button4;
+        public System.Windows.Forms.Label lblidficha;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPCION;
         private System.Windows.Forms.DataGridViewTextBoxColumn TEMPERATURA;
         private System.Windows.Forms.DataGridViewTextBoxColumn PROX_CITA;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn R;
     }
 }

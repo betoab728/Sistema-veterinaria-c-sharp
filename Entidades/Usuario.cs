@@ -13,6 +13,7 @@ namespace Entidades
         public string Contraseña { get; set; }
         public int Idtrabajador { get; set; }
         public int Idnivelacceso { get; set; }
+        public int estado { get; set; }
     }
 
 }
