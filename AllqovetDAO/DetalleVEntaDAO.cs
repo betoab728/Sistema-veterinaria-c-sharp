@@ -10,7 +10,7 @@ using MySql.Data.MySqlClient;
 
 namespace AllqovetDAO
 {
-    public class DetalleVEntaDAO : IDetalleVenta,IDisposable
+    class DetalleVEntaDAO : IDetalleVenta, IDisposable
     {
         public int Agregar(DetalleVenta detalleVenta, ref MySqlConnection con, ref MySqlTransaction transaction)
         {
@@ -47,8 +47,6 @@ namespace AllqovetDAO
             }
         }
 
-   
-
         // TODO: reemplace un finalizador solo si el anterior Dispose(bool disposing) tiene código para liberar los recursos no administrados.
         // ~DetalleVEntaDAO() {
         //   // No cambie este código. Coloque el código de limpieza en el anterior Dispose(colocación de bool).
@@ -61,7 +59,7 @@ namespace AllqovetDAO
             // No cambie este código. Coloque el código de limpieza en el anterior Dispose(colocación de bool).
             Dispose(true);
             // TODO: quite la marca de comentario de la siguiente línea si el finalizador se ha reemplazado antes.
-            GC.SuppressFinalize(this);
+            // GC.SuppressFinalize(this);
         }
         #endregion
     }

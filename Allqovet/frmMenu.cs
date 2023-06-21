@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AllqovetBLL;
 
 namespace Allqovet
 {
@@ -104,6 +103,8 @@ namespace Allqovet
            
             
         }
+
+      
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -228,7 +229,7 @@ namespace Allqovet
 
         private void button10_Click(object sender, EventArgs e)
         {
-            frmVenta venta = new frmVenta();
+            frmVentas venta = new frmVentas();
             AbrirFormHijo(venta);
         }
 

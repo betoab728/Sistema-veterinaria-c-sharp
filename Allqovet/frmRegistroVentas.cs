@@ -28,7 +28,7 @@ namespace Allqovet
         {
             if (dtgventas.Rows.Count >0)
             {
-                frmDetalleVenta detalleVenta = new frmDetalleVenta();
+                frmDetallesVenta detalleVenta = new frmDetallesVenta();
 
                 using (VentaBLL db = new VentaBLL())
                 {

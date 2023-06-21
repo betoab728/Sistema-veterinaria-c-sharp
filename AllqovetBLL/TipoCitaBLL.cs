@@ -7,9 +7,7 @@ using Entidades;
 using Interfaces;
 using AllqovetDAO;
 using System.Data;
-using Interfaces;
-using Entidades;
-using AllqovetDAO;
+
 
 namespace AllqovetBLL
 {

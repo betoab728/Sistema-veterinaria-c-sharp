@@ -67,7 +67,7 @@ namespace Allqovet
         {
             if (dgvclientes.Rows.Count > 0)
             {
-                frmVenta venta = Application.OpenForms.OfType<frmVenta>().SingleOrDefault();
+                frmVentas venta = Application.OpenForms.OfType<frmVentas>().SingleOrDefault();
                 if (venta != null)
                 {
                     venta.lblidcliente.Text = dgvclientes.CurrentRow.Cells["idCliente"].Value.ToString();

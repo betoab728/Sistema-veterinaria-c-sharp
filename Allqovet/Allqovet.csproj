@@ -148,6 +148,12 @@
     <Compile Include="frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDetallesVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetallesVenta.Designer.cs">
+      <DependentUpon>frmDetallesVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFicha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +286,12 @@
     <Compile Include="frmNuevoTipoCita.Designer.cs">
       <DependentUpon>frmNuevoTipoCita.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reportes\DataSetAllqovet.Designer.cs">
@@ -308,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDetallesVenta.resx">
+      <DependentUpon>frmDetallesVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFicha.resx">
       <DependentUpon>frmFicha.cs</DependentUpon>
@@ -374,6 +389,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNuevoTipoCita.resx">
       <DependentUpon>frmNuevoTipoCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

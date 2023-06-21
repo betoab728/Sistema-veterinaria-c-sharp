@@ -33,7 +33,8 @@
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.panelTitulo = new System.Windows.Forms.Panel();
-            this.panelEscritorio = new System.Windows.Forms.Panel();
+            this.lblModo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.button28 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
@@ -79,8 +80,7 @@
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblModo = new System.Windows.Forms.Label();
+            this.panelEscritorio = new System.Windows.Forms.Panel();
             this.panelSubmenuConsultorio.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             this.panelSubmenuVentas.SuspendLayout();
@@ -166,15 +166,24 @@
             this.panelTitulo.Size = new System.Drawing.Size(1112, 24);
             this.panelTitulo.TabIndex = 5;
             // 
-            // panelEscritorio
+            // lblModo
             // 
-            this.panelEscritorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.panelEscritorio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEscritorio.Location = new System.Drawing.Point(258, 24);
-            this.panelEscritorio.Name = "panelEscritorio";
-            this.panelEscritorio.Size = new System.Drawing.Size(1112, 678);
-            this.panelEscritorio.TabIndex = 7;
-            this.panelEscritorio.Paint += new System.Windows.Forms.PaintEventHandler(this.panelEscritorio_Paint);
+            this.lblModo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModo.Location = new System.Drawing.Point(976, 4);
+            this.lblModo.Name = "lblModo";
+            this.lblModo.Size = new System.Drawing.Size(75, 20);
+            this.lblModo.TabIndex = 1;
+            this.lblModo.Text = "AAAAA";
+            this.lblModo.Click += new System.EventHandler(this.lblModo_Click);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(935, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Modo: ";
             // 
             // button28
             // 
@@ -878,24 +887,13 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label1
+            // panelEscritorio
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(935, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Modo: ";
-            // 
-            // lblModo
-            // 
-            this.lblModo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModo.Location = new System.Drawing.Point(976, 4);
-            this.lblModo.Name = "lblModo";
-            this.lblModo.Size = new System.Drawing.Size(75, 20);
-            this.lblModo.TabIndex = 1;
-            this.lblModo.Text = "AAAAA";
-            this.lblModo.Click += new System.EventHandler(this.lblModo_Click);
+            this.panelEscritorio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEscritorio.Location = new System.Drawing.Point(258, 24);
+            this.panelEscritorio.Name = "panelEscritorio";
+            this.panelEscritorio.Size = new System.Drawing.Size(1112, 678);
+            this.panelEscritorio.TabIndex = 7;
             // 
             // frmMenu
             // 
@@ -978,5 +976,6 @@
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Label lblModo;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Panel panelEscritorio;
     }
 }

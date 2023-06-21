@@ -10,7 +10,7 @@ using System.Data;
 
 namespace AllqovetDAO
 {
-    public class SalidaDAO : ISalida,IDisposable
+    class SalidaDAO : ISalida,IDisposable
     {
         public int Agregar(Salida salida, ref MySqlConnection con, ref MySqlTransaction transaction)
         {
@@ -18,9 +18,9 @@ namespace AllqovetDAO
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("pIdmov", salida.Idmovimiento);
-                cmd.Parameters.AddWithValue("pIdproducto",salida.Idproducto);
+                cmd.Parameters.AddWithValue("pIdproducto", salida.Idproducto);
                 cmd.Parameters.AddWithValue("pCantidad", salida.Cantidad);
-               
+
                 return cmd.ExecuteNonQuery();
             }
         }

@@ -1,16 +1,16 @@
-﻿using Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entidades;
+using System.Data;
 
 namespace Interfaces
 {
-  public  interface Ificha
+  public  interface IFicha
     {
-        int Agregar( Ficha ficha, List<DetalleFicha> detalleFichas);
+        int Agregar(Ficha ficha, List<DetalleFicha> detalleFichas);
         int Editar(Ficha ficha, List<DetalleFicha> detalleFichas);
         DataTable Buscar(Ficha ficha);
         DataTable Listar();

@@ -14,6 +14,5 @@ namespace Interfaces
         DataTable ListarVitrinas();
         int ActualizaStockSalida(ProductoVitrina productoVitrina, ref MySqlConnection con, ref MySqlTransaction transaction);
         int ActualizaStockEntrada(ProductoVitrina productoVitrinaa, ref MySqlConnection con, ref MySqlTransaction transaction);
-
     }
 }

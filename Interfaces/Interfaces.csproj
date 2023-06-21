@@ -51,12 +51,17 @@
     <Compile Include="ICategoria.cs" />
     <Compile Include="ICliente.cs" />
     <Compile Include="IDashboard.cs" />
+    <Compile Include="IDetalleFicha.cs" />
+    <Compile Include="IDetalleVenta.cs" />
+    <Compile Include="Ificha.cs" />
     <Compile Include="IMarca.cs" />
     <Compile Include="IMascota.cs" />
     <Compile Include="IMedioPago.cs" />
     <Compile Include="INivelacceso.cs" />
     <Compile Include="IProducto.cs" />
+    <Compile Include="IProductoVitrina.cs" />
     <Compile Include="IProveedores.cs" />
+    <Compile Include="ISalida.cs" />
     <Compile Include="ITipoCita.cs" />
     <Compile Include="ITrabajador.cs" />
     <Compile Include="IUsuario.cs" />

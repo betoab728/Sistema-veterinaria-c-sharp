@@ -7,9 +7,10 @@ using Entidades;
 using MySql.Data.MySqlClient;
 using System.Data;
 
+
 namespace Interfaces
 {
-  public interface IDetalleVenta
+   public interface IDetalleVenta
     {
         int Agregar(DetalleVenta detalleVenta, ref MySqlConnection con, ref MySqlTransaction transaction);
     }

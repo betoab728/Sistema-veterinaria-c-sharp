@@ -10,7 +10,7 @@ using MySql.Data.MySqlClient;
 
 namespace AllqovetDAO
 {
-    public class DetalleFichaDAO : IDetalleFicha,IDisposable
+    class DetalleFichaDAO : IDetalleFicha,IDisposable
     {
         public int Agregar(DetalleFicha detalleFicha, ref MySqlConnection con, ref MySqlTransaction transaction)
         {

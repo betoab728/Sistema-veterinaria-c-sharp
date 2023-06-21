@@ -10,12 +10,12 @@ using System.Data;
 
 namespace AllqovetBLL
 {
-    public class FichaBLL : Ificha,IDisposable
+    public class FichaBLL : IFicha,IDisposable
     {
         FichaDAO db = new FichaDAO();
         public int Agregar(Ficha ficha, List<DetalleFicha> detalleFichas)
         {
-           return db.Agregar(ficha,detalleFichas);
+            return db.Agregar(ficha, detalleFichas);
         }
 
         public DataTable Buscar(Ficha ficha)
@@ -25,7 +25,7 @@ namespace AllqovetBLL
 
         public int Editar(Ficha ficha, List<DetalleFicha> detalleFichas)
         {
-           return db.Editar(ficha, detalleFichas);
+            return db.Editar(ficha, detalleFichas);
         }
 
         public DataTable Listar()
@@ -53,14 +53,13 @@ namespace AllqovetBLL
         }
         public DataTable BuscarFichaFechas(DateTime desde, DateTime hasta)
         {
-            return db.BuscarFichaFechas(desde,hasta);
+            return db.BuscarFichaFechas(desde, hasta);
         }
 
         public DataTable BuscarFichaID(int idficha)
         {
             return db.BuscarFichaID(idficha);
         }
-
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes
 

@@ -10,7 +10,7 @@ using MySql.Data.MySqlClient;
 
 namespace AllqovetDAO
 {
-   public class FichaDAO : Ificha,IDisposable
+    public class FichaDAO : IFicha,IDisposable
     {
         string cnx = Conexion.ObtenerConexion();
 
@@ -31,7 +31,7 @@ namespace AllqovetDAO
                 cmd.Parameters.AddWithValue("pNumero", ficha.numero);
                 cmd.Parameters.AddWithValue("pIdmascota", ficha.Idmascota);
                 cmd.Parameters.AddWithValue("pIdcliente", ficha.Idcliente);
-              
+
                 cmd.Parameters.Add("pIdficha", MySqlDbType.Int32).Direction = ParameterDirection.Output;
                 r = cmd.ExecuteNonQuery();
 
@@ -83,7 +83,7 @@ namespace AllqovetDAO
             cn.Open();
             MySqlTransaction transaccion = cn.BeginTransaction();
             int r = 0;
-          
+
 
             using (MySqlCommand cmd = new MySqlCommand("sp_EditarFicha", cn, transaccion))
             {
@@ -97,7 +97,7 @@ namespace AllqovetDAO
 
                 if (r > 0)
                 {
-                   
+
                     DetalleFichaDAO db = new DetalleFichaDAO();
 
                     foreach (DetalleFicha detalleFicha in detalleFichas)
@@ -132,7 +132,7 @@ namespace AllqovetDAO
             }
         }
 
-        public DataTable Imprimir(int idficha )
+        public DataTable Imprimir(int idficha)
         {
 
             using (MySqlConnection cn = new MySqlConnection(cnx))
@@ -229,7 +229,7 @@ namespace AllqovetDAO
             }
         }
 
-        public DataTable BuscarFichaFechas(DateTime desde,DateTime hasta)
+        public DataTable BuscarFichaFechas(DateTime desde, DateTime hasta)
         {
 
             using (MySqlConnection cn = new MySqlConnection(cnx))
@@ -273,7 +273,6 @@ namespace AllqovetDAO
                 }
             }
         }
-
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes
 
@@ -305,7 +304,7 @@ namespace AllqovetDAO
             // No cambie este código. Coloque el código de limpieza en el anterior Dispose(colocación de bool).
             Dispose(true);
             // TODO: quite la marca de comentario de la siguiente línea si el finalizador se ha reemplazado antes.
-             GC.SuppressFinalize(this);
+            GC.SuppressFinalize(this);
         }
         #endregion
     }
