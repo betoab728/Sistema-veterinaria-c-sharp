@@ -253,6 +253,16 @@ namespace Allqovet.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4172166_bill_cash_money_payment_receipt_icon {
+            get {
+                object obj = ResourceManager.GetObject("4172166_bill_cash_money_payment_receipt_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4476913_close_delete_exit_interface_reject_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("4476913_close_delete_exit_interface_reject_icon (1)", resourceCulture);

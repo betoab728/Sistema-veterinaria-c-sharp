@@ -790,3 +790,6 @@ C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\System.Resources.Extensions.xml
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\System.Security.Principal.Windows.xml
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\System.IO.Pipelines.xml
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmBoleta.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmComprobantes.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.FrmFactura.resources

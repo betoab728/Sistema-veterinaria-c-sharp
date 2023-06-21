@@ -175,5 +175,118 @@ namespace Allqovet
 
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (dtgventas.Rows.Count >0)
+            {
+                EmitirBoleta();
+            }
+          
+            
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (dtgventas.Rows.Count > 0)
+            {
+                EmitirFactura();
+            }
+               
+
+
+        }
+
+        private void EmitirFactura()
+        {
+            using (VentaBLL db = new VentaBLL())
+            {
+                try
+                {
+                    Ventana ventana = new Ventana();
+                    FrmFactura factura = new FrmFactura();
+
+                    int idventa = Convert.ToInt32(dtgventas.CurrentRow.Cells["IDVENTA"].Value);
+
+                    DataTable detalleVenta = new DataTable();
+
+                    detalleVenta = db.DetalleVenta(idventa);
+
+                    string idproducto = "";
+                    string codigo = "";
+                    string descripcion = "";
+                    string cantidad = "";
+                    string precio = "";
+                    string importe = "";
+
+                    foreach (DataRow row in detalleVenta.Rows)
+                    {
+                       idproducto = row["IDPRODUCTO"].ToString();
+                        codigo = row["CODIGO"].ToString(); ;
+                        descripcion = row["DESCRIPCION"].ToString();
+                        cantidad = row["CANTIDAD"].ToString(); 
+                        precio = row["CANTIDAD"].ToString();
+                        importe = row["CANTIDAD"].ToString(); 
+
+                        factura.dgvProductos.Rows.Add(idproducto, codigo, descripcion, cantidad, precio, importe);
+                    }
+
+                    ventana.AbrirFormHijo(factura);
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void EmitirBoleta()
+        {
+            using (VentaBLL db = new VentaBLL())
+            {
+                try
+                {
+
+                    Ventana ventana = new Ventana();
+                    frmBoleta boleta = new frmBoleta();
+
+                    int idventa = Convert.ToInt32(dtgventas.CurrentRow.Cells["IDVENTA"].Value);
+
+                    DataTable detalleVenta = new DataTable();
+
+                    detalleVenta = db.DetalleVenta(idventa);
+
+                    string idproducto = "";
+                    string codigo = "";
+                    string descripcion = "";
+                    string cantidad = "";
+                    string precio = "";
+                    string importe = "";
+
+                    boleta.txtdni.Text = dtgventas.CurrentRow.Cells["DNI"].Value.ToString();
+                    boleta.txtnombre.Text= dtgventas.CurrentRow.Cells["CLIENTE"].Value.ToString();
+
+                    foreach (DataRow row in detalleVenta.Rows)
+                    {
+                        idproducto = row["IDPRODUCTO"].ToString();
+                        codigo = row["CODIGO"].ToString(); ;
+                        descripcion = row["DESCRIPCION"].ToString();
+                        cantidad = row["CANTIDAD"].ToString();
+                        precio = row["CANTIDAD"].ToString();
+                        importe = row["CANTIDAD"].ToString();
+
+                        boleta.dgvProductos.Rows.Add(idproducto, codigo, descripcion, cantidad, precio, importe);
+                    }
+
+                    ventana.AbrirFormHijo(boleta);
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
     }
 }

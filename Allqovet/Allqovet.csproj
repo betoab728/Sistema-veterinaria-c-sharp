@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BarcodeStandard, Version=2.2.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BarcodeLib.2.2.6\lib\netstandard2.0\BarcodeStandard.dll</HintPath>
+    <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QrCode.Net.0.4.0.0\lib\net45\Gma.QrCodeNet.Encoding.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -70,6 +73,12 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Drawing.Common.4.5.1\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
@@ -118,6 +127,12 @@
     <Compile Include="frmAperturaCaja.Designer.cs">
       <DependentUpon>frmAperturaCaja.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBoleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBoleta.Designer.cs">
+      <DependentUpon>frmBoleta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBusCliFicha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +157,12 @@
     <Compile Include="frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmComprobantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComprobantes.Designer.cs">
+      <DependentUpon>frmComprobantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,11 +175,23 @@
     <Compile Include="frmDetallesVenta.Designer.cs">
       <DependentUpon>frmDetallesVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFactura.Designer.cs">
+      <DependentUpon>FrmFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFicha.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmFicha.Designer.cs">
       <DependentUpon>frmFicha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImprimirBoleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImprimirBoleta.Designer.cs">
+      <DependentUpon>frmImprimirBoleta.cs</DependentUpon>
     </Compile>
     <Compile Include="frmImprimirFicha.cs">
       <SubType>Form</SubType>
@@ -306,6 +339,9 @@
     <EmbeddedResource Include="frmAperturaCaja.resx">
       <DependentUpon>frmAperturaCaja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBoleta.resx">
+      <DependentUpon>frmBoleta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBusCliFicha.resx">
       <DependentUpon>frmBusCliFicha.cs</DependentUpon>
     </EmbeddedResource>
@@ -318,14 +354,23 @@
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmComprobantes.resx">
+      <DependentUpon>frmComprobantes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDetallesVenta.resx">
       <DependentUpon>frmDetallesVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmFactura.resx">
+      <DependentUpon>FrmFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFicha.resx">
       <DependentUpon>frmFicha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImprimirBoleta.resx">
+      <DependentUpon>frmImprimirBoleta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmImprimirFicha.resx">
       <DependentUpon>frmImprimirFicha.cs</DependentUpon>
@@ -403,6 +448,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\Boleta.rdlc" />
+    <EmbeddedResource Include="Reportes\Factura.rdlc" />
     <EmbeddedResource Include="Reportes\Ficha.rdlc" />
     <EmbeddedResource Include="Reportes\Venta.rdlc" />
     <None Include="packages.config" />
@@ -612,6 +659,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\103181_close_remove_delete_cross_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4172166_bill_cash_money_payment_receipt_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

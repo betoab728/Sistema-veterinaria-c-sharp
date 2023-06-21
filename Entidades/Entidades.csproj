@@ -47,6 +47,10 @@
     <Compile Include="Cargo.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="CausaMovimiento.cs" />
+    <Compile Include="cep_sunat\BoletaDetalleXML.cs" />
+    <Compile Include="cep_sunat\BoletaXML.cs" />
+    <Compile Include="cep_sunat\FacturaDetalleXML.cs" />
+    <Compile Include="cep_sunat\FacturaXML.cs" />
     <Compile Include="Cita.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="ConsultaDNI.cs" />
@@ -80,5 +84,6 @@
     <Compile Include="Venta.cs" />
     <Compile Include="Vitrina.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
