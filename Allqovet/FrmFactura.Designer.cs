@@ -550,7 +550,7 @@
         private System.Windows.Forms.Label lblproductos;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lblidventa;
         private System.Windows.Forms.Label lblrazon;
+        public System.Windows.Forms.Label lblidventa;
     }
 }

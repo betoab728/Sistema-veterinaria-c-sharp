@@ -41,7 +41,7 @@ namespace AllqovetBLL
 
         public DataTable ImprimiFactura(int idfactura)
         {
-            throw new NotImplementedException();
+           return db.ImprimiFactura(idfactura);
         }
 
         #region IDisposable Support

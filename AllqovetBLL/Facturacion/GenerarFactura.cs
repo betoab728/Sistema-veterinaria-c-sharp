@@ -16,7 +16,7 @@ namespace AllqovetBLL.Facturacion
 {
    public class GenerarFactura
     {
-        public static bool Generar(FacturaXML factura, List<FacturaDetalleXML> detalle, string carpeta)
+        public static bool Generar(FacturaXML factura, List<FacturaDetalleXML> detalle)
         {
             bool resultado = false;
             try
@@ -69,17 +69,7 @@ namespace AllqovetBLL.Facturacion
                 string nombrearchivo = "sunat/facturas/xmls/" + factura.rucemisor + "-01-" + factura.serieynumero + ".xml";
                 File.WriteAllText(nombrearchivo, mixml);
                 resultado = true;
-                //try //SUBO EL XML AL SERVIDOR
-                {
-                    // carpeta += "/facturas/xmls";
-                    // if (ConexionSFTP.Enviar("grupoctc.ddns.net", "usersftp", "Carlosbeto0308", carpeta, nombrearchivo)) resultado = true;
-
-                }
-                //catch (Exception e)
-                {
-                    //  resultado = false;
-                    //throw new Exception("Error al subir XML: " + e.Message);
-                }
+             
 
             }
             catch (Exception ex)
@@ -92,7 +82,7 @@ namespace AllqovetBLL.Facturacion
         }
 
 
-        public static bool Firmar(FacturaXML factura, string carpeta, string passcert)
+        public static bool Firmar(FacturaXML factura,string passcert)
         {
             bool resultado = false;
             try
@@ -180,7 +170,7 @@ namespace AllqovetBLL.Facturacion
 
         }
 
-        public static bool CrearQR(FacturaXML factura, string carpeta)
+        public static bool CrearQR(FacturaXML factura)
         {
             bool resultado = false;
 
@@ -210,8 +200,7 @@ namespace AllqovetBLL.Facturacion
 
                 string nombrearchivo = "sunat/facturas/qrcode/" + factura.rucemisor + "-01-" + factura.serieynumero + ".png";
                 img.Save(nombrearchivo, ImageFormat.Png);
-                //SUBO EL QR AL SERVIDOR
-                carpeta += "/facturas/qrcode";
+               
                 resultado = true;
               
 

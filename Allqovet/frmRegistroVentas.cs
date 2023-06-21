@@ -205,10 +205,10 @@ namespace Allqovet
                 {
                     Ventana ventana = new Ventana();
                     FrmFactura factura = new FrmFactura();
-
                     int idventa = Convert.ToInt32(dtgventas.CurrentRow.Cells["IDVENTA"].Value);
+                    factura.lblidventa.Text = idventa.ToString();
 
-                    DataTable detalleVenta = new DataTable();
+                  DataTable detalleVenta = new DataTable();
 
                     detalleVenta = db.DetalleVenta(idventa);
 
@@ -252,6 +252,7 @@ namespace Allqovet
                     frmBoleta boleta = new frmBoleta();
 
                     int idventa = Convert.ToInt32(dtgventas.CurrentRow.Cells["IDVENTA"].Value);
+                    boleta.lblidventa.Text = idventa.ToString();
 
                     DataTable detalleVenta = new DataTable();
 

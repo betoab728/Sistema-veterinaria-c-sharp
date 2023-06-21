@@ -170,7 +170,7 @@ namespace Allqovet
 
                     foreach (DataGridViewRow row in dgvProductos.Rows)
                     {
-                        if (Convert.ToDouble(row.Cells["PECIO"].Value) > 0)
+                        if (Convert.ToDouble(row.Cells["PRECIO"].Value) > 0)
                         {
                             contador++;
                             double subtotal = Convert.ToDouble(row.Cells["SUBTOTAL"].Value);
@@ -181,7 +181,7 @@ namespace Allqovet
                             detboleta.numeroitem = contador.ToString();
                             detboleta.cantidaditem = row.Cells["CANTIDAD"].Value.ToString();
                             detboleta.valorventa = string.Format("{0:0.00}", valorventa);
-                            detboleta.preciounitario = row.Cells["PVFACT"].Value.ToString();
+                            detboleta.preciounitario = row.Cells["PRECIO"].Value.ToString();
                             detboleta.igv = string.Format("{0:0.00}", igv);
                             detboleta.descripcion = row.Cells["DESCRIPCION"].Value.ToString();
                             detboleta.idproducto = row.Cells["IDPRODUCTO"].Value.ToString();
@@ -280,6 +280,8 @@ namespace Allqovet
         }
         private void ImprimirBoleta(int idboleta, string archivoqr)
         {
+
+
             using (BoletaBLL db = new BoletaBLL())
             {
                 try
@@ -287,8 +289,12 @@ namespace Allqovet
                     ImporteLetras importe = new ImporteLetras();
                     string letras = importe.Convertir(txttotal.Text, true);
 
+                    DataTable prueba = db.ImprimiBoleta(idboleta);
+
+                    int filas = prueba.Rows.Count;
+
                     frmImprimirBoleta boleta = new frmImprimirBoleta();
-                    ReportDataSource fuente = new ReportDataSource("DataSetBoleta", db.Imprimir(idboleta));
+                    ReportDataSource fuente = new ReportDataSource("DataSetBoleta", db.ImprimiBoleta(idboleta));
 
                     //  boleta.nombrearchivo = lblserie.Text + "-" + lblnumero.Text;
                  
@@ -316,7 +322,7 @@ namespace Allqovet
                 catch (Exception ex)
                 {
 
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show( "error al imprimir : "+ex.Message);
                 }
             }
         }

@@ -116,7 +116,7 @@ namespace AllqovetDAO
         {
             using (MySqlConnection cn = new MySqlConnection(cnx))
             {
-                using (MySqlCommand cmd = new MySqlCommand("ImprimiFactura", cn))
+                using (MySqlCommand cmd = new MySqlCommand("sp_ImprimirFactura", cn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("pIdFactura", idfactura);

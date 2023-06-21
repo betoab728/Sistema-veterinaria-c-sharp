@@ -193,6 +193,12 @@
     <Compile Include="frmImprimirBoleta.Designer.cs">
       <DependentUpon>frmImprimirBoleta.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmImprimirFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImprimirFactura.Designer.cs">
+      <DependentUpon>frmImprimirFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmImprimirFicha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -371,6 +377,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmImprimirBoleta.resx">
       <DependentUpon>frmImprimirBoleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImprimirFactura.resx">
+      <DependentUpon>frmImprimirFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmImprimirFicha.resx">
       <DependentUpon>frmImprimirFicha.cs</DependentUpon>

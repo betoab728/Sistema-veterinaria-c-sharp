@@ -528,6 +528,6 @@
         private System.Windows.Forms.Label lblproductos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblidventa;
+        public System.Windows.Forms.Label lblidventa;
     }
 }

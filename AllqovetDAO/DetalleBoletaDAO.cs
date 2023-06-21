@@ -17,7 +17,7 @@ namespace AllqovetDAO
             using (MySqlCommand cmd = new MySqlCommand("sp_RegistrarDetalleBoleta", con, transaction))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("pIdventa", detalleBoleta.Idboleta);
+                cmd.Parameters.AddWithValue("pIboleta", detalleBoleta.Idboleta);
                 cmd.Parameters.AddWithValue("pIdproducto", detalleBoleta.Idproducto);
                 cmd.Parameters.AddWithValue("pDescripcion", detalleBoleta.Descripcion);
                 cmd.Parameters.AddWithValue("pCantidad", detalleBoleta.Cantidad);

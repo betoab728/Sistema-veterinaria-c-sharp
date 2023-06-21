@@ -118,11 +118,11 @@ namespace AllqovetDAO
         {
             using (MySqlConnection cn = new MySqlConnection(cnx))
             {
-                using (MySqlCommand cmd = new MySqlCommand("ImprimirBoleta", cn))
+                using (MySqlCommand cmd = new MySqlCommand("sp_ImprimirBoleta", cn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("pIdboleta", idboleta);
-
+                    cn.Open();
                     using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
                     {
 

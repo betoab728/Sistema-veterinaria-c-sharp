@@ -9,6 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using Entidades.cpe_sunat;
+using AllqovetBLL.Facturacion;
+using System.IO;
+using Microsoft.Reporting.WinForms;
+
 namespace Allqovet
 {
     public partial class FrmFactura : Form
@@ -131,16 +136,196 @@ namespace Allqovet
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show(" Esta seguro de registrar la venta?", "Venta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show(" Esta seguro de registrar la boleta?", "boleta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                RegistrarFactura();
+                int idfactura = RegistrarFactura();
+
+                if (idfactura > 0)
+                {
+                    MessageBox.Show("Boleta Registrada");
+                    ImporteLetras importe = new ImporteLetras();
+                    string letras = importe.Convertir(txttotal.Text, true);
+                    FacturaXML factura = new FacturaXML();
+                    List<FacturaDetalleXML> detalle = new List<FacturaDetalleXML>();
+
+                    //llena los datos de la factura que van en el xml
+                    factura.serieynumero = lblserie.Text + "-" + lblnumero.Text;
+                    factura.fechaemision = DateTime.Now.ToString("yyyy-MM-dd");
+                    factura.horaemision = DateTime.Now.ToString("HH:mm:ss");
+                    factura.importeletras = letras;
+                    factura.cantidaditems = dgvProductos.Rows.Count.ToString();
+                    factura.rucemisor = lblruc.Text.Substring(4, 11);
+
+                    factura.razonemisor = lblrazon.Text;
+                    factura.nombrecomercial = "ALLQOVET";
+                    factura.ruccliente = txtruc.Text;
+                    factura.razoncliente = txtrazon.Text;
+                    factura.igv = txtigv.Text;
+                    factura.subtotal = txtsubtotal.Text;
+                    factura.total = txttotal.Text;
+
+                    int contador = 0;
+
+                    foreach (DataGridViewRow row in dgvProductos.Rows)
+                    {
+                        if (Convert.ToDouble(row.Cells["PRECIO"].Value) > 0)
+                        {
+                            contador++;
+                            double subtotal = Convert.ToDouble(row.Cells["SUBTOTAL"].Value);
+                            double valorventa = subtotal / 1.18;
+                            double igv = subtotal - valorventa;
+
+                            FacturaDetalleXML detfactura = new FacturaDetalleXML();
+                            detfactura.numeroitem = contador.ToString();
+                            detfactura.cantidaditem = row.Cells["CANTIDAD"].Value.ToString();
+                            detfactura.valorventa = string.Format("{0:0.00}", valorventa);
+                            detfactura.preciounitario = row.Cells["PRECIO"].Value.ToString();
+                            detfactura.igv = string.Format("{0:0.00}", igv);
+                            detfactura.descripcion = row.Cells["DESCRIPCION"].Value.ToString();
+                            detfactura.idproducto = row.Cells["IDPRODUCTO"].Value.ToString();
+
+                            detalle.Add(detfactura);
+                        }
+
+                    }
+
+
+                    //1.-GENERO EL XML DENTRO DE TRY CATCH PARA MOSTRAR EN CASO DE ERROR EN UN MESAGEBOX 
+                    try
+                    {
+                        if (GenerarFactura.Generar(factura, detalle)) ;//MessageBox.Show("XML CREADO");
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show("Error al generar XML de la boleta: " + ex.Message);
+                        return;
+                    }
+                    //2.-FIRMO EL XML
+                    try
+                    {
+                        if (GenerarFactura.Firmar(factura, "Carlosbeto0308")) ; //MessageBox.Show("XML FIRMADO");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al firmar XML de la boleta (Form): " + ex.Message);
+                        return;
+                    }
+                    //3.- GENERO EL CODIGO QR ,NO HAGO EL ENVIO PORQUE SERA MEDIANTE RESUMEN
+                    try
+                    {
+                        if (GenerarFactura.CrearQR(factura)) ;// MessageBox.Show("QR creado"); 
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al crear el codigo QR: " + ex.Message);
+                        return;
+                    }
+                    //SI TODO SALIO BIEN IMPRIMO LA FACTURA
+                    string exeFolder = Path.GetDirectoryName(Application.ExecutablePath); //ruta de la aplicacion
+
+                    exeFolder += @"\sunat\facturas\qrcode\" + factura.rucemisor + "-01-" + factura.serieynumero + ".png"; //ruta absoluta de la imagen qr
+
+                    //  string archivoqr = "sunat/facturas/qrcode/" + factura.rucemisor + "-01-" + factura.serieynumero + ".png";
+                    ImprimirFactura(idfactura, exeFolder);
+                    this.Close();
+
+
+
+
+                }
             }
         }
 
-        private void RegistrarFactura()
+        private int RegistrarFactura()
+        {
+            int idfactura = 0;
+            using (FacturaBLL db = new FacturaBLL())
+            {
+                try
+                {
+
+                    Factura factura = new Factura();
+                    List<DetalleFactura> detallesFactura = new List<DetalleFactura>();
+
+                    factura.Serie = lblserie.Text;
+                    factura.Numero = Convert.ToInt32(lblnumero.Text);
+                    factura.Idventa = Convert.ToInt32(lblidventa.Text);
+                    factura.Total = Convert.ToDouble(txttotal.Text);
+
+                    foreach (DataGridViewRow row in dgvProductos.Rows)
+                    {
+                        DetalleFactura detalle = new DetalleFactura();
+                        detalle.Idproducto = Convert.ToInt32(row.Cells["IDPRODUCTO"].Value.ToString());
+                        detalle.Descripcion = row.Cells["DESCRIPCION"].Value.ToString();
+                        detalle.Cantidad = Convert.ToInt32(row.Cells["CANTIDAD"].Value.ToString());
+                        detalle.Precio = Convert.ToDouble(row.Cells["PRECIO"].Value.ToString());
+
+                        detallesFactura.Add(detalle);
+
+
+                    }
+
+                    idfactura = db.Agregar(factura, detallesFactura);
+                    return idfactura;
+                }
+
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.ToString());
+                    return 0;
+                }
+            }
+
+        }
+
+        private void ImprimirFactura(int idfactura, string archivoqr)
         {
 
+
+            using (FacturaBLL db = new FacturaBLL())
+            {
+                try
+                {
+                    ImporteLetras importe = new ImporteLetras();
+                    string letras = importe.Convertir(txttotal.Text, true);
+
+                    DataTable prueba = db.ImprimiFactura(idfactura);
+
+                    int filas = prueba.Rows.Count;
+
+                    frmImprimirBoleta boleta = new frmImprimirBoleta();
+                    ReportDataSource fuente = new ReportDataSource("DataSetFactura", db.ImprimiFactura(idfactura));
+
+                    boleta.reportViewer1.LocalReport.DataSources.Clear();
+                    boleta.reportViewer1.LocalReport.DataSources.Add(fuente);
+                    boleta.reportViewer1.LocalReport.ReportEmbeddedResource = "Allqovet.Reportes.Factura.rdlc";
+
+                    ReportParameter[] p = new ReportParameter[2];
+
+                    p[0] = new ReportParameter("ptotal", letras);
+                    p[1] = new ReportParameter("pcodigoQR", @"file:///" + archivoqr);
+
+                    boleta.reportViewer1.LocalReport.EnableExternalImages = true;
+                    boleta.reportViewer1.LocalReport.SetParameters(p);
+
+                    boleta.reportViewer1.RefreshReport();
+                    boleta.reportViewer1.LocalReport.Refresh();
+
+                    boleta.ShowDialog();
+                    // Inicializar();
+
+                }
+
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("error al imprimir : " + ex.Message);
+                }
+            }
         }
     }
 }

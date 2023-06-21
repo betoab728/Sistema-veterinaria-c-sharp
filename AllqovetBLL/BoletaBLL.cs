@@ -40,7 +40,7 @@ namespace AllqovetBLL
 
         public DataTable ImprimiBoleta(int idboleta)
         {
-            throw new NotImplementedException();
+           return db.ImprimiBoleta(idboleta);
         }
 
         #region IDisposable Support

@@ -1,0 +1,30 @@
+﻿<sac:SummaryDocumentsLine>
+  <cbc:LineID>{{numero_item}}</cbc:LineID>
+  <cbc:DocumentTypeCode>03</cbc:DocumentTypeCode> 
+  <cbc:ID>{{serie_numero}}</cbc:ID>
+  <cac:AccountingCustomerParty>
+    <cbc:CustomerAssignedAccountID>{{dni_cliente}}</cbc:CustomerAssignedAccountID>
+    <cbc:AdditionalAccountID>1</cbc:AdditionalAccountID>
+  </cac:AccountingCustomerParty>
+  <cac:Status>
+    <cbc:ConditionCode>{{estado_boleta}}</cbc:ConditionCode> <!--estado de la boleta 1 efectuada 3 anulado-->
+  </cac:Status>
+  <sac:TotalAmount currencyID="PEN">{{total}}</sac:TotalAmount>
+  <sac:BillingPayment>
+    <cbc:PaidAmount currencyID="PEN">{{subtotal}}</cbc:PaidAmount>
+    <cbc:InstructionID>01</cbc:InstructionID>
+  </sac:BillingPayment>
+  <cac:TaxTotal>
+    <cbc:TaxAmount currencyID="PEN">{{igv}}</cbc:TaxAmount>
+    <cac:TaxSubtotal>
+      <cbc:TaxAmount currencyID="PEN">{{igv}}</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cac:TaxScheme>
+          <cbc:ID>1000</cbc:ID>
+          <cbc:Name>IGV</cbc:Name>
+          <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>
+  </cac:TaxTotal>
+</sac:SummaryDocumentsLine>

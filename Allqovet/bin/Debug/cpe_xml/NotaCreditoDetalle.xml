@@ -1,0 +1,34 @@
+﻿<cac:CreditNoteLine>
+  <cbc:ID>{{iditem}}</cbc:ID>
+  <cbc:CreditedQuantity unitCode="NIU">{{cantidad_item}}</cbc:CreditedQuantity>
+  <cbc:LineExtensionAmount currencyID="PEN">{{subtotal_item}}</cbc:LineExtensionAmount>
+  <cac:PricingReference>
+    <cac:AlternativeConditionPrice>
+      <cbc:PriceAmount currencyID="PEN">{{precio_item}}</cbc:PriceAmount>
+      <cbc:PriceTypeCode>01</cbc:PriceTypeCode>
+    </cac:AlternativeConditionPrice>
+  </cac:PricingReference>
+  <cac:TaxTotal>
+    <cbc:TaxAmount currencyID="PEN">{{igv_item}}</cbc:TaxAmount>
+    <cac:TaxSubtotal>
+      <cbc:TaxableAmount currencyID="PEN">{{subtotal_item}}</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="PEN">{{igv_item}}</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cbc:Percent>18.00</cbc:Percent>
+        <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT" listName="SUNAT:Codigo de Tipo de Afectaci&#xF3;n del IGV" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+        <cac:TaxScheme>
+          <cbc:ID>1000</cbc:ID>
+          <cbc:Name>IGV</cbc:Name>
+          <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>
+  </cac:TaxTotal>
+  <cac:Item>
+    <cbc:Description><![CDATA[{{descripcion_item}}]]></cbc:Description>
+  </cac:Item>
+  <cac:Price>
+    <cbc:PriceAmount currencyID="PEN">{{valor_item}}</cbc:PriceAmount>
+  </cac:Price>
+</cac:CreditNoteLine>
+
