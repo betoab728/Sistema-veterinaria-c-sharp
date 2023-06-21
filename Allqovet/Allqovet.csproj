@@ -295,6 +295,12 @@
     <Compile Include="frmRegistroVentas.Designer.cs">
       <DependentUpon>frmRegistroVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReporteVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteVenta.Designer.cs">
+      <DependentUpon>frmReporteVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTrabajador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -432,6 +438,9 @@
     <EmbeddedResource Include="frmRegistroVentas.resx">
       <DependentUpon>frmRegistroVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteVenta.resx">
+      <DependentUpon>frmReporteVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTrabajador.resx">
       <DependentUpon>frmTrabajador.cs</DependentUpon>
     </EmbeddedResource>
@@ -460,6 +469,7 @@
     <EmbeddedResource Include="Reportes\Boleta.rdlc" />
     <EmbeddedResource Include="Reportes\Factura.rdlc" />
     <EmbeddedResource Include="Reportes\Ficha.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteVentas.rdlc" />
     <EmbeddedResource Include="Reportes\Venta.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -231,6 +231,8 @@ namespace Allqovet
 
                     ImprimirBoleta(idboleta, exeFolder);
 
+                    this.Close();
+
                     //  ImprimirBoleta(idboleta);
                 }
             }
@@ -314,7 +316,9 @@ namespace Allqovet
                     boleta.reportViewer1.RefreshReport();
                     boleta.reportViewer1.LocalReport.Refresh();
 
-                    boleta.ShowDialog();
+                    Ventana ventana = new Ventana();
+                    ventana.AbrirFormHijo(boleta);
+                  
                     // Inicializar();
 
                 }

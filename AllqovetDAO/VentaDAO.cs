@@ -197,6 +197,29 @@ namespace AllqovetDAO
                 }
             }
         }
+
+        public DataTable ReporteVentas(DateTime desde, DateTime hasta)
+        {
+
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_ReporteVentas", cn))
+
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("fdesde", desde);
+                    cmd.Parameters.AddWithValue("fhasta", hasta);
+                    cn.Open();
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        return dt;
+                    }
+                }
+            }
+        }
         public DataTable BuscarVentaApellidos(string apellido)
         {
 

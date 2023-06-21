@@ -443,5 +443,12 @@ namespace Allqovet
             frmRegistroVentas ventas = new frmRegistroVentas();
             AbrirFormHijo(ventas);
         }
+
+        private void button7_Click_2(object sender, EventArgs e)
+        {
+            Ventana ventana = new Ventana();
+            frmReporteVenta reporte = new frmReporteVenta();
+            ventana.AbrirFormHijo(reporte);
+        }
     }
 }

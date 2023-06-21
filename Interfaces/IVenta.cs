@@ -16,6 +16,7 @@ namespace Interfaces
         DataTable BuscarVentaFechas(DateTime desde, DateTime hasta);
         DataTable BuscarVentaApellidos(string apellido);
         DataTable DetalleVenta(int idventa);
+        DataTable ReporteVentas(DateTime desde, DateTime hasta);
 
     }
 }

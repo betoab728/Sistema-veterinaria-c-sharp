@@ -41,6 +41,12 @@ namespace AllqovetBLL
             return db.DetalleVenta(idventa);
         }
 
+        public DataTable ReporteVentas(DateTime desde, DateTime hasta)
+        {
+
+            return db.ReporteVentas(desde,hasta);
+        }
+
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes
 

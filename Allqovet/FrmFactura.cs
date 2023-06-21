@@ -297,26 +297,28 @@ namespace Allqovet
 
                     int filas = prueba.Rows.Count;
 
-                    frmImprimirBoleta boleta = new frmImprimirBoleta();
+                    frmImprimirFactura factura = new frmImprimirFactura();
                     ReportDataSource fuente = new ReportDataSource("DataSetFactura", db.ImprimiFactura(idfactura));
 
-                    boleta.reportViewer1.LocalReport.DataSources.Clear();
-                    boleta.reportViewer1.LocalReport.DataSources.Add(fuente);
-                    boleta.reportViewer1.LocalReport.ReportEmbeddedResource = "Allqovet.Reportes.Factura.rdlc";
+                    factura.reportViewer1.LocalReport.DataSources.Clear();
+                    factura.reportViewer1.LocalReport.DataSources.Add(fuente);
+                    factura.reportViewer1.LocalReport.ReportEmbeddedResource = "Allqovet.Reportes.Factura.rdlc";
 
                     ReportParameter[] p = new ReportParameter[2];
 
                     p[0] = new ReportParameter("ptotal", letras);
                     p[1] = new ReportParameter("pcodigoQR", @"file:///" + archivoqr);
 
-                    boleta.reportViewer1.LocalReport.EnableExternalImages = true;
-                    boleta.reportViewer1.LocalReport.SetParameters(p);
+                    factura.reportViewer1.LocalReport.EnableExternalImages = true;
+                    factura.reportViewer1.LocalReport.SetParameters(p);
 
-                    boleta.reportViewer1.RefreshReport();
-                    boleta.reportViewer1.LocalReport.Refresh();
+                    factura.reportViewer1.RefreshReport();
+                    factura.reportViewer1.LocalReport.Refresh();
 
-                    boleta.ShowDialog();
-                    // Inicializar();
+                    Ventana ventana = new Ventana();
+                    ventana.AbrirFormHijo(factura);
+
+                 
 
                 }
 
