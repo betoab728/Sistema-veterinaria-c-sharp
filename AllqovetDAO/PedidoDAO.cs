@@ -10,9 +10,10 @@ using MySql.Data.MySqlClient;
 
 namespace AllqovetDAO
 {
-    public class PedidoDAO : IPedido, IDisposable
+    public class PedidoDAO: IPedido, IDisposable
     {
         string cnx = Conexion.ObtenerConexion();
+
         public int Agregar(Pedido pedido, List<DetallePedido> detallepedido, List<ProductoVitrina> productoVitrinas, Movimiento movimiento, List<Entrada> entrada)
         {
             MySqlConnection cn = new MySqlConnection(cnx);
@@ -46,7 +47,7 @@ namespace AllqovetDAO
 
                 foreach (DetallePedido detallePedido in detallepedido)
                 {
-                    detallePedido.Idpedido= idPedido;
+                    detallePedido.Idpedido = idPedido;
 
                     r = db.Agregar(detallePedido, ref cn, ref transaccion);
                     if (r != 1)
@@ -108,7 +109,6 @@ namespace AllqovetDAO
                 }
             }
 
-
             if (r == 1) //6 EJECUTA TRANSACCION
             {
                 transaccion.Commit();
@@ -123,14 +123,36 @@ namespace AllqovetDAO
             return idPedido;
 
 
-            throw new NotImplementedException();
+            
         }
-           
+
 
         public DataTable DetallePedido(int idPedido)
         {
             throw new NotImplementedException();
         }
+
+        public DataTable ImprimirPedido(int idped)
+        {
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_ImprimirPedido", cn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pidped", idped);
+
+                    cn.Open();
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        return dt;
+                    }
+                }
+            }
+        }
+
 
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes

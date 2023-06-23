@@ -125,12 +125,15 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="DashboardDAO.cs" />
     <Compile Include="DetalleFichaDAO.cs" />
+    <Compile Include="DetallePedidoDAO.cs" />
     <Compile Include="DetalleVEntaDAO.cs" />
+    <Compile Include="EntradaDAO.cs" />
     <Compile Include="FichaDAO.cs" />
     <Compile Include="MarcaDAO.cs" />
     <Compile Include="MascotaDAO.cs" />
     <Compile Include="MedioPagoDAO.cs" />
     <Compile Include="NivelaccesoDAO.cs" />
+    <Compile Include="PedidoDAO.cs" />
     <Compile Include="ProductoDAO.cs" />
     <Compile Include="ProductoVitrinaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

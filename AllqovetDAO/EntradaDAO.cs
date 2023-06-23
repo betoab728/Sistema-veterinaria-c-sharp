@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Interfaces;
 using Entidades;
+using Interfaces;
 using MySql.Data.MySqlClient;
-using System.Data;
 
 namespace AllqovetDAO
 {
-    public class EntradaDAO : IEntrada,IDisposable
+    public class EntradaDAO : IEntrada, IDisposable
     {
         public int Agregar(Entrada entrada, ref MySqlConnection con, ref MySqlTransaction transaction)
         {

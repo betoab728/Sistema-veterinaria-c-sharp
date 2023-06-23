@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Entidades;
 using Interfaces;
+using Entidades;
 using AllqovetDAO;
+using System.Data;
 
 namespace AllqovetBLL
 {
-    public class PedidoBLL : IPedido, IDisposable
+    public class PedidoBLL: IPedido, IDisposable
     {
-       PedidoDAO db = new PedidoDAO();
+        PedidoDAO db = new PedidoDAO();
 
         public int Agregar(Pedido pedido, List<DetallePedido> detallepedido, List<ProductoVitrina> productoVitrinas, Movimiento movimiento, List<Entrada> entrada)
         {
@@ -22,6 +22,10 @@ namespace AllqovetBLL
         public DataTable DetallePedido(int idPedido)
         {
             return db.DetallePedido(idPedido);
+        }
+        public DataTable ImprimirPedido(int idPedido)
+        {
+            return db.ImprimirPedido(idPedido);
         }
 
         #region IDisposable Support

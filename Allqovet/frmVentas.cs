@@ -352,5 +352,20 @@ namespace Allqovet
 
             }
         }
+
+        private void txtcliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txttotalitem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

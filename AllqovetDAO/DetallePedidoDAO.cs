@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 using Interfaces;
 using Entidades;
 using MySql.Data.MySqlClient;
-using Entidades;
-using Interfaces;
 using System.Data;
 
 namespace AllqovetDAO
 {
-    class DetallePedidoDAO : IDetallePedido, IDisposable
+    public class DetallePedidoDAO : IDetallePedido, IDisposable
     {
         public int Agregar(DetallePedido detallePedido, ref MySqlConnection con, ref MySqlTransaction transaction)
         {
@@ -60,7 +58,7 @@ namespace AllqovetDAO
             // No cambie este código. Coloque el código de limpieza en el anterior Dispose(colocación de bool).
             Dispose(true);
             // TODO: quite la marca de comentario de la siguiente línea si el finalizador se ha reemplazado antes.
-           GC.SuppressFinalize(this);
+            GC.SuppressFinalize(this);
         }
         #endregion
     }
