@@ -128,6 +128,7 @@
     <Compile Include="DetalleBoletaDAO.cs" />
     <Compile Include="DetalleFacturaDAO.cs" />
     <Compile Include="DetalleFichaDAO.cs" />
+    <Compile Include="DetallePedidoDAO.cs" />
     <Compile Include="DetalleVEntaDAO.cs" />
     <Compile Include="FacturaDAO.cs" />
     <Compile Include="FichaDAO.cs" />
@@ -135,6 +136,7 @@
     <Compile Include="MascotaDAO.cs" />
     <Compile Include="MedioPagoDAO.cs" />
     <Compile Include="NivelaccesoDAO.cs" />
+    <Compile Include="PedidoDAO.cs" />
     <Compile Include="ProductoDAO.cs" />
     <Compile Include="ProductoVitrinaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

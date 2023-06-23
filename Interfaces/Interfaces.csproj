@@ -55,6 +55,7 @@
     <Compile Include="IDetalleBoleta.cs" />
     <Compile Include="IDetalleFactura.cs" />
     <Compile Include="IDetalleFicha.cs" />
+    <Compile Include="IDetallePedido.cs" />
     <Compile Include="IDetalleVenta.cs" />
     <Compile Include="IFactura.cs" />
     <Compile Include="Ificha.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="IMascota.cs" />
     <Compile Include="IMedioPago.cs" />
     <Compile Include="INivelacceso.cs" />
+    <Compile Include="IPedido.cs" />
     <Compile Include="IProducto.cs" />
     <Compile Include="IProductoVitrina.cs" />
     <Compile Include="IProveedores.cs" />

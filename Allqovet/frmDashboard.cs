@@ -20,8 +20,7 @@ namespace AllqovetBLL
         {
             InitializeComponent();
             //Default - Últimos 7 días 
-            dtpFechaInicio.Value = DateTime.Today.AddDays(-7);
-            dtpFechaFinal.Value = DateTime.Now;
+           
             dashboardBLL = new DashboardBLL();
 
             
@@ -29,6 +28,11 @@ namespace AllqovetBLL
 
         private void frmDashboard_Load(object sender, EventArgs e)
         {
+            dtpFechaInicio.Value = DateTime.Today.AddDays(-7);
+            dtpFechaFinal.Value = DateTime.Now;
+            dtpFechaInicio_ValueChanged(null,EventArgs.Empty);
+            dtpFechaFinal_ValueChanged(null, EventArgs.Empty);
+
             LoadData();
         }
 
@@ -89,6 +93,7 @@ namespace AllqovetBLL
         private void btnLoad_Click(object sender, EventArgs e)
         {
             LoadData();
+            dtgvBajoStock.DataSource = dashboardBLL.Stock();
         }
 
         private void dtgvBajoStock_CellContentClick(object sender, DataGridViewCellEventArgs e)

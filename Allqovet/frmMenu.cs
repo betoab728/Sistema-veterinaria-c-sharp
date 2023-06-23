@@ -385,7 +385,8 @@ namespace Allqovet
 
         private void button18_Click(object sender, EventArgs e)
         {
-
+            frmUsuarios user = new frmUsuarios();
+            user.Show();
         }
 
         private void panelMantenimiento_Paint(object sender, PaintEventArgs e)

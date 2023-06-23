@@ -12,7 +12,7 @@
   <xs:element name="DataSetAllqovet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetAllqovet" msprop:Generator_UserDSName="DataSetAllqovet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ficha" msprop:Generator_TableClassName="fichaDataTable" msprop:Generator_TableVarName="tableficha" msprop:Generator_TablePropName="ficha" msprop:Generator_RowDeletingName="fichaRowDeleting" msprop:Generator_RowChangingName="fichaRowChanging" msprop:Generator_RowEvHandlerName="fichaRowChangeEventHandler" msprop:Generator_RowDeletedName="fichaRowDeleted" msprop:Generator_UserTableName="ficha" msprop:Generator_RowChangedName="fichaRowChanged" msprop:Generator_RowEvArgName="fichaRowChangeEvent" msprop:Generator_RowClassName="fichaRow">
+        <xs:element name="ficha" msprop:Generator_TableClassName="fichaDataTable" msprop:Generator_TableVarName="tableficha" msprop:Generator_RowChangedName="fichaRowChanged" msprop:Generator_TablePropName="ficha" msprop:Generator_RowDeletingName="fichaRowDeleting" msprop:Generator_RowChangingName="fichaRowChanging" msprop:Generator_RowEvHandlerName="fichaRowChangeEventHandler" msprop:Generator_RowDeletedName="fichaRowDeleted" msprop:Generator_RowClassName="fichaRow" msprop:Generator_UserTableName="ficha" msprop:Generator_RowEvArgName="fichaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="numero" msprop:Generator_ColumnVarNameInTable="columnnumero" msprop:Generator_ColumnPropNameInRow="numero" msprop:Generator_ColumnPropNameInTable="numeroColumn" msprop:Generator_UserColumnName="numero" type="xs:string" minOccurs="0" />
@@ -33,7 +33,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="venta" msprop:Generator_TableClassName="ventaDataTable" msprop:Generator_TableVarName="tableventa" msprop:Generator_TablePropName="venta" msprop:Generator_RowDeletingName="ventaRowDeleting" msprop:Generator_RowChangingName="ventaRowChanging" msprop:Generator_RowEvHandlerName="ventaRowChangeEventHandler" msprop:Generator_RowDeletedName="ventaRowDeleted" msprop:Generator_UserTableName="venta" msprop:Generator_RowChangedName="ventaRowChanged" msprop:Generator_RowEvArgName="ventaRowChangeEvent" msprop:Generator_RowClassName="ventaRow">
+        <xs:element name="venta" msprop:Generator_TableClassName="ventaDataTable" msprop:Generator_TableVarName="tableventa" msprop:Generator_RowChangedName="ventaRowChanged" msprop:Generator_TablePropName="venta" msprop:Generator_RowDeletingName="ventaRowDeleting" msprop:Generator_RowChangingName="ventaRowChanging" msprop:Generator_RowEvHandlerName="ventaRowChangeEventHandler" msprop:Generator_RowDeletedName="ventaRowDeleted" msprop:Generator_RowClassName="ventaRow" msprop:Generator_UserTableName="venta" msprop:Generator_RowEvArgName="ventaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="numeroventa" msprop:Generator_ColumnVarNameInTable="columnnumeroventa" msprop:Generator_ColumnPropNameInRow="numeroventa" msprop:Generator_ColumnPropNameInTable="numeroventaColumn" msprop:Generator_UserColumnName="numeroventa" type="xs:string" minOccurs="0" />
