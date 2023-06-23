@@ -130,6 +130,7 @@
     <Compile Include="DetalleFichaDAO.cs" />
     <Compile Include="DetallePedidoDAO.cs" />
     <Compile Include="DetalleVEntaDAO.cs" />
+    <Compile Include="EntradaDAO.cs" />
     <Compile Include="FacturaDAO.cs" />
     <Compile Include="FichaDAO.cs" />
     <Compile Include="MarcaDAO.cs" />

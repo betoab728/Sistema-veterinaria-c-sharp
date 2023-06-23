@@ -407,7 +407,7 @@
             this.button22.TabIndex = 11;
             this.button22.Text = "Salir";
             this.button22.UseVisualStyleBackColor = false;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
+           // this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button21
             // 
@@ -483,7 +483,7 @@
             this.button19.TabIndex = 10;
             this.button19.Text = "Proveedores";
             this.button19.UseVisualStyleBackColor = false;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
+            //    this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button18
             // 
@@ -515,7 +515,7 @@
             this.button4.TabIndex = 8;
             this.button4.Text = "Trabajadores";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+         //   this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // button9
             // 
@@ -669,7 +669,7 @@
             this.button24.TabIndex = 8;
             this.button24.Text = "Buscar pedido";
             this.button24.UseVisualStyleBackColor = false;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
+        //    this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // button25
             // 
@@ -747,7 +747,7 @@
             this.button29.TabIndex = 8;
             this.button29.Text = "Buscar Comprobante";
             this.button29.UseVisualStyleBackColor = false;
-            this.button29.Click += new System.EventHandler(this.button29_Click_1);
+           // this.button29.Click += new System.EventHandler(this.button29_Click_1);
             // 
             // button33
             // 

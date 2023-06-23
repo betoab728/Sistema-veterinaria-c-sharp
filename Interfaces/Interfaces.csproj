@@ -57,6 +57,7 @@
     <Compile Include="IDetalleFicha.cs" />
     <Compile Include="IDetallePedido.cs" />
     <Compile Include="IDetalleVenta.cs" />
+    <Compile Include="IEntrada.cs" />
     <Compile Include="IFactura.cs" />
     <Compile Include="Ificha.cs" />
     <Compile Include="IMarca.cs" />
