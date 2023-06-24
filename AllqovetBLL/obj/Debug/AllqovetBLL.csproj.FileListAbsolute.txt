@@ -600,3 +600,10 @@ C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\AllqovetBLL\bin\Deb
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\AllqovetBLL\bin\Debug\DotNetZip.xml
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\AllqovetBLL\bin\Debug\Gma.QrCodeNet.Encoding.pdb
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\AllqovetBLL\bin\Debug\Gma.QrCodeNet.Encoding.xml
+D:\VETERINARIA\integrador_avance03\AllqovetBLL\bin\Debug\DotNetZip.dll
+D:\VETERINARIA\integrador_avance03\AllqovetBLL\bin\Debug\Gma.QrCodeNet.Encoding.dll
+D:\VETERINARIA\integrador_avance03\AllqovetBLL\bin\Debug\Microsoft.Web.Services3.dll
+D:\VETERINARIA\integrador_avance03\AllqovetBLL\bin\Debug\DotNetZip.pdb
+D:\VETERINARIA\integrador_avance03\AllqovetBLL\bin\Debug\DotNetZip.xml
+D:\VETERINARIA\integrador_avance03\AllqovetBLL\bin\Debug\Gma.QrCodeNet.Encoding.pdb
+D:\VETERINARIA\integrador_avance03\AllqovetBLL\bin\Debug\Gma.QrCodeNet.Encoding.xml

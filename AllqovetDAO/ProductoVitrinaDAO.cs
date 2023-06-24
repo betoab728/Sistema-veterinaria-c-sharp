@@ -34,7 +34,7 @@ namespace AllqovetDAO
 
         public int ActualizaStockEntrada(ProductoVitrina productoVitrina, ref MySqlConnection con, ref MySqlTransaction transaction)
         {
-            using (MySqlCommand cmd = new MySqlCommand("sp_ActualizaStockSalida", con, transaction))
+            using (MySqlCommand cmd = new MySqlCommand("sp_ActualizarStockEntrada", con, transaction))
             {
 
                 cmd.CommandType = CommandType.StoredProcedure;

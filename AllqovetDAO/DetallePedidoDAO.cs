@@ -14,7 +14,7 @@ namespace AllqovetDAO
     {
         public int Agregar(DetallePedido detallePedido, ref MySqlConnection con, ref MySqlTransaction transaction)
         {
-            using (MySqlCommand cmd = new MySqlCommand("sp_DetallePedido", con, transaction))
+            using (MySqlCommand cmd = new MySqlCommand("sp_RegistrarDetallePedido", con, transaction))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("pIdpedido", detallePedido.Idpedido);

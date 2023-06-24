@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Allqovet
 {
-    public partial class ImprimirPedido : Form
+    public partial class frmImprimirPedido : Form
     {
-        public ImprimirPedido()
+        public frmImprimirPedido()
         {
             InitializeComponent();
         }
@@ -20,7 +20,11 @@ namespace Allqovet
         private void ImprimirPedido_Load(object sender, EventArgs e)
         {
 
-            this.reportViewer1.RefreshReport();
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

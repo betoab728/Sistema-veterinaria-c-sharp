@@ -34,7 +34,6 @@
             this.lblarticulos = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lblidproducto = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -45,7 +44,6 @@
             this.txtprecio = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtcan = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtdescripcion = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -70,8 +68,12 @@
             this.COSTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UTILIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.txttotalitem = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblidproducto = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -138,8 +140,9 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.lblidproducto);
             this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.txttotalitem);
+            this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.button7);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.button2);
@@ -149,7 +152,6 @@
             this.groupBox3.Controls.Add(this.txtprecio);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.txtcan);
-            this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.txtdescripcion);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Location = new System.Drawing.Point(31, 142);
@@ -158,20 +160,12 @@
             this.groupBox3.TabIndex = 133;
             this.groupBox3.TabStop = false;
             // 
-            // lblidproducto
-            // 
-            this.lblidproducto.Location = new System.Drawing.Point(114, 73);
-            this.lblidproducto.Name = "lblidproducto";
-            this.lblidproducto.Size = new System.Drawing.Size(56, 20);
-            this.lblidproducto.TabIndex = 127;
-            this.lblidproducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(201, 73);
+            this.label9.Location = new System.Drawing.Point(79, 71);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 17);
             this.label9.TabIndex = 126;
@@ -219,7 +213,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(162, 23);
             this.button2.TabIndex = 110;
-            this.button2.Text = "Buscar producto";
+            this.button2.Text = "Buscar Producto";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // txtcodigo
@@ -244,6 +238,7 @@
             this.button3.Text = "Agregar";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label5
             // 
@@ -258,11 +253,12 @@
             // 
             // txtprecio
             // 
-            this.txtprecio.Location = new System.Drawing.Point(412, 73);
+            this.txtprecio.Location = new System.Drawing.Point(283, 71);
             this.txtprecio.Name = "txtprecio";
             this.txtprecio.Size = new System.Drawing.Size(74, 20);
             this.txtprecio.TabIndex = 124;
             this.txtprecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtprecio.Leave += new System.EventHandler(this.txtprecio_Leave_1);
             // 
             // label15
             // 
@@ -277,24 +273,14 @@
             // 
             // txtcan
             // 
-            this.txtcan.Location = new System.Drawing.Point(271, 73);
+            this.txtcan.Location = new System.Drawing.Point(149, 70);
             this.txtcan.Name = "txtcan";
             this.txtcan.Size = new System.Drawing.Size(76, 20);
             this.txtcan.TabIndex = 112;
             this.txtcan.Text = "1";
             this.txtcan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtcan.TextChanged += new System.EventHandler(this.txtcan_TextChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(21, 74);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 17);
-            this.label6.TabIndex = 111;
-            this.label6.Text = "ID Producto";
+            this.txtcan.Leave += new System.EventHandler(this.txtcan_Leave_1);
             // 
             // txtdescripcion
             // 
@@ -308,7 +294,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label16.Location = new System.Drawing.Point(360, 74);
+            this.label16.Location = new System.Drawing.Point(231, 72);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(46, 17);
             this.label16.TabIndex = 123;
@@ -343,6 +329,7 @@
             this.groupBox1.Size = new System.Drawing.Size(614, 77);
             this.groupBox1.TabIndex = 132;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // cmbProveedor
             // 
@@ -359,6 +346,7 @@
             this.txttotal.Size = new System.Drawing.Size(108, 20);
             this.txttotal.TabIndex = 126;
             this.txttotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txttotal.TextChanged += new System.EventHandler(this.txttotal_TextChanged);
             // 
             // label4
             // 
@@ -533,22 +521,22 @@
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnGuardar
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Image = global::Allqovet.Properties.Resources.save;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(235, 485);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(93, 36);
-            this.button6.TabIndex = 135;
-            this.button6.Text = "GUARDAR";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnGuardar.Image = global::Allqovet.Properties.Resources.save;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(235, 485);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(93, 36);
+            this.btnGuardar.TabIndex = 135;
+            this.btnGuardar.Text = "GUARDAR";
+            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.button6_Click);
             // 
             // label1
             // 
@@ -562,19 +550,62 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // txttotalitem
+            // 
+            this.txttotalitem.Location = new System.Drawing.Point(408, 70);
+            this.txttotalitem.Name = "txttotalitem";
+            this.txttotalitem.ReadOnly = true;
+            this.txttotalitem.Size = new System.Drawing.Size(77, 20);
+            this.txttotalitem.TabIndex = 139;
+            this.txttotalitem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label10.Location = new System.Drawing.Point(365, 72);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 17);
+            this.label10.TabIndex = 138;
+            this.label10.Text = "Total";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(52, 495);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 17);
+            this.label6.TabIndex = 111;
+            this.label6.Text = "ID Producto";
+            this.label6.Visible = false;
+            // 
+            // lblidproducto
+            // 
+            this.lblidproducto.Location = new System.Drawing.Point(145, 494);
+            this.lblidproducto.Name = "lblidproducto";
+            this.lblidproducto.Size = new System.Drawing.Size(56, 20);
+            this.lblidproducto.TabIndex = 127;
+            this.lblidproducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lblidproducto.Visible = false;
+            // 
             // frmIngresoProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(682, 535);
+            this.Controls.Add(this.lblidproducto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvproductos);
+            this.Controls.Add(this.label6);
             this.Name = "frmIngresoProductos";
             this.Text = "frmIngresoProductos";
             this.Load += new System.EventHandler(this.frmIngresoProductos_Load);
@@ -586,13 +617,14 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproductos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbltotal;
         private System.Windows.Forms.Label label8;
@@ -608,7 +640,6 @@
         private System.Windows.Forms.TextBox txtprecio;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtcan;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtdescripcion;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -633,7 +664,10 @@
         private System.Windows.Forms.TextBox txttotal;
         private System.Windows.Forms.ComboBox cmbProveedor;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox lblidproducto;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txttotalitem;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox lblidproducto;
     }
 }

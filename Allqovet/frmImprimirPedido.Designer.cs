@@ -1,6 +1,6 @@
 ﻿namespace Allqovet
 {
-    partial class ImprimirPedido
+    partial class frmImprimirPedido
     {
         /// <summary>
         /// Required designer variable.
@@ -39,14 +39,15 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(347, 353);
             this.reportViewer1.TabIndex = 1;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
-            // ImprimirPedido
+            // frmImprimirPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(347, 353);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "ImprimirPedido";
+            this.Name = "frmImprimirPedido";
             this.Text = "ImprimirPedido";
             this.Load += new System.EventHandler(this.ImprimirPedido_Load);
             this.ResumeLayout(false);

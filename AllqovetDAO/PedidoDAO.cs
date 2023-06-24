@@ -75,14 +75,15 @@ namespace AllqovetDAO
 
             if (r > 0) //4 REGSISTRA MOVIMIENTO
             {
-                using (MySqlCommand cmd = new MySqlCommand("sp_RegistrarMovimiento", cn, transaccion))
+                using (MySqlCommand cmd = new MySqlCommand("sp_RegistrarMovimientoIngreso", cn, transaccion))
                 {
                     movimiento.Idpedido = idPedido;
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("pTipo", movimiento.Tipo);
-                    cmd.Parameters.AddWithValue("pIdventa", movimiento.Idventa);
+                    cmd.Parameters.AddWithValue("pIdpedido", movimiento.Idpedido);
                     cmd.Parameters.AddWithValue("pIdcausa", movimiento.idcausa);
                     cmd.Parameters.AddWithValue("pCantidad", movimiento.cantidad);
+
 
                     cmd.Parameters.Add("pIdmov", MySqlDbType.Int32).Direction = ParameterDirection.Output;
                     r = cmd.ExecuteNonQuery();

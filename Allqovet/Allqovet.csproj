@@ -344,11 +344,11 @@
     <Compile Include="frmVentas.Designer.cs">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImprimirPedido.cs">
+    <Compile Include="frmImprimirPedido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ImprimirPedido.Designer.cs">
-      <DependentUpon>ImprimirPedido.cs</DependentUpon>
+    <Compile Include="frmImprimirPedido.Designer.cs">
+      <DependentUpon>frmImprimirPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -472,8 +472,8 @@
     <EmbeddedResource Include="frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImprimirPedido.resx">
-      <DependentUpon>ImprimirPedido.cs</DependentUpon>
+    <EmbeddedResource Include="frmImprimirPedido.resx">
+      <DependentUpon>frmImprimirPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -488,6 +488,7 @@
     <EmbeddedResource Include="Reportes\Boleta.rdlc" />
     <EmbeddedResource Include="Reportes\Factura.rdlc" />
     <EmbeddedResource Include="Reportes\Ficha.rdlc" />
+    <EmbeddedResource Include="Reportes\Pedido.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteVentas.rdlc" />
     <EmbeddedResource Include="Reportes\Venta.rdlc" />
     <None Include="packages.config" />

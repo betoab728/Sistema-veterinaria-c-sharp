@@ -61,9 +61,7 @@ namespace Allqovet
             if (txtprecio.Text.Length > 0) precio = Convert.ToDouble(txtprecio.Text);
             total = cantidad * precio;
 
-            lbltotal.Text = total.ToString();
-
-            lbltotal.Text = string.Format("{0:0.00}", total);
+            txttotalitem.Text = string.Format("{0:0.00}", total);
 
    
         }
@@ -99,9 +97,10 @@ namespace Allqovet
                         foreach (DataRow row in producto.Rows)
                         {
                             // idproducto = Convert.ToInt32(row["idproducto"].ToString());
+
                             lblidproducto.Text = row["Idproducto"].ToString();
                             txtcodigo.Text = row["codigo"].ToString();
-                            txtdescripcion.Text = row["descripcion"].ToString();
+                            txtdescripcion.Text = row["producto"].ToString();
                             txtprecio.Text = row["PrecioVenta"].ToString();
 
                             TotalItem();
@@ -175,7 +174,7 @@ namespace Allqovet
 
         private void button6_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Esta seguro de registrar el ingreso?", "Venta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show("Esta seguro de registrar el ingreso?", "Pedido", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
                 RegistrarPedido();
@@ -257,7 +256,7 @@ namespace Allqovet
             {
                 try
                 {
-                    ImprimirPedido pedido = new ImprimirPedido();
+                    frmImprimirPedido pedido = new frmImprimirPedido();
 
                     ReportDataSource fuente = new ReportDataSource("DataSetPedido", db.ImprimirPedido(idped));
                     pedido.reportViewer1.LocalReport.DataSources.Clear();
@@ -296,6 +295,47 @@ namespace Allqovet
         private void button7_Click(object sender, EventArgs e)
         {
             BuscarProducto();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            if(txtcan.Text.Length>0 &&txtprecio.Text.Length>0 && txttotalitem.Text.Length>0){ 
+                dgvproductos.Rows.Add(lblidproducto.Text, txtcodigo.Text, txtdescripcion.Text, txtcan.Text, txtprecio.Text,txttotalitem.Text);
+
+                txtprecio.Text = "";
+                txtcodigo.Text = "";
+                lblidproducto.Text = "0";
+                txtcan.Text = "1";
+                txtdescripcion.Text = "";
+                txttotalitem.Text= "";
+
+                CalcularTotal();
+                txtcodigo.Focus();
+            }
+
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txttotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcan_Leave_1(object sender, EventArgs e)
+        {
+            TotalItem();
+        }
+
+        private void txtprecio_Leave_1(object sender, EventArgs e)
+        {
+            TotalItem();
+
         }
     }
 }
