@@ -407,6 +407,7 @@
             this.button22.TabIndex = 11;
             this.button22.Text = "Salir";
             this.button22.UseVisualStyleBackColor = false;
+           // this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button21
             // 
@@ -482,6 +483,7 @@
             this.button19.TabIndex = 10;
             this.button19.Text = "Proveedores";
             this.button19.UseVisualStyleBackColor = false;
+            //    this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button18
             // 
@@ -513,6 +515,7 @@
             this.button4.TabIndex = 8;
             this.button4.Text = "Trabajadores";
             this.button4.UseVisualStyleBackColor = false;
+         //   this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // button9
             // 
@@ -572,7 +575,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(241, 41);
             this.button6.TabIndex = 9;
-            this.button6.Text = "Vitrinas";
+            this.button6.Text = "Vitrinas / Stock";
             this.button6.UseVisualStyleBackColor = false;
             // 
             // button16
@@ -587,7 +590,7 @@
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(241, 41);
             this.button16.TabIndex = 8;
-            this.button16.Text = "de";
+            this.button16.Text = "Salidas";
             this.button16.UseVisualStyleBackColor = false;
             this.button16.Click += new System.EventHandler(this.button16_Click_1);
             // 
@@ -666,6 +669,7 @@
             this.button24.TabIndex = 8;
             this.button24.Text = "Buscar pedido";
             this.button24.UseVisualStyleBackColor = false;
+        //    this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // button25
             // 
@@ -727,6 +731,7 @@
             this.button7.TabIndex = 9;
             this.button7.Text = "Reporte";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click_2);
             // 
             // button29
             // 
@@ -742,6 +747,7 @@
             this.button29.TabIndex = 8;
             this.button29.Text = "Buscar Comprobante";
             this.button29.UseVisualStyleBackColor = false;
+           // this.button29.Click += new System.EventHandler(this.button29_Click_1);
             // 
             // button33
             // 

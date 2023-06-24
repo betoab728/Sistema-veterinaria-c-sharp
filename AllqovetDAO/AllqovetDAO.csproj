@@ -118,19 +118,26 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoletaDAO.cs" />
     <Compile Include="CajachicaDAO.cs" />
     <Compile Include="CargoDAO.cs" />
     <Compile Include="CategoriaDAO.cs" />
     <Compile Include="ClienteDAO.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="DashboardDAO.cs" />
+    <Compile Include="DetalleBoletaDAO.cs" />
+    <Compile Include="DetalleFacturaDAO.cs" />
     <Compile Include="DetalleFichaDAO.cs" />
+    <Compile Include="DetallePedidoDAO.cs" />
     <Compile Include="DetalleVEntaDAO.cs" />
+    <Compile Include="EntradaDAO.cs" />
+    <Compile Include="FacturaDAO.cs" />
     <Compile Include="FichaDAO.cs" />
     <Compile Include="MarcaDAO.cs" />
     <Compile Include="MascotaDAO.cs" />
     <Compile Include="MedioPagoDAO.cs" />
     <Compile Include="NivelaccesoDAO.cs" />
+    <Compile Include="PedidoDAO.cs" />
     <Compile Include="ProductoDAO.cs" />
     <Compile Include="ProductoVitrinaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

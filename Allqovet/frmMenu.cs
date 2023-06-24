@@ -385,7 +385,8 @@ namespace Allqovet
 
         private void button18_Click(object sender, EventArgs e)
         {
-
+            frmUsuarios user = new frmUsuarios();
+            user.Show();
         }
 
         private void panelMantenimiento_Paint(object sender, PaintEventArgs e)
@@ -442,6 +443,13 @@ namespace Allqovet
         {
             frmRegistroVentas ventas = new frmRegistroVentas();
             AbrirFormHijo(ventas);
+        }
+
+        private void button7_Click_2(object sender, EventArgs e)
+        {
+            Ventana ventana = new Ventana();
+            frmReporteVenta reporte = new frmReporteVenta();
+            ventana.AbrirFormHijo(reporte);
         }
     }
 }

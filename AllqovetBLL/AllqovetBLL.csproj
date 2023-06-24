@@ -31,6 +31,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QrCode.Net.0.4.0.0\lib\net45\Gma.QrCodeNet.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Services3.3.0.0.0\lib\net20\Microsoft.Web.Services3.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\MySql.Data.8.0.33\lib\netstandard2.0\MySql.Data.dll</HintPath>
@@ -38,6 +47,15 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
@@ -48,17 +66,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoletaBLL.cs" />
     <Compile Include="CajachicaBLL.cs" />
     <Compile Include="CargoBLL.cs" />
     <Compile Include="CategoriaBLL.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="ClienteBLL.cs" />
+    <Compile Include="Connected Services\ServiceFacturacion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="DashboardBLL.cs" />
+    <Compile Include="FacturaBLL.cs" />
+    <Compile Include="Facturacion\Firmador.cs" />
+    <Compile Include="Facturacion\GenerarBoleta.cs" />
+    <Compile Include="Facturacion\GenerarFactura.cs" />
+    <Compile Include="Facturacion\PasswordDigestBehavior.cs" />
+    <Compile Include="Facturacion\PasswordDigestMessageInspector.cs" />
     <Compile Include="FichaBLL.cs" />
+    <Compile Include="ImporteLetras.cs" />
     <Compile Include="MarcaBLL.cs" />
     <Compile Include="MascotaBLL.cs" />
     <Compile Include="MedioPagoBLL.cs" />
     <Compile Include="NivelaccesoBLL.cs" />
+    <Compile Include="PedidoBLL.cs" />
     <Compile Include="ProductoBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorBLL.cs" />
@@ -83,6 +115,50 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Connected Services\ServiceFacturacion\AllqovetBLL.ServiceFacturacion.getStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceFacturacion\AllqovetBLL.ServiceFacturacion.sendBillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceFacturacion\AllqovetBLL.ServiceFacturacion.sendPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceFacturacion\AllqovetBLL.ServiceFacturacion.sendSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceFacturacion\AllqovetBLL.ServiceFacturacion.statusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceFacturacion\billService.wsdl" />
+    <None Include="Connected Services\ServiceFacturacion\billService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceFacturacion\billService1.wsdl" />
+    <None Include="Connected Services\ServiceFacturacion\billService2.wsdl" />
+    <None Include="Facturacion\Cetificado\20600849957.pfx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Facturacion\xml\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceFacturacion\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ServiceFacturacion\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceFacturacion\configuration91.svcinfo" />
+    <Content Include="Facturacion\Plantilla_xml\Boleta.xml" />
+    <Content Include="Facturacion\Plantilla_xml\DetalleBoleta.xml" />
+    <Content Include="Facturacion\Plantilla_xml\DetalleFactura.xml" />
+    <Content Include="Facturacion\Plantilla_xml\Factura.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceFacturacion\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

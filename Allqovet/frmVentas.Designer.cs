@@ -120,6 +120,7 @@
             this.label14.TabIndex = 127;
             this.label14.Text = "ALLQOVET";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // panel1
             // 
@@ -289,6 +290,7 @@
             this.txttotalitem.Size = new System.Drawing.Size(77, 20);
             this.txttotalitem.TabIndex = 126;
             this.txttotalitem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txttotalitem.TextChanged += new System.EventHandler(this.txttotalitem_TextChanged);
             // 
             // button2
             // 
@@ -494,6 +496,7 @@
             this.txtcliente.Name = "txtcliente";
             this.txtcliente.Size = new System.Drawing.Size(279, 20);
             this.txtcliente.TabIndex = 108;
+            this.txtcliente.TextChanged += new System.EventHandler(this.txtcliente_TextChanged);
             // 
             // label3
             // 

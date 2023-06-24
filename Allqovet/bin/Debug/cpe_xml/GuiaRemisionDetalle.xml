@@ -1,0 +1,13 @@
+﻿<cac:DespatchLine>
+  <cbc:ID>{{numero_item}}</cbc:ID>
+  <cbc:DeliveredQuantity unitCode="NIU">{{cantidad_item}}</cbc:DeliveredQuantity>
+  <cac:OrderLineReference>
+    <cbc:LineID>{{numero_item}}</cbc:LineID>
+  </cac:OrderLineReference>
+  <cac:Item>
+    <cbc:Name><![CDATA[{{item_descripcion}}]]></cbc:Name>
+    <cac:SellersItemIdentification>
+      <cbc:ID>{{idproducto}}</cbc:ID>
+    </cac:SellersItemIdentification>
+  </cac:Item>
+</cac:DespatchLine>

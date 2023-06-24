@@ -96,7 +96,23 @@ namespace AllqovetDAO
 
         public DataTable Listar()
         {
-            throw new NotImplementedException();
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_ListarProveedores", cn))
+
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cn.Open();
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        return dt;
+                    }
+                }
+            }
         }
 
         public Proveedor ConsultaRUC(string ruc)

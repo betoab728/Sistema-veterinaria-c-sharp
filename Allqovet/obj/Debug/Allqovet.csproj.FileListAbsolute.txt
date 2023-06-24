@@ -778,7 +778,6 @@ C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\System.Xml.XmlSerializer.dll
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\System.Xml.XPath.dll
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\System.Xml.XPath.XDocument.dll
-C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\BarcodeStandard.dll
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\SkiaSharp.dll
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\System.Drawing.Common.dll
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\System.Resources.Extensions.dll
@@ -790,3 +789,18 @@ C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\System.Resources.Extensions.xml
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\System.Security.Principal.Windows.xml
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\System.IO.Pipelines.xml
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmBoleta.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmComprobantes.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.FrmFactura.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\DotNetZip.dll
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\Gma.QrCodeNet.Encoding.dll
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\Microsoft.Web.Services3.dll
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\DotNetZip.pdb
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\DotNetZip.xml
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\Gma.QrCodeNet.Encoding.pdb
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\bin\Debug\Gma.QrCodeNet.Encoding.xml
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmImprimirBoleta.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmImprimirFactura.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmReporteVenta.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmIngresoProductos.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.ImprimirPedido.resources

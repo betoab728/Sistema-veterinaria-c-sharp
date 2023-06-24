@@ -1,0 +1,3 @@
+los dni de los clientes no siempre se registra
+si no se registra el campo queda como null
+ y en la consulta devuelve 00000000 

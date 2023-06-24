@@ -1,0 +1,37 @@
+﻿<cac:InvoiceLine>
+  <cbc:ID>{{numero_item}}</cbc:ID>
+  <cbc:InvoicedQuantity unitCode="NIU" unitCodeListAgencyName="United Nations Economic Commission for Europe" unitCodeListID="UN/ECE rec 20">{{cantidad_item}}</cbc:InvoicedQuantity>
+  <cbc:LineExtensionAmount currencyID="PEN">{{valor_venta_item}}</cbc:LineExtensionAmount>
+  <cac:PricingReference>
+    <cac:AlternativeConditionPrice>
+      <cbc:PriceAmount currencyID="PEN">{{precio_unitario_item}}</cbc:PriceAmount>
+      <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+    </cac:AlternativeConditionPrice>
+  </cac:PricingReference>
+  <cac:TaxTotal>
+    <cbc:TaxAmount currencyID="PEN">{{igv_item}}</cbc:TaxAmount>
+    <cac:TaxSubtotal>
+      <cbc:TaxableAmount currencyID="PEN">{{valor_venta_item}}</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="PEN">{{igv_item}}</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cbc:ID schemeAgencyName="United Nations Economic Commission for Europe" schemeID="UN/ECE 5305" schemeName="Tax Category Identifier">S</cbc:ID>
+        <cbc:Percent>18</cbc:Percent>
+        <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT" listName="SUNAT:Codigo de Tipo de Afectación del IGV" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+        <cac:TaxScheme>
+          <cbc:ID schemeAgencyName="United Nations Economic Commission for Europe" schemeID="UN/ECE 5153" schemeName="Tax Scheme Identifier">1000</cbc:ID>
+          <cbc:Name>IGV</cbc:Name>
+          <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>
+  </cac:TaxTotal>
+  <cac:Item>
+    <cbc:Description><![CDATA[{{item_descripcion}}]]></cbc:Description>
+    <cac:SellersItemIdentification>
+      <cbc:ID><![CDATA[{{idproducto}}]]></cbc:ID>
+    </cac:SellersItemIdentification>
+  </cac:Item>
+  <cac:Price>
+    <cbc:PriceAmount currencyID="PEN">{{valorprecio}}</cbc:PriceAmount>
+  </cac:Price>
+</cac:InvoiceLine>

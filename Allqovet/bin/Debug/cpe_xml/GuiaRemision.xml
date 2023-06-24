@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<DespatchAdvice xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2">
+  <ext:UBLExtensions>
+    <ext:UBLExtension>
+      <ext:ExtensionContent>
+      </ext:ExtensionContent>
+    </ext:UBLExtension>
+  </ext:UBLExtensions>
+  <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+  <cbc:CustomizationID schemeAgencyName="PE:SUNAT">1.0</cbc:CustomizationID>
+  <cbc:ID>{{serieynumero}}</cbc:ID>
+  <cbc:IssueDate>{{fecha_emision}}</cbc:IssueDate>
+   <cbc:DespatchAdviceTypeCode>09</cbc:DespatchAdviceTypeCode>
+  <cac:Signature>
+    <cbc:ID>{{rucemisor}}</cbc:ID>
+    <cac:SignatoryParty>
+      <cac:PartyIdentification>
+        <cbc:ID>{{rucemisor}}</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyName>
+        <cbc:Name><![CDATA[{{razon_emisor}}]]></cbc:Name>
+      </cac:PartyName>
+    </cac:SignatoryParty>
+    <cac:DigitalSignatureAttachment>
+      <cac:ExternalReference>
+        <cbc:URI>{{rucemisor}}</cbc:URI>
+      </cac:ExternalReference>
+    </cac:DigitalSignatureAttachment>
+  </cac:Signature>
+  <cac:DespatchSupplierParty>
+    <cbc:CustomerAssignedAccountID schemeID="6">{{rucemisor}}</cbc:CustomerAssignedAccountID>
+    <cac:Party>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName><![CDATA[{{razon_emisor}}]]></cbc:RegistrationName>
+      </cac:PartyLegalEntity>
+    </cac:Party>
+  </cac:DespatchSupplierParty>
+  <cac:DeliveryCustomerParty>
+    <cbc:CustomerAssignedAccountID schemeID="6">{{ruc_destino}}</cbc:CustomerAssignedAccountID>
+    <cac:Party>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName><![CDATA[{{razon_destino}}]]></cbc:RegistrationName>
+      </cac:PartyLegalEntity>
+    </cac:Party>
+  </cac:DeliveryCustomerParty>
+  <cac:Shipment>
+    <cbc:ID>1</cbc:ID>
+    <cbc:HandlingCode>{{codigo_motivo}}</cbc:HandlingCode>
+    <cbc:Information>{{motivo_traslado}}</cbc:Information>
+    <cbc:GrossWeightMeasure unitCode="KGM">{{peso_bruto}}</cbc:GrossWeightMeasure>
+    <cbc:SplitConsignmentIndicator>false</cbc:SplitConsignmentIndicator>
+    <cac:ShipmentStage>
+      <cbc:TransportModeCode>{{modalidad_traslado}}</cbc:TransportModeCode>
+      <cac:TransitPeriod>
+        <cbc:StartDate>{{fecha_inicio_traslado}}</cbc:StartDate>
+      </cac:TransitPeriod>
+      <cac:TransportMeans>
+        <cac:RoadTransport>
+          <cbc:LicensePlateID>{{placa_vehiculo}}</cbc:LicensePlateID>
+        </cac:RoadTransport>
+      </cac:TransportMeans>
+      <cac:DriverPerson>
+        <cbc:ID schemeID="1">{{dni_conductor}}</cbc:ID>
+      </cac:DriverPerson>
+    </cac:ShipmentStage>
+    <cac:Delivery>
+      <cac:DeliveryAddress>
+        <cbc:ID>{{ubigeo_llegada}}</cbc:ID>
+        <cbc:StreetName>{{direccion_llegada}}</cbc:StreetName>
+      </cac:DeliveryAddress>
+    </cac:Delivery>
+    
+    <cac:OriginAddress>
+      <cbc:ID>{{ubigeo_partida}}</cbc:ID>
+      <cbc:StreetName>{{direccion_partida}}</cbc:StreetName>
+    </cac:OriginAddress>
+  </cac:Shipment>
+{{items}}
+  
+</DespatchAdvice>

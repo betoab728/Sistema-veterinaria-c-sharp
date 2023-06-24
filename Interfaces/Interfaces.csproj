@@ -46,18 +46,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="IBoleta.cs" />
     <Compile Include="ICajachica.cs" />
     <Compile Include="Icargo.cs" />
     <Compile Include="ICategoria.cs" />
     <Compile Include="ICliente.cs" />
     <Compile Include="IDashboard.cs" />
+    <Compile Include="IDetalleBoleta.cs" />
+    <Compile Include="IDetalleFactura.cs" />
     <Compile Include="IDetalleFicha.cs" />
+    <Compile Include="IDetallePedido.cs" />
     <Compile Include="IDetalleVenta.cs" />
+    <Compile Include="IEntrada.cs" />
+    <Compile Include="IFactura.cs" />
     <Compile Include="Ificha.cs" />
     <Compile Include="IMarca.cs" />
     <Compile Include="IMascota.cs" />
     <Compile Include="IMedioPago.cs" />
     <Compile Include="INivelacceso.cs" />
+    <Compile Include="IPedido.cs" />
     <Compile Include="IProducto.cs" />
     <Compile Include="IProductoVitrina.cs" />
     <Compile Include="IProveedores.cs" />
