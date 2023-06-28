@@ -113,7 +113,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmBusCliVenta";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBusCliVenta";
             this.Activated += new System.EventHandler(this.frmBusCliVenta_Activated);
             this.Load += new System.EventHandler(this.frmBusCliVenta_Load);

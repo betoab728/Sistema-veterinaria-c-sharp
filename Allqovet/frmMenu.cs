@@ -337,6 +337,10 @@ namespace Allqovet
         private void button17_Click(object sender, EventArgs e)
         {
 
+
+            frmIngresoProductos ingreso = new frmIngresoProductos();
+            AbrirFormHijo(ingreso);
+
         }
 
         private void panelSubmenuConsultorio_Paint(object sender, PaintEventArgs e)
@@ -462,6 +466,11 @@ namespace Allqovet
         {
             frmMovCajas mov = new frmMovCajas();
             AbrirFormHijo(mov);
+        }
+
+        private void button39_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

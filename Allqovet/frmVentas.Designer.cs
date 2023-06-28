@@ -359,6 +359,7 @@
             this.txtprecio.Size = new System.Drawing.Size(59, 20);
             this.txtprecio.TabIndex = 124;
             this.txtprecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtprecio.TextChanged += new System.EventHandler(this.txtprecio_TextChanged);
             this.txtprecio.Leave += new System.EventHandler(this.txtprecio_Leave);
             // 
             // label15

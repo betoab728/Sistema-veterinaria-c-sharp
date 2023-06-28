@@ -803,7 +803,6 @@ C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmImprimirFactura.resources
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmReporteVenta.resources
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmIngresoProductos.resources
-C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.ImprimirPedido.resources
 D:\VETERINARIA\integrador_avance03\Allqovet\bin\Debug\Microsoft.Win32.Primitives.dll
 D:\VETERINARIA\integrador_avance03\Allqovet\bin\Debug\System.AppContext.dll
 D:\VETERINARIA\integrador_avance03\Allqovet\bin\Debug\System.Collections.Concurrent.dll
@@ -933,3 +932,9 @@ D:\VETERINARIA\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmVentas.resourc
 D:\VETERINARIA\integrador_avance03\Allqovet\obj\Debug\RdlCompile.cache
 D:\VETERINARIA\integrador_avance03\Allqovet\obj\Debug\RdlCompile.compiled
 D:\VETERINARIA\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmImprimirPedido.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmCobro.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmGasto.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmImprimeIngreso.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmMovCajas.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmImprimirPedido.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmReporteStock.resources

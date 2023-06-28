@@ -30,6 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.txtFechaVenc = new System.Windows.Forms.DateTimePicker();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
@@ -45,8 +47,6 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtcodigo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +83,28 @@
             this.groupBox1.Size = new System.Drawing.Size(485, 261);
             this.groupBox1.TabIndex = 106;
             this.groupBox1.TabStop = false;
+            // 
+            // txtcodigo
+            // 
+            this.txtcodigo.BackColor = System.Drawing.SystemColors.Control;
+            this.txtcodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtcodigo.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtcodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.txtcodigo.Location = new System.Drawing.Point(120, 19);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(120, 20);
+            this.txtcodigo.TabIndex = 123;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label9.Location = new System.Drawing.Point(29, 23);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 17);
+            this.label9.TabIndex = 122;
+            this.label9.Text = "Codigo:";
             // 
             // cmbMarca
             // 
@@ -247,35 +269,13 @@
             // 
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(80, 21);
+            this.label8.Location = new System.Drawing.Point(24, 21);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(385, 23);
+            this.label8.Size = new System.Drawing.Size(485, 23);
             this.label8.TabIndex = 107;
             this.label8.Text = "REGISTRAR NUEVO PRODUCTO";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(29, 23);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 17);
-            this.label9.TabIndex = 122;
-            this.label9.Text = "Codigo:";
-            // 
-            // txtcodigo
-            // 
-            this.txtcodigo.BackColor = System.Drawing.SystemColors.Control;
-            this.txtcodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtcodigo.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txtcodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.txtcodigo.Location = new System.Drawing.Point(120, 19);
-            this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(120, 20);
-            this.txtcodigo.TabIndex = 123;
             // 
             // frmNuevoProducto
             // 

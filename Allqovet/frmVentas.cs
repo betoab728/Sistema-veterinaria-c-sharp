@@ -118,9 +118,35 @@ namespace Allqovet
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Ventana ventana = new Ventana();
             frmBusCliVenta cli = new frmBusCliVenta();
-            ventana.AbrirFormHijo(cli);
+
+            //  Ventana ventana = new Ventana();
+
+            //   frm.SetDesktopLocation((panelEscritorio.Width - frm.Width) / 2, (panelEscritorio.Height - frm.Height) / 2);
+
+             /* frmMenu menu = Application.OpenForms.OfType<frmMenu>().SingleOrDefault();
+             if (menu != null)
+             {
+
+
+                 int x = 0;
+                 int y = 0;
+
+                 x = menu.Location.X;
+
+                 x = (menu.panelEscritorio.Width - cli.Width) / 2;
+                 y  = (menu.panelEscritorio.Height - cli.Height) / 2;
+
+
+             }
+
+             */
+           
+
+            cli.ShowDialog();
+
+
+            // ventana.AbrirFormHijo(cli);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -378,6 +404,11 @@ namespace Allqovet
         }
 
         private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtprecio_TextChanged(object sender, EventArgs e)
         {
 
         }
