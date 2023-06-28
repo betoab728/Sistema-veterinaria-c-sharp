@@ -306,8 +306,22 @@ namespace Allqovet
                     if (idventa > 0)
                     {
                         MessageBox.Show("Venta registrada: " + idventa);
-                        Imprimir(idventa);
-                        this.Close();
+
+                        //ventana cobro
+
+                        frmCobro cobro = new frmCobro();
+                        cobro.lbltotal.Text = lbltotal.Text;
+                        cobro.lblidventa.Text = idventa.ToString();
+                        cobro.lblnumeroventa.Text = lblserie.Text +"-"+ lblnumero.Text;
+
+                        Ventana ventana = new Ventana();
+
+                        ventana.AbrirFormHijo(cobro);
+
+
+
+                        //    Imprimir(idventa);
+                       // this.Close();
                     }
 
                 }
@@ -322,7 +336,7 @@ namespace Allqovet
 
         }
 
-        private void Imprimir(int idventa)
+        public void Imprimir(int idventa)
         {
             using (VentaBLL db = new VentaBLL())
             {

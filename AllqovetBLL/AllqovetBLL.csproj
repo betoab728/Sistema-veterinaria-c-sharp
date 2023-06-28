@@ -90,6 +90,7 @@
     <Compile Include="MascotaBLL.cs" />
     <Compile Include="MedioPagoBLL.cs" />
     <Compile Include="NivelaccesoBLL.cs" />
+    <Compile Include="OperacionBLL.cs" />
     <Compile Include="PedidoBLL.cs" />
     <Compile Include="ProductoBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

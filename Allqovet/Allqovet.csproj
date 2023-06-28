@@ -158,6 +158,12 @@
     <Compile Include="frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCobro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCobro.Designer.cs">
+      <DependentUpon>frmCobro.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmComprobantes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,18 @@
     </Compile>
     <Compile Include="frmFicha.Designer.cs">
       <DependentUpon>frmFicha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGasto.Designer.cs">
+      <DependentUpon>frmGasto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImprimeIngreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImprimeIngreso.Designer.cs">
+      <DependentUpon>frmImprimeIngreso.cs</DependentUpon>
     </Compile>
     <Compile Include="frmImprimirBoleta.cs">
       <SubType>Form</SubType>
@@ -235,6 +253,12 @@
     </Compile>
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovCajas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovCajas.Designer.cs">
+      <DependentUpon>frmMovCajas.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNuevaCategory.cs">
       <SubType>Form</SubType>
@@ -379,6 +403,9 @@
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCobro.resx">
+      <DependentUpon>frmCobro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmComprobantes.resx">
       <DependentUpon>frmComprobantes.cs</DependentUpon>
     </EmbeddedResource>
@@ -393,6 +420,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmFicha.resx">
       <DependentUpon>frmFicha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGasto.resx">
+      <DependentUpon>frmGasto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImprimeIngreso.resx">
+      <DependentUpon>frmImprimeIngreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmImprimirBoleta.resx">
       <DependentUpon>frmImprimirBoleta.cs</DependentUpon>
@@ -417,6 +450,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovCajas.resx">
+      <DependentUpon>frmMovCajas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNuevaCategory.resx">
       <DependentUpon>frmNuevaCategory.cs</DependentUpon>
@@ -701,6 +737,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\4172166_bill_cash_money_payment_receipt_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3338902_business tools_cashier_calculate_calculate money_currency machine_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6843092_currency_finance_financial_income_management_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6843092_currency_finance_financial_income_management_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8675110_ic_fluent_money_calculator_regular_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8675110_ic_fluent_money_calculator_regular_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\104853_excel_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\104853_excel_icon %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

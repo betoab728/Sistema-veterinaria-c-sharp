@@ -104,6 +104,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(178, 22);
             this.txtDescripcion.TabIndex = 13;
+            this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
             // label8
             // 
@@ -128,6 +129,7 @@
             this.Controls.Add(this.label8);
             this.Name = "NuevoTipoPago";
             this.Text = "NuevoTipoPago";
+            this.Load += new System.EventHandler(this.NuevoTipoPago_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

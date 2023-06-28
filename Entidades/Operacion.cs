@@ -18,5 +18,6 @@ namespace Entidades
             public int Idventa { get; set; }
             public int Idcajachica { get; set; }
             public DateTime FechaRegistro { get; set; }
+            public int idtipo { get; set; }
     }
 }

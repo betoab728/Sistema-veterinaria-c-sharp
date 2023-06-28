@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-using Interfaces;
 using AllqovetBLL;
 using Microsoft.Reporting.WinForms;
 
@@ -235,7 +234,7 @@ namespace Allqovet
                     {
                         MessageBox.Show("Ingreso registrada: " + idpedido);
                         Imprimir(idpedido);
-                        this.Close();
+                        //this.Close();
                     }
 
                 }
@@ -265,12 +264,13 @@ namespace Allqovet
                     pedido.reportViewer1.RefreshReport();
                     pedido.reportViewer1.LocalReport.Refresh();
 
-                    Ventana ventana = new Ventana();
-                    ventana.AbrirFormHijo(pedido);
+                     Ventana ventana = new Ventana();
+
+                     ventana.AbrirFormHijo(pedido);
 
                     //  this.Close();
 
-
+                   // pedido.Show();
                 }
                 catch (Exception ex)
                 {
