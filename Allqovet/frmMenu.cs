@@ -451,5 +451,17 @@ namespace Allqovet
             frmReporteVenta reporte = new frmReporteVenta();
             ventana.AbrirFormHijo(reporte);
         }
+
+        private void button15_Click_1(object sender, EventArgs e)
+        {
+            NuevoTipoPago pago = new NuevoTipoPago();
+            AbrirFormHijo(pago);
+        }
+
+        private void button36_Click(object sender, EventArgs e)
+        {
+            frmMovCajas mov = new frmMovCajas();
+            AbrirFormHijo(mov);
+        }
     }
 }

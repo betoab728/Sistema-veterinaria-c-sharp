@@ -83,6 +83,26 @@ namespace Allqovet.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _104853_excel_icon {
+            get {
+                object obj = ResourceManager.GetObject("104853_excel_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _104853_excel_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("104853_excel_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1564534_customer_man_user_account_profile_icon {
             get {
                 object obj = ResourceManager.GetObject("1564534_customer_man_user_account_profile_icon", resourceCulture);
@@ -156,6 +176,16 @@ namespace Allqovet.Properties {
         internal static System.Drawing.Bitmap _3155810_binoculars_binocular_magnifying_glass_view_zoom_icon {
             get {
                 object obj = ResourceManager.GetObject("3155810_binoculars_binocular_magnifying glass_view_zoom_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3338902_business_tools_cashier_calculate_calculate_money_currency_machine_icon {
+            get {
+                object obj = ResourceManager.GetObject("3338902_business tools_cashier_calculate_calculate money_currency machine_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,6 +383,26 @@ namespace Allqovet.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _6843092_currency_finance_financial_income_management_icon {
+            get {
+                object obj = ResourceManager.GetObject("6843092_currency_finance_financial_income_management_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _6843092_currency_finance_financial_income_management_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("6843092_currency_finance_financial_income_management_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _7830824_view_icon {
             get {
                 object obj = ResourceManager.GetObject("7830824_view_icon", resourceCulture);
@@ -386,6 +436,26 @@ namespace Allqovet.Properties {
         internal static System.Drawing.Bitmap _8542014_dog_puppy_pet_icon {
             get {
                 object obj = ResourceManager.GetObject("8542014_dog_puppy_pet_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8675110_ic_fluent_money_calculator_regular_icon {
+            get {
+                object obj = ResourceManager.GetObject("8675110_ic_fluent_money_calculator_regular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8675110_ic_fluent_money_calculator_regular_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("8675110_ic_fluent_money_calculator_regular_icon (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

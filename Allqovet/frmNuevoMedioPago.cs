@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AllqovetBLL;
-using AllqovetDAO;
 using Entidades;
 
 namespace Allqovet
@@ -22,6 +21,12 @@ namespace Allqovet
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (txtDescripcion.Text.Length==0)
+            {
+                MessageBox.Show("Ingrese la descripcion del medio de pago");
+                return;
+            }
+
             if (Registrar() > 0)
             {
                 MessageBox.Show("Nuevo Medio de Pago registrado");
@@ -70,5 +75,16 @@ namespace Allqovet
         {
 
         }
+
+        private void NuevoTipoPago_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+            txtDescripcion.CharacterCasing = CharacterCasing.Upper;
+        }
+
     }
 }

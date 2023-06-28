@@ -64,6 +64,7 @@
     <Compile Include="IMascota.cs" />
     <Compile Include="IMedioPago.cs" />
     <Compile Include="INivelacceso.cs" />
+    <Compile Include="IOperacion.cs" />
     <Compile Include="IPedido.cs" />
     <Compile Include="IProducto.cs" />
     <Compile Include="IProductoVitrina.cs" />

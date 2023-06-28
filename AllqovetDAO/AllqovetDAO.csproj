@@ -137,6 +137,7 @@
     <Compile Include="MascotaDAO.cs" />
     <Compile Include="MedioPagoDAO.cs" />
     <Compile Include="NivelaccesoDAO.cs" />
+    <Compile Include="OperacionDAO.cs" />
     <Compile Include="PedidoDAO.cs" />
     <Compile Include="ProductoDAO.cs" />
     <Compile Include="ProductoVitrinaDAO.cs" />

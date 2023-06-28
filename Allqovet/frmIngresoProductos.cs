@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-using Interfaces;
 using AllqovetBLL;
 using Microsoft.Reporting.WinForms;
 
@@ -236,7 +235,7 @@ namespace Allqovet
                     {
                         MessageBox.Show("Ingreso registrada: " + idpedido);
                         Imprimir(idpedido);
-                        this.Close();
+                        //this.Close();
                     }
 
                 }
@@ -257,7 +256,7 @@ namespace Allqovet
             {
                 try
                 {
-                    ImprimirPedido pedido = new ImprimirPedido();
+                    frmImprimeIngreso pedido = new frmImprimeIngreso();
 
                     ReportDataSource fuente = new ReportDataSource("DataSetPedido", db.ImprimirPedido(idped));
                     pedido.reportViewer1.LocalReport.DataSources.Clear();
@@ -266,12 +265,13 @@ namespace Allqovet
                     pedido.reportViewer1.RefreshReport();
                     pedido.reportViewer1.LocalReport.Refresh();
 
-                    Ventana ventana = new Ventana();
-                    ventana.AbrirFormHijo(pedido);
+                     Ventana ventana = new Ventana();
+
+                     ventana.AbrirFormHijo(pedido);
 
                     //  this.Close();
 
-
+                   // pedido.Show();
                 }
                 catch (Exception ex)
                 {
@@ -296,6 +296,11 @@ namespace Allqovet
         private void button7_Click(object sender, EventArgs e)
         {
             BuscarProducto();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Imprimir(12);
         }
     }
 }
