@@ -471,6 +471,9 @@ namespace Allqovet
         private void button39_Click(object sender, EventArgs e)
         {
 
+            frmReporteStock frmReporteStock = new frmReporteStock();
+            AbrirFormHijo(frmReporteStock);
+
         }
     }
 }

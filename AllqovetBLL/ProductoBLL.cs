@@ -38,6 +38,11 @@ namespace AllqovetBLL
             return db.BuscarProductoCodigo(codigo);
         }
 
+        public DataTable ReporteStock(int idmarca, int idcategoria, int idvitrina,int stock)
+        {
+            return db.ReporteStock(idmarca,idcategoria,idvitrina,stock);
+        }
+
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes
 

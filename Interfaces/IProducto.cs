@@ -15,5 +15,6 @@ namespace Interfaces
         DataTable Buscar(Producto producto);
         DataTable Listar();
         DataTable BuscarProductoCodigo(string codigo);
+        DataTable ReporteStock(int idmarca, int idcategoria, int idvitrina, int stock);
     }
 }

@@ -78,6 +78,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="DashboardBLL.cs" />
+    <Compile Include="DocumentoBLL.cs" />
     <Compile Include="FacturaBLL.cs" />
     <Compile Include="Facturacion\Firmador.cs" />
     <Compile Include="Facturacion\GenerarBoleta.cs" />
@@ -96,9 +97,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorBLL.cs" />
     <Compile Include="TipoCitaBLL.cs" />
+    <Compile Include="TipoOperacionBLL.cs" />
     <Compile Include="TrabajadorBLL.cs" />
     <Compile Include="UsuarioBLL.cs" />
     <Compile Include="VentaBLL.cs" />
+    <Compile Include="VitrinaBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AllqovetDAO\AllqovetDAO.csproj">

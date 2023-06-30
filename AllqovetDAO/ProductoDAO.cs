@@ -80,6 +80,31 @@ namespace AllqovetDAO
             }
         }
 
+        public DataTable ReporteStock(int idmarca,int idcategoria,int idvitrina,int stock)
+        {
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_ReporteStock", cn))
+
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pIdmarca", idmarca);
+                    cmd.Parameters.AddWithValue("pIdcategoria", idcategoria);
+                    cmd.Parameters.AddWithValue("pIdvitrina", idvitrina);
+                    cmd.Parameters.AddWithValue("pstock", stock);
+
+                    cn.Open();
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        return dt;
+                    }
+                }
+            }
+        }
+
         public int Editar(Producto producto)
         {
             throw new NotImplementedException();

@@ -37,10 +37,17 @@ namespace Allqovet
             {
                 try
                 {
-                    cmbtipooperacion.DataSource = db.Listar();
+                    DataTable operacion = db.Listar();
+
+                    cmbtipooperacion.DataSource = operacion;
                     cmbtipooperacion.DisplayMember = "nombre";
                     cmbtipooperacion.ValueMember = "idtipooperacion";
                     cmbtipooperacion.SelectedIndex = -1;
+
+                    cmbtipo.DataSource = operacion;
+                    cmbtipo.DisplayMember = "descripcion_tipo";
+                    cmbtipo.ValueMember = "tipo";
+                    cmbtipo.SelectedIndex = -1;
 
 
                 }
@@ -127,13 +134,89 @@ namespace Allqovet
                 return;
             }
 
+            if (txtdescripcion.Text.Length==0)
+            {
+                MessageBox.Show("Ingrese una descripcion");
+                return;
+            }
+            if (txtimporte.Text.Length==0)
+            {
+                MessageBox.Show("Ingrese un importe");
+                return;
+            }
+
+
+
+            DialogResult dialogResult = MessageBox.Show(" Esta seguro de registrar la operacion?", "Movimiento de caja", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                RegistraMovimiento();
+            }
+
         }
 
         private void RegistraMovimiento()
         {
-            Operacion operacion = new Operacion();
+
+            using (OperacionBLL db=new OperacionBLL())
+            {
+                try
+                {
+                    Operacion operacion = new Operacion();
+
+                    operacion.fecha = dtpfecha.Value;
+                    operacion.Concepto = txtdescripcion.Text;
+                    operacion.Tipo = cmbtipo.SelectedValue.ToString();
+                    operacion.Idmediopago = Convert.ToInt32(cmbforma.SelectedValue);
+                    operacion.Importe = Convert.ToDouble(txtimporte.Text);
+                    operacion.Idcajachica = Idcajachica();
+                    operacion.idtipo = Convert.ToInt32(cmbtipooperacion.SelectedValue);
+                    operacion.iddocumento = Convert.ToInt32(cmbdoc.SelectedValue);
+                    operacion.serie = txtserie.Text;
+                    operacion.numero = Convert.ToInt32(txtnumero.Text);
+
+                    int r = db.Agregar(operacion);
+
+                    if( r >0)
+                    {
+                        MessageBox.Show("Movimiento registrado");
+                        this.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+           
 
         }
 
+        private int Idcajachica()
+        {
+            int Idcajachica = 0;
+            using (CajachicaBLL db = new CajachicaBLL())
+
+            {
+                try
+                {
+                    Idcajachica = db.BuscarCajaActiva();
+                }
+                catch (Exception ex)
+                {
+                    Idcajachica = 0;
+                    MessageBox.Show(ex.Message);
+                }
+
+                return Idcajachica;
+            }
+        }
+
+        private void cmbtipooperacion_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            cmbtipo.SelectedIndex = cmbtipooperacion.SelectedIndex;
+        }
     }
 }

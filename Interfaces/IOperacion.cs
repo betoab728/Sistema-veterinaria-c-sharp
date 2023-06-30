@@ -12,5 +12,6 @@ namespace Interfaces
     {
         int Agregar(Operacion operacion);
         int AgregarPagoVenta(Operacion operacion);
+        int AgregarMovimiento(Operacion operacion);
     }
 }

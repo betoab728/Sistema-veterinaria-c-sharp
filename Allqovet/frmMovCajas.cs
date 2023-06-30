@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AllqovetBLL;
 
 namespace Allqovet
 {
@@ -19,8 +20,51 @@ namespace Allqovet
 
         private void frmMovCajas_Load(object sender, EventArgs e)
         {
-
+            ListarFormaPagos();
+            ListarOperaciones();
         }
+
+        private void ListarOperaciones()
+        {
+            using (TipoOperacionBLL db = new TipoOperacionBLL())
+            {
+                try
+                {
+                    cmbtipooperacion.DataSource = db.Listar();
+                    cmbtipooperacion.DisplayMember = "nombre";
+                    cmbtipooperacion.ValueMember = "idtipooperacion";
+                    cmbtipooperacion.SelectedIndex = -1;
+
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void ListarFormaPagos()
+        {
+              using (MedioPagoBLL db = new MedioPagoBLL())
+                {
+                    try
+                    {
+
+                        cmbtipopago.DataSource = db.Listar();
+                        cmbtipopago.DisplayMember = "Descripcion";
+                        cmbtipopago.ValueMember = "Idmediopago";
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message); ;
+                    }
+                }
+            
+        }
+
 
         private void rbfecfa_CheckedChanged(object sender, EventArgs e)
         {

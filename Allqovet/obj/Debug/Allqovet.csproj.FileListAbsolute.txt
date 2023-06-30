@@ -938,3 +938,5 @@ C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmMovCajas.resources
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmImprimirPedido.resources
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmReporteStock.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.csproj.ResolveComReference.cache
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmImprimirStock.resources

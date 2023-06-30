@@ -47,6 +47,8 @@
             this.txtserie = new System.Windows.Forms.TextBox();
             this.txtnumero = new System.Windows.Forms.TextBox();
             this.cmbdoc = new System.Windows.Forms.ComboBox();
+            this.cmbtipo = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,7 +92,7 @@
             this.button3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button3.Image = global::Allqovet.Properties.Resources.delete;
-            this.button3.Location = new System.Drawing.Point(310, 292);
+            this.button3.Location = new System.Drawing.Point(327, 312);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(118, 36);
             this.button3.TabIndex = 119;
@@ -108,7 +110,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Image = global::Allqovet.Properties.Resources.save;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(186, 292);
+            this.button2.Location = new System.Drawing.Point(203, 312);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(118, 36);
             this.button2.TabIndex = 118;
@@ -134,6 +136,7 @@
             this.cmbtipooperacion.Name = "cmbtipooperacion";
             this.cmbtipooperacion.Size = new System.Drawing.Size(427, 24);
             this.cmbtipooperacion.TabIndex = 121;
+            this.cmbtipooperacion.SelectionChangeCommitted += new System.EventHandler(this.cmbtipooperacion_SelectionChangeCommitted);
             // 
             // txtimporte
             // 
@@ -148,7 +151,7 @@
             // 
             this.groupBox1.Controls.Add(this.txtimporte);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(119, 187);
+            this.groupBox1.Location = new System.Drawing.Point(141, 213);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(358, 89);
             this.groupBox1.TabIndex = 123;
@@ -255,12 +258,35 @@
             this.cmbdoc.Size = new System.Drawing.Size(126, 24);
             this.cmbdoc.TabIndex = 133;
             // 
+            // cmbtipo
+            // 
+            this.cmbtipo.Enabled = false;
+            this.cmbtipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbtipo.FormattingEnabled = true;
+            this.cmbtipo.Location = new System.Drawing.Point(119, 176);
+            this.cmbtipo.Name = "cmbtipo";
+            this.cmbtipo.Size = new System.Drawing.Size(126, 24);
+            this.cmbtipo.TabIndex = 134;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(24, 179);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(90, 19);
+            this.label9.TabIndex = 135;
+            this.label9.Text = "Movimiento";
+            // 
             // frmGasto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
-            this.ClientSize = new System.Drawing.Size(571, 343);
+            this.ClientSize = new System.Drawing.Size(571, 359);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.cmbtipo);
             this.Controls.Add(this.cmbdoc);
             this.Controls.Add(this.txtnumero);
             this.Controls.Add(this.txtserie);
@@ -311,5 +337,7 @@
         private System.Windows.Forms.TextBox txtserie;
         private System.Windows.Forms.TextBox txtnumero;
         private System.Windows.Forms.ComboBox cmbdoc;
+        private System.Windows.Forms.ComboBox cmbtipo;
+        private System.Windows.Forms.Label label9;
     }
 }

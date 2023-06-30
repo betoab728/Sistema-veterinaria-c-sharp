@@ -21,6 +21,10 @@ namespace AllqovetBLL
         {
            return db.AgregarPagoVenta(operacion);
         }
+        public int AgregarMovimiento(Operacion operacion)
+        {
+            return db.AgregarMovimiento(operacion);
+        }
 
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes

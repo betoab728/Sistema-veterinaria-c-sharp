@@ -44,6 +44,33 @@ namespace AllqovetDAO
             }
         }
 
+        public int AgregarMovimiento(Operacion operacion)
+        {
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("RegistrarMovimientoCaja", cn))
+                {
+                    cn.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pFecha", operacion.fecha);
+                    cmd.Parameters.AddWithValue("pConcepto", operacion.Concepto);
+                    cmd.Parameters.AddWithValue("pTipo", operacion.Tipo);
+                    cmd.Parameters.AddWithValue("pIdmediopago", operacion.Idmediopago);
+                    cmd.Parameters.AddWithValue("pImporte", operacion.Importe);
+                    cmd.Parameters.AddWithValue("pIdcajachica", operacion.Idcajachica);
+                    cmd.Parameters.AddWithValue("pIdtipo", operacion.idtipo);
+                    cmd.Parameters.AddWithValue("pIddocumento", operacion.iddocumento);
+                    cmd.Parameters.AddWithValue("pSerie", operacion.serie);
+                    cmd.Parameters.AddWithValue("pNumero", operacion.numero);
+
+
+                    int r = cmd.ExecuteNonQuery();
+
+                    return r;
+                }
+            }
+        }
+
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes
 

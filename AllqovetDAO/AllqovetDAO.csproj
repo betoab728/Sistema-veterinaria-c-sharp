@@ -130,6 +130,7 @@
     <Compile Include="DetalleFichaDAO.cs" />
     <Compile Include="DetallePedidoDAO.cs" />
     <Compile Include="DetalleVEntaDAO.cs" />
+    <Compile Include="DocumentoDAO.cs" />
     <Compile Include="EntradaDAO.cs" />
     <Compile Include="FacturaDAO.cs" />
     <Compile Include="FichaDAO.cs" />
@@ -150,9 +151,11 @@
     <Compile Include="ProveedorDAO.cs" />
     <Compile Include="SalidaDAO.cs" />
     <Compile Include="TipoCitaDAO.cs" />
+    <Compile Include="TipoOperacionDAO.cs" />
     <Compile Include="TrabajadorDAO.cs" />
     <Compile Include="UsuarioDAO.cs" />
     <Compile Include="VentaDAO.cs" />
+    <Compile Include="VitrinaDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">

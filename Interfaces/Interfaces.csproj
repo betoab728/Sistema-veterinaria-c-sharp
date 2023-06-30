@@ -57,6 +57,7 @@
     <Compile Include="IDetalleFicha.cs" />
     <Compile Include="IDetallePedido.cs" />
     <Compile Include="IDetalleVenta.cs" />
+    <Compile Include="IDocumento.cs" />
     <Compile Include="IEntrada.cs" />
     <Compile Include="IFactura.cs" />
     <Compile Include="Ificha.cs" />
@@ -71,9 +72,11 @@
     <Compile Include="IProveedores.cs" />
     <Compile Include="ISalida.cs" />
     <Compile Include="ITipoCita.cs" />
+    <Compile Include="ITipoOperacion.cs" />
     <Compile Include="ITrabajador.cs" />
     <Compile Include="IUsuario.cs" />
     <Compile Include="IVenta.cs" />
+    <Compile Include="IVitrina.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

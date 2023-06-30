@@ -110,6 +110,7 @@
             // 
             // cmbtipopago
             // 
+            this.cmbtipopago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbtipopago.Enabled = false;
             this.cmbtipopago.FormattingEnabled = true;
             this.cmbtipopago.Location = new System.Drawing.Point(182, 58);
