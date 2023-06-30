@@ -70,6 +70,7 @@
     <Compile Include="CajachicaBLL.cs" />
     <Compile Include="CargoBLL.cs" />
     <Compile Include="CategoriaBLL.cs" />
+    <Compile Include="CitaBLL.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="ClienteBLL.cs" />
     <Compile Include="Connected Services\ServiceFacturacion\Reference.cs">

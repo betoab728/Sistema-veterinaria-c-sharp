@@ -122,6 +122,7 @@
     <Compile Include="CajachicaDAO.cs" />
     <Compile Include="CargoDAO.cs" />
     <Compile Include="CategoriaDAO.cs" />
+    <Compile Include="CitaDAO.cs" />
     <Compile Include="ClienteDAO.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="DashboardDAO.cs" />

@@ -940,3 +940,11 @@ C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmReporteStock.resources
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.csproj.ResolveComReference.cache
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmImprimirStock.resources
+D:\VETERINARIA\integrador_avance03\Allqovet\obj\Debug\Allqovet.csproj.ResolveComReference.cache
+D:\VETERINARIA\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmCita.resources
+D:\VETERINARIA\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmCobro.resources
+D:\VETERINARIA\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmGasto.resources
+D:\VETERINARIA\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmImprimeIngreso.resources
+D:\VETERINARIA\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmImprimirStock.resources
+D:\VETERINARIA\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmMovCajas.resources
+D:\VETERINARIA\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmReporteStock.resources
