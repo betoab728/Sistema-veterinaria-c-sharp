@@ -175,7 +175,7 @@ namespace Allqovet
                     operacion.serie = txtserie.Text;
                     operacion.numero = Convert.ToInt32(txtnumero.Text);
 
-                    int r = db.Agregar(operacion);
+                    int r = db.AgregarMovimiento(operacion);
 
                     if( r >0)
                     {
