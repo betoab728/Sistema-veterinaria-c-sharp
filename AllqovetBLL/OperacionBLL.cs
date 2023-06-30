@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Entidades;
 using Interfaces;
 using AllqovetDAO;
+using System.Data;
 
 namespace AllqovetBLL
 {
@@ -24,6 +25,15 @@ namespace AllqovetBLL
         public int AgregarMovimiento(Operacion operacion)
         {
             return db.AgregarMovimiento(operacion);
+        }
+
+        public DataTable BuscarMovCajaFechas(DateTime desde, DateTime hasta, int idmediopago, int idtipoOperacion)
+        {
+            return db.BuscarMovCajaFechas(desde ,hasta ,idmediopago, idtipoOperacion);
+        }
+        public DataTable BuscarMovCajaActual(int idcajachica, int idmediopago, int idTipoOperacion)
+        {
+            return db.BuscarMovCajaActual(idcajachica, idmediopago, idTipoOperacion);
         }
 
         #region IDisposable Support

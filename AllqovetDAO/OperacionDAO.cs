@@ -71,6 +71,61 @@ namespace AllqovetDAO
             }
         }
 
+        public DataTable BuscarMovCajaFechas(DateTime desde,DateTime hasta , int idmediopago,int idtipoOperacion)
+        {
+
+
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_BuscarMovCajaFechas", cn))
+
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("desde", desde);
+                    cmd.Parameters.AddWithValue("hasta", hasta);
+                    cmd.Parameters.AddWithValue("pIdmediopago", idmediopago);
+                    cmd.Parameters.AddWithValue("pIdtipoOperacion", idtipoOperacion);
+
+                    cn.Open();
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        return dt;
+                    }
+                }
+            }
+        }
+
+        public DataTable BuscarMovCajaActual(int idcajachica,int idmediopago,int idTipoOperacion)
+        {
+
+
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_BuscarMovCajaActual", cn))
+
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pIdcajachica", idcajachica);
+                    cmd.Parameters.AddWithValue("pIdmediopago", idmediopago);
+                    cmd.Parameters.AddWithValue("pIdtipoOperacion", idTipoOperacion);
+
+                    cn.Open();
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        return dt;
+                    }
+                }
+            }
+        }
+
+
+
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes
 

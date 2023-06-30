@@ -40,7 +40,7 @@
             this.rbfecfa = new System.Windows.Forms.RadioButton();
             this.lbldesde = new System.Windows.Forms.Label();
             this.rbactual = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMovimientos = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -48,7 +48,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMovimientos)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -79,13 +79,14 @@
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::Allqovet.Properties.Resources.buscar;
-            this.button1.Location = new System.Drawing.Point(681, 19);
+            this.button1.Location = new System.Drawing.Point(528, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 29);
             this.button1.TabIndex = 12;
             this.button1.Text = "Buscar";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cmbtipooperacion
             // 
@@ -191,14 +192,17 @@
             this.rbactual.UseVisualStyleBackColor = true;
             this.rbactual.CheckedChanged += new System.EventHandler(this.rbactual_CheckedChanged);
             // 
-            // dataGridView1
+            // dgvMovimientos
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 139);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 243);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvMovimientos.AllowUserToAddRows = false;
+            this.dgvMovimientos.AllowUserToDeleteRows = false;
+            this.dgvMovimientos.BackgroundColor = System.Drawing.Color.White;
+            this.dgvMovimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMovimientos.Location = new System.Drawing.Point(16, 139);
+            this.dgvMovimientos.Name = "dgvMovimientos";
+            this.dgvMovimientos.ReadOnly = true;
+            this.dgvMovimientos.Size = new System.Drawing.Size(776, 243);
+            this.dgvMovimientos.TabIndex = 1;
             // 
             // label8
             // 
@@ -240,6 +244,7 @@
             this.button5.Text = "Anular";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -306,14 +311,14 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvMovimientos);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmMovCajas";
             this.Text = "frmMovCajas";
             this.Load += new System.EventHandler(this.frmMovCajas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMovimientos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -332,7 +337,7 @@
         private System.Windows.Forms.DateTimePicker dtphasta;
         private System.Windows.Forms.ComboBox cmbtipopago;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMovimientos;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
