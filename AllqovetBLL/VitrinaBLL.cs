@@ -15,7 +15,7 @@ namespace AllqovetBLL
         VitrinaDAO db = new VitrinaDAO();
         public int Agregar(Vitrina vitrina)
         {
-            throw new NotImplementedException();
+            return db.Agregar(vitrina);
         }
 
         public DataTable Listar()

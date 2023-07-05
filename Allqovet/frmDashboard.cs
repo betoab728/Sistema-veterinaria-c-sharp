@@ -123,12 +123,14 @@ namespace AllqovetBLL
 
         private void button1_Click(object sender, EventArgs e)
         {
-   
+            frmNuevoCliente cliente = new frmNuevoCliente();
+            cliente.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            frmClientes clientes = new frmClientes();
+            clientes.ShowDialog();
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -178,6 +180,79 @@ namespace AllqovetBLL
         }
 
         private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmClientes clientes = new frmClientes();
+            clientes.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Ventana ventana = new Ventana();
+
+            frmFicha ficha = new frmFicha(false);
+
+            ventana.AbrirFormHijo(ficha);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            frmVentas ventas = new frmVentas();
+            ventas.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            frmRegistroVentas registroVentas = new frmRegistroVentas();
+            registroVentas.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            frmRegistroVentas registroVentas = new frmRegistroVentas();
+            registroVentas.ShowDialog();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            frmIngresoProductos ingresoProductos = new frmIngresoProductos();
+            ingresoProductos.ShowDialog();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Ventana ventana = new Ventana();
+            frmReporteStock stock= new frmReporteStock();
+            ventana.AbrirFormHijo(stock);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Ventana ventana = new Ventana();
+            frmReporteVenta reporte = new frmReporteVenta();
+            ventana.AbrirFormHijo(reporte);
+        }
+
+        private void label11_Click(object sender, EventArgs e)
         {
 
         }

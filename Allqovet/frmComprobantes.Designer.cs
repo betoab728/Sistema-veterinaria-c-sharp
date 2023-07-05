@@ -118,7 +118,8 @@
             this.groupBox1.Size = new System.Drawing.Size(776, 59);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Buscar Ficha";
+            this.groupBox1.Text = "Buscar Comprobante";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // panelfecha
             // 

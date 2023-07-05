@@ -285,6 +285,12 @@
     <Compile Include="frmNuevaMascota.Designer.cs">
       <DependentUpon>frmNuevaMascota.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNuevaVitrina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaVitrina.Designer.cs">
+      <DependentUpon>frmNuevaVitrina.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNuevoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -478,6 +484,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNuevaMascota.resx">
       <DependentUpon>frmNuevaMascota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaVitrina.resx">
+      <DependentUpon>frmNuevaVitrina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNuevoCliente.resx">
       <DependentUpon>frmNuevoCliente.cs</DependentUpon>

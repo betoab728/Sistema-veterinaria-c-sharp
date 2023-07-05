@@ -607,3 +607,10 @@ D:\VETERINARIA\integrador_avance03\AllqovetBLL\bin\Debug\DotNetZip.pdb
 D:\VETERINARIA\integrador_avance03\AllqovetBLL\bin\Debug\DotNetZip.xml
 D:\VETERINARIA\integrador_avance03\AllqovetBLL\bin\Debug\Gma.QrCodeNet.Encoding.pdb
 D:\VETERINARIA\integrador_avance03\AllqovetBLL\bin\Debug\Gma.QrCodeNet.Encoding.xml
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\AllqovetBLL\bin\Debug\DotNetZip.dll
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\AllqovetBLL\bin\Debug\Gma.QrCodeNet.Encoding.dll
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\AllqovetBLL\bin\Debug\Microsoft.Web.Services3.dll
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\AllqovetBLL\bin\Debug\DotNetZip.pdb
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\AllqovetBLL\bin\Debug\DotNetZip.xml
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\AllqovetBLL\bin\Debug\Gma.QrCodeNet.Encoding.pdb
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\AllqovetBLL\bin\Debug\Gma.QrCodeNet.Encoding.xml

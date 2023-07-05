@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Allqovet"
+    "\\Allqovet",
+    "\\AllqovetBLL",
+    "\\Allqovet\\SqlServerTypes\\x86"
   ],
-  "SelectedNode": "\\Allqovet\\frmNuevaCategory.cs",
+  "SelectedNode": "\\Allqovet\\frmMenu.Designer.cs",
   "PreviewInSolutionExplorer": false
 }

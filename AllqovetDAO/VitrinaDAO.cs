@@ -17,7 +17,19 @@ namespace AllqovetDAO
 
         public int Agregar(Vitrina vitrina)
         {
-            throw new NotImplementedException();
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_RegistrarVitrina", cn))
+                {
+                    cn.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pNombre", vitrina.descripcion);
+
+                    int r = cmd.ExecuteNonQuery();
+
+                    return r;
+                }
+            }
         }
 
         public DataTable Listar()

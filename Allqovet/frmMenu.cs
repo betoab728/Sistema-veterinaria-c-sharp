@@ -235,8 +235,11 @@ namespace Allqovet
 
         private void button14_Click(object sender, EventArgs e)
         {
-            frmRegistrofichas fichas = new frmRegistrofichas();
-            AbrirFormHijo(fichas);
+            Ventana ventana = new Ventana();
+
+            frmFicha ficha = new frmFicha(false);
+
+            ventana.AbrirFormHijo(ficha);
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -301,7 +304,8 @@ namespace Allqovet
 
         private void button33_Click(object sender, EventArgs e)
         {
-
+            frmRegistroVentas ventas = new frmRegistroVentas();
+            AbrirFormHijo(ventas);
         }
 
         private void panelFacturacion_Paint(object sender, PaintEventArgs e)
@@ -336,7 +340,6 @@ namespace Allqovet
 
         private void button17_Click(object sender, EventArgs e)
         {
-
 
             frmIngresoProductos ingreso = new frmIngresoProductos();
             AbrirFormHijo(ingreso);
@@ -474,6 +477,42 @@ namespace Allqovet
             frmReporteStock frmReporteStock = new frmReporteStock();
             AbrirFormHijo(frmReporteStock);
 
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            frmReporteStock frmReporteStock = new frmReporteStock();
+            AbrirFormHijo(frmReporteStock);
+        }
+
+        private void button29_Click_1(object sender, EventArgs e)
+        {
+            frmComprobantes comprobantes = new frmComprobantes();
+            AbrirFormHijo(comprobantes);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            frmRegistrofichas registrofichas = new frmRegistrofichas();
+            AbrirFormHijo(registrofichas);
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            frmTrabajador trabajador = new frmTrabajador();
+            AbrirFormHijo(trabajador);
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            frmProveedores proveedores = new frmProveedores();
+            AbrirFormHijo(proveedores);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            frmNuevaVitrina vitrina = new frmNuevaVitrina();
+            AbrirFormHijo(vitrina);
         }
     }
 }
