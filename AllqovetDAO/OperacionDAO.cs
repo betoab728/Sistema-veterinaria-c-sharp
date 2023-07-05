@@ -71,6 +71,35 @@ namespace AllqovetDAO
             }
         }
 
+
+        public int ActualizarMovimientoCaja(Operacion operacion)
+        {
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_ActualizarMovimientoCaja", cn))
+                {
+                    cn.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pFecha", operacion.fecha);
+                    cmd.Parameters.AddWithValue("pConcepto", operacion.Concepto);
+                    cmd.Parameters.AddWithValue("pTipo", operacion.Tipo);
+                    cmd.Parameters.AddWithValue("pIdmediopago", operacion.Idmediopago);
+                    cmd.Parameters.AddWithValue("pImporte", operacion.Importe);
+                    cmd.Parameters.AddWithValue("pIdcajachica", operacion.Idcajachica);
+                    cmd.Parameters.AddWithValue("pIdtipo", operacion.idtipo);
+                    cmd.Parameters.AddWithValue("pIddocumento", operacion.iddocumento);
+                    cmd.Parameters.AddWithValue("pSerie", operacion.serie);
+                    cmd.Parameters.AddWithValue("pNumero", operacion.numero);
+                    cmd.Parameters.AddWithValue("pIdoperacion", operacion.Idoperacion);
+
+
+                    int r = cmd.ExecuteNonQuery();
+
+                    return r;
+                }
+            }
+        }
+
         public DataTable BuscarMovCajaFechas(DateTime desde,DateTime hasta , int idmediopago,int idtipoOperacion)
         {
 
@@ -120,6 +149,63 @@ namespace AllqovetDAO
 
                         return dt;
                     }
+                }
+            }
+        }
+
+        public Operacion MostrarRegistro(int idopereacion)
+        {
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_BuscarOperacion", cn))
+
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pIdoperacion", idopereacion);
+                   
+
+                    cn.Open();
+
+                    using (MySqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        Operacion operacion  = new Operacion();
+
+                        while (dr.Read())
+                        {
+
+                              operacion.fecha = Convert.ToDateTime(dr["fecha"]);
+                              operacion.Concepto = dr["Concepto"].ToString();
+                              operacion.Tipo = dr["Tipo"].ToString();
+                              operacion.Idmediopago = Convert.ToInt32( dr["Idmediopago"]);
+                              operacion.Importe =Convert.ToDouble(dr["Importe"]);
+                              operacion.idtipo = Convert.ToInt32( dr["idtipo"]);
+                              operacion.iddocumento = Convert.ToInt32(dr["iddocumento"]);
+                              operacion.serie = dr["serie"].ToString();
+                              operacion.numero = Convert.ToInt32( dr["numero"]);
+
+
+                        }
+
+                        return operacion;
+                    }
+                }
+            }
+        }
+        
+
+        public int Anular(int Idoperacion)
+        {
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_AnularMovcaja", cn))
+                {
+                    cn.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pIdoperacion", Idoperacion);
+                 
+                    int r = cmd.ExecuteNonQuery();
+
+                    return r;
                 }
             }
         }

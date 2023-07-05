@@ -17,6 +17,7 @@ namespace Entidades
         public double Utilidad { get; set; }
         public string serie { get; set; }
         public int numero { get; set; }
+        public int idcajachica { get; set; }
     }
 
 }

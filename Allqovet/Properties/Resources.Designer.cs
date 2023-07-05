@@ -223,6 +223,26 @@ namespace Allqovet.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _352286_content_cut_icon {
+            get {
+                object obj = ResourceManager.GetObject("352286_content_cut_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _352286_content_cut_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("352286_content_cut_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3669272_remove_circle_ic_icon {
             get {
                 object obj = ResourceManager.GetObject("3669272_remove_circle_ic_icon", resourceCulture);

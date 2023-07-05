@@ -14,9 +14,14 @@ namespace Allqovet
 {
     public partial class frmGasto : Form
     {
-        public frmGasto()
+        bool edicion = false;
+
+        SoloNumeros validar = new SoloNumeros();
+        public frmGasto(bool editar)
         {
             InitializeComponent();
+
+            edicion = editar;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -29,6 +34,49 @@ namespace Allqovet
             ListarOperacion();
             ListarMedioPAgo();
             ListaTipoDocumento();
+
+
+            if (edicion)
+            {
+                MostrarRegistro();
+            }
+        }
+        private void MostrarRegistro()
+        {
+            using (OperacionBLL db = new OperacionBLL())
+            {
+                try
+                {
+                    int idoperacion = 0;
+                   idoperacion =Convert.ToInt32(lblidoperacion.Text);
+
+                    Operacion operacion = new Operacion();
+
+                   operacion = db.MostrarRegistro(idoperacion);
+                   int idt = operacion.idtipo;
+
+
+                      cmbtipooperacion.SelectedValue = operacion.idtipo;
+
+                     txtdescripcion.Text = operacion.Concepto;
+                     dtpfecha.Value = operacion.fecha;
+
+                     cmbforma.SelectedValue = operacion.Idmediopago;
+
+                     cmbdoc.SelectedValue = operacion.iddocumento;
+                     txtserie.Text = operacion.serie;
+                     txtnumero.Text = operacion.numero.ToString();
+                     txtimporte.Text = string.Format("{0:0.00}",operacion.Importe);
+                     cmbtipo.SelectedValue = operacion.Tipo;
+
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Error en el metodo mostrar registro: "+ex.Message);
+                }
+            }
         }
 
         private void ListarOperacion()
@@ -150,9 +198,53 @@ namespace Allqovet
             DialogResult dialogResult = MessageBox.Show(" Esta seguro de registrar la operacion?", "Movimiento de caja", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                RegistraMovimiento();
+                if (!edicion)
+                {
+                    RegistraMovimiento();
+                }
+                else
+                {
+                    Actualizar();
+                }
+             
             }
 
+        }
+
+        private void Actualizar()
+        {
+            using (OperacionBLL db = new OperacionBLL())
+            {
+                try
+                {
+                    Operacion operacion = new Operacion();
+
+                    operacion.fecha = dtpfecha.Value;
+                    operacion.Concepto = txtdescripcion.Text;
+                    operacion.Tipo = cmbtipo.SelectedValue.ToString();
+                    operacion.Idmediopago = Convert.ToInt32(cmbforma.SelectedValue);
+                    operacion.Importe = Convert.ToDouble(txtimporte.Text);
+                    operacion.Idcajachica = Idcajachica();
+                    operacion.idtipo = Convert.ToInt32(cmbtipooperacion.SelectedValue);
+                    operacion.iddocumento = Convert.ToInt32(cmbdoc.SelectedValue);
+                    operacion.serie = txtserie.Text;
+                    operacion.numero = Convert.ToInt32(txtnumero.Text);
+                    operacion.Idoperacion = Convert.ToInt32(lblidoperacion.Text);
+
+                    int r = db.ActualizarMovimientoCaja(operacion);
+
+                    if (r > 0)
+                    {
+                        MessageBox.Show("Movimiento Actualizado");
+                        this.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void RegistraMovimiento()
@@ -217,6 +309,11 @@ namespace Allqovet
         private void cmbtipooperacion_SelectionChangeCommitted(object sender, EventArgs e)
         {
             cmbtipo.SelectedIndex = cmbtipooperacion.SelectedIndex;
+        }
+
+        private void txtimporte_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = validar.Solonumeros(Convert.ToInt32(e.KeyChar), txtimporte);
         }
     }
 }

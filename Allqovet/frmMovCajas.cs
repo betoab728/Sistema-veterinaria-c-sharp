@@ -118,7 +118,7 @@ namespace Allqovet
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmGasto gasto = new frmGasto();
+            frmGasto gasto = new frmGasto(false);
 
             Ventana ventana = new Ventana();
             ventana.AbrirFormHijo(gasto);
@@ -126,14 +126,49 @@ namespace Allqovet
 
         private void button5_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("¿ Esta seguro de Anular el movimiento de caja?", "Venta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Anular();
+            }
+        }
 
+        private void Anular()
+        {
+            using (OperacionBLL db= new OperacionBLL())
+            {
+                try
+                {
+                    int idoperacion = 0;
+                    idoperacion = Convert.ToInt32(dgvMovimientos.CurrentRow.Cells["IDOPERACION"].Value);
+
+                    int r = db.Anular(idoperacion);
+
+                    if (r>0)
+                    {
+                        MessageBox.Show("Registro anulado");
+                        Consulta();
+
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Consulta();
+        }
+
+        private void Consulta()
+        {
             if (rbactual.Checked)
             {
-                MessageBox.Show("entro a actual");
+
 
                 BuscarMovCajaActual();
             }
@@ -156,7 +191,25 @@ namespace Allqovet
                     idcajachica = Idcajachica();
                     if (chkforma.Checked) idmediopago = Convert.ToInt32(cmbtipopago.SelectedValue);
                     if (chkoperacion.Checked) idtipoOoperacion = Convert.ToInt32(cmbtipooperacion.SelectedValue);
+
                     dgvMovimientos.DataSource = db.BuscarMovCajaActual(idcajachica, idmediopago, idtipoOoperacion);
+
+                    if (dgvMovimientos.Rows.Count >0)
+                    {
+                     
+                        dgvMovimientos.Columns["IDOPERACION"].Visible = false;
+
+                       foreach (DataGridViewRow row in dgvMovimientos.Rows)
+                        {
+
+                            if (row.Cells["ESTADO"].Value.ToString() == "ANULADO")
+                            {
+                                row.DefaultCellStyle.BackColor = Color.Red;
+                            }
+                        }
+
+                    }
+
                 }
                 catch (Exception ex)
                 {
@@ -181,6 +234,23 @@ namespace Allqovet
                     if (chkoperacion.Checked) idtipoOoperacion = Convert.ToInt32(cmbtipooperacion.SelectedValue);
 
                     dgvMovimientos.DataSource = db.BuscarMovCajaFechas(desde, hasta, idmediopago, idtipoOoperacion);
+
+                    if (dgvMovimientos.Rows.Count>0)
+                    {
+                        dgvMovimientos.Columns["IDOPERACION"].Visible = false;
+
+                        foreach (DataGridViewRow row in dgvMovimientos.Rows)
+                        {
+                         
+
+                            if (row.Cells["ESTADO"].Value.ToString() == "ANULADO")
+                                
+                            {
+                               
+                                row.DefaultCellStyle.BackColor = Color.Red;
+                            }
+                        }
+                    }
 
                 }
                 catch (Exception ex)
@@ -210,5 +280,28 @@ namespace Allqovet
                 return Idcajachica;
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DatagridAexcel exportar = new DatagridAexcel();
+
+            exportar.ExportarDataGridViewExcel(dgvMovimientos);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+            frmGasto gasto = new frmGasto(true);
+
+            int idoperacion = 0;
+
+            idoperacion = Convert.ToInt32(dgvMovimientos.CurrentRow.Cells["IDOPERACION"].Value);
+            gasto.lblidoperacion.Text = idoperacion.ToString();
+
+            Ventana ventana = new Ventana();
+            ventana.AbrirFormHijo(gasto);
+        }
+
+
     }
 }

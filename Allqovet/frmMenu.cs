@@ -229,8 +229,18 @@ namespace Allqovet
 
         private void button10_Click(object sender, EventArgs e)
         {
-            frmVentas venta = new frmVentas();
-            AbrirFormHijo(venta);
+            if (CajaAbierta())
+            {
+                frmVentas venta = new frmVentas();
+                AbrirFormHijo(venta);
+            }
+
+            else
+            {
+                MessageBox.Show("No existe una caja activa");
+            }
+
+         
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -418,21 +428,38 @@ namespace Allqovet
 
         private void button12_Click(object sender, EventArgs e)
         {
-            using (CajachicaBLL db=new CajachicaBLL())
+            if (!CajaAbierta())
+            {
+
+                frmAperturaCaja caja = new frmAperturaCaja();
+                AbrirFormHijo(caja);
+            }
+            else
+            {
+                MessageBox.Show("Ya existe una caja activa");
+            }
+
+        }
+
+        private bool CajaAbierta()
+        {
+            bool estado = false;
+            using (CajachicaBLL db = new CajachicaBLL())
             {
                 try
                 {
                     int cajachica = 0;
                     cajachica = db.BuscarCajaActiva();
 
-                    if (cajachica==0)
+                    if (cajachica == 0)
                     {
-                        frmAperturaCaja caja = new frmAperturaCaja();
-                        AbrirFormHijo(caja);
+                        estado = false;
+                     
                     }
                     else
                     {
-                        MessageBox.Show("Ya existe una caja activa");
+                        estado = true;
+                      
                     }
                 }
                 catch (Exception ex)
@@ -440,10 +467,9 @@ namespace Allqovet
 
                     MessageBox.Show(ex.Message);
                 }
+
+                return estado;
             }
-
-
-            
         }
 
         private void button11_Click(object sender, EventArgs e)

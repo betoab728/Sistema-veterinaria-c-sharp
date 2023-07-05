@@ -71,6 +71,7 @@
             // 
             // cbocriterio
             // 
+            this.cbocriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbocriterio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbocriterio.FormattingEnabled = true;
             this.cbocriterio.Items.AddRange(new object[] {
@@ -117,10 +118,13 @@
             // 
             // dgClientes
             // 
+            this.dgClientes.AllowUserToAddRows = false;
+            this.dgClientes.AllowUserToDeleteRows = false;
             this.dgClientes.BackgroundColor = System.Drawing.Color.White;
             this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgClientes.Location = new System.Drawing.Point(12, 110);
             this.dgClientes.Name = "dgClientes";
+            this.dgClientes.ReadOnly = true;
             this.dgClientes.Size = new System.Drawing.Size(776, 268);
             this.dgClientes.TabIndex = 22;
             // 

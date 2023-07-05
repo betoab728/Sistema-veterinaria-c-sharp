@@ -49,6 +49,7 @@
             this.cmbdoc = new System.Windows.Forms.ComboBox();
             this.cmbtipo = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.lblidoperacion = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,6 +146,8 @@
             this.txtimporte.Name = "txtimporte";
             this.txtimporte.Size = new System.Drawing.Size(181, 40);
             this.txtimporte.TabIndex = 122;
+            this.txtimporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtimporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtimporte_KeyPress);
             this.txtimporte.Leave += new System.EventHandler(this.txtimporte_Leave);
             // 
             // groupBox1
@@ -216,7 +219,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(22, 149);
+            this.label6.Location = new System.Drawing.Point(24, 147);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 19);
             this.label6.TabIndex = 129;
@@ -251,11 +254,12 @@
             // 
             // cmbdoc
             // 
-            this.cmbdoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbdoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbdoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbdoc.FormattingEnabled = true;
             this.cmbdoc.Location = new System.Drawing.Point(119, 146);
             this.cmbdoc.Name = "cmbdoc";
-            this.cmbdoc.Size = new System.Drawing.Size(126, 24);
+            this.cmbdoc.Size = new System.Drawing.Size(126, 21);
             this.cmbdoc.TabIndex = 133;
             // 
             // cmbtipo
@@ -279,12 +283,23 @@
             this.label9.TabIndex = 135;
             this.label9.Text = "Movimiento";
             // 
+            // lblidoperacion
+            // 
+            this.lblidoperacion.AutoSize = true;
+            this.lblidoperacion.Location = new System.Drawing.Point(49, 265);
+            this.lblidoperacion.Name = "lblidoperacion";
+            this.lblidoperacion.Size = new System.Drawing.Size(13, 13);
+            this.lblidoperacion.TabIndex = 136;
+            this.lblidoperacion.Text = "0";
+            this.lblidoperacion.Visible = false;
+            // 
             // frmGasto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(571, 359);
+            this.Controls.Add(this.lblidoperacion);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cmbtipo);
             this.Controls.Add(this.cmbdoc);
@@ -339,5 +354,6 @@
         private System.Windows.Forms.ComboBox cmbdoc;
         private System.Windows.Forms.ComboBox cmbtipo;
         private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label lblidoperacion;
     }
 }

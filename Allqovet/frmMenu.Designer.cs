@@ -288,6 +288,7 @@
             this.button38.TabIndex = 11;
             this.button38.Text = "Cerrar caja";
             this.button38.UseVisualStyleBackColor = false;
+            this.button38.Click += new System.EventHandler(this.button38_Click);
             // 
             // button12
             // 
