@@ -2687,6 +2687,8 @@ namespace Allqovet.Reportes {
             
             private global::System.Data.DataColumn columnstock;
             
+            private global::System.Data.DataColumn columnvalor_total;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ReporteStockDataTable() {
@@ -2770,6 +2772,14 @@ namespace Allqovet.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn valor_totalColumn {
+                get {
+                    return this.columnvalor_total;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2805,7 +2815,7 @@ namespace Allqovet.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ReporteStockRow AddReporteStockRow(string codigo, string descripcion, string precio, string marca, string categoria, int stock) {
+            public ReporteStockRow AddReporteStockRow(string codigo, string descripcion, string precio, string marca, string categoria, int stock, double valor_total) {
                 ReporteStockRow rowReporteStockRow = ((ReporteStockRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         codigo,
@@ -2813,7 +2823,8 @@ namespace Allqovet.Reportes {
                         precio,
                         marca,
                         categoria,
-                        stock};
+                        stock,
+                        valor_total};
                 rowReporteStockRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowReporteStockRow);
                 return rowReporteStockRow;
@@ -2842,6 +2853,7 @@ namespace Allqovet.Reportes {
                 this.columnmarca = base.Columns["marca"];
                 this.columncategoria = base.Columns["categoria"];
                 this.columnstock = base.Columns["stock"];
+                this.columnvalor_total = base.Columns["valor_total"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2859,6 +2871,8 @@ namespace Allqovet.Reportes {
                 base.Columns.Add(this.columncategoria);
                 this.columnstock = new global::System.Data.DataColumn("stock", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstock);
+                this.columnvalor_total = new global::System.Data.DataColumn("valor_total", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvalor_total);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6134,6 +6148,22 @@ namespace Allqovet.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public double valor_total {
+                get {
+                    try {
+                        return ((double)(this[this.tableReporteStock.valor_totalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'valor_total\' de la tabla \'ReporteStock\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReporteStock.valor_totalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IscodigoNull() {
                 return this.IsNull(this.tableReporteStock.codigoColumn);
             }
@@ -6202,6 +6232,18 @@ namespace Allqovet.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetstockNull() {
                 this[this.tableReporteStock.stockColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isvalor_totalNull() {
+                return this.IsNull(this.tableReporteStock.valor_totalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setvalor_totalNull() {
+                this[this.tableReporteStock.valor_totalColumn] = global::System.Convert.DBNull;
             }
         }
         

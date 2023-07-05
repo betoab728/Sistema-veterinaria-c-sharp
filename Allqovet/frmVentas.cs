@@ -298,6 +298,7 @@ namespace Allqovet
                     venta.Idtrabajador = Convert.ToInt32(cmbvendedor.SelectedValue);
                     venta.Total = Convert.ToDouble(lbltotal.Text);
                     venta.Utilidad = Convert.ToDouble(lblutilidad.Text);
+                    venta.idcajachica = Idcajachica();
 
                     movimiento.Tipo = "s";
                     movimiento.idcausa = 1; //motivo 1: venta de producto
@@ -360,6 +361,27 @@ namespace Allqovet
 
 
 
+        }
+
+
+        private int Idcajachica()
+        {
+            int Idcajachica = 0;
+            using (CajachicaBLL db = new CajachicaBLL())
+
+            {
+                try
+                {
+                    Idcajachica = db.BuscarCajaActiva();
+                }
+                catch (Exception ex)
+                {
+                    Idcajachica = 0;
+                    MessageBox.Show(ex.Message);
+                }
+
+                return Idcajachica;
+            }
         }
 
         public void Imprimir(int idventa)

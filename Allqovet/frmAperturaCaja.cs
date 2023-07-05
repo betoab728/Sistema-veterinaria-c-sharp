@@ -115,6 +115,17 @@ namespace Allqovet
 
                     if (db.Agregar(caja) >0)
                     {
+
+
+                        frmMenu f1 = Application.OpenForms.OfType<frmMenu>().SingleOrDefault();
+                       
+
+                        if (f1 != null)
+                        {
+                            f1.lblusuario.Text = "CAJA ACTIVA, USUARIO:"+txttrabajador.Text;
+                        }
+
+
                         MessageBox.Show("Apertura de caja correcto");
                         this.Close();
                     }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelSubmenuConsultorio = new System.Windows.Forms.Panel();
+            this.button40 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -90,7 +91,7 @@
             this.btnVentas = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelEscritorio = new System.Windows.Forms.Panel();
-            this.button40 = new System.Windows.Forms.Button();
+            this.lblusuario = new System.Windows.Forms.Label();
             this.panelSubmenuConsultorio.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             this.panelSubmenuVentas.SuspendLayout();
@@ -119,6 +120,22 @@
             this.panelSubmenuConsultorio.Size = new System.Drawing.Size(241, 171);
             this.panelSubmenuConsultorio.TabIndex = 4;
             this.panelSubmenuConsultorio.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSubmenuConsultorio_Paint);
+            // 
+            // button40
+            // 
+            this.button40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
+            this.button40.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button40.FlatAppearance.BorderSize = 0;
+            this.button40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button40.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button40.ForeColor = System.Drawing.Color.White;
+            this.button40.Location = new System.Drawing.Point(0, 123);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(241, 41);
+            this.button40.TabIndex = 10;
+            this.button40.Text = "Listado de citas";
+            this.button40.UseVisualStyleBackColor = false;
+            this.button40.Click += new System.EventHandler(this.button40_Click);
             // 
             // button2
             // 
@@ -171,6 +188,7 @@
             // panelTitulo
             // 
             this.panelTitulo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelTitulo.Controls.Add(this.lblusuario);
             this.panelTitulo.Controls.Add(this.lblModo);
             this.panelTitulo.Controls.Add(this.label1);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1055,21 +1073,15 @@
             this.panelEscritorio.Size = new System.Drawing.Size(1112, 676);
             this.panelEscritorio.TabIndex = 7;
             // 
-            // button40
+            // lblusuario
             // 
-            this.button40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.button40.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button40.FlatAppearance.BorderSize = 0;
-            this.button40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button40.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button40.ForeColor = System.Drawing.Color.White;
-            this.button40.Location = new System.Drawing.Point(0, 123);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(241, 41);
-            this.button40.TabIndex = 10;
-            this.button40.Text = "Listado de citas";
-            this.button40.UseVisualStyleBackColor = false;
-            this.button40.Click += new System.EventHandler(this.button40_Click);
+            this.lblusuario.AutoSize = true;
+            this.lblusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblusuario.Location = new System.Drawing.Point(37, 8);
+            this.lblusuario.Name = "lblusuario";
+            this.lblusuario.Size = new System.Drawing.Size(77, 17);
+            this.lblusuario.TabIndex = 2;
+            this.lblusuario.Text = "USUARIO";
             // 
             // frmMenu
             // 
@@ -1085,6 +1097,7 @@
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.panelSubmenuConsultorio.ResumeLayout(false);
             this.panelTitulo.ResumeLayout(false);
+            this.panelTitulo.PerformLayout();
             this.panelSubmenuVentas.ResumeLayout(false);
             this.panelsubmenuClientes.ResumeLayout(false);
             this.panelmenu.ResumeLayout(false);
@@ -1164,5 +1177,6 @@
         private System.Windows.Forms.Button button38;
         private System.Windows.Forms.Button button39;
         private System.Windows.Forms.Button button40;
+        public System.Windows.Forms.Label lblusuario;
     }
 }

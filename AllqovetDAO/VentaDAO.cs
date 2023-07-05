@@ -36,6 +36,7 @@ namespace AllqovetDAO
                 cmd.Parameters.AddWithValue("pIdtrabajador", venta.Idtrabajador);
                 cmd.Parameters.AddWithValue("pTotal", venta.Total);
                 cmd.Parameters.AddWithValue("pUtilidad", venta.Utilidad);
+                cmd.Parameters.AddWithValue("pIdcajachica", venta.idcajachica);
 
                 cmd.Parameters.Add("pIdventa", MySqlDbType.Int32).Direction = ParameterDirection.Output;
                 r = cmd.ExecuteNonQuery();
