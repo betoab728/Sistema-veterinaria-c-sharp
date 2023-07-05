@@ -9,10 +9,12 @@ namespace Entidades
     public class Cita
     {
         public int Idcita { get; set; }
+        public int idmascota { get; set; }
         public int Idtipo { get; set; }
         public DateTime Fecha { get; set; }
         public DateTime Hora { get; set; }
         public string NombreMascota { get; set; }
+        public string descripcion { get; set; }
         public string Telefono { get; set; }
     }
 }

@@ -90,6 +90,7 @@
             this.btnVentas = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelEscritorio = new System.Windows.Forms.Panel();
+            this.button40 = new System.Windows.Forms.Button();
             this.panelSubmenuConsultorio.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             this.panelSubmenuVentas.SuspendLayout();
@@ -108,13 +109,14 @@
             // panelSubmenuConsultorio
             // 
             this.panelSubmenuConsultorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(156)))), ((int)(((byte)(180)))));
+            this.panelSubmenuConsultorio.Controls.Add(this.button40);
             this.panelSubmenuConsultorio.Controls.Add(this.button2);
             this.panelSubmenuConsultorio.Controls.Add(this.button13);
             this.panelSubmenuConsultorio.Controls.Add(this.button14);
             this.panelSubmenuConsultorio.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubmenuConsultorio.Location = new System.Drawing.Point(0, 1328);
             this.panelSubmenuConsultorio.Name = "panelSubmenuConsultorio";
-            this.panelSubmenuConsultorio.Size = new System.Drawing.Size(241, 130);
+            this.panelSubmenuConsultorio.Size = new System.Drawing.Size(241, 171);
             this.panelSubmenuConsultorio.TabIndex = 4;
             this.panelSubmenuConsultorio.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSubmenuConsultorio_Paint);
             // 
@@ -288,7 +290,6 @@
             this.button38.TabIndex = 11;
             this.button38.Text = "Cerrar caja";
             this.button38.UseVisualStyleBackColor = false;
-            this.button38.Click += new System.EventHandler(this.button38_Click);
             // 
             // button12
             // 
@@ -434,7 +435,7 @@
             this.panelsubmenuSistemas.Controls.Add(this.button21);
             this.panelsubmenuSistemas.Controls.Add(this.button20);
             this.panelsubmenuSistemas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelsubmenuSistemas.Location = new System.Drawing.Point(0, 1709);
+            this.panelsubmenuSistemas.Location = new System.Drawing.Point(0, 1750);
             this.panelsubmenuSistemas.Name = "panelsubmenuSistemas";
             this.panelsubmenuSistemas.Size = new System.Drawing.Size(241, 128);
             this.panelsubmenuSistemas.TabIndex = 17;
@@ -493,7 +494,7 @@
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Image = global::Allqovet.Properties.Resources.configuraciones;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(0, 1668);
+            this.button8.Location = new System.Drawing.Point(0, 1709);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(241, 41);
             this.button8.TabIndex = 8;
@@ -510,7 +511,7 @@
             this.panelMantenimiento.Controls.Add(this.button18);
             this.panelMantenimiento.Controls.Add(this.button4);
             this.panelMantenimiento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMantenimiento.Location = new System.Drawing.Point(0, 1499);
+            this.panelMantenimiento.Location = new System.Drawing.Point(0, 1540);
             this.panelMantenimiento.Name = "panelMantenimiento";
             this.panelMantenimiento.Size = new System.Drawing.Size(241, 169);
             this.panelMantenimiento.TabIndex = 16;
@@ -662,7 +663,7 @@
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.Image = global::Allqovet.Properties.Resources._4945350_document_extension_files_folders_min_icon__2_;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(0, 1458);
+            this.button9.Location = new System.Drawing.Point(0, 1499);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(241, 41);
             this.button9.TabIndex = 15;
@@ -1054,6 +1055,22 @@
             this.panelEscritorio.Size = new System.Drawing.Size(1112, 676);
             this.panelEscritorio.TabIndex = 7;
             // 
+            // button40
+            // 
+            this.button40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
+            this.button40.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button40.FlatAppearance.BorderSize = 0;
+            this.button40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button40.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button40.ForeColor = System.Drawing.Color.White;
+            this.button40.Location = new System.Drawing.Point(0, 123);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(241, 41);
+            this.button40.TabIndex = 10;
+            this.button40.Text = "Listado de citas";
+            this.button40.UseVisualStyleBackColor = false;
+            this.button40.Click += new System.EventHandler(this.button40_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1146,5 +1163,6 @@
         private System.Windows.Forms.Button button36;
         private System.Windows.Forms.Button button38;
         private System.Windows.Forms.Button button39;
+        private System.Windows.Forms.Button button40;
     }
 }

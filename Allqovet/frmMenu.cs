@@ -363,7 +363,8 @@ namespace Allqovet
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-
+            frmCita cita = new frmCita();
+            AbrirFormHijo(cita);
         }
 
         private void button16_Click_1(object sender, EventArgs e)
@@ -539,6 +540,12 @@ namespace Allqovet
         {
             frmNuevaVitrina vitrina = new frmNuevaVitrina();
             AbrirFormHijo(vitrina);
+        }
+
+        private void button40_Click(object sender, EventArgs e)
+        {
+            frmRegistroCitas citas = new frmRegistroCitas();
+            AbrirFormHijo(citas);
         }
     }
 }

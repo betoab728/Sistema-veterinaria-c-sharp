@@ -159,6 +159,12 @@
     <Compile Include="frmCategory.Designer.cs">
       <DependentUpon>frmCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCiereCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCiereCaja.Designer.cs">
+      <DependentUpon>frmCiereCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -345,6 +351,12 @@
     <Compile Include="frmPrueba.Designer.cs">
       <DependentUpon>frmPrueba.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegistroCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroCitas.Designer.cs">
+      <DependentUpon>frmRegistroCitas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistrofichas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -439,6 +451,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCategory.resx">
       <DependentUpon>frmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCiereCaja.resx">
+      <DependentUpon>frmCiereCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCita.resx">
       <DependentUpon>frmCita.cs</DependentUpon>
@@ -535,6 +550,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrueba.resx">
       <DependentUpon>frmPrueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroCitas.resx">
+      <DependentUpon>frmRegistroCitas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrofichas.resx">
       <DependentUpon>frmRegistrofichas.cs</DependentUpon>

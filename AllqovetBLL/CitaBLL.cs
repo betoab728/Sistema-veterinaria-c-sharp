@@ -34,6 +34,20 @@ namespace AllqovetBLL
             return db.Listar();
         }
 
+        public DataTable ListarCitaFecha(DateTime fecha)
+        {
+            return db.ListarCitaFecha(fecha);
+        }
+
+        public int AtenderCita(int idcita)
+        {
+            return db.AtenderCita(idcita);
+        }
+        public int AnularCita(int idcita)
+        {
+            return db.AnularCita(idcita);
+        }
+
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes
 

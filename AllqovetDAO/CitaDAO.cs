@@ -25,8 +25,8 @@ namespace AllqovetDAO
                     cmd.Parameters.AddWithValue("pIdtipo", cita.Idtipo);
                     cmd.Parameters.AddWithValue("pFecha", cita.Fecha);
                     cmd.Parameters.AddWithValue("pHora", cita.Hora);
-                    cmd.Parameters.AddWithValue("pNombreMascota", cita.NombreMascota);
-                    cmd.Parameters.AddWithValue("pTelefono", cita.Telefono);    
+                    cmd.Parameters.AddWithValue("pIdmascota", cita.idmascota);
+                    cmd.Parameters.AddWithValue("pDescripcion", cita.descripcion);    
                     int r = cmd.ExecuteNonQuery();
 
                     return r;
@@ -89,7 +89,67 @@ namespace AllqovetDAO
                 }
             }
         }
-   
+
+       public DataTable ListarCitaFecha(DateTime fecha)
+        {
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_Listarcitas", cn))
+
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pFecha", fecha);
+
+                    cn.Open();
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        return dt;
+                    }
+                }
+            }
+        }
+
+        public int AtenderCita(int idcita)
+        {
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_AtenderCita", cn))
+                {
+                    cn.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pIdcita", idcita);
+                 
+                    int r = cmd.ExecuteNonQuery();
+
+                    return r;
+                }
+            }
+        }
+
+        
+
+        public int AnularCita(int idcita)
+        {
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("AnularCita", cn))
+                {
+                    cn.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pIdcita", idcita);
+
+                    int r = cmd.ExecuteNonQuery();
+
+                    return r;
+                }
+            }
+        }
+
+
+
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes
 

@@ -30,7 +30,6 @@
         {
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.dtgvCitas = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,12 +45,9 @@
             this.dtpHora = new System.Windows.Forms.DateTimePicker();
             this.lblIdcliente = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnListarCitas = new System.Windows.Forms.Button();
             this.btnRegistrarCita = new System.Windows.Forms.Button();
             this.cmbMascota = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvCitas)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -64,18 +60,10 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(396, 68);
+            this.monthCalendar1.Location = new System.Drawing.Point(357, 69);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 1;
-            // 
-            // dtgvCitas
-            // 
-            this.dtgvCitas.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvCitas.Location = new System.Drawing.Point(36, 316);
-            this.dtgvCitas.Name = "dtgvCitas";
-            this.dtgvCitas.Size = new System.Drawing.Size(534, 113);
-            this.dtgvCitas.TabIndex = 2;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // label3
             // 
@@ -152,7 +140,7 @@
             this.txtCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCliente.Location = new System.Drawing.Point(127, 152);
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(218, 22);
+            this.txtCliente.Size = new System.Drawing.Size(180, 22);
             this.txtCliente.TabIndex = 51;
             this.txtCliente.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
@@ -214,7 +202,7 @@
             // lblIdcliente
             // 
             this.lblIdcliente.AutoSize = true;
-            this.lblIdcliente.Location = new System.Drawing.Point(485, 444);
+            this.lblIdcliente.Location = new System.Drawing.Point(33, 289);
             this.lblIdcliente.Name = "lblIdcliente";
             this.lblIdcliente.Size = new System.Drawing.Size(104, 13);
             this.lblIdcliente.TabIndex = 66;
@@ -227,7 +215,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = global::Allqovet.Properties.Resources.buscar;
-            this.button2.Location = new System.Drawing.Point(351, 153);
+            this.button2.Location = new System.Drawing.Point(313, 152);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(32, 23);
             this.button2.TabIndex = 111;
@@ -235,71 +223,21 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::Allqovet.Properties.Resources.eliminar;
-            this.button5.Location = new System.Drawing.Point(294, 444);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(123, 36);
-            this.button5.TabIndex = 60;
-            this.button5.Text = "Eliminar";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::Allqovet.Properties.Resources.editar;
-            this.button3.Location = new System.Drawing.Point(165, 444);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 36);
-            this.button3.TabIndex = 59;
-            this.button3.Text = "Modificar";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnListarCitas
-            // 
-            this.btnListarCitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.btnListarCitas.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnListarCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarCitas.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarCitas.ForeColor = System.Drawing.Color.White;
-            this.btnListarCitas.Image = global::Allqovet.Properties.Resources.nuevo;
-            this.btnListarCitas.Location = new System.Drawing.Point(36, 444);
-            this.btnListarCitas.Name = "btnListarCitas";
-            this.btnListarCitas.Size = new System.Drawing.Size(123, 36);
-            this.btnListarCitas.TabIndex = 58;
-            this.btnListarCitas.Text = "Listar Citas";
-            this.btnListarCitas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnListarCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnListarCitas.UseVisualStyleBackColor = false;
-            // 
             // btnRegistrarCita
             // 
             this.btnRegistrarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.btnRegistrarCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarCita.ForeColor = System.Drawing.Color.White;
             this.btnRegistrarCita.Image = global::Allqovet.Properties.Resources._8542014_dog_puppy_pet_icon;
-            this.btnRegistrarCita.Location = new System.Drawing.Point(221, 264);
+            this.btnRegistrarCita.Location = new System.Drawing.Point(183, 289);
             this.btnRegistrarCita.Name = "btnRegistrarCita";
-            this.btnRegistrarCita.Size = new System.Drawing.Size(124, 33);
+            this.btnRegistrarCita.Size = new System.Drawing.Size(124, 36);
             this.btnRegistrarCita.TabIndex = 56;
             this.btnRegistrarCita.Text = "Registar Cita";
             this.btnRegistrarCita.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRegistrarCita.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRegistrarCita.UseVisualStyleBackColor = false;
+            this.btnRegistrarCita.Click += new System.EventHandler(this.btnRegistrarCita_Click);
             // 
             // cmbMascota
             // 
@@ -309,12 +247,30 @@
             this.cmbMascota.Size = new System.Drawing.Size(218, 21);
             this.cmbMascota.TabIndex = 112;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Allqovet.Properties.Resources.eliminar;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(313, 289);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 36);
+            this.button1.TabIndex = 113;
+            this.button1.Text = "Cancelar";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // frmCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
-            this.ClientSize = new System.Drawing.Size(606, 501);
+            this.ClientSize = new System.Drawing.Size(616, 338);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbMascota);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.lblIdcliente);
@@ -323,9 +279,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtTelf);
             this.Controls.Add(this.txtDescripcion);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.btnListarCitas);
             this.Controls.Add(this.cmbTipoCita);
             this.Controls.Add(this.btnRegistrarCita);
             this.Controls.Add(this.label1);
@@ -335,13 +288,11 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dtgvCitas);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "frmCita";
             this.Text = "frmCita";
             this.Load += new System.EventHandler(this.frmCita_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvCitas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,20 +307,17 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnListarCitas;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.TextBox txtCliente;
         public System.Windows.Forms.ComboBox cmbMascota;
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
-        public System.Windows.Forms.DataGridView dtgvCitas;
         public System.Windows.Forms.ComboBox cmbTipoCita;
         public System.Windows.Forms.TextBox txtTelf;
         public System.Windows.Forms.TextBox txtDescripcion;
         public System.Windows.Forms.DateTimePicker dtpHora;
         public System.Windows.Forms.Label lblIdcliente;
+        private System.Windows.Forms.Button button1;
     }
 }

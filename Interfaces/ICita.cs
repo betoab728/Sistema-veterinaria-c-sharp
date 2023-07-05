@@ -15,6 +15,9 @@ namespace Interfaces
         DataTable Listar();
         int Editar(Cita cita);
         int Eliminar(Cita cita);
+        DataTable ListarCitaFecha(DateTime fecha);
+        int AtenderCita(int idcita);
+        int AnularCita(int idcita);
 
 
     }

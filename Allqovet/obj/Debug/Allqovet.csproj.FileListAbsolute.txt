@@ -1074,3 +1074,9 @@ C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Allqovet\
 C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Allqovet\obj\Debug\RdlCompile.cache
 C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Allqovet\obj\Debug\RdlCompile.compiled
 C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmNuevaVitrina.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmBuscarClienteCita.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmCiereCaja.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmCita.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmImprimirCierre.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmNuevaVitrina.resources
+C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmRegistroCitas.resources
