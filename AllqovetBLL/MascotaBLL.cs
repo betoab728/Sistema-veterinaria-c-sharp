@@ -23,6 +23,11 @@ namespace AllqovetBLL
            return db.BuscarMascotaFicha(idccliente);
         }
 
+        public DataTable ListarMascota(int idcliente)
+        {
+            return db.ListarMascota(idcliente);
+        }
+
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes
 

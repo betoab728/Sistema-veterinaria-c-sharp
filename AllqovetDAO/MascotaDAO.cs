@@ -55,6 +55,27 @@ namespace AllqovetDAO
                 }
             }
         }
+        public DataTable ListarMascota(int idcliente)
+        {
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_ListarMascota", cn))
+
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pIdcliente", idcliente);
+
+                    cn.Open();
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        return dt;
+                    }
+                }
+            }
+        }
 
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes

@@ -63,6 +63,11 @@ namespace AllqovetBLL
             }
         }
 
+        public DataTable BuscarApellidos()
+        {
+            throw new NotImplementedException();
+        }
+
         // TODO: reemplace un finalizador solo si el anterior Dispose(bool disposing) tiene código para liberar los recursos no administrados.
         // ~ClienteBLL() {
         //   // No cambie este código. Coloque el código de limpieza en el anterior Dispose(colocación de bool).

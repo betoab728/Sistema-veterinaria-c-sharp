@@ -13,5 +13,6 @@ namespace Interfaces
     {
         int Agregar(Mascota mascota,ref MySqlConnection con,ref MySqlTransaction transaction);
         DataTable BuscarMascotaFicha(int idccliente);
+        DataTable ListarMascota(int idcliente);
     }
 }

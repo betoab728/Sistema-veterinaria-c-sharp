@@ -135,6 +135,12 @@
     <Compile Include="frmBoleta.Designer.cs">
       <DependentUpon>frmBoleta.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscarClienteCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarClienteCita.Designer.cs">
+      <DependentUpon>frmBuscarClienteCita.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBusCliFicha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -409,6 +415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBoleta.resx">
       <DependentUpon>frmBoleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarClienteCita.resx">
+      <DependentUpon>frmBuscarClienteCita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBusCliFicha.resx">
       <DependentUpon>frmBusCliFicha.cs</DependentUpon>
