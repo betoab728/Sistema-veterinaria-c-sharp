@@ -31,8 +31,18 @@ namespace Allqovet
             {
                 if (Registrar() > 0)
                 {
-                    MessageBox.Show("cliente registrado correctamente");
+                    MessageBox.Show("Cliente registrado correctamente");
+                    DialogResult dialogResult2 = MessageBox.Show("Desea programar cita?", "Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        frmCita cita = new frmCita();
+                        Ventana ventana = new Ventana();
+                        ventana.AbrirFormHijo(cita);
+                    }
+                
                     this.Close();
+                    
+                    
                 }
             }
                

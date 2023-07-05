@@ -72,11 +72,13 @@ namespace Allqovet
                 {
                     venta.lblidcliente.Text = dgvclientes.CurrentRow.Cells["idCliente"].Value.ToString();
                     venta.txtcliente.Text = dgvclientes.CurrentRow.Cells["Nombres"].Value.ToString()+
-                        dgvclientes.CurrentRow.Cells["ApellidoPaterno"].Value.ToString() + 
-                        dgvclientes.CurrentRow.Cells["ApellidoMaterno"].Value.ToString();
+                    dgvclientes.CurrentRow.Cells["ApellidoPaterno"].Value.ToString() + 
+                    dgvclientes.CurrentRow.Cells["ApellidoMaterno"].Value.ToString();
 
                 }
+
                 this.Close();
+
             }
 
            

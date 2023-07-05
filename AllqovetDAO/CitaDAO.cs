@@ -1,69 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
 using Interfaces;
 using MySql.Data.MySqlClient;
-using System.Data;
 
 namespace AllqovetDAO
 {
-  public  class MascotaDAO : IMascota,IDisposable
+    public class CitaDAO: ICita, IDisposable
     {
         string cnx = Conexion.ObtenerConexion();
-        public int Agregar(Mascota mascota, ref MySqlConnection con, ref MySqlTransaction transaction)
+
+        public int Agregar(Cita cita)
         {
-            using (MySqlCommand cmd = new MySqlCommand("sp_RegistrarMascota", con, transaction))
-            {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("pNombre", mascota.Nombre);
-                cmd.Parameters.AddWithValue("pFecha", mascota.FechaNacimiento);
-                cmd.Parameters.AddWithValue("pRaza", mascota.Raza);
-                cmd.Parameters.AddWithValue("pEspecie", mascota.Especie);
-                cmd.Parameters.AddWithValue("pSexo", mascota.Sexo);
-                cmd.Parameters.AddWithValue("pCapa", mascota.Capa);
-                cmd.Parameters.AddWithValue("pObs", mascota.Observacion);
-                cmd.Parameters.AddWithValue("pIdcliente", mascota.idcliente);
-
-
-                return cmd.ExecuteNonQuery();
-            }
-        }
-
-        public DataTable BuscarMascotaFicha(int idccliente)
-        {
-          
-
             using (MySqlConnection cn = new MySqlConnection(cnx))
             {
-                using (MySqlCommand cmd = new MySqlCommand("sp_BuscarMascotaFicha", cn))
-
+                using (MySqlCommand cmd = new MySqlCommand("sp_RegistrarCita", cn))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("pIdcliente", idccliente);
-
                     cn.Open();
-                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
-                    {
-                        DataTable dt = new DataTable();
-                        da.Fill(dt);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pIdtipo", cita.Idtipo);
+                    cmd.Parameters.AddWithValue("pFecha", cita.Fecha);
+                    cmd.Parameters.AddWithValue("pHora", cita.Hora);
+                    cmd.Parameters.AddWithValue("pNombreMascota", cita.NombreMascota);
+                    cmd.Parameters.AddWithValue("pTelefono", cita.Telefono);    
+                    int r = cmd.ExecuteNonQuery();
 
-                        return dt;
-                    }
+                    return r;
                 }
             }
         }
-        public DataTable ListarMascota(int idcliente)
+
+        public DataTable Listar()
         {
             using (MySqlConnection cn = new MySqlConnection(cnx))
             {
-                using (MySqlCommand cmd = new MySqlCommand("sp_ListarMascota", cn))
+                using (MySqlCommand cmd = new MySqlCommand("sp_ListarCita", cn))
 
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("pIdcliente", idcliente);
 
                     cn.Open();
                     using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
@@ -77,6 +55,41 @@ namespace AllqovetDAO
             }
         }
 
+        public int Editar(Cita cita)
+        {
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_EditarCita", cn))
+                {
+                    cn.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pIdtipo", cita.Idtipo);
+                    cmd.Parameters.AddWithValue("pFecha", cita.Fecha);
+                    cmd.Parameters.AddWithValue("pHora", cita.Hora);
+                    cmd.Parameters.AddWithValue("pNombreMascota", cita.NombreMascota);
+                    cmd.Parameters.AddWithValue("pTelefono", cita.Telefono);
+                    int r = cmd.ExecuteNonQuery();
+                    return r;
+                }
+            }
+        }
+
+        public int Eliminar(Cita cita)
+        {
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_EliminarCita", cn))
+                {
+                    cn.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pIdCita", cita.Idcita);
+                    int r = cmd.ExecuteNonQuery();
+
+                    return r;
+                }
+            }
+        }
+   
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes
 
@@ -97,7 +110,7 @@ namespace AllqovetDAO
         }
 
         // TODO: reemplace un finalizador solo si el anterior Dispose(bool disposing) tiene código para liberar los recursos no administrados.
-        // ~MascotaDAO() {
+        // ~CitaDAO() {
         //   // No cambie este código. Coloque el código de limpieza en el anterior Dispose(colocación de bool).
         //   Dispose(false);
         // }

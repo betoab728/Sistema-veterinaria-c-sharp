@@ -412,5 +412,15 @@ namespace Allqovet
         {
 
         }
+
+        private void txtcodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbvendedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

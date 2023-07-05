@@ -43,11 +43,8 @@
             this.lblidproducto = new System.Windows.Forms.Label();
             this.txtstock = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.txttotalitem = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.txtcodigo = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtprecio = new System.Windows.Forms.TextBox();
@@ -60,7 +57,6 @@
             this.lblidcliente = new System.Windows.Forms.Label();
             this.txtfecha = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.cmbvendedor = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtcliente = new System.Windows.Forms.TextBox();
@@ -81,6 +77,10 @@
             this.UTILIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -266,22 +266,6 @@
             this.label12.TabIndex = 117;
             this.label12.Text = "Stock";
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::Allqovet.Properties.Resources._103181_close_remove_delete_cross_icon;
-            this.button4.Location = new System.Drawing.Point(495, 56);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 34);
-            this.button4.TabIndex = 114;
-            this.button4.Text = "Quitar";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // txttotalitem
             // 
             this.txttotalitem.Location = new System.Drawing.Point(406, 68);
@@ -292,20 +276,6 @@
             this.txttotalitem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txttotalitem.TextChanged += new System.EventHandler(this.txttotalitem_TextChanged);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::Allqovet.Properties.Resources.buscar;
-            this.button2.Location = new System.Drawing.Point(265, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(32, 23);
-            this.button2.TabIndex = 110;
-            this.button2.Text = "..";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // txtcodigo
             // 
             this.txtcodigo.Location = new System.Drawing.Point(90, 16);
@@ -313,22 +283,7 @@
             this.txtcodigo.Size = new System.Drawing.Size(169, 20);
             this.txtcodigo.TabIndex = 109;
             this.txtcodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::Allqovet.Properties.Resources._8541639_cart_plus_shopping_icon__1_;
-            this.button3.Location = new System.Drawing.Point(495, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 34);
-            this.button3.TabIndex = 113;
-            this.button3.Text = "Agregar";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.txtcodigo.TextChanged += new System.EventHandler(this.txtcodigo_TextChanged);
             // 
             // label11
             // 
@@ -457,20 +412,6 @@
             this.label13.TabIndex = 111;
             this.label13.Text = "Fecha";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::Allqovet.Properties.Resources.buscar;
-            this.button1.Location = new System.Drawing.Point(391, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 23);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "..";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // cmbvendedor
             // 
             this.cmbvendedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -479,6 +420,7 @@
             this.cmbvendedor.Name = "cmbvendedor";
             this.cmbvendedor.Size = new System.Drawing.Size(321, 21);
             this.cmbvendedor.TabIndex = 110;
+            this.cmbvendedor.SelectedIndexChanged += new System.EventHandler(this.cmbvendedor_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -673,6 +615,66 @@
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::Allqovet.Properties.Resources._103181_close_remove_delete_cross_icon;
+            this.button4.Location = new System.Drawing.Point(495, 56);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(102, 34);
+            this.button4.TabIndex = 114;
+            this.button4.Text = "Quitar";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::Allqovet.Properties.Resources.buscar;
+            this.button2.Location = new System.Drawing.Point(265, 13);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(32, 23);
+            this.button2.TabIndex = 110;
+            this.button2.Text = "..";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::Allqovet.Properties.Resources._8541639_cart_plus_shopping_icon__1_;
+            this.button3.Location = new System.Drawing.Point(495, 19);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(102, 34);
+            this.button3.TabIndex = 113;
+            this.button3.Text = "Agregar";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::Allqovet.Properties.Resources.buscar;
+            this.button1.Location = new System.Drawing.Point(391, 14);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(32, 23);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "..";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 

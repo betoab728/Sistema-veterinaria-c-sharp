@@ -4,28 +4,34 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AllqovetDAO;
 using Entidades;
 using Interfaces;
-using MySql.Data.MySqlClient;
-using AllqovetDAO;
+
 namespace AllqovetBLL
 {
-    public class MascotaBLL : IMascota,IDisposable
+    public class CitaBLL : ICita, IDisposable
     {
-        MascotaDAO db = new MascotaDAO();
-        public int Agregar(Mascota mascota, ref MySqlConnection con, ref MySqlTransaction transaction)
+        CitaDAO db = new CitaDAO();
+
+        public int Agregar(Cita cita)
         {
-            throw new NotImplementedException();
+            return db.Agregar(cita);
         }
 
-        public DataTable BuscarMascotaFicha(int idccliente)
+        public int Editar(Cita cita)
         {
-           return db.BuscarMascotaFicha(idccliente);
+            return db.Editar(cita);
         }
 
-        public DataTable ListarMascota(int idcliente)
+        public int Eliminar(Cita cita)
         {
-            return db.ListarMascota(idcliente);
+            return db.Eliminar(cita);
+        }
+
+        public DataTable Listar()
+        {
+            return db.Listar();
         }
 
         #region IDisposable Support
@@ -48,7 +54,7 @@ namespace AllqovetBLL
         }
 
         // TODO: reemplace un finalizador solo si el anterior Dispose(bool disposing) tiene código para liberar los recursos no administrados.
-        // ~MascotaBLL() {
+        // ~CitaBLL() {
         //   // No cambie este código. Coloque el código de limpieza en el anterior Dispose(colocación de bool).
         //   Dispose(false);
         // }

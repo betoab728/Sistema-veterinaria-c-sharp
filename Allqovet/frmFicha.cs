@@ -333,5 +333,10 @@ namespace Allqovet
 
             }
         }
+
+        private void dtpproxcita_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

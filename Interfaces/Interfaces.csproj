@@ -50,6 +50,7 @@
     <Compile Include="ICajachica.cs" />
     <Compile Include="Icargo.cs" />
     <Compile Include="ICategoria.cs" />
+    <Compile Include="ICita.cs" />
     <Compile Include="ICliente.cs" />
     <Compile Include="IDashboard.cs" />
     <Compile Include="IDetalleBoleta.cs" />

@@ -34,6 +34,11 @@
             this.label14 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.dtgficha = new System.Windows.Forms.DataGridView();
+            this.FECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TEMPERATURA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PROX_CITA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.R = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpproxcita = new System.Windows.Forms.DateTimePicker();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -70,11 +75,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.lblidficha = new System.Windows.Forms.Label();
-            this.FECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TEMPERATURA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PROX_CITA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.R = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgficha)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -175,6 +175,38 @@
             this.dtgficha.Size = new System.Drawing.Size(787, 178);
             this.dtgficha.TabIndex = 32;
             // 
+            // FECHA
+            // 
+            this.FECHA.HeaderText = "FECHA";
+            this.FECHA.Name = "FECHA";
+            this.FECHA.ReadOnly = true;
+            // 
+            // DESCRIPCION
+            // 
+            this.DESCRIPCION.HeaderText = "DESCRIPCION";
+            this.DESCRIPCION.Name = "DESCRIPCION";
+            this.DESCRIPCION.ReadOnly = true;
+            this.DESCRIPCION.Width = 400;
+            // 
+            // TEMPERATURA
+            // 
+            this.TEMPERATURA.HeaderText = "TEMPERATURA";
+            this.TEMPERATURA.Name = "TEMPERATURA";
+            this.TEMPERATURA.ReadOnly = true;
+            // 
+            // PROX_CITA
+            // 
+            this.PROX_CITA.HeaderText = "PROX_CITA";
+            this.PROX_CITA.Name = "PROX_CITA";
+            this.PROX_CITA.ReadOnly = true;
+            // 
+            // R
+            // 
+            this.R.HeaderText = "R";
+            this.R.Name = "R";
+            this.R.ReadOnly = true;
+            this.R.Visible = false;
+            // 
             // dtpproxcita
             // 
             this.dtpproxcita.Checked = false;
@@ -185,6 +217,7 @@
             this.dtpproxcita.ShowCheckBox = true;
             this.dtpproxcita.Size = new System.Drawing.Size(111, 22);
             this.dtpproxcita.TabIndex = 40;
+            this.dtpproxcita.ValueChanged += new System.EventHandler(this.dtpproxcita_ValueChanged);
             // 
             // label17
             // 
@@ -569,38 +602,6 @@
             this.lblidficha.Size = new System.Drawing.Size(13, 13);
             this.lblidficha.TabIndex = 56;
             this.lblidficha.Text = "0";
-            // 
-            // FECHA
-            // 
-            this.FECHA.HeaderText = "FECHA";
-            this.FECHA.Name = "FECHA";
-            this.FECHA.ReadOnly = true;
-            // 
-            // DESCRIPCION
-            // 
-            this.DESCRIPCION.HeaderText = "DESCRIPCION";
-            this.DESCRIPCION.Name = "DESCRIPCION";
-            this.DESCRIPCION.ReadOnly = true;
-            this.DESCRIPCION.Width = 400;
-            // 
-            // TEMPERATURA
-            // 
-            this.TEMPERATURA.HeaderText = "TEMPERATURA";
-            this.TEMPERATURA.Name = "TEMPERATURA";
-            this.TEMPERATURA.ReadOnly = true;
-            // 
-            // PROX_CITA
-            // 
-            this.PROX_CITA.HeaderText = "PROX_CITA";
-            this.PROX_CITA.Name = "PROX_CITA";
-            this.PROX_CITA.ReadOnly = true;
-            // 
-            // R
-            // 
-            this.R.HeaderText = "R";
-            this.R.Name = "R";
-            this.R.ReadOnly = true;
-            this.R.Visible = false;
             // 
             // frmFicha
             // 

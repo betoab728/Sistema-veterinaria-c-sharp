@@ -12,5 +12,7 @@ namespace Entidades
         public int Idtipo { get; set; }
         public DateTime Fecha { get; set; }
         public DateTime Hora { get; set; }
+        public string NombreMascota { get; set; }
+        public string Telefono { get; set; }
     }
 }
