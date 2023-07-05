@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Interfaces;
 using AllqovetDAO;
 using Entidades;
+using System.Data;
 
 namespace AllqovetBLL
 {
@@ -20,6 +21,34 @@ namespace AllqovetBLL
         public int BuscarCajaActiva()
         {
             return db.BuscarCajaActiva();
+        }
+
+        public DataTable VentasCierre(int idcaja)
+        {
+            return db.VentasCierre(idcaja);
+        }
+
+        public DataTable ResumenVentasMedioPago(int idcaja)
+        {
+            return db.ResumenVentasMedioPago(idcaja);
+        }
+        public DataTable EgresosCierre(int idcaja)
+        {
+            return db.EgresosCierre(idcaja);
+        }
+        public DataTable ResumenEgresosMEdioPago(int idcaja)
+        {
+            return db.ResumenEgresosMEdioPago(idcaja);
+        }
+
+        public int CerrarCaja(CajaChica caja)
+        {
+            return db.CerrarCaja(caja);
+        }
+
+        public DataTable CobrosCierre(int idcaja)
+        {
+            return db.CobrosCierre(idcaja);
         }
 
         #region IDisposable Support

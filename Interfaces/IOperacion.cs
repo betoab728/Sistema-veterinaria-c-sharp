@@ -16,5 +16,8 @@ namespace Interfaces
         int AgregarMovimiento(Operacion operacion);
         DataTable BuscarMovCajaFechas(DateTime desde, DateTime hasta, int idmediopago, int idtipoOperacion);
         DataTable BuscarMovCajaActual(int idcajachica, int idmediopago, int idTipoOperacion);
+        int Anular(int Idoperacion);
+        Operacion MostrarRegistro(int idopereacion);
+        int ActualizarMovimientoCaja(Operacion operacion);
     }
 }

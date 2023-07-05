@@ -153,6 +153,18 @@
     <Compile Include="frmCategory.Designer.cs">
       <DependentUpon>frmCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCiereCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCiereCaja.Designer.cs">
+      <DependentUpon>frmCiereCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCierre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCierre.Designer.cs">
+      <DependentUpon>frmCierre.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +224,12 @@
     </Compile>
     <Compile Include="frmImprimirBoleta.Designer.cs">
       <DependentUpon>frmImprimirBoleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImprimirCierre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImprimirCierre.Designer.cs">
+      <DependentUpon>frmImprimirCierre.cs</DependentUpon>
     </Compile>
     <Compile Include="frmImprimirFactura.cs">
       <SubType>Form</SubType>
@@ -413,6 +431,12 @@
     <EmbeddedResource Include="frmCategory.resx">
       <DependentUpon>frmCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCiereCaja.resx">
+      <DependentUpon>frmCiereCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCierre.resx">
+      <DependentUpon>frmCierre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -442,6 +466,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmImprimirBoleta.resx">
       <DependentUpon>frmImprimirBoleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImprimirCierre.resx">
+      <DependentUpon>frmImprimirCierre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmImprimirFactura.resx">
       <DependentUpon>frmImprimirFactura.cs</DependentUpon>
@@ -541,6 +568,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reportes\Boleta.rdlc" />
+    <EmbeddedResource Include="Reportes\CierreCaja.rdlc" />
     <EmbeddedResource Include="Reportes\Factura.rdlc" />
     <EmbeddedResource Include="Reportes\Ficha.rdlc" />
     <EmbeddedResource Include="Reportes\Pedido.rdlc" />
@@ -807,6 +835,12 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352286_content_cut_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352286_content_cut_icon %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

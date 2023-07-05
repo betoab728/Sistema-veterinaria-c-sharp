@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblidtrabajador = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txttrabajador = new System.Windows.Forms.TextBox();
             this.txtdni = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtmonto = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.lblidtrabajador = new System.Windows.Forms.Label();
-            this.txttrabajador = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -62,6 +62,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // lblidtrabajador
+            // 
+            this.lblidtrabajador.AutoSize = true;
+            this.lblidtrabajador.Location = new System.Drawing.Point(19, 117);
+            this.lblidtrabajador.Name = "lblidtrabajador";
+            this.lblidtrabajador.Size = new System.Drawing.Size(13, 13);
+            this.lblidtrabajador.TabIndex = 10;
+            this.lblidtrabajador.Text = "0";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Allqovet.Properties.Resources._2102044_cash_credit_financial_icon__1_;
@@ -72,6 +81,16 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // txttrabajador
+            // 
+            this.txttrabajador.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttrabajador.Location = new System.Drawing.Point(97, 216);
+            this.txttrabajador.Name = "txttrabajador";
+            this.txttrabajador.ReadOnly = true;
+            this.txttrabajador.Size = new System.Drawing.Size(242, 27);
+            this.txttrabajador.TabIndex = 36;
+            this.txttrabajador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // txtdni
             // 
             this.txtdni.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -81,16 +100,16 @@
             this.txtdni.TabIndex = 0;
             this.txtdni.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(18, 222);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 21);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Nombre";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(18, 174);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 21);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "DNI";
             // 
             // button1
             // 
@@ -109,16 +128,16 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(18, 174);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 21);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "DNI";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(18, 222);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 21);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Nombre";
             // 
             // label2
             // 
@@ -187,25 +206,7 @@
             this.button5.Text = "Cancelar";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // lblidtrabajador
-            // 
-            this.lblidtrabajador.AutoSize = true;
-            this.lblidtrabajador.Location = new System.Drawing.Point(19, 117);
-            this.lblidtrabajador.Name = "lblidtrabajador";
-            this.lblidtrabajador.Size = new System.Drawing.Size(13, 13);
-            this.lblidtrabajador.TabIndex = 10;
-            this.lblidtrabajador.Text = "0";
-            // 
-            // txttrabajador
-            // 
-            this.txttrabajador.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttrabajador.Location = new System.Drawing.Point(97, 216);
-            this.txttrabajador.Name = "txttrabajador";
-            this.txttrabajador.ReadOnly = true;
-            this.txttrabajador.Size = new System.Drawing.Size(242, 27);
-            this.txttrabajador.TabIndex = 36;
-            this.txttrabajador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // frmAperturaCaja
             // 

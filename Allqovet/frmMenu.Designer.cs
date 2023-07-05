@@ -67,6 +67,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.btnConsultorio = new System.Windows.Forms.Button();
             this.panelAlmacen = new System.Windows.Forms.Panel();
+            this.button39 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
@@ -89,7 +90,6 @@
             this.btnVentas = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelEscritorio = new System.Windows.Forms.Panel();
-            this.button39 = new System.Windows.Forms.Button();
             this.panelSubmenuConsultorio.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             this.panelSubmenuVentas.SuspendLayout();
@@ -286,6 +286,7 @@
             this.button38.TabIndex = 11;
             this.button38.Text = "Cerrar caja";
             this.button38.UseVisualStyleBackColor = false;
+            this.button38.Click += new System.EventHandler(this.button38_Click);
             // 
             // button12
             // 
@@ -695,6 +696,22 @@
             this.panelAlmacen.Size = new System.Drawing.Size(241, 171);
             this.panelAlmacen.TabIndex = 10;
             // 
+            // button39
+            // 
+            this.button39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
+            this.button39.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button39.FlatAppearance.BorderSize = 0;
+            this.button39.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button39.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button39.ForeColor = System.Drawing.Color.White;
+            this.button39.Location = new System.Drawing.Point(0, 123);
+            this.button39.Name = "button39";
+            this.button39.Size = new System.Drawing.Size(241, 41);
+            this.button39.TabIndex = 10;
+            this.button39.Text = "Reporte Stock";
+            this.button39.UseVisualStyleBackColor = false;
+            this.button39.Click += new System.EventHandler(this.button39_Click);
+            // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
@@ -1030,22 +1047,6 @@
             this.panelEscritorio.Name = "panelEscritorio";
             this.panelEscritorio.Size = new System.Drawing.Size(1112, 676);
             this.panelEscritorio.TabIndex = 7;
-            // 
-            // button39
-            // 
-            this.button39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.button39.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button39.FlatAppearance.BorderSize = 0;
-            this.button39.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button39.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button39.ForeColor = System.Drawing.Color.White;
-            this.button39.Location = new System.Drawing.Point(0, 123);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(241, 41);
-            this.button39.TabIndex = 10;
-            this.button39.Text = "Reporte Stock";
-            this.button39.UseVisualStyleBackColor = false;
-            this.button39.Click += new System.EventHandler(this.button39_Click);
             // 
             // frmMenu
             // 

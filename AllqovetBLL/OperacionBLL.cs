@@ -35,6 +35,21 @@ namespace AllqovetBLL
         {
             return db.BuscarMovCajaActual(idcajachica, idmediopago, idTipoOperacion);
         }
+        public int Anular(int Idoperacion)
+        {
+            return db.Anular(Idoperacion);
+        }
+
+        public Operacion MostrarRegistro(int idopereacion)
+        {
+            return db.MostrarRegistro(idopereacion);
+        }
+
+        public int ActualizarMovimientoCaja(Operacion operacion)
+        {
+            return db.ActualizarMovimientoCaja(operacion);
+        }
+
 
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes
