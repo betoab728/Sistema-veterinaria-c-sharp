@@ -123,6 +123,12 @@
     <Compile Include="frmAgregarmascota.Designer.cs">
       <DependentUpon>frmAgregarmascota.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAnularVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnularVenta.Designer.cs">
+      <DependentUpon>frmAnularVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAperturaCaja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -433,6 +439,9 @@
     <Compile Include="Ventana.cs" />
     <EmbeddedResource Include="frmAgregarmascota.resx">
       <DependentUpon>frmAgregarmascota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnularVenta.resx">
+      <DependentUpon>frmAnularVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAperturaCaja.resx">
       <DependentUpon>frmAperturaCaja.cs</DependentUpon>

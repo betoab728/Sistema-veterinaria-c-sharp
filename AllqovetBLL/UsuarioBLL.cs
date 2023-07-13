@@ -37,6 +37,11 @@ namespace AllqovetBLL
             return db.BuscarUsuario(id);
         }
 
+        public  Usuario PermisoAnulacion(string clave)
+        {
+            return db.PermisoAnulacion(clave);
+        }
+
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes
 

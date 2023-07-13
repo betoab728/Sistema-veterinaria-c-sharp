@@ -41,12 +41,14 @@ namespace Allqovet
                     lblserie.Text = venta.serie;
 
                     int cantidadDigitos = 8;
-                    lblnumero.Text = venta.numero.ToString("D" + cantidadDigitos.ToString());
+
+                      lblnumero.Text = venta.numero.ToString("D" + cantidadDigitos.ToString());
+
                 }
                 catch (Exception ex)
                 {
 
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("error en el correlativo: "+ex.Message);
                 }
             }
 
@@ -151,7 +153,16 @@ namespace Allqovet
 
         private void button2_Click(object sender, EventArgs e)
         {
-            BuscarProducto();
+            if (!string.IsNullOrEmpty(txtcodigo.Text))
+            {
+                BuscarProducto();
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un codigo");
+            }
+
+              
         }
 
         private void BuscarProducto()
@@ -194,7 +205,34 @@ namespace Allqovet
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int stock = 0;
+            if (txtcan.Text.Length == 0)
+            {
+
+                MessageBox.Show("ingrese una cantidad");
+                return;
+            }
+
+            int cantidad = Convert.ToInt32(txtcan.Text);
+            int stock = Convert.ToInt32(txtstock.Text);
+
+            if (cantidad <= 0)
+            {
+
+                MessageBox.Show("ingrese una cantidad valida");
+                return;
+            }
+
+            if (stock <= 0)
+            {
+
+                MessageBox.Show("no hay stock suficiente");
+                return;
+            }
+            if (cantidad > stock)
+            {
+                MessageBox.Show("no hay stock suficiente ");
+                return;
+            }
 
             stock = Convert.ToInt32(txtstock.Text);
             if (stock > 0)
@@ -271,6 +309,28 @@ namespace Allqovet
 
         private void button6_Click(object sender, EventArgs e)
         {
+            int idcliente = Convert.ToInt32(lblidcliente.Text);
+
+            if (idcliente==0)
+            {
+                MessageBox.Show("Ingrese un cliente");
+                return;
+            }
+
+            if (cmbvendedor.SelectedIndex==-1)
+            {
+                MessageBox.Show("seleccione un vendedor");
+                return;
+            }
+
+            if (dgvproductos.Rows.Count >0)
+            {
+                MessageBox.Show("La venta no tiene productos");
+                return;
+            }
+
+
+
             DialogResult dialogResult = MessageBox.Show(" Esta seguro de registrar la venta?", "Venta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {

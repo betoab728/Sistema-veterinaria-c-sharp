@@ -22,7 +22,22 @@ namespace Allqovet
             menu.panelEscritorio.Tag = frm;
             frm.BringToFront();
             frm.SetDesktopLocation((menu.panelEscritorio.Width - frm.Width) / 2, (menu.panelEscritorio.Height - frm.Height) / 2);
+
+            
             frm.Show();
+         
+          
         }
+
+        public void AbrirFormDialog(Form frm)
+        {
+            frmMenu menu = Application.OpenForms.OfType<frmMenu>().SingleOrDefault();
+            formActual = frm;
+
+            frm.SetDesktopLocation((menu.panelEscritorio.Width - frm.Width) / 2, (menu.panelEscritorio.Height - frm.Height) / 2);
+            frm.ShowDialog();
+        }
+
+
     }
 }

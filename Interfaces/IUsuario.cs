@@ -16,6 +16,7 @@ namespace Interfaces
         DataTable Listar();
         DataTable Login(Usuario usuario);
         Usuario BuscarUsuario(int id);
+        Usuario PermisoAnulacion(string clave);
 
     }
 }

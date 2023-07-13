@@ -36,16 +36,19 @@
             this.dtpdesde = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.cbocriterio = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtgventas = new System.Windows.Forms.DataGridView();
+            this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblregistros = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panelfecha.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgventas)).BeginInit();
@@ -132,6 +135,7 @@
             // 
             // cbocriterio
             // 
+            this.cbocriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbocriterio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbocriterio.FormattingEnabled = true;
             this.cbocriterio.Items.AddRange(new object[] {
@@ -142,22 +146,6 @@
             this.cbocriterio.Size = new System.Drawing.Size(121, 25);
             this.cbocriterio.TabIndex = 4;
             this.cbocriterio.SelectedIndexChanged += new System.EventHandler(this.cbocriterio_SelectedIndexChanged);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Allqovet.Properties.Resources.buscar;
-            this.button1.Location = new System.Drawing.Point(667, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 29);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Buscar";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtbuscar
             // 
@@ -186,9 +174,27 @@
             this.dtgventas.Location = new System.Drawing.Point(9, 102);
             this.dtgventas.Name = "dtgventas";
             this.dtgventas.ReadOnly = true;
-            this.dtgventas.Size = new System.Drawing.Size(775, 296);
+            this.dtgventas.Size = new System.Drawing.Size(775, 279);
             this.dtgventas.TabIndex = 36;
             this.dtgventas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgfichas_CellContentClick);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Image = global::Allqovet.Properties.Resources.eliminar;
+            this.button8.Location = new System.Drawing.Point(324, 404);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(91, 36);
+            this.button8.TabIndex = 45;
+            this.button8.Text = "Anular";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -198,7 +204,7 @@
             this.button7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Image = global::Allqovet.Properties.Resources._4172166_bill_cash_money_payment_receipt_icon;
-            this.button7.Location = new System.Drawing.Point(540, 404);
+            this.button7.Location = new System.Drawing.Point(556, 404);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(130, 36);
             this.button7.TabIndex = 44;
@@ -216,7 +222,7 @@
             this.button6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = global::Allqovet.Properties.Resources._4172166_bill_cash_money_payment_receipt_icon;
-            this.button6.Location = new System.Drawing.Point(405, 404);
+            this.button6.Location = new System.Drawing.Point(421, 404);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(129, 36);
             this.button6.TabIndex = 43;
@@ -232,9 +238,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::Allqovet.Properties.Resources._6579037_and_computers_hardware_print_printer_icon;
-            this.button3.Location = new System.Drawing.Point(292, 404);
+            this.button3.Location = new System.Drawing.Point(236, 404);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 36);
+            this.button3.Size = new System.Drawing.Size(82, 36);
             this.button3.TabIndex = 42;
             this.button3.Text = "Imprimir";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -249,9 +255,9 @@
             this.button5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = global::Allqovet.Properties.Resources._392505_eye_preview_see_seen_view_icon__1_;
-            this.button5.Location = new System.Drawing.Point(162, 404);
+            this.button5.Location = new System.Drawing.Point(109, 404);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(124, 36);
+            this.button5.Size = new System.Drawing.Size(121, 36);
             this.button5.TabIndex = 41;
             this.button5.Text = "Ver Detalle";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -266,9 +272,9 @@
             this.button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = global::Allqovet.Properties.Resources.salir;
-            this.button4.Location = new System.Drawing.Point(676, 404);
+            this.button4.Location = new System.Drawing.Point(692, 404);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 36);
+            this.button4.Size = new System.Drawing.Size(89, 36);
             this.button4.TabIndex = 40;
             this.button4.Text = "Salir";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -286,20 +292,61 @@
             this.button2.Image = global::Allqovet.Properties.Resources.nuevo;
             this.button2.Location = new System.Drawing.Point(9, 404);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 36);
+            this.button2.Size = new System.Drawing.Size(91, 36);
             this.button2.TabIndex = 39;
-            this.button2.Text = "Registrar nuevo";
+            this.button2.Text = "Nuevo";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Allqovet.Properties.Resources.buscar;
+            this.button1.Location = new System.Drawing.Point(667, 15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 29);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Buscar";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(10, 384);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 17);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "REGISTROS:";
+            // 
+            // lblregistros
+            // 
+            this.lblregistros.AutoSize = true;
+            this.lblregistros.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblregistros.ForeColor = System.Drawing.Color.White;
+            this.lblregistros.Location = new System.Drawing.Point(89, 384);
+            this.lblregistros.Name = "lblregistros";
+            this.lblregistros.Size = new System.Drawing.Size(15, 17);
+            this.lblregistros.TabIndex = 46;
+            this.lblregistros.Text = "0";
             // 
             // frmRegistroVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 452);
+            this.Controls.Add(this.lblregistros);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button3);
@@ -311,12 +358,14 @@
             this.Controls.Add(this.dtgventas);
             this.Name = "frmRegistroVentas";
             this.Text = "frmRegistroVentas";
+            this.Load += new System.EventHandler(this.frmRegistroVentas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panelfecha.ResumeLayout(false);
             this.panelfecha.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgventas)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -340,5 +389,8 @@
         private System.Windows.Forms.DataGridView dtgventas;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblregistros;
     }
 }

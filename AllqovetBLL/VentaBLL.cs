@@ -47,6 +47,12 @@ namespace AllqovetBLL
             return db.ReporteVentas(desde,hasta);
         }
 
+
+        public int AnularVenta(Venta venta, List<ProductoVitrina> listado)
+        {
+            return db.AnularVenta(venta, listado);
+        }
+
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes
 

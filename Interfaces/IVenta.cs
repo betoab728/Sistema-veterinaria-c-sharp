@@ -18,5 +18,7 @@ namespace Interfaces
         DataTable DetalleVenta(int idventa);
         DataTable ReporteVentas(DateTime desde, DateTime hasta);
 
+        int AnularVenta(Venta venta, List<ProductoVitrina> listado);
+
     }
 }

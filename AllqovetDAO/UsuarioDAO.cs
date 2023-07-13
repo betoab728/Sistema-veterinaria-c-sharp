@@ -106,6 +106,35 @@ namespace AllqovetDAO
             }
         }
 
+       public Usuario PermisoAnulacion(string clave)
+        {
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_PermisoAnulacion", cn))
+                {
+
+                    string clave_encriptada = Encriptar(clave);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pClave", clave_encriptada);
+
+                    cn.Open();
+                    using (MySqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        Usuario usuario = new Usuario();
+
+                        while (dr.Read())
+                        {
+                            usuario.Idusuario =Convert.ToInt32( dr["Idusuario"]);
+                         
+
+                        }
+
+                        return usuario;
+                    }
+                }
+            }
+        }
+
         public Usuario BuscarUsuario(int id)
         {
             using (MySqlConnection cn = new MySqlConnection(cnx))

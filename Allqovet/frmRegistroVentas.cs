@@ -14,6 +14,8 @@ namespace Allqovet
 {
     public partial class frmRegistroVentas : Form
     {
+        public bool ventaanulada = false;
+
         public frmRegistroVentas()
         {
             InitializeComponent();
@@ -39,7 +41,6 @@ namespace Allqovet
                         detalleVenta.dataGridView1.DataSource = db.DetalleVenta(idventa);
                         ventana.AbrirFormHijo(detalleVenta);
 
-
                     }
                     catch (Exception ex)
                     {
@@ -49,14 +50,13 @@ namespace Allqovet
                 }
             }
          
-
         }
 
         
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -97,6 +97,18 @@ namespace Allqovet
             }
         }
 
+        private void Buscar()
+        {
+            if (cbocriterio.SelectedIndex == 0)
+            {
+                BuscarVentaApellidos();
+            }
+            else
+            {
+                BuscarVentaFechas();
+            }
+        }
+
         private void BuscarVentaApellidos()
         {
             using (VentaBLL db=new VentaBLL())
@@ -105,11 +117,31 @@ namespace Allqovet
                 {
                     string apellido = txtbuscar.Text;
                     dtgventas.DataSource = db.BuscarVentaApellidos(apellido);
+                    FormatoTabla();
+
                 }
                 catch (Exception ex)
                 {
 
                     MessageBox.Show(ex.Message); 
+                }
+            }
+        }
+
+        private void FormatoTabla()
+        {
+            if (dtgventas.Rows.Count >0)
+            {
+                lblregistros.Text= dtgventas.Rows.Count.ToString();
+
+                foreach (DataGridViewRow row in dtgventas.Rows)
+                {
+
+
+                    if (row.Cells["ESTADO"].Value.ToString() == "ANULADA")
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Red;
+                    }
                 }
             }
         }
@@ -124,6 +156,7 @@ namespace Allqovet
                     DateTime hasta = Convert.ToDateTime(dtphasta.Value.ToString("yyyy-MM-dd"));
 
                     dtgventas.DataSource = db.BuscarVentaFechas(desde, hasta);
+                    FormatoTabla();
                 }
                 catch (Exception ex)
                 {
@@ -226,7 +259,7 @@ namespace Allqovet
                         codigo = row["CODIGO"].ToString(); ;
                         descripcion = row["DESCRIPCION"].ToString();
                         cantidad = row["CANTIDAD"].ToString(); 
-                        precio = row["CANTIDAD"].ToString();
+                        precio = row["PRECIO"].ToString();
                         importe = row["CANTIDAD"].ToString(); 
 
                         factura.dgvProductos.Rows.Add(idproducto, codigo, descripcion, cantidad, precio, importe);
@@ -275,8 +308,8 @@ namespace Allqovet
                         codigo = row["CODIGO"].ToString(); ;
                         descripcion = row["DESCRIPCION"].ToString();
                         cantidad = row["CANTIDAD"].ToString();
-                        precio = row["CANTIDAD"].ToString();
-                        importe = row["CANTIDAD"].ToString();
+                        precio = row["PRECIO"].ToString();
+                        importe = row["IMPORTE"].ToString();
 
                         boleta.dgvProductos.Rows.Add(idproducto, codigo, descripcion, cantidad, precio, importe);
                     }
@@ -289,6 +322,42 @@ namespace Allqovet
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void frmRegistroVentas_Load(object sender, EventArgs e)
+        {
+            cbocriterio.SelectedIndex = 0;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            int fila =Convert.ToInt32(dtgventas.SelectedRows.Count);
+
+            if (fila >-1)
+            {
+                DialogResult dialogResult = MessageBox.Show("¿Esta seguro de anular la venta?", "Venta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Anular();
+
+                    if (ventaanulada)
+                    {
+                        Buscar();
+                    }
+
+                }
+            }
+
+            
+        }
+
+        private void Anular()
+        {
+            frmAnularVenta anulacion = new frmAnularVenta();
+            anulacion.lblidventa.Text = dtgventas.CurrentRow.Cells["IDVENTA"].Value.ToString();
+
+            Ventana ventana = new Ventana();
+            ventana.AbrirFormDialog(anulacion);
         }
     }
 }

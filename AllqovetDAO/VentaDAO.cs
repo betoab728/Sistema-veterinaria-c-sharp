@@ -267,6 +267,97 @@ namespace AllqovetDAO
             }
         }
 
+        public int AnularVenta( Venta venta, List<ProductoVitrina> listado)
+        {
+            //anular venta,movimiento,pago, retornar stock
+            MySqlConnection cn = new MySqlConnection(cnx);
+            cn.Open();
+            MySqlTransaction transaccion = cn.BeginTransaction();
+            int r = 0;
+
+            using (MySqlCommand cmd = new MySqlCommand("sp_AnularVenta", cn, transaccion)) //1 REGISTRA VENTA
+            {
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("pIdventa", venta.Idventa);
+                cmd.Parameters.AddWithValue("pIdusuario", venta.IdUsuarioAnula);
+                cmd.Parameters.AddWithValue("pMotivo", venta.motivo);
+
+                r = cmd.ExecuteNonQuery();
+              
+            }
+
+            if (r >0)  //si se anula venta se anula pagos
+            {
+                try
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("sp_AnularPago", cn, transaccion))
+                    {
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("pIdventa", venta.Idventa);
+
+                          r=  cmd.ExecuteNonQuery();
+                           
+                    }
+                }
+                catch (Exception)
+                {
+                        r = 0;
+                        throw new Exception();
+                }
+
+            }
+
+
+            if (r > 0) // se restaura el stock
+            {
+                if (listado.Count > 0)
+                {
+
+                    ProductoVitrinaDAO db = new ProductoVitrinaDAO();
+                    foreach (ProductoVitrina pa in listado)
+                    {
+                        r = db.ActualizaStockEntrada(pa, ref cn, ref transaccion);
+                        if (r != 1)
+                        {
+                            break;
+                        }
+                        // recorro el detalle, tomo el idproducto y cantidad y lo envio a la clase 
+                        //ProductoAlmacenDAO  para que incremente el stock
+                    }
+                }
+
+            }
+
+
+            if (r > 0)  //si se efectuo la anulacion se actualiza movimiento a estado 0
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_AnularMovimientoVenta", cn, transaccion))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("pIdventa", venta.Idventa);
+                    //rpta = cmd.ExecuteNonQuery(); lo comento por que a veces hay ventas que no generan movimientos asi que la anulacion debe proceder
+                    //aunque no haya movimiento que anular
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            //se finaliza la transaccion 
+            if (r> 0)
+
+            {
+                transaccion.Commit();
+                cn.Close();
+            }
+            else
+            {
+
+                transaccion.Rollback();
+            }
+            return r;
+
+        }
+
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes
 

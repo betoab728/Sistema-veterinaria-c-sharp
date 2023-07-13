@@ -145,7 +145,7 @@
             this.groupBox3.Controls.Add(this.txtsubtotal);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Location = new System.Drawing.Point(76, 412);
+            this.groupBox3.Location = new System.Drawing.Point(76, 419);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(399, 46);
             this.groupBox3.TabIndex = 18;
@@ -287,7 +287,7 @@
             this.button5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = global::Allqovet.Properties.Resources.eliminar;
-            this.button5.Location = new System.Drawing.Point(591, 422);
+            this.button5.Location = new System.Drawing.Point(591, 427);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(103, 36);
             this.button5.TabIndex = 31;
@@ -304,7 +304,7 @@
             this.button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::Allqovet.Properties.Resources.save;
-            this.button3.Location = new System.Drawing.Point(481, 422);
+            this.button3.Location = new System.Drawing.Point(481, 427);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(106, 36);
             this.button3.TabIndex = 30;
@@ -416,36 +416,44 @@
             // lblitems
             // 
             this.lblitems.AutoSize = true;
+            this.lblitems.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblitems.ForeColor = System.Drawing.Color.White;
             this.lblitems.Location = new System.Drawing.Point(55, 409);
             this.lblitems.Name = "lblitems";
-            this.lblitems.Size = new System.Drawing.Size(13, 13);
+            this.lblitems.Size = new System.Drawing.Size(14, 16);
             this.lblitems.TabIndex = 132;
             this.lblitems.Text = "0";
             // 
             // lblproductos
             // 
             this.lblproductos.AutoSize = true;
+            this.lblproductos.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblproductos.ForeColor = System.Drawing.Color.White;
             this.lblproductos.Location = new System.Drawing.Point(165, 409);
             this.lblproductos.Name = "lblproductos";
-            this.lblproductos.Size = new System.Drawing.Size(13, 13);
+            this.lblproductos.Size = new System.Drawing.Size(14, 16);
             this.lblproductos.TabIndex = 131;
             this.lblproductos.Text = "0";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(84, 409);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 13);
+            this.label4.Size = new System.Drawing.Size(78, 16);
             this.label4.TabIndex = 130;
             this.label4.Text = "PRODUCTOS";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(9, 409);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.Size = new System.Drawing.Size(39, 16);
             this.label7.TabIndex = 129;
             this.label7.Text = "ITEMS";
             // 

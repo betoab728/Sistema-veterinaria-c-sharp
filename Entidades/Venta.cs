@@ -18,6 +18,10 @@ namespace Entidades
         public string serie { get; set; }
         public int numero { get; set; }
         public int idcajachica { get; set; }
+        public int estado { get; set; }
+        public int IdUsuarioAnula { get; set; }
+        public string motivo { get; set; }
+
     }
 
 }
