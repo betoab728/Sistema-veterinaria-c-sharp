@@ -14,8 +14,10 @@ namespace Entidades
         public int Idcategoria { get; set; }
         public double PrecioCosto { get; set; }
         public double PrecioVenta { get; set; }
-        public DateTime FechaVencimiento { get; set; }
+        public DateTime? FechaVencimiento { get; set; }
         public string codigo { get; set; }
+        public int Stokcminimo { get; set; }
+        public string Manejastock { get; set; }
     }
 
 }

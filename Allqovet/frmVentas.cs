@@ -323,7 +323,7 @@ namespace Allqovet
                 return;
             }
 
-            if (dgvproductos.Rows.Count >0)
+            if (dgvproductos.Rows.Count ==0)
             {
                 MessageBox.Show("La venta no tiene productos");
                 return;

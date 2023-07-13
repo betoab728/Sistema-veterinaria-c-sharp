@@ -33,7 +33,7 @@
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cmbMarca = new System.Windows.Forms.ComboBox();
-            this.txtFechaVenc = new System.Windows.Forms.DateTimePicker();
+            this.dtpfecha = new System.Windows.Forms.DateTimePicker();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -47,7 +47,15 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.cmbubicacion = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSi = new System.Windows.Forms.RadioButton();
+            this.btnNo = new System.Windows.Forms.RadioButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtstockmin = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -62,25 +70,30 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtstockmin);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.dtpfecha);
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.cmbubicacion);
             this.groupBox1.Controls.Add(this.txtcodigo);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.cmbMarca);
-            this.groupBox1.Controls.Add(this.txtFechaVenc);
             this.groupBox1.Controls.Add(this.cmbCategoria);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtPrecioVenta);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtPrecioCosto);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(24, 54);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(485, 261);
+            this.groupBox1.Size = new System.Drawing.Size(485, 322);
             this.groupBox1.TabIndex = 106;
             this.groupBox1.TabStop = false;
             // 
@@ -114,20 +127,20 @@
             this.cmbMarca.Size = new System.Drawing.Size(120, 21);
             this.cmbMarca.TabIndex = 121;
             // 
-            // txtFechaVenc
+            // dtpfecha
             // 
-            this.txtFechaVenc.Checked = false;
-            this.txtFechaVenc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtFechaVenc.Location = new System.Drawing.Point(167, 160);
-            this.txtFechaVenc.Name = "txtFechaVenc";
-            this.txtFechaVenc.ShowCheckBox = true;
-            this.txtFechaVenc.Size = new System.Drawing.Size(136, 20);
-            this.txtFechaVenc.TabIndex = 120;
+            this.dtpfecha.Checked = false;
+            this.dtpfecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpfecha.Location = new System.Drawing.Point(322, 159);
+            this.dtpfecha.Name = "dtpfecha";
+            this.dtpfecha.ShowCheckBox = true;
+            this.dtpfecha.Size = new System.Drawing.Size(136, 20);
+            this.dtpfecha.TabIndex = 120;
             // 
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(349, 92);
+            this.cmbCategoria.Location = new System.Drawing.Point(349, 89);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(109, 21);
             this.cmbCategoria.TabIndex = 119;
@@ -139,8 +152,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Image = global::Allqovet.Properties.Resources.delete;
-            this.button3.Location = new System.Drawing.Point(257, 210);
+            this.button3.Image = global::Allqovet.Properties.Resources.eliminar;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.Location = new System.Drawing.Point(240, 269);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(103, 36);
             this.button3.TabIndex = 117;
@@ -156,10 +170,10 @@
             this.button2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Image = global::Allqovet.Properties.Resources.save;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(136, 210);
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.Location = new System.Drawing.Point(120, 269);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 36);
+            this.button2.Size = new System.Drawing.Size(114, 36);
             this.button2.TabIndex = 116;
             this.button2.Text = "GUARDAR";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -171,11 +185,11 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(30, 162);
+            this.label7.Location = new System.Drawing.Point(191, 162);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 17);
+            this.label7.Size = new System.Drawing.Size(125, 17);
             this.label7.TabIndex = 114;
-            this.label7.Text = "Fecha Vencimiento: ";
+            this.label7.Text = "Fecha Vencimiento";
             // 
             // txtPrecioVenta
             // 
@@ -183,7 +197,7 @@
             this.txtPrecioVenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrecioVenta.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtPrecioVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.txtPrecioVenta.Location = new System.Drawing.Point(349, 123);
+            this.txtPrecioVenta.Location = new System.Drawing.Point(349, 124);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.Size = new System.Drawing.Size(109, 20);
             this.txtPrecioVenta.TabIndex = 113;
@@ -193,22 +207,22 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(251, 126);
+            this.label6.Location = new System.Drawing.Point(257, 127);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 17);
+            this.label6.Size = new System.Drawing.Size(86, 17);
             this.label6.TabIndex = 112;
-            this.label6.Text = "Precio Venta: ";
+            this.label6.Text = "Precio Venta";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(29, 127);
+            this.label5.Location = new System.Drawing.Point(29, 128);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 17);
+            this.label5.Size = new System.Drawing.Size(84, 17);
             this.label5.TabIndex = 111;
-            this.label5.Text = "Precio Costo: ";
+            this.label5.Text = "Precio Costo";
             // 
             // txtPrecioCosto
             // 
@@ -226,7 +240,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(254, 96);
+            this.label4.Location = new System.Drawing.Point(268, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 17);
             this.label4.TabIndex = 109;
@@ -277,12 +291,89 @@
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
+            // cmbubicacion
+            // 
+            this.cmbubicacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbubicacion.FormattingEnabled = true;
+            this.cmbubicacion.Location = new System.Drawing.Point(271, 217);
+            this.cmbubicacion.Name = "cmbubicacion";
+            this.cmbubicacion.Size = new System.Drawing.Size(121, 21);
+            this.cmbubicacion.TabIndex = 126;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnNo);
+            this.groupBox2.Controls.Add(this.btnSi);
+            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(32, 199);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(153, 53);
+            this.groupBox2.TabIndex = 128;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Maneja Stock";
+            // 
+            // btnSi
+            // 
+            this.btnSi.AutoSize = true;
+            this.btnSi.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSi.Location = new System.Drawing.Point(25, 20);
+            this.btnSi.Name = "btnSi";
+            this.btnSi.Size = new System.Drawing.Size(37, 23);
+            this.btnSi.TabIndex = 0;
+            this.btnSi.TabStop = true;
+            this.btnSi.Text = "SI";
+            this.btnSi.UseVisualStyleBackColor = true;
+            // 
+            // btnNo
+            // 
+            this.btnNo.AutoSize = true;
+            this.btnNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNo.ForeColor = System.Drawing.Color.White;
+            this.btnNo.Location = new System.Drawing.Point(88, 22);
+            this.btnNo.Name = "btnNo";
+            this.btnNo.Size = new System.Drawing.Size(47, 21);
+            this.btnNo.TabIndex = 129;
+            this.btnNo.TabStop = true;
+            this.btnNo.Text = "NO";
+            this.btnNo.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(201, 219);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 16);
+            this.label10.TabIndex = 108;
+            this.label10.Text = "Ubicacion";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(29, 159);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(88, 17);
+            this.label11.TabIndex = 129;
+            this.label11.Text = "Stock minimo";
+            // 
+            // txtstockmin
+            // 
+            this.txtstockmin.Location = new System.Drawing.Point(120, 158);
+            this.txtstockmin.Name = "txtstockmin";
+            this.txtstockmin.Size = new System.Drawing.Size(65, 20);
+            this.txtstockmin.TabIndex = 130;
+            this.txtstockmin.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // frmNuevoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
-            this.ClientSize = new System.Drawing.Size(526, 324);
+            this.ClientSize = new System.Drawing.Size(537, 399);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -292,6 +383,8 @@
             this.Load += new System.EventHandler(this.frmNuevoProducto_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,11 +404,18 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbCategoria;
-        private System.Windows.Forms.DateTimePicker txtFechaVenc;
+        private System.Windows.Forms.DateTimePicker dtpfecha;
         private System.Windows.Forms.TextBox txtPrecioCosto;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.ComboBox cmbMarca;
         private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton btnNo;
+        private System.Windows.Forms.RadioButton btnSi;
+        private System.Windows.Forms.ComboBox cmbubicacion;
+        private System.Windows.Forms.TextBox txtstockmin;
+        private System.Windows.Forms.Label label11;
     }
 }

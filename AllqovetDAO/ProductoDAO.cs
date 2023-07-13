@@ -14,13 +14,73 @@ namespace AllqovetDAO
     {
         String cnx = Conexion.ObtenerConexion();
 
-        public int Agregar(Producto producto)
+        public int Agregar(Producto producto,ProductoVitrina productoVitrina)
+        {
+
+            MySqlConnection cn = new MySqlConnection(cnx);
+            cn.Open();
+            MySqlTransaction transaccion = cn.BeginTransaction();
+            int r = 0;
+            int idproducto = 0;
+
+           
+            using (MySqlCommand cmd = new MySqlCommand("sp_RegistrarProducto", cn, transaccion))
+            {
+               
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("pDescripcion", producto.Descripcion);
+                cmd.Parameters.AddWithValue("pIdmarca", producto.Idmarca);
+                cmd.Parameters.AddWithValue("pIdcategoria", producto.Idcategoria);
+                cmd.Parameters.AddWithValue("pPrecioCosto", producto.PrecioCosto);
+                cmd.Parameters.AddWithValue("pPrecioVenta", producto.PrecioVenta);
+                cmd.Parameters.AddWithValue("pFechaVencimiento", producto.FechaVencimiento);
+                cmd.Parameters.AddWithValue("pCodigo", producto.codigo);
+                cmd.Parameters.AddWithValue("pManejaStock", producto.Manejastock);
+                cmd.Parameters.AddWithValue("pStockMinimo", producto.Stokcminimo);
+
+                cmd.Parameters.Add("pIdproducto", MySqlDbType.Int32).Direction = ParameterDirection.Output;
+                r = cmd.ExecuteNonQuery();
+                idproducto = Convert.ToInt32(cmd.Parameters["pIdproducto"].Value);
+
+
+            }
+            if (r > 0) //registro la ubicacion del producto
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_RegistrarUbicacion", cn, transaccion))
+                {
+                
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pIdproducto", idproducto);
+                    cmd.Parameters.AddWithValue("pIdvitrina", productoVitrina.Idvitrina);
+                    r = cmd.ExecuteNonQuery();
+
+                }
+            }
+            if (r>0) //6 EJECUTA TRANSACCION
+            {
+                transaccion.Commit();
+                cn.Close();
+            }
+            else
+            {
+
+                transaccion.Rollback();
+            }
+
+            return idproducto;
+
+
+        }
+
+        public int AgregarServicio(Producto producto)
         {
             using (MySqlConnection cn = new MySqlConnection(cnx))
             {
                 using (MySqlCommand cmd = new MySqlCommand("sp_RegistrarProducto", cn))
                 {
+                    int idproducto = 0;
                     cn.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("pDescripcion", producto.Descripcion);
                     cmd.Parameters.AddWithValue("pIdmarca", producto.Idmarca);
@@ -29,13 +89,20 @@ namespace AllqovetDAO
                     cmd.Parameters.AddWithValue("pPrecioVenta", producto.PrecioVenta);
                     cmd.Parameters.AddWithValue("pFechaVencimiento", producto.FechaVencimiento);
                     cmd.Parameters.AddWithValue("pCodigo", producto.codigo);
+                    cmd.Parameters.AddWithValue("pManejaStock", producto.Manejastock);
+                    cmd.Parameters.AddWithValue("pStockMinimo", producto.Stokcminimo);
 
+                    cmd.Parameters.Add("pIdproducto", MySqlDbType.Int32).Direction = ParameterDirection.Output;
                     int r = cmd.ExecuteNonQuery();
+                    idproducto = Convert.ToInt32(cmd.Parameters["pIdproducto"].Value);
 
-                    return r;
+
+                    return idproducto;
                 }
             }
         }
+
+
 
         public DataTable Buscar(Producto producto)
         {

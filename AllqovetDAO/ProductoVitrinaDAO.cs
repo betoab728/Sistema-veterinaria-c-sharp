@@ -12,11 +12,7 @@ namespace AllqovetDAO
 {
     public class ProductoVitrinaDAO : IProductoVitrina,IDisposable
     {
-        public int ActualizaStockEntrada()
-        {
-            throw new NotImplementedException();
-        }
-
+        string cnx = Conexion.ObtenerConexion();
         public int ActualizaStockSalida(ProductoVitrina productoVitrina, ref MySqlConnection con, ref MySqlTransaction transaction)
         {
             using (MySqlCommand cmd = new MySqlCommand("sp_ActualizaStockSalida", con, transaction))
@@ -47,9 +43,26 @@ namespace AllqovetDAO
             }
         }
 
+     
+
         public DataTable ListarVitrinas()
         {
-            throw new NotImplementedException();
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_ListarVitrinas", cn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cn.Open();
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        return dt;
+                    }
+                }
+            }
+
         }
 
         #region IDisposable Support

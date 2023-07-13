@@ -14,9 +14,9 @@ namespace AllqovetBLL
     {
         ProductoDAO db = new ProductoDAO();
 
-        public int Agregar(Producto producto)
+        public int Agregar(Producto producto, ProductoVitrina productoVitrina)
         {
-            return db.Agregar(producto);
+            return db.Agregar(producto, productoVitrina);
         }
 
         public DataTable Buscar(Producto producto)
@@ -41,6 +41,11 @@ namespace AllqovetBLL
         public DataTable ReporteStock(int idmarca, int idcategoria, int idvitrina,int stock)
         {
             return db.ReporteStock(idmarca,idcategoria,idvitrina,stock);
+        }
+
+        public int AgregarServicio(Producto producto)
+        {
+            return db.AgregarServicio(producto);
         }
 
         #region IDisposable Support
