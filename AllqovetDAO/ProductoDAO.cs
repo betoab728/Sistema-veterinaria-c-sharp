@@ -102,8 +102,6 @@ namespace AllqovetDAO
             }
         }
 
-
-
         public DataTable Buscar(Producto producto)
         {
             using (MySqlConnection cn = new MySqlConnection(cnx))

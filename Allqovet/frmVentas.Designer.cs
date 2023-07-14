@@ -37,11 +37,8 @@
             this.lblarticulos = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lblutilidad_item = new System.Windows.Forms.Label();
-            this.lblcosto = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.lblidproducto = new System.Windows.Forms.Label();
             this.txtstock = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.txttotalitem = new System.Windows.Forms.TextBox();
@@ -56,6 +53,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtproducto = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.lblutilidad_item = new System.Windows.Forms.Label();
+            this.lblcosto = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblidproducto = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblidcliente = new System.Windows.Forms.Label();
             this.txtfecha = new System.Windows.Forms.TextBox();
@@ -71,6 +72,11 @@
             this.lblserie = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvproductos = new System.Windows.Forms.DataGridView();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.lblmanejastock = new System.Windows.Forms.Label();
             this.IDPRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,9 +85,6 @@
             this.IMPORTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COSTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UTILIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -182,11 +185,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.lblutilidad_item);
-            this.groupBox3.Controls.Add(this.lblcosto);
-            this.groupBox3.Controls.Add(this.lblCodigo);
-            this.groupBox3.Controls.Add(this.lblidproducto);
             this.groupBox3.Controls.Add(this.txtstock);
+            this.groupBox3.Controls.Add(this.button7);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.txttotalitem);
@@ -207,46 +207,6 @@
             this.groupBox3.TabIndex = 125;
             this.groupBox3.TabStop = false;
             // 
-            // lblutilidad_item
-            // 
-            this.lblutilidad_item.AutoSize = true;
-            this.lblutilidad_item.Location = new System.Drawing.Point(449, 18);
-            this.lblutilidad_item.Name = "lblutilidad_item";
-            this.lblutilidad_item.Size = new System.Drawing.Size(40, 13);
-            this.lblutilidad_item.TabIndex = 130;
-            this.lblutilidad_item.Text = "utilidad";
-            this.lblutilidad_item.Visible = false;
-            // 
-            // lblcosto
-            // 
-            this.lblcosto.AutoSize = true;
-            this.lblcosto.Location = new System.Drawing.Point(415, 18);
-            this.lblcosto.Name = "lblcosto";
-            this.lblcosto.Size = new System.Drawing.Size(33, 13);
-            this.lblcosto.TabIndex = 129;
-            this.lblcosto.Text = "costo";
-            this.lblcosto.Visible = false;
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(370, 18);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(39, 13);
-            this.lblCodigo.TabIndex = 128;
-            this.lblCodigo.Text = "codigo";
-            this.lblCodigo.Visible = false;
-            // 
-            // lblidproducto
-            // 
-            this.lblidproducto.AutoSize = true;
-            this.lblidproducto.Location = new System.Drawing.Point(308, 18);
-            this.lblidproducto.Name = "lblidproducto";
-            this.lblidproducto.Size = new System.Drawing.Size(57, 13);
-            this.lblidproducto.TabIndex = 127;
-            this.lblidproducto.Text = "idproducto";
-            this.lblidproducto.Visible = false;
-            // 
             // txtstock
             // 
             this.txtstock.Location = new System.Drawing.Point(90, 70);
@@ -255,6 +215,20 @@
             this.txtstock.Size = new System.Drawing.Size(34, 20);
             this.txtstock.TabIndex = 120;
             this.txtstock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(303, 13);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(114, 23);
+            this.button7.TabIndex = 133;
+            this.button7.Text = "Buscar Producto";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // label12
             // 
@@ -306,6 +280,7 @@
             this.button2.Text = "..";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.button2_KeyPress);
             // 
             // txtcodigo
             // 
@@ -315,6 +290,7 @@
             this.txtcodigo.TabIndex = 109;
             this.txtcodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtcodigo.TextChanged += new System.EventHandler(this.txtcodigo_TextChanged);
+            this.txtcodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcodigo_KeyPress);
             // 
             // button3
             // 
@@ -400,6 +376,7 @@
             // 
             this.txtproducto.Location = new System.Drawing.Point(90, 42);
             this.txtproducto.Name = "txtproducto";
+            this.txtproducto.ReadOnly = true;
             this.txtproducto.Size = new System.Drawing.Size(393, 20);
             this.txtproducto.TabIndex = 122;
             // 
@@ -413,6 +390,46 @@
             this.label16.Size = new System.Drawing.Size(46, 17);
             this.label16.TabIndex = 123;
             this.label16.Text = "Precio";
+            // 
+            // lblutilidad_item
+            // 
+            this.lblutilidad_item.AutoSize = true;
+            this.lblutilidad_item.Location = new System.Drawing.Point(336, 9);
+            this.lblutilidad_item.Name = "lblutilidad_item";
+            this.lblutilidad_item.Size = new System.Drawing.Size(40, 13);
+            this.lblutilidad_item.TabIndex = 130;
+            this.lblutilidad_item.Text = "utilidad";
+            this.lblutilidad_item.Visible = false;
+            // 
+            // lblcosto
+            // 
+            this.lblcosto.AutoSize = true;
+            this.lblcosto.Location = new System.Drawing.Point(302, 9);
+            this.lblcosto.Name = "lblcosto";
+            this.lblcosto.Size = new System.Drawing.Size(33, 13);
+            this.lblcosto.TabIndex = 129;
+            this.lblcosto.Text = "costo";
+            this.lblcosto.Visible = false;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(257, 9);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(39, 13);
+            this.lblCodigo.TabIndex = 128;
+            this.lblCodigo.Text = "codigo";
+            this.lblCodigo.Visible = false;
+            // 
+            // lblidproducto
+            // 
+            this.lblidproducto.AutoSize = true;
+            this.lblidproducto.Location = new System.Drawing.Point(195, 9);
+            this.lblidproducto.Name = "lblidproducto";
+            this.lblidproducto.Size = new System.Drawing.Size(57, 13);
+            this.lblidproducto.TabIndex = 127;
+            this.lblidproducto.Text = "idproducto";
+            this.lblidproducto.Visible = false;
             // 
             // groupBox1
             // 
@@ -591,6 +608,68 @@
             this.dgvproductos.Size = new System.Drawing.Size(614, 169);
             this.dgvproductos.TabIndex = 122;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button5.Image = global::Allqovet.Properties.Resources.delete;
+            this.button5.Location = new System.Drawing.Point(315, 516);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(103, 36);
+            this.button5.TabIndex = 130;
+            this.button5.Text = "CANCELAR";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button6.Image = global::Allqovet.Properties.Resources.save;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(216, 516);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(93, 36);
+            this.button6.TabIndex = 129;
+            this.button6.Text = "GUARDAR";
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Location = new System.Drawing.Point(424, 521);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(102, 31);
+            this.pictureBox1.TabIndex = 128;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(539, 523);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 133;
+            this.button8.Text = "button8";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // lblmanejastock
+            // 
+            this.lblmanejastock.AutoSize = true;
+            this.lblmanejastock.Location = new System.Drawing.Point(138, 528);
+            this.lblmanejastock.Name = "lblmanejastock";
+            this.lblmanejastock.Size = new System.Drawing.Size(67, 13);
+            this.lblmanejastock.TabIndex = 134;
+            this.lblmanejastock.Text = "manejastock";
+            // 
             // IDPRODUCTO
             // 
             this.IDPRODUCTO.HeaderText = "IDPRODUCTO";
@@ -645,56 +724,20 @@
             this.UTILIDAD.ReadOnly = true;
             this.UTILIDAD.Visible = false;
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Image = global::Allqovet.Properties.Resources.delete;
-            this.button5.Location = new System.Drawing.Point(315, 516);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(103, 36);
-            this.button5.TabIndex = 130;
-            this.button5.Text = "CANCELAR";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Image = global::Allqovet.Properties.Resources.save;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(216, 516);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(93, 36);
-            this.button6.TabIndex = 129;
-            this.button6.Text = "GUARDAR";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(424, 521);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(102, 31);
-            this.pictureBox1.TabIndex = 128;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
-            // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(644, 553);
+            this.Controls.Add(this.lblmanejastock);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.lblutilidad_item);
+            this.Controls.Add(this.lblcosto);
             this.Controls.Add(this.lblutilidad);
+            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblidproducto);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label14);
@@ -744,7 +787,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox txttotalitem;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label5;
@@ -769,6 +811,11 @@
         private System.Windows.Forms.Label lblserie;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvproductos;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        public System.Windows.Forms.TextBox txtcodigo;
+        private System.Windows.Forms.Label lblmanejastock;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDPRODUCTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPCION;
@@ -777,6 +824,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IMPORTE;
         private System.Windows.Forms.DataGridViewTextBoxColumn COSTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn UTILIDAD;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -159,6 +159,12 @@
     <Compile Include="frmBusCliVenta.Designer.cs">
       <DependentUpon>frmBusCliVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBusProVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusProVenta.Designer.cs">
+      <DependentUpon>frmBusProVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -457,6 +463,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBusCliVenta.resx">
       <DependentUpon>frmBusCliVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusProVenta.resx">
+      <DependentUpon>frmBusProVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCategory.resx">
       <DependentUpon>frmCategory.cs</DependentUpon>

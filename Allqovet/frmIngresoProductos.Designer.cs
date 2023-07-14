@@ -235,6 +235,7 @@
             this.button2.TabIndex = 110;
             this.button2.Text = "Buscar Producto";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtcodigo
             // 
@@ -438,6 +439,7 @@
             this.button1.TabIndex = 54;
             this.button1.Text = "..";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 

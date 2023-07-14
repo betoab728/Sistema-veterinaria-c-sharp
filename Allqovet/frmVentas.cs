@@ -102,14 +102,24 @@ namespace Allqovet
 
         private void txtprecio_Leave(object sender, EventArgs e)
         {
-            if (txtprecio.Text.Length > 0)
+            if (String.IsNullOrEmpty(txtproducto.Text))
             {
-                TotalItem();
+              //  MessageBox.Show("ingrese un producto");
 
-                double precio = 0;
-                precio = Convert.ToDouble(txtprecio.Text);
-                txtprecio.Text = string.Format("{0:0.00}", precio);
             }
+            else
+            {
+                if (txtprecio.Text.Length > 0)
+                {
+                    TotalItem();
+
+                    double precio = 0;
+                    precio = Convert.ToDouble(txtprecio.Text);
+                    txtprecio.Text = string.Format("{0:0.00}", precio);
+                }
+            }
+
+          
 
         }
 
@@ -184,6 +194,7 @@ namespace Allqovet
                             lblcosto.Text = row["PrecioCosto"].ToString();
                             txtprecio.Text = row["PrecioVenta"].ToString();
                             txtstock.Text = row["stock"].ToString();
+                            lblmanejastock.Text = row["manejastock"].ToString();
 
                             TotalItem();
 
@@ -205,6 +216,12 @@ namespace Allqovet
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(txttotalitem.Text))
+            {
+                MessageBox.Show("ingrese una producto");
+                return;
+            }
+
             if (txtcan.Text.Length == 0)
             {
 
@@ -238,20 +255,21 @@ namespace Allqovet
             if (stock > 0)
             {
 
+                if (!ProductoenLista())
+                {
+                    dgvproductos.Rows.Add(lblidproducto.Text, lblCodigo.Text, txtproducto.Text, txtcan.Text, txtprecio.Text, txttotalitem.Text, lblcosto.Text, lblutilidad_item.Text);
 
-                dgvproductos.Rows.Add(lblidproducto.Text, lblCodigo.Text, txtproducto.Text, txtcan.Text, txtprecio.Text, txttotalitem.Text, lblcosto.Text, lblutilidad_item.Text);
+             
 
-                txtprecio.Text = "";
-                txtcodigo.Text = "";
-                lblidproducto.Text = "0";
-                lblCodigo.Text = "0";
-                txtstock.Text = "";
-                txtcan.Text = "1";
-                txtproducto.Text = "";
-                txttotalitem.Text = "";
+                    CalcularTotal();
+                    Limpiar();
+
+
+                }
+
 
                 CalcularTotal();
-                txtcodigo.Focus();
+                Limpiar();
 
 
             }
@@ -259,6 +277,95 @@ namespace Allqovet
             {
                 MessageBox.Show("No hay stock suficiente");
             }
+        }
+
+        private void Limpiar()
+        {
+            txtprecio.Text = "";
+            txtcodigo.Text = "";
+            lblidproducto.Text = "0";
+            lblCodigo.Text = "0";
+            txtstock.Text = "";
+            txtcan.Text = "1";
+            txtproducto.Text = "";
+            txttotalitem.Text = "";
+            txtcodigo.Focus();
+        }
+
+        private bool ProductoenLista()
+        {
+            bool result = false;
+            string idproducto = "";
+            double preciolista = 0;
+            double precio = 0;
+            int stock = 0;
+            precio = Convert.ToDouble(txtprecio.Text);
+            stock = Convert.ToInt32(txtstock.Text);
+
+            int cant = Convert.ToInt32(txtcan.Text);
+            int cantlista = 0;
+            double subtotal = Convert.ToDouble(txttotalitem.Text);
+            double subtotallista = 0;
+            double utilidad = cant*( precio - Convert.ToDouble(lblcosto.Text));
+            
+            //  FrmNuevaFacturaCompra f1 = Application.OpenForms.OfType<FrmNuevaFacturaCompra>().SingleOrDefault();
+
+            for (int fila = 0; fila < dgvproductos.Rows.Count; fila++)
+            {
+                idproducto = dgvproductos.Rows[fila].Cells["idproducto"].Value.ToString();
+                if (idproducto.Equals(lblidproducto.Text))
+                {
+                    result = true;
+                    DialogResult dlg = MessageBox.Show("¿El producto ya se encuentra en el listado, desea agregarlo?", "Productos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dlg == DialogResult.Yes)
+                    {
+                        preciolista = Convert.ToDouble(dgvproductos.Rows[fila].Cells["PRECIO"].Value.ToString());
+
+                        if (precio != preciolista)
+                        {
+                            MessageBox.Show("Los precios no coinciden", "Agregar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return result;
+                        }
+
+                        cantlista = Convert.ToInt32(dgvproductos.Rows[fila].Cells["CANTIDAD"].Value.ToString());
+                        cant += cantlista;
+
+                        subtotallista = Convert.ToDouble(dgvproductos.Rows[fila].Cells["IMPORTE"].Value.ToString());
+                        subtotal += subtotallista;
+                        utilidad += Convert.ToDouble(dgvproductos.Rows[fila].Cells["UTILIDAD"].Value.ToString());
+
+                        if (lblmanejastock.Text.Equals("1"))
+                        {
+                     
+                            if (cant > stock)
+                            {
+                                MessageBox.Show("No hay stock suficiente", "Agregar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return result;
+                            }
+                            else
+                            {
+                                dgvproductos.Rows[fila].Cells["CANTIDAD"].Value = Convert.ToString(cant);
+                                dgvproductos.Rows[fila].Cells["IMPORTE"].Value = Convert.ToString(string.Format("{0:0.00}", subtotal));
+
+                                dgvproductos.Rows[fila].Cells["UTILIDAD"].Value = Convert.ToString(string.Format("{0:0.00}", utilidad));
+                            }
+
+                        }
+                        else
+                        {
+                            dgvproductos.Rows[fila].Cells["CANTIDAD"].Value = Convert.ToString(cant);
+                            dgvproductos.Rows[fila].Cells["IMPORTE"].Value = Convert.ToString(string.Format("{0:0.00}", subtotal));
+
+                            dgvproductos.Rows[fila].Cells["UTILIDAD"].Value = Convert.ToString(string.Format("{0:0.00}", utilidad));
+                        }
+                        
+                    }
+                }
+
+
+            }
+
+            return result;
         }
 
         private void CalcularTotal()
@@ -503,6 +610,52 @@ namespace Allqovet
         private void cmbvendedor_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            frmBusProVenta buscar = new frmBusProVenta();
+            buscar.ShowDialog();
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            int x = this.Location.X;
+            int y = this.Location.Y;
+
+            MessageBox.Show("ubicacion X:"+x + "y:"+y);
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
+
+        private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar == (char)(Keys.Enter))
+            {
+                e.Handled = true;//elimina el sonido
+
+                if (!string.IsNullOrEmpty(txtcodigo.Text))
+                {
+                    BuscarProducto();
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese un codigo");
+                }
+            }
+
+         
         }
     }
 }
