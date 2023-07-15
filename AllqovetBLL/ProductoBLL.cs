@@ -42,6 +42,10 @@ namespace AllqovetBLL
         {
             return db.ReporteStock(idmarca,idcategoria,idvitrina,stock);
         }
+        public DataTable ReporteCaducidad(DateTime Fecha)
+        {
+            return db.ReporteCaducidad(Fecha);
+        }
 
         public int AgregarServicio(Producto producto)
         {

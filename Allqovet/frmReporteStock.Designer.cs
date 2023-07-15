@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkstock = new System.Windows.Forms.CheckBox();
             this.cmbvitrina = new System.Windows.Forms.ComboBox();
             this.chkvitrina = new System.Windows.Forms.CheckBox();
             this.cmbcategoria = new System.Windows.Forms.ComboBox();
@@ -41,7 +42,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dgvproductos = new System.Windows.Forms.DataGridView();
-            this.chkstock = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproductos)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +60,18 @@
             this.groupBox1.Size = new System.Drawing.Size(680, 83);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // chkstock
+            // 
+            this.chkstock.AutoSize = true;
+            this.chkstock.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkstock.ForeColor = System.Drawing.Color.White;
+            this.chkstock.Location = new System.Drawing.Point(301, 48);
+            this.chkstock.Name = "chkstock";
+            this.chkstock.Size = new System.Drawing.Size(126, 23);
+            this.chkstock.TabIndex = 6;
+            this.chkstock.Text = "Solo con stock";
+            this.chkstock.UseVisualStyleBackColor = true;
             // 
             // cmbvitrina
             // 
@@ -140,6 +152,7 @@
             this.label3.TabIndex = 29;
             this.label3.Text = "REPORTE DE PRODUCTOS";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // button3
             // 
@@ -215,18 +228,6 @@
             this.dgvproductos.ReadOnly = true;
             this.dgvproductos.Size = new System.Drawing.Size(680, 272);
             this.dgvproductos.TabIndex = 134;
-            // 
-            // chkstock
-            // 
-            this.chkstock.AutoSize = true;
-            this.chkstock.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkstock.ForeColor = System.Drawing.Color.White;
-            this.chkstock.Location = new System.Drawing.Point(301, 48);
-            this.chkstock.Name = "chkstock";
-            this.chkstock.Size = new System.Drawing.Size(126, 23);
-            this.chkstock.TabIndex = 6;
-            this.chkstock.Text = "Solo con stock";
-            this.chkstock.UseVisualStyleBackColor = true;
             // 
             // frmReporteStock
             // 
