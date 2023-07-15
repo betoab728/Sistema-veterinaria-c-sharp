@@ -381,6 +381,12 @@
     <Compile Include="frmRegistroVentas.Designer.cs">
       <DependentUpon>frmRegistroVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReporteCaducidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteCaducidad.Designer.cs">
+      <DependentUpon>frmReporteCaducidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReporteStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -578,6 +584,9 @@
     <EmbeddedResource Include="frmRegistroVentas.resx">
       <DependentUpon>frmRegistroVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteCaducidad.resx">
+      <DependentUpon>frmReporteCaducidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReporteStock.resx">
       <DependentUpon>frmReporteStock.cs</DependentUpon>
     </EmbeddedResource>
@@ -617,6 +626,7 @@
     <EmbeddedResource Include="Reportes\Factura.rdlc" />
     <EmbeddedResource Include="Reportes\Ficha.rdlc" />
     <EmbeddedResource Include="Reportes\Pedido.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteCaducidad.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteStock.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteVentas.rdlc" />
     <EmbeddedResource Include="Reportes\Venta.rdlc" />

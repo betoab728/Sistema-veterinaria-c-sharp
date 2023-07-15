@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.panelSubmenuConsultorio = new System.Windows.Forms.Panel();
             this.button40 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.panelTitulo = new System.Windows.Forms.Panel();
+            this.lblusuario = new System.Windows.Forms.Label();
             this.lblModo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button28 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
             this.panelSubmenuVentas = new System.Windows.Forms.Panel();
             this.button36 = new System.Windows.Forms.Button();
             this.button38 = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.panelsubmenuClientes = new System.Windows.Forms.Panel();
-            this.button30 = new System.Windows.Forms.Button();
             this.button31 = new System.Windows.Forms.Button();
             this.button37 = new System.Windows.Forms.Button();
             this.panelmenu = new System.Windows.Forms.Panel();
@@ -68,7 +68,6 @@
             this.button9 = new System.Windows.Forms.Button();
             this.btnConsultorio = new System.Windows.Forms.Button();
             this.panelAlmacen = new System.Windows.Forms.Panel();
-            this.button39 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
@@ -79,7 +78,6 @@
             this.button25 = new System.Windows.Forms.Button();
             this.btnPedidos = new System.Windows.Forms.Button();
             this.panelFacturacion = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
             this.button33 = new System.Windows.Forms.Button();
             this.btnFacturacion = new System.Windows.Forms.Button();
@@ -91,7 +89,8 @@
             this.btnVentas = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelEscritorio = new System.Windows.Forms.Panel();
-            this.lblusuario = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
             this.panelSubmenuConsultorio.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             this.panelSubmenuVentas.SuspendLayout();
@@ -115,7 +114,7 @@
             this.panelSubmenuConsultorio.Controls.Add(this.button13);
             this.panelSubmenuConsultorio.Controls.Add(this.button14);
             this.panelSubmenuConsultorio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubmenuConsultorio.Location = new System.Drawing.Point(0, 1328);
+            this.panelSubmenuConsultorio.Location = new System.Drawing.Point(0, 1246);
             this.panelSubmenuConsultorio.Name = "panelSubmenuConsultorio";
             this.panelSubmenuConsultorio.Size = new System.Drawing.Size(241, 171);
             this.panelSubmenuConsultorio.TabIndex = 4;
@@ -197,6 +196,16 @@
             this.panelTitulo.Size = new System.Drawing.Size(1112, 26);
             this.panelTitulo.TabIndex = 5;
             // 
+            // lblusuario
+            // 
+            this.lblusuario.AutoSize = true;
+            this.lblusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblusuario.Location = new System.Drawing.Point(37, 8);
+            this.lblusuario.Name = "lblusuario";
+            this.lblusuario.Size = new System.Drawing.Size(77, 17);
+            this.lblusuario.TabIndex = 2;
+            this.lblusuario.Text = "USUARIO";
+            // 
             // lblModo
             // 
             this.lblModo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -247,22 +256,6 @@
             this.button27.Text = "Nuevo Producto";
             this.button27.UseVisualStyleBackColor = false;
             this.button27.Click += new System.EventHandler(this.button27_Click);
-            // 
-            // button26
-            // 
-            this.button26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.button26.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button26.FlatAppearance.BorderSize = 0;
-            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button26.ForeColor = System.Drawing.Color.White;
-            this.button26.Location = new System.Drawing.Point(0, 82);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(241, 41);
-            this.button26.TabIndex = 9;
-            this.button26.Text = "Reporte";
-            this.button26.UseVisualStyleBackColor = false;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // panelSubmenuVentas
             // 
@@ -360,29 +353,13 @@
             // panelsubmenuClientes
             // 
             this.panelsubmenuClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.panelsubmenuClientes.Controls.Add(this.button30);
             this.panelsubmenuClientes.Controls.Add(this.button31);
             this.panelsubmenuClientes.Controls.Add(this.button37);
             this.panelsubmenuClientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelsubmenuClientes.Location = new System.Drawing.Point(0, 357);
             this.panelsubmenuClientes.Name = "panelsubmenuClientes";
-            this.panelsubmenuClientes.Size = new System.Drawing.Size(241, 130);
+            this.panelsubmenuClientes.Size = new System.Drawing.Size(241, 89);
             this.panelsubmenuClientes.TabIndex = 11;
-            // 
-            // button30
-            // 
-            this.button30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.button30.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button30.FlatAppearance.BorderSize = 0;
-            this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button30.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button30.ForeColor = System.Drawing.Color.White;
-            this.button30.Location = new System.Drawing.Point(0, 82);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(241, 41);
-            this.button30.TabIndex = 9;
-            this.button30.Text = "Reporte\r\n";
-            this.button30.UseVisualStyleBackColor = false;
             // 
             // button31
             // 
@@ -453,7 +430,7 @@
             this.panelsubmenuSistemas.Controls.Add(this.button21);
             this.panelsubmenuSistemas.Controls.Add(this.button20);
             this.panelsubmenuSistemas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelsubmenuSistemas.Location = new System.Drawing.Point(0, 1750);
+            this.panelsubmenuSistemas.Location = new System.Drawing.Point(0, 1668);
             this.panelsubmenuSistemas.Name = "panelsubmenuSistemas";
             this.panelsubmenuSistemas.Size = new System.Drawing.Size(241, 128);
             this.panelsubmenuSistemas.TabIndex = 17;
@@ -512,7 +489,7 @@
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Image = global::Allqovet.Properties.Resources.configuraciones;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(0, 1709);
+            this.button8.Location = new System.Drawing.Point(0, 1627);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(241, 41);
             this.button8.TabIndex = 8;
@@ -529,7 +506,7 @@
             this.panelMantenimiento.Controls.Add(this.button18);
             this.panelMantenimiento.Controls.Add(this.button4);
             this.panelMantenimiento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMantenimiento.Location = new System.Drawing.Point(0, 1540);
+            this.panelMantenimiento.Location = new System.Drawing.Point(0, 1458);
             this.panelMantenimiento.Name = "panelMantenimiento";
             this.panelMantenimiento.Size = new System.Drawing.Size(241, 169);
             this.panelMantenimiento.TabIndex = 16;
@@ -681,7 +658,7 @@
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.Image = global::Allqovet.Properties.Resources._4945350_document_extension_files_folders_min_icon__2_;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(0, 1499);
+            this.button9.Location = new System.Drawing.Point(0, 1417);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(241, 41);
             this.button9.TabIndex = 15;
@@ -698,7 +675,7 @@
             this.btnConsultorio.ForeColor = System.Drawing.Color.White;
             this.btnConsultorio.Image = global::Allqovet.Properties.Resources.consultorio;
             this.btnConsultorio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultorio.Location = new System.Drawing.Point(0, 1287);
+            this.btnConsultorio.Location = new System.Drawing.Point(0, 1205);
             this.btnConsultorio.Name = "btnConsultorio";
             this.btnConsultorio.Size = new System.Drawing.Size(241, 41);
             this.btnConsultorio.TabIndex = 3;
@@ -708,32 +685,15 @@
             // 
             // panelAlmacen
             // 
-            this.panelAlmacen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(156)))), ((int)(((byte)(180)))));
-            this.panelAlmacen.Controls.Add(this.button39);
+            this.panelAlmacen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
             this.panelAlmacen.Controls.Add(this.button6);
             this.panelAlmacen.Controls.Add(this.button16);
             this.panelAlmacen.Controls.Add(this.button17);
             this.panelAlmacen.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAlmacen.Location = new System.Drawing.Point(0, 1116);
+            this.panelAlmacen.Location = new System.Drawing.Point(0, 1075);
             this.panelAlmacen.Name = "panelAlmacen";
-            this.panelAlmacen.Size = new System.Drawing.Size(241, 171);
+            this.panelAlmacen.Size = new System.Drawing.Size(241, 130);
             this.panelAlmacen.TabIndex = 10;
-            // 
-            // button39
-            // 
-            this.button39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.button39.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button39.FlatAppearance.BorderSize = 0;
-            this.button39.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button39.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button39.ForeColor = System.Drawing.Color.White;
-            this.button39.Location = new System.Drawing.Point(0, 123);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(241, 41);
-            this.button39.TabIndex = 10;
-            this.button39.Text = "Reporte Stock";
-            this.button39.UseVisualStyleBackColor = false;
-            this.button39.Click += new System.EventHandler(this.button39_Click);
             // 
             // button6
             // 
@@ -792,7 +752,7 @@
             this.btnAlmacen.ForeColor = System.Drawing.Color.White;
             this.btnAlmacen.Image = global::Allqovet.Properties.Resources.almacen;
             this.btnAlmacen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlmacen.Location = new System.Drawing.Point(0, 1075);
+            this.btnAlmacen.Location = new System.Drawing.Point(0, 1034);
             this.btnAlmacen.Name = "btnAlmacen";
             this.btnAlmacen.Size = new System.Drawing.Size(241, 41);
             this.btnAlmacen.TabIndex = 13;
@@ -802,14 +762,16 @@
             // 
             // panelPedidos
             // 
-            this.panelPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(156)))), ((int)(((byte)(180)))));
+            this.panelPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
+            this.panelPedidos.Controls.Add(this.button26);
+            this.panelPedidos.Controls.Add(this.button7);
             this.panelPedidos.Controls.Add(this.button5);
             this.panelPedidos.Controls.Add(this.button24);
             this.panelPedidos.Controls.Add(this.button25);
             this.panelPedidos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPedidos.Location = new System.Drawing.Point(0, 945);
+            this.panelPedidos.Location = new System.Drawing.Point(0, 822);
             this.panelPedidos.Name = "panelPedidos";
-            this.panelPedidos.Size = new System.Drawing.Size(241, 130);
+            this.panelPedidos.Size = new System.Drawing.Size(241, 212);
             this.panelPedidos.TabIndex = 13;
             // 
             // button5
@@ -824,7 +786,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(241, 41);
             this.button5.TabIndex = 9;
-            this.button5.Text = "Reporte";
+            this.button5.Text = "Reporte Facturación";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
@@ -840,7 +802,7 @@
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(241, 41);
             this.button24.TabIndex = 8;
-            this.button24.Text = "Buscar pedido";
+            this.button24.Text = "Reporte Productos/Stock";
             this.button24.UseVisualStyleBackColor = false;
             // 
             // button25
@@ -855,7 +817,7 @@
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(241, 41);
             this.button25.TabIndex = 7;
-            this.button25.Text = "Nuevo Pedido";
+            this.button25.Text = "Reporte Clientes";
             this.button25.UseVisualStyleBackColor = false;
             this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
@@ -866,44 +828,27 @@
             this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPedidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPedidos.ForeColor = System.Drawing.Color.White;
-            this.btnPedidos.Image = global::Allqovet.Properties.Resources.pedido;
+            this.btnPedidos.Image = ((System.Drawing.Image)(resources.GetObject("btnPedidos.Image")));
             this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedidos.Location = new System.Drawing.Point(0, 904);
+            this.btnPedidos.Location = new System.Drawing.Point(0, 781);
             this.btnPedidos.Name = "btnPedidos";
             this.btnPedidos.Size = new System.Drawing.Size(241, 41);
             this.btnPedidos.TabIndex = 13;
-            this.btnPedidos.Text = "Pedidos";
+            this.btnPedidos.Text = "Reportes";
             this.btnPedidos.UseVisualStyleBackColor = true;
             this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
             // panelFacturacion
             // 
-            this.panelFacturacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(156)))), ((int)(((byte)(180)))));
-            this.panelFacturacion.Controls.Add(this.button7);
+            this.panelFacturacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
             this.panelFacturacion.Controls.Add(this.button29);
             this.panelFacturacion.Controls.Add(this.button33);
             this.panelFacturacion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFacturacion.Location = new System.Drawing.Point(0, 774);
+            this.panelFacturacion.Location = new System.Drawing.Point(0, 692);
             this.panelFacturacion.Name = "panelFacturacion";
-            this.panelFacturacion.Size = new System.Drawing.Size(241, 130);
+            this.panelFacturacion.Size = new System.Drawing.Size(241, 89);
             this.panelFacturacion.TabIndex = 10;
             this.panelFacturacion.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFacturacion_Paint);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(0, 82);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(241, 41);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "Reporte";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click_2);
             // 
             // button29
             // 
@@ -946,7 +891,7 @@
             this.btnFacturacion.ForeColor = System.Drawing.Color.White;
             this.btnFacturacion.Image = global::Allqovet.Properties.Resources.facturacion;
             this.btnFacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFacturacion.Location = new System.Drawing.Point(0, 733);
+            this.btnFacturacion.Location = new System.Drawing.Point(0, 651);
             this.btnFacturacion.Name = "btnFacturacion";
             this.btnFacturacion.Size = new System.Drawing.Size(241, 41);
             this.btnFacturacion.TabIndex = 14;
@@ -956,16 +901,15 @@
             // 
             // panelProductos
             // 
-            this.panelProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(81)))), ((int)(((byte)(131)))));
+            this.panelProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
             this.panelProductos.Controls.Add(this.button3);
             this.panelProductos.Controls.Add(this.button1);
-            this.panelProductos.Controls.Add(this.button26);
             this.panelProductos.Controls.Add(this.button28);
             this.panelProductos.Controls.Add(this.button27);
             this.panelProductos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelProductos.Location = new System.Drawing.Point(0, 528);
+            this.panelProductos.Location = new System.Drawing.Point(0, 487);
             this.panelProductos.Name = "panelProductos";
-            this.panelProductos.Size = new System.Drawing.Size(241, 205);
+            this.panelProductos.Size = new System.Drawing.Size(241, 164);
             this.panelProductos.TabIndex = 13;
             this.panelProductos.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
@@ -977,7 +921,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 164);
+            this.button3.Location = new System.Drawing.Point(0, 123);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(241, 41);
             this.button3.TabIndex = 11;
@@ -993,7 +937,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 123);
+            this.button1.Location = new System.Drawing.Point(0, 82);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(241, 41);
             this.button1.TabIndex = 10;
@@ -1010,7 +954,7 @@
             this.btnProductos.ForeColor = System.Drawing.Color.White;
             this.btnProductos.Image = global::Allqovet.Properties.Resources.products;
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.Location = new System.Drawing.Point(0, 487);
+            this.btnProductos.Location = new System.Drawing.Point(0, 446);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(241, 41);
             this.btnProductos.TabIndex = 8;
@@ -1073,15 +1017,35 @@
             this.panelEscritorio.Size = new System.Drawing.Size(1112, 676);
             this.panelEscritorio.TabIndex = 7;
             // 
-            // lblusuario
+            // button7
             // 
-            this.lblusuario.AutoSize = true;
-            this.lblusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblusuario.Location = new System.Drawing.Point(37, 8);
-            this.lblusuario.Name = "lblusuario";
-            this.lblusuario.Size = new System.Drawing.Size(77, 17);
-            this.lblusuario.TabIndex = 2;
-            this.lblusuario.Text = "USUARIO";
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(0, 123);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(241, 41);
+            this.button7.TabIndex = 10;
+            this.button7.Text = "Reporte Ventas";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button26
+            // 
+            this.button26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
+            this.button26.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button26.FlatAppearance.BorderSize = 0;
+            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button26.ForeColor = System.Drawing.Color.White;
+            this.button26.Location = new System.Drawing.Point(0, 164);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(241, 41);
+            this.button26.TabIndex = 11;
+            this.button26.Text = "Reporte Caducidad";
+            this.button26.UseVisualStyleBackColor = false;
             // 
             // frmMenu
             // 
@@ -1123,7 +1087,6 @@
         private System.Windows.Forms.Button btnConsultorio;
         private System.Windows.Forms.Button button28;
         private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button26;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Panel panelSubmenuVentas;
@@ -1132,14 +1095,12 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Panel panelsubmenuClientes;
-        private System.Windows.Forms.Button button30;
         private System.Windows.Forms.Button button31;
         private System.Windows.Forms.Button button37;
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Panel panelmenu;
         private System.Windows.Forms.Panel panelProductos;
         private System.Windows.Forms.Panel panelFacturacion;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button29;
         private System.Windows.Forms.Button button33;
         private System.Windows.Forms.Button btnFacturacion;
@@ -1175,8 +1136,9 @@
         private System.Windows.Forms.Button button35;
         private System.Windows.Forms.Button button36;
         private System.Windows.Forms.Button button38;
-        private System.Windows.Forms.Button button39;
         private System.Windows.Forms.Button button40;
         public System.Windows.Forms.Label lblusuario;
+        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button button7;
     }
 }

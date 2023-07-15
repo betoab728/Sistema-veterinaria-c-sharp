@@ -170,6 +170,28 @@ namespace AllqovetDAO
             }
         }
 
+        public DataTable ReporteCaducidad(DateTime fecha)
+        {
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_ProductoCaducidad", cn))
+
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("pFecha", fecha );
+
+                    cn.Open();
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        return dt;
+                    }
+                }
+            }
+        }
+
         public int Editar(Producto producto)
         {
             throw new NotImplementedException();

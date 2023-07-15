@@ -117,17 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnPedidos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnBw8EKjUTB+0LAAABMUlEQVRYR62X0W0CQQxEr5BQBQc1
-        QCqIxPGB7uiFilIQKSTJSaMV2B5m1+yTRuLsfbZ/GSzn7fI5bZefaVx+WwJ9mMb5hp85MsvXQP8/YP1+
-        4wg7uDbQH/zkEY9DWwLd+IkjngfUB3rgNx7hB9QFOvEbjogH6EB/4VceEcs60IVfcUQs6pz2ywdGvEc0
-        vC7z99d42WBMnnh4v2ANJ5J6Bms4kdQzWMOJpJ7BGk4ktQRjCqrvsEJrMKag+g4rtAZjCqrvsEJrMKag
-        +g4rsOB5QdVZ32EFFjwvqDrrO6zAgucFVWd9hxVY8Lyg6qzvUEK2zvoOJWTrrO9QQrbO+g4lZOus71BC
-        ts76DiVk66zvsELvYA0nknoGazjZP6eVuWMN5zRej+tDI/bIfdrNB6wBw/AHVS9vydNwhk8AAAAASUVO
-        RK5CYII=
-</value>
-  </data>
 </root>
