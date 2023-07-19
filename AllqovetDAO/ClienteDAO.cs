@@ -125,7 +125,7 @@ namespace AllqovetDAO
             }
         }
 
-        public int Editar(Cliente nivelacceso)
+        public int Editar(Cliente cliente)
         {
             throw new NotImplementedException();
         }

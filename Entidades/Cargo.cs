@@ -9,7 +9,7 @@ namespace Entidades
   public  class Cargo
     {
         int idcargo { get; set; }
-        int descripcion { get; set; }
+        string descripcion { get; set; }
 
     }
 }

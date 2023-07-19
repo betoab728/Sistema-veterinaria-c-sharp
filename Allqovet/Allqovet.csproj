@@ -345,6 +345,12 @@
     <Compile Include="frmNuevoUsuario.Designer.cs">
       <DependentUpon>frmNuevoUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPermiso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPermiso.Designer.cs">
+      <DependentUpon>frmPermiso.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -565,6 +571,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNuevoUsuario.resx">
       <DependentUpon>frmNuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPermiso.resx">
+      <DependentUpon>frmPermiso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>

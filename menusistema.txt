@@ -1,0 +1,54 @@
+1 btnVentas
+	btnNuevaVenta
+	btnBuscarVenta
+	btnIniciarCaja
+	btnCerrarCaja
+	btnMovCaja
+2 btnClientes
+	btnNuevoCliente
+	btnBuscarCliente
+
+3 btnProductos
+	btnNuevoProducto
+	btnBuscarProducto
+	btnMarca
+	btnCategoria
+
+4 btnFacturacion
+
+	btnNuevoComprobante
+	btnBuscarComprobante
+
+5 btnReportes
+	btnRepClientes
+	btnRepStock
+	btnRepFacturacion
+	btnRepVentas
+	btnRepCaducidad
+
+6 btnAlmacen
+	btnIngresos
+	btnSalidas
+	btnStock
+
+7 btnConsultorio
+	btnFichas
+	btnBuscarFicha
+	btnCitas
+	btnListaCitas
+
+8 btnMantenimiento
+	btnTrabajadores
+	btnUsuarios
+	btnProveedores
+	btnMedioPago
+9 btnSistema
+	btnPermisos
+	btnBackup
+
+
+
+
+ALTER TABLE submenu
+ADD CONSTRAINT fk_idmenusubmenu
+FOREIGN KEY (idmenu) REFERENCES menu(idmenu);

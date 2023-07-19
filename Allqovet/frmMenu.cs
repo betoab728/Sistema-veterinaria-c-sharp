@@ -547,5 +547,21 @@ namespace Allqovet
             frmRegistroCitas citas = new frmRegistroCitas();
             AbrirFormHijo(citas);
         }
+
+        private void button20_Click_1(object sender, EventArgs e)
+        {
+            frmPermiso permiso = new frmPermiso();
+            AbrirFormHijo(permiso);
+        }
+
+        private void frmMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Estás seguro de que desea salir del sistema?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+               Application.Exit(); // Cancela el cierre de la ventana
+            }
+        }
     }
 }

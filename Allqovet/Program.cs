@@ -18,7 +18,7 @@ namespace Allqovet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmReporteCaducidad());
+            Application.Run(new frmLogin());
         }
     }
 }

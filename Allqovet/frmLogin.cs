@@ -111,9 +111,73 @@ namespace Allqovet
         {
             if (Validacion())
             {
-                MessageBox.Show("Acceso correcto. Bienvenido"); 
-
+                MessageBox.Show("Acceso correcto. Bienvenido");
                 frmMenu menu = new frmMenu();
+
+                using (PermisoBLL db = new PermisoBLL())
+                {
+                    try
+                    {
+
+                        int idnivel = Convert.ToInt32(cbonivel.SelectedValue);
+                        Usuario usuario = new Usuario();
+                        usuario.Idnivelacceso = Convert.ToInt32(cbonivel.SelectedValue);
+
+                        DataTable permisos = db.LeerPermisos(usuario);
+
+                        //correlativo.Rows[0][0].ToString();
+                        // (edad >= 18) ? "Es mayor de edad" : "Es menor de edad";
+
+
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString()=="1" ? true:false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+
+                        menu.btnNuevaVenta.Enabled = permisos.Rows[0][0].ToString() == "1" ? true : false;
+
+
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+
+
+
+
+
                 menu.Show();
                 this.Visible = false;
             }
@@ -122,6 +186,11 @@ namespace Allqovet
                 MessageBox.Show("Usuario no encontrado");
             }
             
+        }
+
+        private void LeerPermisos(Form frmMenu)
+        {
+          
         }
 
         private bool Validacion()

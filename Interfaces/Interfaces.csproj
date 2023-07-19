@@ -65,19 +65,23 @@
     <Compile Include="IMarca.cs" />
     <Compile Include="IMascota.cs" />
     <Compile Include="IMedioPago.cs" />
+    <Compile Include="IMenu.cs" />
     <Compile Include="INivelacceso.cs" />
     <Compile Include="IOperacion.cs" />
     <Compile Include="IPedido.cs" />
+    <Compile Include="IPermiso.cs" />
     <Compile Include="IProducto.cs" />
     <Compile Include="IProductoVitrina.cs" />
     <Compile Include="IProveedores.cs" />
     <Compile Include="ISalida.cs" />
+    <Compile Include="ISubmenuSistema.cs" />
     <Compile Include="ITipoCita.cs" />
     <Compile Include="ITipoOperacion.cs" />
     <Compile Include="ITrabajador.cs" />
     <Compile Include="IUsuario.cs" />
     <Compile Include="IVenta.cs" />
     <Compile Include="IVitrina.cs" />
+    <Compile Include="Permiso.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

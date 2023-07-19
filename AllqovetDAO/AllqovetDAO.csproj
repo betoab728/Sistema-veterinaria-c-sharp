@@ -138,9 +138,11 @@
     <Compile Include="MarcaDAO.cs" />
     <Compile Include="MascotaDAO.cs" />
     <Compile Include="MedioPagoDAO.cs" />
+    <Compile Include="MenuDAO.cs" />
     <Compile Include="NivelaccesoDAO.cs" />
     <Compile Include="OperacionDAO.cs" />
     <Compile Include="PedidoDAO.cs" />
+    <Compile Include="PermisoDAO.cs" />
     <Compile Include="ProductoDAO.cs" />
     <Compile Include="ProductoVitrinaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -151,6 +153,7 @@
     </Compile>
     <Compile Include="ProveedorDAO.cs" />
     <Compile Include="SalidaDAO.cs" />
+    <Compile Include="SubmenuSistemaDAO.cs" />
     <Compile Include="TipoCitaDAO.cs" />
     <Compile Include="TipoOperacionDAO.cs" />
     <Compile Include="TrabajadorDAO.cs" />
