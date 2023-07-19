@@ -301,6 +301,7 @@
             this.btnCerrarCaja.TabIndex = 11;
             this.btnCerrarCaja.Text = "Cerrar caja";
             this.btnCerrarCaja.UseVisualStyleBackColor = false;
+            this.btnCerrarCaja.Click += new System.EventHandler(this.btnCerrarCaja_Click);
             // 
             // btnIniciarCaja
             // 
@@ -789,6 +790,7 @@
             this.btnRepCaducidad.TabIndex = 11;
             this.btnRepCaducidad.Text = "Reporte Caducidad";
             this.btnRepCaducidad.UseVisualStyleBackColor = false;
+            this.btnRepCaducidad.Click += new System.EventHandler(this.btnRepCaducidad_Click);
             // 
             // btnRepVentas
             // 
@@ -804,6 +806,7 @@
             this.btnRepVentas.TabIndex = 10;
             this.btnRepVentas.Text = "Reporte Ventas";
             this.btnRepVentas.UseVisualStyleBackColor = false;
+            this.btnRepVentas.Click += new System.EventHandler(this.btnRepVentas_Click);
             // 
             // btnRepFacturacion
             // 
@@ -835,6 +838,7 @@
             this.btnRepStock.TabIndex = 8;
             this.btnRepStock.Text = "Reporte Productos/Stock";
             this.btnRepStock.UseVisualStyleBackColor = false;
+            this.btnRepStock.Click += new System.EventHandler(this.btnRepStock_Click);
             // 
             // btnRepClientes
             // 

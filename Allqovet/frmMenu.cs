@@ -320,7 +320,7 @@ namespace Allqovet
 
         private void panelFacturacion_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void button25_Click(object sender, EventArgs e)
@@ -562,6 +562,29 @@ namespace Allqovet
             {
                Application.Exit(); // Cancela el cierre de la ventana
             }
+        }
+
+        private void btnRepStock_Click(object sender, EventArgs e)
+        {
+            frmReporteStock reporteStock = new frmReporteStock();
+            AbrirFormHijo(reporteStock);
+        }
+
+        private void btnRepVentas_Click(object sender, EventArgs e)
+        {
+            frmReporteVenta reporteVenta = new frmReporteVenta();
+            AbrirFormHijo(reporteVenta);
+        }
+
+        private void btnRepCaducidad_Click(object sender, EventArgs e)
+        {
+            frmReporteCaducidad reporteCaducidad = new frmReporteCaducidad();
+            AbrirFormHijo(reporteCaducidad);
+        }
+
+        private void btnCerrarCaja_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

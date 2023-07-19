@@ -1084,3 +1084,12 @@ C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmBusProVenta.resources
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmPermiso.resources
 C:\Users\ELIAS\Documents\curso integrador\avance 3 miercoles\Allqovet\obj\Debug\Allqovet.frmReporteCaducidad.resources
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmAnularVenta.resources
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmBuscarClienteCita.resources
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmBusProVenta.resources
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmCiereCaja.resources
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmCita.resources
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmImprimirCierre.resources
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmPermiso.resources
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmRegistroCitas.resources
+C:\Users\Administrador\Documents\AVANCE03_ALLQOVET\integrador_avance03\Allqovet\obj\Debug\Allqovet.frmReporteCaducidad.resources
