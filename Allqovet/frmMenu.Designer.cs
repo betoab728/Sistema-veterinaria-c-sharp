@@ -69,15 +69,12 @@
             this.btnConsultorio = new System.Windows.Forms.Button();
             this.panelAlmacen = new System.Windows.Forms.Panel();
             this.btnStock = new System.Windows.Forms.Button();
-            this.btnSalidas = new System.Windows.Forms.Button();
             this.btnIngresos = new System.Windows.Forms.Button();
             this.btnAlmacen = new System.Windows.Forms.Button();
             this.panelPedidos = new System.Windows.Forms.Panel();
             this.btnRepCaducidad = new System.Windows.Forms.Button();
             this.btnRepVentas = new System.Windows.Forms.Button();
-            this.btnRepFacturacion = new System.Windows.Forms.Button();
             this.btnRepStock = new System.Windows.Forms.Button();
-            this.btnRepClientes = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.panelFacturacion = new System.Windows.Forms.Panel();
             this.btnBuscarComprobante = new System.Windows.Forms.Button();
@@ -114,7 +111,7 @@
             this.panelSubmenuConsultorio.Controls.Add(this.btnBuscarFicha);
             this.panelSubmenuConsultorio.Controls.Add(this.btnFichas);
             this.panelSubmenuConsultorio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubmenuConsultorio.Location = new System.Drawing.Point(0, 1246);
+            this.panelSubmenuConsultorio.Location = new System.Drawing.Point(0, 1109);
             this.panelSubmenuConsultorio.Name = "panelSubmenuConsultorio";
             this.panelSubmenuConsultorio.Size = new System.Drawing.Size(241, 171);
             this.panelSubmenuConsultorio.TabIndex = 4;
@@ -431,7 +428,7 @@
             this.panelsubmenuSistemas.Controls.Add(this.btnBackup);
             this.panelsubmenuSistemas.Controls.Add(this.btnPermisos);
             this.panelsubmenuSistemas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelsubmenuSistemas.Location = new System.Drawing.Point(0, 1668);
+            this.panelsubmenuSistemas.Location = new System.Drawing.Point(0, 1531);
             this.panelsubmenuSistemas.Name = "panelsubmenuSistemas";
             this.panelsubmenuSistemas.Size = new System.Drawing.Size(241, 128);
             this.panelsubmenuSistemas.TabIndex = 17;
@@ -491,7 +488,7 @@
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Image = global::Allqovet.Properties.Resources.configuraciones;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(0, 1627);
+            this.button8.Location = new System.Drawing.Point(0, 1490);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(241, 41);
             this.button8.TabIndex = 8;
@@ -508,7 +505,7 @@
             this.panelMantenimiento.Controls.Add(this.btnUsuarios);
             this.panelMantenimiento.Controls.Add(this.btnTrabajadores);
             this.panelMantenimiento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMantenimiento.Location = new System.Drawing.Point(0, 1458);
+            this.panelMantenimiento.Location = new System.Drawing.Point(0, 1321);
             this.panelMantenimiento.Name = "panelMantenimiento";
             this.panelMantenimiento.Size = new System.Drawing.Size(241, 169);
             this.panelMantenimiento.TabIndex = 16;
@@ -660,7 +657,7 @@
             this.btnMantenimiento.ForeColor = System.Drawing.Color.White;
             this.btnMantenimiento.Image = global::Allqovet.Properties.Resources._4945350_document_extension_files_folders_min_icon__2_;
             this.btnMantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMantenimiento.Location = new System.Drawing.Point(0, 1417);
+            this.btnMantenimiento.Location = new System.Drawing.Point(0, 1280);
             this.btnMantenimiento.Name = "btnMantenimiento";
             this.btnMantenimiento.Size = new System.Drawing.Size(241, 41);
             this.btnMantenimiento.TabIndex = 15;
@@ -677,7 +674,7 @@
             this.btnConsultorio.ForeColor = System.Drawing.Color.White;
             this.btnConsultorio.Image = global::Allqovet.Properties.Resources.consultorio;
             this.btnConsultorio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultorio.Location = new System.Drawing.Point(0, 1205);
+            this.btnConsultorio.Location = new System.Drawing.Point(0, 1068);
             this.btnConsultorio.Name = "btnConsultorio";
             this.btnConsultorio.Size = new System.Drawing.Size(241, 41);
             this.btnConsultorio.TabIndex = 3;
@@ -689,12 +686,11 @@
             // 
             this.panelAlmacen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
             this.panelAlmacen.Controls.Add(this.btnStock);
-            this.panelAlmacen.Controls.Add(this.btnSalidas);
             this.panelAlmacen.Controls.Add(this.btnIngresos);
             this.panelAlmacen.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAlmacen.Location = new System.Drawing.Point(0, 1075);
+            this.panelAlmacen.Location = new System.Drawing.Point(0, 986);
             this.panelAlmacen.Name = "panelAlmacen";
-            this.panelAlmacen.Size = new System.Drawing.Size(241, 130);
+            this.panelAlmacen.Size = new System.Drawing.Size(241, 82);
             this.panelAlmacen.TabIndex = 10;
             // 
             // btnStock
@@ -705,29 +701,13 @@
             this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStock.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStock.ForeColor = System.Drawing.Color.White;
-            this.btnStock.Location = new System.Drawing.Point(0, 82);
+            this.btnStock.Location = new System.Drawing.Point(0, 41);
             this.btnStock.Name = "btnStock";
             this.btnStock.Size = new System.Drawing.Size(241, 41);
             this.btnStock.TabIndex = 9;
             this.btnStock.Text = "Vitrinas / Stock";
             this.btnStock.UseVisualStyleBackColor = false;
             this.btnStock.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // btnSalidas
-            // 
-            this.btnSalidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.btnSalidas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSalidas.FlatAppearance.BorderSize = 0;
-            this.btnSalidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalidas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalidas.ForeColor = System.Drawing.Color.White;
-            this.btnSalidas.Location = new System.Drawing.Point(0, 41);
-            this.btnSalidas.Name = "btnSalidas";
-            this.btnSalidas.Size = new System.Drawing.Size(241, 41);
-            this.btnSalidas.TabIndex = 8;
-            this.btnSalidas.Text = "Salidas";
-            this.btnSalidas.UseVisualStyleBackColor = false;
-            this.btnSalidas.Click += new System.EventHandler(this.button16_Click_1);
             // 
             // btnIngresos
             // 
@@ -754,7 +734,7 @@
             this.btnAlmacen.ForeColor = System.Drawing.Color.White;
             this.btnAlmacen.Image = global::Allqovet.Properties.Resources.almacen;
             this.btnAlmacen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlmacen.Location = new System.Drawing.Point(0, 1034);
+            this.btnAlmacen.Location = new System.Drawing.Point(0, 945);
             this.btnAlmacen.Name = "btnAlmacen";
             this.btnAlmacen.Size = new System.Drawing.Size(241, 41);
             this.btnAlmacen.TabIndex = 13;
@@ -767,14 +747,13 @@
             this.panelPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
             this.panelPedidos.Controls.Add(this.btnRepCaducidad);
             this.panelPedidos.Controls.Add(this.btnRepVentas);
-            this.panelPedidos.Controls.Add(this.btnRepFacturacion);
             this.panelPedidos.Controls.Add(this.btnRepStock);
-            this.panelPedidos.Controls.Add(this.btnRepClientes);
             this.panelPedidos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPedidos.Location = new System.Drawing.Point(0, 822);
             this.panelPedidos.Name = "panelPedidos";
-            this.panelPedidos.Size = new System.Drawing.Size(241, 212);
+            this.panelPedidos.Size = new System.Drawing.Size(241, 123);
             this.panelPedidos.TabIndex = 13;
+            this.panelPedidos.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPedidos_Paint);
             // 
             // btnRepCaducidad
             // 
@@ -784,7 +763,7 @@
             this.btnRepCaducidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRepCaducidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRepCaducidad.ForeColor = System.Drawing.Color.White;
-            this.btnRepCaducidad.Location = new System.Drawing.Point(0, 164);
+            this.btnRepCaducidad.Location = new System.Drawing.Point(0, 82);
             this.btnRepCaducidad.Name = "btnRepCaducidad";
             this.btnRepCaducidad.Size = new System.Drawing.Size(241, 41);
             this.btnRepCaducidad.TabIndex = 11;
@@ -800,29 +779,13 @@
             this.btnRepVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRepVentas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRepVentas.ForeColor = System.Drawing.Color.White;
-            this.btnRepVentas.Location = new System.Drawing.Point(0, 123);
+            this.btnRepVentas.Location = new System.Drawing.Point(0, 41);
             this.btnRepVentas.Name = "btnRepVentas";
             this.btnRepVentas.Size = new System.Drawing.Size(241, 41);
             this.btnRepVentas.TabIndex = 10;
             this.btnRepVentas.Text = "Reporte Ventas";
             this.btnRepVentas.UseVisualStyleBackColor = false;
             this.btnRepVentas.Click += new System.EventHandler(this.btnRepVentas_Click);
-            // 
-            // btnRepFacturacion
-            // 
-            this.btnRepFacturacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.btnRepFacturacion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRepFacturacion.FlatAppearance.BorderSize = 0;
-            this.btnRepFacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRepFacturacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRepFacturacion.ForeColor = System.Drawing.Color.White;
-            this.btnRepFacturacion.Location = new System.Drawing.Point(0, 82);
-            this.btnRepFacturacion.Name = "btnRepFacturacion";
-            this.btnRepFacturacion.Size = new System.Drawing.Size(241, 41);
-            this.btnRepFacturacion.TabIndex = 9;
-            this.btnRepFacturacion.Text = "Reporte Facturación";
-            this.btnRepFacturacion.UseVisualStyleBackColor = false;
-            this.btnRepFacturacion.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // btnRepStock
             // 
@@ -832,29 +795,13 @@
             this.btnRepStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRepStock.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRepStock.ForeColor = System.Drawing.Color.White;
-            this.btnRepStock.Location = new System.Drawing.Point(0, 41);
+            this.btnRepStock.Location = new System.Drawing.Point(0, 0);
             this.btnRepStock.Name = "btnRepStock";
             this.btnRepStock.Size = new System.Drawing.Size(241, 41);
             this.btnRepStock.TabIndex = 8;
             this.btnRepStock.Text = "Reporte Productos/Stock";
             this.btnRepStock.UseVisualStyleBackColor = false;
             this.btnRepStock.Click += new System.EventHandler(this.btnRepStock_Click);
-            // 
-            // btnRepClientes
-            // 
-            this.btnRepClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.btnRepClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRepClientes.FlatAppearance.BorderSize = 0;
-            this.btnRepClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRepClientes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRepClientes.ForeColor = System.Drawing.Color.White;
-            this.btnRepClientes.Location = new System.Drawing.Point(0, 0);
-            this.btnRepClientes.Name = "btnRepClientes";
-            this.btnRepClientes.Size = new System.Drawing.Size(241, 41);
-            this.btnRepClientes.TabIndex = 7;
-            this.btnRepClientes.Text = "Reporte Clientes";
-            this.btnRepClientes.UseVisualStyleBackColor = false;
-            this.btnRepClientes.Click += new System.EventHandler(this.button25_Click);
             // 
             // btnReportes
             // 
@@ -1100,14 +1047,11 @@
         private System.Windows.Forms.Button btnNuevoComprobante;
         private System.Windows.Forms.Button btnFacturacion;
         private System.Windows.Forms.Panel panelPedidos;
-        private System.Windows.Forms.Button btnRepFacturacion;
         private System.Windows.Forms.Button btnRepStock;
-        private System.Windows.Forms.Button btnRepClientes;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnAlmacen;
         private System.Windows.Forms.Panel panelAlmacen;
         private System.Windows.Forms.Button btnStock;
-        private System.Windows.Forms.Button btnSalidas;
         private System.Windows.Forms.Button btnIngresos;
         private System.Windows.Forms.Button btnCategoria;
         private System.Windows.Forms.Panel panelsubmenuSistemas;

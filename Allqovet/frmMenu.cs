@@ -586,5 +586,10 @@ namespace Allqovet
         {
 
         }
+
+        private void panelPedidos_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
