@@ -9,20 +9,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Allqovet;
 using AllqovetBLL;
+using Entidades;
 
 namespace AllqovetBLL
 {
     public partial class frmDashboard : Form
     {
-        private DashboardBLL dashboardBLL;
-        public frmDashboard()
+       private DashboardBLL dashboardBLL;
+       public  BotonesDashboard btns =new BotonesDashboard();
+
+        public frmDashboard(BotonesDashboard botones)
         
         {
             InitializeComponent();
             //Default - Últimos 7 días 
            
             dashboardBLL = new DashboardBLL();
+            btns = botones;
 
+          
             
         }
 
@@ -34,6 +39,10 @@ namespace AllqovetBLL
             dtpFechaFinal_ValueChanged(null, EventArgs.Empty);
 
             LoadData();
+
+            EstadoBotones();
+
+
         }
 
         private void LoadData()
@@ -182,12 +191,17 @@ namespace AllqovetBLL
         private void label9_Click(object sender, EventArgs e)
         {
 
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            frmClientes clientes = new frmClientes();
+
+            frmRegistrofichas clientes = new frmRegistrofichas();
             clientes.ShowDialog();
+
+
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -256,6 +270,79 @@ namespace AllqovetBLL
         {
 
         }
+
+        private void frmDashboard_Activated(object sender, EventArgs e)
+        {
+            frmMenu menu = Application.OpenForms.OfType<frmMenu>().SingleOrDefault();
+            if (menu != null)
+            {
+                if (menu.btnNuevaVenta.Visible)
+                {
+                    btnNuevaVenta.Enabled = false;
+                }
+                else
+                {
+                    btnNuevaVenta.Enabled = false;
+                }
+
+                //   btnNuevaVenta.Enabled = menu.btnNuevaVenta.Visible == true ? true : false;
+            }
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            frmMenu menu = Application.OpenForms.OfType<frmMenu>().SingleOrDefault();
+            if (menu != null)
+            {
+               // btnNuevoCliente.Enabled = menu.btnNuevoCliente.Visible == true ? true : false;
+              //  btnNuevaVenta.Enabled = menu.btnNuevaVenta.Visible == true ? true : false;
+
+                if (menu.btnNuevaVenta.Visible)
+                {
+                    MessageBox.Show("boton activo");
+                  this.btnNuevaVenta.Enabled = true;
+                }
+                else
+                {
+                    //  this.btnNuevaVenta.Enabled = false;
+                    MessageBox.Show("boton esta  inactivo");
+                }
+
+              /* btnNuevoCliente.Enabled = menu.btnNuevoCliente.Visible == true ? true : false;
+                btnBuscarCliente.Enabled = menu.btnBuscarCliente.Visible == true ? true : false; ;
+                btnBuscarMascota.Enabled = menu.btnBuscarFicha.Visible == true ? true : false;
+                btnGenerarFicha.Enabled = menu.btnFichas.Visible == true ? true : false;
+                btnNuevaVenta.Enabled = menu.btnNuevaVenta.Visible == true ? true : false;
+                btnBuscarVenta.Enabled = menu.btnBuscarVenta.Visible == true ? true : false;
+                btnNuevoComprobante.Enabled = menu.btnNuevoComprobante.Visible == true ? true : false;
+                btnRepVentas.Enabled = menu.btnRepVentas.Visible == true ? true : false;
+                btnPedido.Enabled = menu.btnIngresos.Visible == true ? true : false;
+                btnCita.Enabled = menu.btnCitas.Visible == true ? true : false;
+                btnInventario.Enabled = menu.btnStock.Visible == true ? true : false;
+                btnSistema.Enabled = btnSistema.Visible == true ? true : false;
+
+    */
+
+
+            }
+        }
+
+        private void EstadoBotones()
+        {
+            btnNuevoCliente.Enabled = btns.btnNuevoCliente;
+            btnBuscarCliente.Enabled = btns.btnBuscarCliente;
+            btnBuscarMascota.Enabled = btns.btnBuscarMascota;
+            btnGenerarFicha.Enabled = btns.btnGenerarFicha;
+            btnNuevaVenta.Enabled = btns.btnNuevaVenta;
+            btnBuscarVenta.Enabled = btns.btnBuscarVenta;
+            btnNuevoComprobante.Enabled = btns.btnNuevoComprobante;
+            btnRepVentas.Enabled = btns.btnRepVentas;
+            btnPedido.Enabled = btns.btnPedido;
+            btnCita.Enabled = btns.btnCita;
+            btnInventario.Enabled = btns.btnInventario;
+            btnSistema.Enabled = btns.btnSistema;
+        }
+
     }
 
     }

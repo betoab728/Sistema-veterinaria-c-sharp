@@ -8,20 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 
 namespace Allqovet
 {
     public partial class frmMenu : Form
     {
         /*private Panel leftBorderBtn;*/
-
+        private BotonesDashboard btns = new BotonesDashboard();
         private Form formActual;
 
         
 
-        public frmMenu()
+        public frmMenu(BotonesDashboard botones)
         {
           InitializeComponent();
+            btns = botones;
             /*
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7,41);
@@ -114,7 +116,9 @@ namespace Allqovet
         private void frmMenu_Load(object sender, EventArgs e)
         {
             Ocultarsubmenu();
-            frmDashboard dashboard = new frmDashboard();
+
+            frmDashboard dashboard = new frmDashboard(btns);
+
             AbrirFormHijo(dashboard);
 
         }
@@ -585,6 +589,12 @@ namespace Allqovet
         private void btnCerrarCaja_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBackup_Click(object sender, EventArgs e)
+        {
+            frmBackup backup = new frmBackup();
+            AbrirFormHijo(backup);
         }
     }
 }

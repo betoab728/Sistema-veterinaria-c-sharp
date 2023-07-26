@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title12 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.btnNuevoCliente = new System.Windows.Forms.Button();
             this.panelBajoStock = new System.Windows.Forms.Panel();
             this.dtgvBajoStock = new System.Windows.Forms.DataGridView();
@@ -55,16 +55,16 @@
             this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.chartTopProd = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnLoad = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnNuevaVenta = new System.Windows.Forms.Button();
+            this.btnPedido = new System.Windows.Forms.Button();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
+            this.btnGenerarFicha = new System.Windows.Forms.Button();
+            this.btnBuscarVenta = new System.Windows.Forms.Button();
+            this.btnNuevoComprobante = new System.Windows.Forms.Button();
+            this.btnRepVentas = new System.Windows.Forms.Button();
+            this.btnCita = new System.Windows.Forms.Button();
+            this.btnInventario = new System.Windows.Forms.Button();
+            this.btnSistema = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.lblFechaInicio = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -72,7 +72,7 @@
             this.lblNuevoCliente = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBuscarMascota = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -125,23 +125,23 @@
             this.dtgvBajoStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvBajoStock.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvBajoStock.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvBajoStock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvBajoStock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dtgvBajoStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvBajoStock.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvBajoStock.DefaultCellStyle = dataGridViewCellStyle10;
             this.dtgvBajoStock.EnableHeadersVisualStyles = false;
             this.dtgvBajoStock.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(119)))), ((int)(((byte)(119)))));
             this.dtgvBajoStock.Location = new System.Drawing.Point(11, 43);
@@ -320,14 +320,14 @@
             this.chartTopProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
             this.chartTopProd.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(52)))), ((int)(((byte)(100)))));
             this.chartTopProd.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
-            chartArea12.Name = "ChartArea1";
-            this.chartTopProd.ChartAreas.Add(chartArea12);
-            legend12.Alignment = System.Drawing.StringAlignment.Center;
-            legend12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
-            legend12.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Left;
-            legend12.Name = "Legend1";
-            this.chartTopProd.Legends.Add(legend12);
+            chartArea5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
+            chartArea5.Name = "ChartArea1";
+            this.chartTopProd.ChartAreas.Add(chartArea5);
+            legend5.Alignment = System.Drawing.StringAlignment.Center;
+            legend5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
+            legend5.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Left;
+            legend5.Name = "Legend1";
+            this.chartTopProd.Legends.Add(legend5);
             this.chartTopProd.Location = new System.Drawing.Point(789, 86);
             this.chartTopProd.Name = "chartTopProd";
             this.chartTopProd.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -337,25 +337,25 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(156)))), ((int)(((byte)(180))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))))};
-            series12.BorderColor = System.Drawing.Color.White;
-            series12.BorderWidth = 5;
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series12.Color = System.Drawing.Color.DodgerBlue;
-            series12.IsValueShownAsLabel = true;
-            series12.LabelForeColor = System.Drawing.Color.White;
-            series12.Legend = "Legend1";
-            series12.Name = "Series1";
-            this.chartTopProd.Series.Add(series12);
+            series5.BorderColor = System.Drawing.Color.White;
+            series5.BorderWidth = 5;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series5.Color = System.Drawing.Color.DodgerBlue;
+            series5.IsValueShownAsLabel = true;
+            series5.LabelForeColor = System.Drawing.Color.White;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartTopProd.Series.Add(series5);
             this.chartTopProd.Size = new System.Drawing.Size(290, 267);
             this.chartTopProd.TabIndex = 31;
             this.chartTopProd.Text = "chart1";
-            title12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
-            title12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title12.ForeColor = System.Drawing.Color.White;
-            title12.Name = "Title1";
-            title12.Text = "TOP 5 PRODUCTOS";
-            this.chartTopProd.Titles.Add(title12);
+            title5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
+            title5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title5.ForeColor = System.Drawing.Color.White;
+            title5.Name = "Title1";
+            title5.Text = "TOP 5 PRODUCTOS";
+            this.chartTopProd.Titles.Add(title5);
             this.chartTopProd.Click += new System.EventHandler(this.chartTopProd_Click);
             // 
             // btnLoad
@@ -371,115 +371,115 @@
             this.btnLoad.UseVisualStyleBackColor = false;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
-            // button8
+            // btnNuevaVenta
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(78, 281);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(153, 144);
-            this.button8.TabIndex = 27;
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.btnNuevaVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
+            this.btnNuevaVenta.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevaVenta.Image")));
+            this.btnNuevaVenta.Location = new System.Drawing.Point(78, 281);
+            this.btnNuevaVenta.Name = "btnNuevaVenta";
+            this.btnNuevaVenta.Size = new System.Drawing.Size(153, 144);
+            this.btnNuevaVenta.TabIndex = 27;
+            this.btnNuevaVenta.UseVisualStyleBackColor = false;
+            this.btnNuevaVenta.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button12
+            // btnPedido
             // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.Location = new System.Drawing.Point(78, 431);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(153, 144);
-            this.button12.TabIndex = 33;
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.btnPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
+            this.btnPedido.Image = ((System.Drawing.Image)(resources.GetObject("btnPedido.Image")));
+            this.btnPedido.Location = new System.Drawing.Point(78, 431);
+            this.btnPedido.Name = "btnPedido";
+            this.btnPedido.Size = new System.Drawing.Size(153, 144);
+            this.btnPedido.TabIndex = 33;
+            this.btnPedido.UseVisualStyleBackColor = false;
+            this.btnPedido.Click += new System.EventHandler(this.button12_Click);
             // 
-            // button2
+            // btnBuscarCliente
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(242, 131);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(153, 144);
-            this.button2.TabIndex = 24;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnBuscarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
+            this.btnBuscarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCliente.Image")));
+            this.btnBuscarCliente.Location = new System.Drawing.Point(242, 131);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(153, 144);
+            this.btnBuscarCliente.TabIndex = 24;
+            this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button4
+            // btnGenerarFicha
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(560, 131);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(153, 144);
-            this.button4.TabIndex = 26;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnGenerarFicha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
+            this.btnGenerarFicha.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerarFicha.Image")));
+            this.btnGenerarFicha.Location = new System.Drawing.Point(560, 131);
+            this.btnGenerarFicha.Name = "btnGenerarFicha";
+            this.btnGenerarFicha.Size = new System.Drawing.Size(153, 144);
+            this.btnGenerarFicha.TabIndex = 26;
+            this.btnGenerarFicha.UseVisualStyleBackColor = false;
+            this.btnGenerarFicha.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button7
+            // btnBuscarVenta
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(242, 281);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(153, 144);
-            this.button7.TabIndex = 28;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnBuscarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
+            this.btnBuscarVenta.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarVenta.Image")));
+            this.btnBuscarVenta.Location = new System.Drawing.Point(242, 281);
+            this.btnBuscarVenta.Name = "btnBuscarVenta";
+            this.btnBuscarVenta.Size = new System.Drawing.Size(153, 144);
+            this.btnBuscarVenta.TabIndex = 28;
+            this.btnBuscarVenta.UseVisualStyleBackColor = false;
+            this.btnBuscarVenta.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button6
+            // btnNuevoComprobante
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(401, 281);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(153, 144);
-            this.button6.TabIndex = 29;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnNuevoComprobante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
+            this.btnNuevoComprobante.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoComprobante.Image")));
+            this.btnNuevoComprobante.Location = new System.Drawing.Point(401, 281);
+            this.btnNuevoComprobante.Name = "btnNuevoComprobante";
+            this.btnNuevoComprobante.Size = new System.Drawing.Size(153, 144);
+            this.btnNuevoComprobante.TabIndex = 29;
+            this.btnNuevoComprobante.UseVisualStyleBackColor = false;
+            this.btnNuevoComprobante.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button5
+            // btnRepVentas
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(560, 281);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(153, 144);
-            this.button5.TabIndex = 30;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnRepVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
+            this.btnRepVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnRepVentas.Image")));
+            this.btnRepVentas.Location = new System.Drawing.Point(560, 281);
+            this.btnRepVentas.Name = "btnRepVentas";
+            this.btnRepVentas.Size = new System.Drawing.Size(153, 144);
+            this.btnRepVentas.TabIndex = 30;
+            this.btnRepVentas.UseVisualStyleBackColor = false;
+            this.btnRepVentas.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button11
+            // btnCita
             // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(242, 431);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(153, 144);
-            this.button11.TabIndex = 34;
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.btnCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
+            this.btnCita.Image = ((System.Drawing.Image)(resources.GetObject("btnCita.Image")));
+            this.btnCita.Location = new System.Drawing.Point(242, 431);
+            this.btnCita.Name = "btnCita";
+            this.btnCita.Size = new System.Drawing.Size(153, 144);
+            this.btnCita.TabIndex = 34;
+            this.btnCita.UseVisualStyleBackColor = false;
+            this.btnCita.Click += new System.EventHandler(this.button11_Click);
             // 
-            // button10
+            // btnInventario
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.Location = new System.Drawing.Point(401, 431);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(153, 144);
-            this.button10.TabIndex = 35;
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.btnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
+            this.btnInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnInventario.Image")));
+            this.btnInventario.Location = new System.Drawing.Point(401, 431);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Size = new System.Drawing.Size(153, 144);
+            this.btnInventario.TabIndex = 35;
+            this.btnInventario.UseVisualStyleBackColor = false;
+            this.btnInventario.Click += new System.EventHandler(this.button10_Click);
             // 
-            // button9
+            // btnSistema
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(560, 431);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(153, 144);
-            this.button9.TabIndex = 36;
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.btnSistema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
+            this.btnSistema.Image = ((System.Drawing.Image)(resources.GetObject("btnSistema.Image")));
+            this.btnSistema.Location = new System.Drawing.Point(560, 431);
+            this.btnSistema.Name = "btnSistema";
+            this.btnSistema.Size = new System.Drawing.Size(153, 144);
+            this.btnSistema.TabIndex = 36;
+            this.btnSistema.UseVisualStyleBackColor = false;
+            this.btnSistema.Click += new System.EventHandler(this.button9_Click);
             // 
             // label4
             // 
@@ -562,23 +562,23 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(416, 220);
+            this.label6.Location = new System.Drawing.Point(432, 220);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 16);
+            this.label6.Size = new System.Drawing.Size(98, 16);
             this.label6.TabIndex = 41;
-            this.label6.Text = "Buscar Mascota";
+            this.label6.Text = "Buscar Ficha";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // btnBuscarMascota
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(401, 131);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 144);
-            this.button1.TabIndex = 40;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnBuscarMascota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(148)))), ((int)(((byte)(180)))));
+            this.btnBuscarMascota.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarMascota.Image")));
+            this.btnBuscarMascota.Location = new System.Drawing.Point(401, 131);
+            this.btnBuscarMascota.Name = "btnBuscarMascota";
+            this.btnBuscarMascota.Size = new System.Drawing.Size(153, 144);
+            this.btnBuscarMascota.TabIndex = 40;
+            this.btnBuscarMascota.UseVisualStyleBackColor = false;
+            this.btnBuscarMascota.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label7
             // 
@@ -714,23 +714,23 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBuscarMascota);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblNuevoCliente);
             this.Controls.Add(this.lblFechaFinal);
             this.Controls.Add(this.lblFechaInicio);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button12);
+            this.Controls.Add(this.btnSistema);
+            this.Controls.Add(this.btnInventario);
+            this.Controls.Add(this.btnCita);
+            this.Controls.Add(this.btnPedido);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.chartTopProd);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnRepVentas);
+            this.Controls.Add(this.btnNuevoComprobante);
+            this.Controls.Add(this.btnBuscarVenta);
+            this.Controls.Add(this.btnNuevaVenta);
+            this.Controls.Add(this.btnGenerarFicha);
+            this.Controls.Add(this.btnBuscarCliente);
             this.Controls.Add(this.btnNuevoCliente);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
@@ -743,6 +743,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDashboard";
             this.Text = "frmDashboard";
+            this.Activated += new System.EventHandler(this.frmDashboard_Activated);
             this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.panelBajoStock.ResumeLayout(false);
             this.panelBajoStock.PerformLayout();
@@ -763,7 +764,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnNuevoCliente;
         private System.Windows.Forms.Panel panelBajoStock;
         private System.Windows.Forms.DataGridView dtgvBajoStock;
         private System.Windows.Forms.Label lblStock;
@@ -783,16 +783,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblFechaInicio;
         private System.Windows.Forms.Label label1;
@@ -800,7 +790,6 @@
         private System.Windows.Forms.Label lblNuevoCliente;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -810,5 +799,17 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
+        public System.Windows.Forms.Button btnNuevoCliente;
+        public System.Windows.Forms.Button btnNuevaVenta;
+        public System.Windows.Forms.Button btnPedido;
+        public System.Windows.Forms.Button btnBuscarCliente;
+        public System.Windows.Forms.Button btnGenerarFicha;
+        public System.Windows.Forms.Button btnBuscarVenta;
+        public System.Windows.Forms.Button btnNuevoComprobante;
+        public System.Windows.Forms.Button btnRepVentas;
+        public System.Windows.Forms.Button btnCita;
+        public System.Windows.Forms.Button btnInventario;
+        public System.Windows.Forms.Button btnSistema;
+        public System.Windows.Forms.Button btnBuscarMascota;
     }
 }

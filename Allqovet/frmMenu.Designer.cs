@@ -35,6 +35,8 @@
             this.btnBuscarFicha = new System.Windows.Forms.Button();
             this.btnFichas = new System.Windows.Forms.Button();
             this.panelTitulo = new System.Windows.Forms.Panel();
+            this.lblEstadocaja = new System.Windows.Forms.Label();
+            this.lblnombreusuario = new System.Windows.Forms.Label();
             this.lblusuario = new System.Windows.Forms.Label();
             this.lblModo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,7 +56,7 @@
             this.button22 = new System.Windows.Forms.Button();
             this.btnBackup = new System.Windows.Forms.Button();
             this.btnPermisos = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnSistema = new System.Windows.Forms.Button();
             this.panelMantenimiento = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button23 = new System.Windows.Forms.Button();
@@ -187,6 +189,8 @@
             // panelTitulo
             // 
             this.panelTitulo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelTitulo.Controls.Add(this.lblEstadocaja);
+            this.panelTitulo.Controls.Add(this.lblnombreusuario);
             this.panelTitulo.Controls.Add(this.lblusuario);
             this.panelTitulo.Controls.Add(this.lblModo);
             this.panelTitulo.Controls.Add(this.label1);
@@ -196,15 +200,38 @@
             this.panelTitulo.Size = new System.Drawing.Size(1112, 26);
             this.panelTitulo.TabIndex = 5;
             // 
+            // lblEstadocaja
+            // 
+            this.lblEstadocaja.AutoSize = true;
+            this.lblEstadocaja.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadocaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.lblEstadocaja.Location = new System.Drawing.Point(287, 6);
+            this.lblEstadocaja.Name = "lblEstadocaja";
+            this.lblEstadocaja.Size = new System.Drawing.Size(49, 18);
+            this.lblEstadocaja.TabIndex = 4;
+            this.lblEstadocaja.Text = "CAJA";
+            // 
+            // lblnombreusuario
+            // 
+            this.lblnombreusuario.AutoSize = true;
+            this.lblnombreusuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombreusuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
+            this.lblnombreusuario.Location = new System.Drawing.Point(116, 8);
+            this.lblnombreusuario.Name = "lblnombreusuario";
+            this.lblnombreusuario.Size = new System.Drawing.Size(54, 18);
+            this.lblnombreusuario.TabIndex = 3;
+            this.lblnombreusuario.Text = "label2";
+            // 
             // lblusuario
             // 
             this.lblusuario.AutoSize = true;
-            this.lblusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblusuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblusuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(49)))), ((int)(((byte)(96)))));
             this.lblusuario.Location = new System.Drawing.Point(37, 8);
             this.lblusuario.Name = "lblusuario";
-            this.lblusuario.Size = new System.Drawing.Size(77, 17);
+            this.lblusuario.Size = new System.Drawing.Size(66, 18);
             this.lblusuario.TabIndex = 2;
-            this.lblusuario.Text = "USUARIO";
+            this.lblusuario.Text = "Usuario:";
             // 
             // lblModo
             // 
@@ -399,7 +426,7 @@
             this.panelmenu.AutoScroll = true;
             this.panelmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(128)))), ((int)(((byte)(154)))));
             this.panelmenu.Controls.Add(this.panelsubmenuSistemas);
-            this.panelmenu.Controls.Add(this.button8);
+            this.panelmenu.Controls.Add(this.btnSistema);
             this.panelmenu.Controls.Add(this.panelMantenimiento);
             this.panelmenu.Controls.Add(this.btnMantenimiento);
             this.panelmenu.Controls.Add(this.panelSubmenuConsultorio);
@@ -465,6 +492,7 @@
             this.btnBackup.TabIndex = 10;
             this.btnBackup.Text = "Copia de seguridad";
             this.btnBackup.UseVisualStyleBackColor = false;
+            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
             // 
             // btnPermisos
             // 
@@ -482,22 +510,22 @@
             this.btnPermisos.UseVisualStyleBackColor = false;
             this.btnPermisos.Click += new System.EventHandler(this.button20_Click_1);
             // 
-            // button8
+            // btnSistema
             // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Image = global::Allqovet.Properties.Resources.configuraciones;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(0, 1627);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(241, 41);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "Sistema";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.btnSistema.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSistema.FlatAppearance.BorderSize = 0;
+            this.btnSistema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSistema.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSistema.ForeColor = System.Drawing.Color.White;
+            this.btnSistema.Image = global::Allqovet.Properties.Resources.configuraciones;
+            this.btnSistema.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSistema.Location = new System.Drawing.Point(0, 1627);
+            this.btnSistema.Name = "btnSistema";
+            this.btnSistema.Size = new System.Drawing.Size(241, 41);
+            this.btnSistema.TabIndex = 8;
+            this.btnSistema.Text = "Sistema";
+            this.btnSistema.UseVisualStyleBackColor = true;
+            this.btnSistema.Click += new System.EventHandler(this.button8_Click);
             // 
             // panelMantenimiento
             // 
@@ -1060,6 +1088,7 @@
             this.Controls.Add(this.panelEscritorio);
             this.Controls.Add(this.panelTitulo);
             this.Controls.Add(this.panelmenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1085,53 +1114,26 @@
 
         #endregion
         private System.Windows.Forms.Panel panelTitulo;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel panelSubmenuConsultorio;
-        private System.Windows.Forms.Button btnCitas;
-        private System.Windows.Forms.Button btnBuscarFicha;
-        private System.Windows.Forms.Button btnFichas;
-        private System.Windows.Forms.Button btnConsultorio;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelSubmenuVentas;
         private System.Windows.Forms.Panel panelsubmenuClientes;
         private System.Windows.Forms.Panel panelProductos;
         private System.Windows.Forms.Panel panelFacturacion;
-        private System.Windows.Forms.Button btnBuscarComprobante;
-        private System.Windows.Forms.Button btnNuevoComprobante;
-        private System.Windows.Forms.Button btnFacturacion;
         private System.Windows.Forms.Panel panelPedidos;
-        private System.Windows.Forms.Button btnRepFacturacion;
-        private System.Windows.Forms.Button btnRepStock;
-        private System.Windows.Forms.Button btnRepClientes;
-        private System.Windows.Forms.Button btnReportes;
-        private System.Windows.Forms.Button btnAlmacen;
         private System.Windows.Forms.Panel panelAlmacen;
-        private System.Windows.Forms.Button btnStock;
-        private System.Windows.Forms.Button btnSalidas;
-        private System.Windows.Forms.Button btnIngresos;
-        private System.Windows.Forms.Button btnCategoria;
         private System.Windows.Forms.Panel panelsubmenuSistemas;
         private System.Windows.Forms.Panel panelMantenimiento;
-        private System.Windows.Forms.Button btnUsuarios;
-        private System.Windows.Forms.Button btnTrabajadores;
-        private System.Windows.Forms.Button btnMantenimiento;
         private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button btnBackup;
-        private System.Windows.Forms.Button btnPermisos;
-        private System.Windows.Forms.Button btnProveedores;
         private System.Windows.Forms.Label lblModo;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Panel panelEscritorio;
-        private System.Windows.Forms.Button btnMedioPago;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button button32;
         private System.Windows.Forms.Button button34;
         private System.Windows.Forms.Button button35;
-        private System.Windows.Forms.Button btnListaCitas;
         public System.Windows.Forms.Label lblusuario;
-        private System.Windows.Forms.Button btnRepCaducidad;
-        private System.Windows.Forms.Button btnRepVentas;
         public System.Windows.Forms.Button btnVentas;
         public System.Windows.Forms.Button btnIniciarCaja;
         public System.Windows.Forms.Button btnBuscarVenta;
@@ -1146,5 +1148,34 @@
         public System.Windows.Forms.Button btnProductos;
         public System.Windows.Forms.Button btnMarca;
         public System.Windows.Forms.Panel panelmenu;
+        public System.Windows.Forms.Button btnSistema;
+        public System.Windows.Forms.Button btnCitas;
+        public System.Windows.Forms.Button btnBuscarFicha;
+        public System.Windows.Forms.Button btnFichas;
+        public System.Windows.Forms.Button btnBuscarComprobante;
+        public System.Windows.Forms.Button btnNuevoComprobante;
+        public System.Windows.Forms.Button btnFacturacion;
+        public System.Windows.Forms.Button btnRepFacturacion;
+        public System.Windows.Forms.Button btnRepStock;
+        public System.Windows.Forms.Button btnRepClientes;
+        public System.Windows.Forms.Button btnReportes;
+        public System.Windows.Forms.Button btnAlmacen;
+        public System.Windows.Forms.Button btnStock;
+        public System.Windows.Forms.Button btnSalidas;
+        public System.Windows.Forms.Button btnIngresos;
+        public System.Windows.Forms.Button btnCategoria;
+        public System.Windows.Forms.Button btnUsuarios;
+        public System.Windows.Forms.Button btnTrabajadores;
+        public System.Windows.Forms.Button btnBackup;
+        public System.Windows.Forms.Button btnPermisos;
+        public System.Windows.Forms.Button btnProveedores;
+        public System.Windows.Forms.Button btnMedioPago;
+        public System.Windows.Forms.Button btnListaCitas;
+        public System.Windows.Forms.Button btnRepCaducidad;
+        public System.Windows.Forms.Button btnRepVentas;
+        public System.Windows.Forms.Button btnConsultorio;
+        public System.Windows.Forms.Button btnMantenimiento;
+        public System.Windows.Forms.Label lblEstadocaja;
+        public System.Windows.Forms.Label lblnombreusuario;
     }
 }

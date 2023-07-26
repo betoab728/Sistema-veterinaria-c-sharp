@@ -130,7 +130,7 @@ namespace AllqovetDAO
         {
             using (MySqlConnection cn = new MySqlConnection(cnx))
             {
-                using (MySqlCommand cmd = new MySqlCommand("sp_Login", cn))
+                using (MySqlCommand cmd = new MySqlCommand("sp_LeerPermisos", cn))
                 {
 
                  

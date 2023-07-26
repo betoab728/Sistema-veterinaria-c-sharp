@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="analisis.cs" />
     <Compile Include="boleta.cs" />
+    <Compile Include="BotonesDashboard.cs" />
     <Compile Include="cajachica.cs" />
     <Compile Include="Cargo.cs" />
     <Compile Include="Categoria.cs" />

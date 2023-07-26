@@ -150,6 +150,10 @@ namespace Allqovet
                 usuario.Idnivelacceso = Convert.ToInt32(cmbnivel.SelectedValue);
                 usuario.Idusuario = Convert.ToInt32(lblidusuario.Text);
 
+                int estado = 0;
+                if (cmbestado.SelectedIndex == 0) estado = 1;
+                usuario.estado = estado;
+
                 using (UsuarioBLL db = new UsuarioBLL())
                 {
                     try

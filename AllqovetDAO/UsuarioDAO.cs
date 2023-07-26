@@ -52,6 +52,7 @@ namespace AllqovetDAO
                     cmd.Parameters.AddWithValue("pIdtrabajador", usuario.Idtrabajador);
                     cmd.Parameters.AddWithValue("pIdnivel", usuario.Idnivelacceso);
                     cmd.Parameters.AddWithValue("pIdusuario", usuario.Idusuario);
+                    cmd.Parameters.AddWithValue("pEstado", usuario.estado);
 
                     return cmd.ExecuteNonQuery();
 
