@@ -58,6 +58,31 @@ namespace AllqovetDAO
             }
         }
 
+        public int AperturaActual()
+        {
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_AperturaActual", cn))
+                {
+                    int caja = 0;
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cn.Open();
+                    using (MySqlDataReader dr = cmd.ExecuteReader())
+                    {
+
+                        while (dr.Read())
+                        {
+                            caja = Convert.ToInt32(dr["Idcajachica"]);
+
+                        }
+
+                        return caja;
+                    }
+                }
+            }
+        }
+
         public DataTable VentasCierre(int idcaja)
         {
             using (MySqlConnection cn = new MySqlConnection(cnx))

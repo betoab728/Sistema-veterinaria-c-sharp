@@ -51,6 +51,11 @@ namespace AllqovetBLL
             return db.CobrosCierre(idcaja);
         }
 
+        public int AperturaActual()
+        {
+            return db.AperturaActual();
+        }
+
         #region IDisposable Support
         private bool disposedValue = false; // Para detectar llamadas redundantes
 

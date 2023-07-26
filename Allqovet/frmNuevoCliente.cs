@@ -26,6 +26,7 @@ namespace Allqovet
 
         private void button3_Click(object sender, EventArgs e)
         {
+
             DialogResult dialogResult = MessageBox.Show("Esta seguro de registrar al cliente?", "Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {

@@ -122,7 +122,7 @@ namespace Allqovet
 
                         if (f1 != null)
                         {
-                            f1.lblusuario.Text = "CAJA ACTIVA, USUARIO:"+txttrabajador.Text;
+                            f1.lblEstadocaja.Text = "Estado Caja: Abierto";
                         }
 
 

@@ -253,6 +253,8 @@ namespace Allqovet
 
             frmFicha ficha = new frmFicha(false);
 
+          
+
             ventana.AbrirFormHijo(ficha);
         }
 
@@ -588,13 +590,34 @@ namespace Allqovet
 
         private void btnCerrarCaja_Click(object sender, EventArgs e)
         {
+            if (CajaAbierta())
+            {
+                frmCiereCaja caja = new frmCiereCaja();
+                AbrirFormHijo(caja);
+            }
 
+            else
+            {
+                MessageBox.Show("No existe una caja activa");
+            }
+
+           
         }
 
         private void btnBackup_Click(object sender, EventArgs e)
         {
             frmBackup backup = new frmBackup();
             AbrirFormHijo(backup);
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Estás seguro de que desea salir del sistema?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit(); // Cancela el cierre de la ventana
+            }
         }
     }
 }

@@ -477,6 +477,7 @@
             this.button22.TabIndex = 11;
             this.button22.Text = "Salir";
             this.button22.UseVisualStyleBackColor = false;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // btnBackup
             // 

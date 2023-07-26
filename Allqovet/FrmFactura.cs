@@ -136,14 +136,14 @@ namespace Allqovet
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show(" Esta seguro de registrar la boleta?", "boleta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show(" Esta seguro de registrar la factura?", "factura", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
                 int idfactura = RegistrarFactura();
 
                 if (idfactura > 0)
                 {
-                    MessageBox.Show("Boleta Registrada");
+                    MessageBox.Show("Factura Registrada");
                     ImporteLetras importe = new ImporteLetras();
                     string letras = importe.Convertir(txttotal.Text, true);
                     FacturaXML factura = new FacturaXML();
@@ -255,6 +255,10 @@ namespace Allqovet
                     factura.Idventa = Convert.ToInt32(lblidventa.Text);
                     factura.Total = Convert.ToDouble(txttotal.Text);
 
+                    factura.ruc = txtruc.Text;
+                    factura.razon = txtrazon.Text;
+                    factura.direccion = txtdireccion.Text;
+
                     foreach (DataGridViewRow row in dgvProductos.Rows)
                     {
                         DetalleFactura detalle = new DetalleFactura();
@@ -298,6 +302,8 @@ namespace Allqovet
                     int filas = prueba.Rows.Count;
 
                     frmImprimirFactura factura = new frmImprimirFactura();
+                    factura.ruta = @"sunat\facturas\" + lblserie.Text + "-" + lblnumero.Text + ".pdf";
+
                     ReportDataSource fuente = new ReportDataSource("DataSetFactura", db.ImprimiFactura(idfactura));
 
                     factura.reportViewer1.LocalReport.DataSources.Clear();

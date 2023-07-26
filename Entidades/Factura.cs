@@ -15,6 +15,9 @@ namespace Entidades
         public int Numero { get; set; }
         public int Idventa { get; set; }
         public double Total { get; set; }
+        public string ruc { get; set; }
+        public string razon { get; set; }
+        public string direccion { get; set; }
 
     }
 }

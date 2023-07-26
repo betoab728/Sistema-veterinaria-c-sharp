@@ -135,7 +135,7 @@ namespace Allqovet
                         botones.btnNuevoCliente = permisos.Rows[5][5].ToString() == "1" ? true : false; 
                         botones.btnBuscarCliente = permisos.Rows[6][5].ToString() == "1" ? true : false;
                         botones.btnBuscarMascota = permisos.Rows[22][5].ToString() == "1" ? true : false;
-                        botones.btnGenerarFicha = permisos.Rows[21][0].ToString() == "1" ? true : false;
+                        botones.btnGenerarFicha = permisos.Rows[21][5].ToString() == "1" ? true : false;
                         botones.btnNuevaVenta = permisos.Rows[0][5].ToString() == "1" ? true : false;
                         botones.btnBuscarVenta = permisos.Rows[1][5].ToString() == "1" ? true : false;
                         botones.btnNuevoComprobante = permisos.Rows[11][5].ToString() == "1" ? true : false;
@@ -193,7 +193,7 @@ namespace Allqovet
                         menu.btnSalidas.Visible = permisos.Rows[19][5].ToString() == "1" ? true : false;
 
                         menu.btnStock.Visible = permisos.Rows[20][5].ToString() == "1" ? true : false;
-                        menu.btnFichas.Visible = permisos.Rows[21][0].ToString() == "1" ? true : false;
+                        menu.btnFichas.Visible = permisos.Rows[21][5].ToString() == "1" ? true : false;
                         menu.btnBuscarFicha.Visible = permisos.Rows[22][5].ToString() == "1" ? true : false;
                         menu.btnCitas.Visible = permisos.Rows[23][5].ToString() == "1" ? true : false;
                         menu.btnListaCitas.Visible = permisos.Rows[24][5].ToString() == "1" ? true : false;

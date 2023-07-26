@@ -79,7 +79,24 @@ namespace AllqovetDAO
 
         public DataTable BuscarBoletaFechas(DateTime desde, DateTime hasta)
         {
-            throw new NotImplementedException();
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_BuscarBoletaFechas", cn))
+
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("fdesde", desde);
+                    cmd.Parameters.AddWithValue("fhasta", hasta);
+                    cn.Open();
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        return dt;
+                    }
+                }
+            }
         }
 
         public Boleta Correlativo()

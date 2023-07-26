@@ -17,13 +17,13 @@
   <cbc:CustomizationID schemeAgencyName="PE:SUNAT">2.0</cbc:CustomizationID>
   <cbc:ProfileID schemeAgencyName="PE:SUNAT" schemeName="Tipo de Operacion" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo51">0101</cbc:ProfileID>
   <cbc:ID>B001-00000008</cbc:ID>
-  <cbc:IssueDate>2023-06-21</cbc:IssueDate>
-  <cbc:IssueTime>16:29:09</cbc:IssueTime>
-  <cbc:DueDate>2023-06-21</cbc:DueDate>
+  <cbc:IssueDate>2023-07-26</cbc:IssueDate>
+  <cbc:IssueTime>14:43:58</cbc:IssueTime>
+  <cbc:DueDate>2023-07-26</cbc:DueDate>
   <cbc:InvoiceTypeCode listAgencyName="PE:SUNAT" listID="0101" listName="Tipo de Documento" listSchemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo51" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo01" name="Tipo de Operacion">03</cbc:InvoiceTypeCode>
-  <cbc:Note languageLocaleID="1000">SON DIECISEIS  CON 00/100 SOLES.</cbc:Note>
+  <cbc:Note languageLocaleID="1000">SON VEINTE Y CINCO  CON 00/100 SOLES.</cbc:Note>
   <cbc:DocumentCurrencyCode listAgencyName="United Nations Economic Commission for Europe" listID="ISO 4217 Alpha" listName="Currency">PEN</cbc:DocumentCurrencyCode>
-  <cbc:LineCountNumeric>2</cbc:LineCountNumeric>
+  <cbc:LineCountNumeric>1</cbc:LineCountNumeric>
   <cac:Signature>
     <cbc:ID>B001-00000008</cbc:ID>
     <cac:SignatoryParty>
@@ -79,20 +79,20 @@
   <cac:AccountingCustomerParty>
     <cac:Party>
       <cac:PartyIdentification>
-        <cbc:ID schemeAgencyName="PE:SUNAT" schemeID="1" schemeName="Documento de Identidad" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06">85544798</cbc:ID>
+        <cbc:ID schemeAgencyName="PE:SUNAT" schemeID="1" schemeName="Documento de Identidad" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06">09859503</cbc:ID>
       </cac:PartyIdentification>
       <cac:PartyName>
-        <cbc:Name><![CDATA[Carlos Javier Vegas Palomino]]></cbc:Name>
+        <cbc:Name><![CDATA[ENRIQUE MANUEL LACHERRE CALDERON]]></cbc:Name>
       </cac:PartyName>
       <cac:PartyTaxScheme>
-        <cbc:RegistrationName><![CDATA[Carlos Javier Vegas Palomino]]></cbc:RegistrationName>
-        <cbc:CompanyID schemeAgencyName="PE:SUNAT" schemeID="1" schemeName="SUNAT:Identificador de Documento de Identidad" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06">85544798</cbc:CompanyID>
+        <cbc:RegistrationName><![CDATA[ENRIQUE MANUEL LACHERRE CALDERON]]></cbc:RegistrationName>
+        <cbc:CompanyID schemeAgencyName="PE:SUNAT" schemeID="1" schemeName="SUNAT:Identificador de Documento de Identidad" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06">09859503</cbc:CompanyID>
         <cac:TaxScheme>
-          <cbc:ID schemeAgencyName="PE:SUNAT" schemeID="1" schemeName="SUNAT:Identificador de Documento de Identidad" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06">85544798</cbc:ID>
+          <cbc:ID schemeAgencyName="PE:SUNAT" schemeID="1" schemeName="SUNAT:Identificador de Documento de Identidad" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06">09859503</cbc:ID>
         </cac:TaxScheme>
       </cac:PartyTaxScheme>
       <cac:PartyLegalEntity>
-        <cbc:RegistrationName><![CDATA[Carlos Javier Vegas Palomino]]></cbc:RegistrationName>
+        <cbc:RegistrationName><![CDATA[ENRIQUE MANUEL LACHERRE CALDERON]]></cbc:RegistrationName>
         <cac:RegistrationAddress>
           <cbc:ID schemeAgencyName="PE:INEI" schemeName="Ubigeos">
           </cbc:ID>
@@ -110,10 +110,10 @@
     </cac:Party>
   </cac:AccountingCustomerParty>
   <cac:TaxTotal>
-    <cbc:TaxAmount currencyID="PEN">2.44</cbc:TaxAmount>
+    <cbc:TaxAmount currencyID="PEN">3,81</cbc:TaxAmount>
     <cac:TaxSubtotal>
-      <cbc:TaxableAmount currencyID="PEN">13.56</cbc:TaxableAmount>
-      <cbc:TaxAmount currencyID="PEN">2.44</cbc:TaxAmount>
+      <cbc:TaxableAmount currencyID="PEN">21,19</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="PEN">3,81</cbc:TaxAmount>
       <cac:TaxCategory>
         <cbc:ID schemeAgencyName="United Nations Economic Commission for Europe" schemeID="UN/ECE 5305" schemeName="Tax Category Identifier">S</cbc:ID>
         <cac:TaxScheme>
@@ -125,23 +125,23 @@
     </cac:TaxSubtotal>
   </cac:TaxTotal>
   <cac:LegalMonetaryTotal>
-    <cbc:PayableAmount currencyID="PEN">16.00</cbc:PayableAmount>
+    <cbc:PayableAmount currencyID="PEN">25,00</cbc:PayableAmount>
   </cac:LegalMonetaryTotal>
   <cac:InvoiceLine>
   <cbc:ID>1</cbc:ID>
-  <cbc:InvoicedQuantity unitCode="NIU" unitCodeListAgencyName="United Nations Economic Commission for Europe" unitCodeListID="UN/ECE rec 20">6</cbc:InvoicedQuantity>
-  <cbc:LineExtensionAmount currencyID="PEN">5.08</cbc:LineExtensionAmount>
+  <cbc:InvoicedQuantity unitCode="NIU" unitCodeListAgencyName="United Nations Economic Commission for Europe" unitCodeListID="UN/ECE rec 20">1</cbc:InvoicedQuantity>
+  <cbc:LineExtensionAmount currencyID="PEN">21,19</cbc:LineExtensionAmount>
   <cac:PricingReference>
     <cac:AlternativeConditionPrice>
-      <cbc:PriceAmount currencyID="PEN">6</cbc:PriceAmount>
+      <cbc:PriceAmount currencyID="PEN">25,00</cbc:PriceAmount>
       <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
     </cac:AlternativeConditionPrice>
   </cac:PricingReference>
   <cac:TaxTotal>
-    <cbc:TaxAmount currencyID="PEN">0.92</cbc:TaxAmount>
+    <cbc:TaxAmount currencyID="PEN">3,81</cbc:TaxAmount>
     <cac:TaxSubtotal>
-      <cbc:TaxableAmount currencyID="PEN">5.08</cbc:TaxableAmount>
-      <cbc:TaxAmount currencyID="PEN">0.92</cbc:TaxAmount>
+      <cbc:TaxableAmount currencyID="PEN">21,19</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="PEN">3,81</cbc:TaxAmount>
       <cac:TaxCategory>
         <cbc:ID schemeAgencyName="United Nations Economic Commission for Europe" schemeID="UN/ECE 5305" schemeName="Tax Category Identifier">S</cbc:ID>
         <cbc:Percent>18</cbc:Percent>
@@ -155,49 +155,13 @@
     </cac:TaxSubtotal>
   </cac:TaxTotal>
   <cac:Item>
-    <cbc:Description><![CDATA[Producto 1 Dog Chow]]></cbc:Description>
+    <cbc:Description><![CDATA[comida adulto Dog Chow]]></cbc:Description>
     <cac:SellersItemIdentification>
-      <cbc:ID><![CDATA[6]]></cbc:ID>
+      <cbc:ID><![CDATA[1]]></cbc:ID>
     </cac:SellersItemIdentification>
   </cac:Item>
   <cac:Price>
-    <cbc:PriceAmount currencyID="PEN">6</cbc:PriceAmount>
-  </cac:Price>
-</cac:InvoiceLine><cac:InvoiceLine>
-  <cbc:ID>2</cbc:ID>
-  <cbc:InvoicedQuantity unitCode="NIU" unitCodeListAgencyName="United Nations Economic Commission for Europe" unitCodeListID="UN/ECE rec 20">10</cbc:InvoicedQuantity>
-  <cbc:LineExtensionAmount currencyID="PEN">8.47</cbc:LineExtensionAmount>
-  <cac:PricingReference>
-    <cac:AlternativeConditionPrice>
-      <cbc:PriceAmount currencyID="PEN">10</cbc:PriceAmount>
-      <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
-    </cac:AlternativeConditionPrice>
-  </cac:PricingReference>
-  <cac:TaxTotal>
-    <cbc:TaxAmount currencyID="PEN">1.53</cbc:TaxAmount>
-    <cac:TaxSubtotal>
-      <cbc:TaxableAmount currencyID="PEN">8.47</cbc:TaxableAmount>
-      <cbc:TaxAmount currencyID="PEN">1.53</cbc:TaxAmount>
-      <cac:TaxCategory>
-        <cbc:ID schemeAgencyName="United Nations Economic Commission for Europe" schemeID="UN/ECE 5305" schemeName="Tax Category Identifier">S</cbc:ID>
-        <cbc:Percent>18</cbc:Percent>
-        <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT" listName="SUNAT:Codigo de Tipo de Afectación del IGV" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
-        <cac:TaxScheme>
-          <cbc:ID schemeAgencyName="United Nations Economic Commission for Europe" schemeID="UN/ECE 5153" schemeName="Tax Scheme Identifier">1000</cbc:ID>
-          <cbc:Name>IGV</cbc:Name>
-          <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
-        </cac:TaxScheme>
-      </cac:TaxCategory>
-    </cac:TaxSubtotal>
-  </cac:TaxTotal>
-  <cac:Item>
-    <cbc:Description><![CDATA[Producto 5 Cat Chow]]></cbc:Description>
-    <cac:SellersItemIdentification>
-      <cbc:ID><![CDATA[10]]></cbc:ID>
-    </cac:SellersItemIdentification>
-  </cac:Item>
-  <cac:Price>
-    <cbc:PriceAmount currencyID="PEN">10</cbc:PriceAmount>
+    <cbc:PriceAmount currencyID="PEN">25,00</cbc:PriceAmount>
   </cac:Price>
 </cac:InvoiceLine>
 </Invoice>

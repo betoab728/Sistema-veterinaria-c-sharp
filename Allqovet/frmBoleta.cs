@@ -299,8 +299,9 @@ namespace Allqovet
                     ReportDataSource fuente = new ReportDataSource("DataSetBoleta", db.ImprimiBoleta(idboleta));
 
                     //  boleta.nombrearchivo = lblserie.Text + "-" + lblnumero.Text;
-                 
-                  
+
+                    boleta.ruta = @"sunat\boletas\" + lblserie.Text + "-" + lblnumero.Text + ".pdf";
+
                     boleta.reportViewer1.LocalReport.DataSources.Clear();
                     boleta.reportViewer1.LocalReport.DataSources.Add(fuente);
                     boleta.reportViewer1.LocalReport.ReportEmbeddedResource = "Allqovet.Reportes.Boleta.rdlc";

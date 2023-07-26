@@ -25,7 +25,7 @@ namespace AllqovetBLL
 
         public DataTable BuscarBoletaFechas(DateTime desde, DateTime hasta)
         {
-            throw new NotImplementedException();
+          return db.BuscarBoletaFechas(desde,hasta);
         }
 
         public Boleta Correlativo()

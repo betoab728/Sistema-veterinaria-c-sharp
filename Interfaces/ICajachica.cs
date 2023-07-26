@@ -17,6 +17,7 @@ namespace Interfaces
         DataTable EgresosCierre(int idcaja);
         DataTable ResumenEgresosMEdioPago(int idcaja);
         DataTable CobrosCierre(int idcaja);
+        int AperturaActual();
 
         int CerrarCaja(CajaChica caja);
     }

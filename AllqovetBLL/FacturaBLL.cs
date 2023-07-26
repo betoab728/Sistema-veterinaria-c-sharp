@@ -21,7 +21,7 @@ namespace AllqovetBLL
 
         public DataTable BuscarFacturaFechas(DateTime desde, DateTime hasta)
         {
-            throw new NotImplementedException();
+           return db.BuscarFacturaFechas(desde,hasta);
         }
 
         public DataTable BuscarFacturaRazon(string apellido)

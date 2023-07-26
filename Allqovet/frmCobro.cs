@@ -27,7 +27,11 @@ namespace Allqovet
 
         private void frmCobro_Load(object sender, EventArgs e)
         {
+            panelefectivo.Visible = true;
+            paneltarjeta.Visible = false;
+
             ListarMedioPAgo();
+
         }
 
         private void ListarMedioPAgo()
@@ -40,6 +44,10 @@ namespace Allqovet
                     cmbmedio.DataSource = db.Listar();
                     cmbmedio.DisplayMember = "Descripcion";
                     cmbmedio.ValueMember = "Idmediopago";
+
+                    panelefectivo.Visible = true;
+                    paneltarjeta.Visible = false;
+
                 }
                 catch (Exception ex)
                 {
@@ -115,7 +123,7 @@ namespace Allqovet
             {
                 try
                 {
-                    Idcajachica = db.BuscarCajaActiva();
+                    Idcajachica = db.AperturaActual();
                 }
                 catch (Exception ex)
                 {

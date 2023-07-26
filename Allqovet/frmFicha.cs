@@ -88,6 +88,8 @@ namespace Allqovet
             }
             else
             {
+                MessageBox.Show("en nuevo");
+
                 Nuevo();
             }
 
@@ -215,7 +217,7 @@ namespace Allqovet
                 catch (Exception ex)
                 {
 
-                    MessageBox.Show(ex.ToString());
+                    MessageBox.Show("error en resgistro nuevo: "+ex.Message);
                     r = 0;
                 }
             }
@@ -306,7 +308,7 @@ namespace Allqovet
                 try
                 {
                     frmImprimirFicha ficha = new frmImprimirFicha();
-                    ReportDataSource fuente = new ReportDataSource("DataSetEntrada", db.Imprimir(idficha));
+                    ReportDataSource fuente = new ReportDataSource("DataSetImprimirFicha", db.Imprimir(idficha));
                     ficha.reportViewer1.LocalReport.DataSources.Clear();
                     ficha.reportViewer1.LocalReport.DataSources.Add(fuente);
                     ficha.reportViewer1.LocalReport.ReportEmbeddedResource = "Allqovet.Reportes.Ficha.rdlc";

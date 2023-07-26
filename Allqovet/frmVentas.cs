@@ -539,7 +539,7 @@ namespace Allqovet
             {
                 try
                 {
-                    Idcajachica = db.BuscarCajaActiva();
+                    Idcajachica = db.AperturaActual();
                 }
                 catch (Exception ex)
                 {

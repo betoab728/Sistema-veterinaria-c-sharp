@@ -207,7 +207,16 @@ namespace Allqovet
 
                     if (db.CerrarCaja(cajaChica) > 0)
                     {
-                        MessageBox.Show("La caja se ha cerrado correctamente");
+                        frmMenu menu = Application.OpenForms.OfType<frmMenu>().SingleOrDefault();
+                        if (menu != null)
+                        {
+                            menu.lblnombreusuario.Text = "-";
+                            menu.lblEstadocaja.Text = "Estado caja: Cerrado";
+                        }
+
+                            MessageBox.Show("La caja se ha cerrado correctamente");
+
+
 
                         ImprimirCierre(cajaChica.Idcajachica);
 
@@ -275,7 +284,7 @@ namespace Allqovet
             {
                 try
                 {
-                    Idcajachica = db.BuscarCajaActiva();
+                    Idcajachica = db.AperturaActual();
                 }
                 catch (Exception ex)
                 {

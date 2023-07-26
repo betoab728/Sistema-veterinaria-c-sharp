@@ -30,6 +30,9 @@ namespace AllqovetDAO
                 cmd.Parameters.AddWithValue("pNumero", factura.Numero);
                 cmd.Parameters.AddWithValue("pIdventa", factura.Idventa);
                 cmd.Parameters.AddWithValue("pTotal", factura.Total);
+                cmd.Parameters.AddWithValue("pRuc", factura.ruc);
+                cmd.Parameters.AddWithValue("pRazon", factura.razon);
+                cmd.Parameters.AddWithValue("pDireccion", factura.direccion);
 
                 cmd.Parameters.Add("pIdfactura", MySqlDbType.Int32).Direction = ParameterDirection.Output;
                 r = cmd.ExecuteNonQuery();
@@ -72,7 +75,24 @@ namespace AllqovetDAO
 
         public DataTable BuscarFacturaFechas(DateTime desde, DateTime hasta)
         {
-            throw new NotImplementedException();
+            using (MySqlConnection cn = new MySqlConnection(cnx))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("sp_BuscarFacturaFechas", cn))
+
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("fdesde", desde);
+                    cmd.Parameters.AddWithValue("fhasta", hasta);
+                    cn.Open();
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        return dt;
+                    }
+                }
+            }
         }
 
         public DataTable BuscarFacturaRazon(string apellido)

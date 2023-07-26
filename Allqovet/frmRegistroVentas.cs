@@ -260,7 +260,7 @@ namespace Allqovet
                         descripcion = row["DESCRIPCION"].ToString();
                         cantidad = row["CANTIDAD"].ToString(); 
                         precio = row["PRECIO"].ToString();
-                        importe = row["CANTIDAD"].ToString(); 
+                        importe = row["IMPORTE"].ToString(); 
 
                         factura.dgvProductos.Rows.Add(idproducto, codigo, descripcion, cantidad, precio, importe);
                     }
